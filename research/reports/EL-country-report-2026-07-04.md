@@ -76,7 +76,7 @@ fuel-tax/quality control via **AADE** chemical laboratories.
     GHG-intensity reduction by 2030; combined advanced-biofuel + RFNBO target
     (1 % 2025 → 5.5 % 2030, energy, with multipliers). `PROPOSED` for GR.
 - **EU-wide:** ETS2 compliance for road-transport fuel suppliers — allowance surrender
-  from **2028** (2027 emissions; auctioning from 2027) under **Directive (EU) 2023/959
+  from **2029** (for 2028 emissions; obligation start 1 Jan 2028; auctioning from 2027) under **Directive (EU) 2023/959
   (ETS2, Chapter IVa of Dir. 2003/87/EC)**. [CORRECTION — the draft's "Reg. (EU)
   2026/667" is the 2040 climate-target law, NOT ETS2.] Applies to GR. (V4, V5)
 
@@ -100,7 +100,7 @@ Greece levies the **EFK — Ειδικός Φόρος Κατανάλωσης (ex
 - **VAT.** 24% VAT applies on the tax-inclusive price (S2).
 - **Fuel-price relief via subsidy, not EFK.** For 2026 the government has used targeted "Fuel Pass"-type subsidies rather than cutting EFK. An opposition (SYRIZA) amendment to cut fuel EFK (to ~€359 petrol / €330 diesel) was **not adopted** — `PROPOSED` only (S7).
 - **Agricultural diesel discount (separate from road fuel).** From **1 November 2026** Greece re-introduces an at-the-pump EFK discount of up to **€0.41/L for agricultural diesel** (app/QR-code based). This is an agricultural relief, not a road-transport rate change. `CONFIRMED` — S5.
-- **ETS2** applies to road-transport fuels with allowance surrender from **2028** (2027 emissions; auctioning from 2027) under **Directive (EU) 2023/959 (ETS2, Chapter IVa of Dir. 2003/87/EC)**. [CORRECTION — the draft's "Regulation (EU) 2026/667" is the 2040 EU climate-target law, NOT ETS2.] `CONFIRMED` (EU-level). (V4, V5)
+- **ETS2** applies to road-transport fuels with allowance surrender from **2029** (for 2028 emissions; obligation start 1 Jan 2028; auctioning from 2027) under **Directive (EU) 2023/959 (ETS2, Chapter IVa of Dir. 2003/87/EC)**. [CORRECTION — the draft's "Regulation (EU) 2026/667" is the 2040 EU climate-target law, NOT ETS2.] `CONFIRMED` (EU-level). (V4, V5)
 
 ## 3. Sustainability & compliance requirements
 

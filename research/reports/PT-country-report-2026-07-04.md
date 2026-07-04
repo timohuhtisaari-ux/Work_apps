@@ -87,7 +87,7 @@ Malta), with the Commission requesting financial sanctions.** (V3)
   Still `PROPOSED`. (S3, S10)
 
 **EU-wide:** ETS2 compliance obligation for road-transport fuel suppliers — allowance
-surrender begins **2028** (for 2027 emissions; auctioning from 2027) under
+surrender begins **2029** (for 2028 emissions; obligation start 1 Jan 2028; auctioning from 2027) under
 **Directive (EU) 2023/959 (ETS2, Chapter IVa of Directive 2003/87/EC)**.
 [CORRECTION — the earlier draft cited "Reg. (EU) 2026/667"; that regulation is the
 **2040 EU climate-target** amendment to the Climate Law (2021/1119), NOT the ETS2
@@ -117,7 +117,7 @@ Portugal taxes motor fuels through the **ISP — Imposto sobre os Produtos Petro
 - **Advanced-biofuel / renewable-gas exemption is certificate-gated and state-aid-based.** Relief under CIEC Art. 90(11) requires holding and cancelling **TdB (títulos de biocombustíveis)** for advanced biofuels or **Guarantees of Origin** for renewable gases, plus regular tax status; Portaria 226/2026/1 (20 May 2026) sets the recognition/implementation procedure. Conventional blended biofuels (FAME up to B7, ethanol) that meet the ordinary incorporation obligation are taxed at the fossil-fuel ISP rate — the exemption targets *advanced* volumes. Mandate/TdB mechanics: see Section 1.
 - **Adicionamento CO2 is re-indexed every year** to the prior-year average EU-ETS auction price; for 2026 the AT fixed it at **70.0405 €/t CO2** (Ofício Circulado 25086/2025). Expect annual revision each January. `CONFIRMED`.
 - **ISP unit rate is a moving target.** The government re-fixes the unit rate and the extraordinary discount by Portaria on a near-weekly basis under the price-mitigation mechanism in force since March 2022. Corroborator confirmed the value genuinely moves: Portaria 112-A/2026 (13 Mar) €462.39/€331.26; Portaria 141-A/2026 (2 Apr) €441.68/€278.17. The €437/€298 in the original draft is a plausible April-era approximation but was not matched to a dated in-force Portaria — **re-check the current week's Portaria at time of use.** A proposed Lei n.º 67/XVII would further lower the ISP minimum bands (€199.89 petrol / €156.66 diesel) — `PROPOSED`.
-- **ETS2** applies to road-transport fuels with allowance surrender from **2028** (2027 emissions; auctioning from 2027) under **Directive (EU) 2023/959 (ETS2, Chapter IVa of Dir. 2003/87/EC)**. [CORRECTION — the draft's "Regulation (EU) 2026/667" is the **2040 EU climate-target** amendment to the Climate Law, NOT ETS2.] `CONFIRMED` (EU-level). (V4, V5)
+- **ETS2** applies to road-transport fuels with allowance surrender from **2029** (for 2028 emissions; obligation start 1 Jan 2028; auctioning from 2027) under **Directive (EU) 2023/959 (ETS2, Chapter IVa of Dir. 2003/87/EC)**. [CORRECTION — the draft's "Regulation (EU) 2026/667" is the **2040 EU climate-target** amendment to the Climate Law, NOT ETS2.] `CONFIRMED` (EU-level). (V4, V5)
 
 ## 3. Sustainability & compliance requirements
 
@@ -271,4 +271,4 @@ Portugal taxes motor fuels through the **ISP — Imposto sobre os Produtos Petro
 | V2 | https://www.dgeg.gov.pt/pt/areas-setoriais/energia/eficiencia-energetica/biocombustiveis/biocombustiveis-em-portugal/ | 1 | 2026-07-04 | Incorporation 13%(2025)/14%(2027)/16%(2029); advanced Parte-A 2.0/4/7/10%; penalty €1,760 (Anexo III) |
 | V3 | https://energy.ec.europa.eu/news/april-infringements-package-key-decisions-energy-2026-04-29_en | 1 | 2026-07-04 | PT/EL/Malta referred to CJEU 29 Apr 2026 for RED III non-transposition; financial sanctions |
 | V4 | https://eur-lex.europa.eu/eli/reg/2026/667/oj/eng | 1 | 2026-07-04 | Reg. (EU) 2026/667 = 2040 EU climate target (Climate Law amendment) — NOT ETS2 |
-| V5 | https://climate.ec.europa.eu/eu-action/carbon-markets/ets2-buildings-road-transport-and-additional-sectors_en | 1 | 2026-07-04 | ETS2 surrender from 2028 (2027 emissions); Directive (EU) 2023/959 |
+| V5 | https://climate.ec.europa.eu/eu-action/carbon-markets/ets2-buildings-road-transport-and-additional-sectors_en | 1 | 2026-07-04 | ETS2 obligation start 1 Jan 2028, first surrender 2029 (2028 emissions); Directive (EU) 2023/959 |

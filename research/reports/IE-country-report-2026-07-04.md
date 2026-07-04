@@ -81,7 +81,7 @@ Adopted (`CONFIRMED`) recent steps:
   CJEU in the 29 Apr 2026 infringements package (only PT, EL, Malta were), consistent
   with IE having transposed transport RED III. `CONFIRMED` for transport. (S2, S4, V9)
 - **EU-wide:** ETS2 compliance for road-transport fuel suppliers — allowance surrender
-  from **2028** (2027 emissions; auctioning from 2027) under **Directive (EU) 2023/959
+  from **2029** (for 2028 emissions; obligation start 1 Jan 2028; auctioning from 2027) under **Directive (EU) 2023/959
   (ETS2, Chapter IVa of Dir. 2003/87/EC)**. [CORRECTION — the draft's "Reg. (EU)
   2026/667" is the 2040 climate-target law, NOT ETS2.] Applies to IE. (V4, V5)
 
@@ -113,7 +113,7 @@ Ireland levies **Mineral Oil Tax (MOT)** on motor fuels under Chapter 1 of Part 
 - **Carbon-tax trajectory (legislated).** Finance Act 2020 set a 10-year path raising the carbon charge to **€100/t CO2 by 2030**. Propellant fuels (petrol, auto-diesel) step up each October (they moved to **€71/t on 8 Oct 2025**); non-propellant fuels normally step up on 1 May, but the **1 May 2026 increase was postponed to 14 October 2026** (to €71/t). `CONFIRMED` (legislated) — S1.
 - **Temporary cuts reverse ~end July 2026.** The 25 Mar / 15 Apr 2026 non-carbon MOT cuts and the NORA-levy cut are set to end 31 Jul 2026, restoring petrol €706.14 / diesel €615.76. `CONFIRMED` — S1, S2.
 - **Annual October Budget.** Standard-rate and carbon-component changes are made in the October Budget / Finance Act cycle.
-- **ETS2.** EU emissions trading for road-transport fuels (ETS2) — allowance surrender from **2028** (2027 emissions; auctioning from 2027) under **Directive (EU) 2023/959 (ETS2, Chapter IVa of Dir. 2003/87/EC)**. [CORRECTION — the draft's "Regulation (EU) 2026/667" is the 2040 EU climate-target law, NOT ETS2.] `CONFIRMED` (EU-level). (V4, V5)
+- **ETS2.** EU emissions trading for road-transport fuels (ETS2) — allowance surrender from **2029** (for 2028 emissions; obligation start 1 Jan 2028; auctioning from 2027) under **Directive (EU) 2023/959 (ETS2, Chapter IVa of Dir. 2003/87/EC)**. [CORRECTION — the draft's "Regulation (EU) 2026/667" is the 2040 EU climate-target law, NOT ETS2.] `CONFIRMED` (EU-level). (V4, V5)
 
 ## 3. Sustainability & compliance requirements
 
