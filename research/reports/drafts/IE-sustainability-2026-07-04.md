@@ -3,13 +3,14 @@
 - **Scope:** Section 3 of country-report template + draft Section-4 checklist items in this scope.
 - **Researched by:** sustainability-researcher
 - **Report date:** 2026-07-04
-- **Corroboration pass:** PENDING
+- **Corroboration pass:** DONE 2026-07-04 (source-corroborator)
 
 > Method note: `irishstatutebook.ie/eli/2025/si/664/made/en/print` returned HTTP 403 to
-> WebFetch; SI 664/2025 content was captured via the Irish Statute Book search index and
-> corroborated with NORA official pages. NORA's RTFO is modelled closely on the UK RTFO;
-> where only UK RTFO guidance was available (assurance/PoS mechanics) it is flagged as a
-> UK-analogue corroboration, not the Irish primary — see Gaps.
+> WebFetch (not retried per environment rules); SI 664/2025 content was captured via the
+> Irish Statute Book search index and corroborated with NORA official pages and the gov.ie
+> ministerial release. NORA's RTFO is modelled closely on the UK RTFO; where only UK RTFO
+> guidance was available (assurance/PoS mechanics) it is flagged as a UK-analogue
+> corroboration, not the Irish primary — see Gaps.
 
 ## 3. Sustainability & compliance requirements
 
@@ -21,9 +22,9 @@
 | Sustainability criteria (RED I) | **S.I. 33 of 2012** — Biofuel Sustainability Criteria Regulations | S.I. 33/2012 | CONFIRMED | nora.ie |
 | GHG-intensity (FQD Art. 7a) | **S.I. 160 of 2017** — 6 % GHG-intensity reduction of transport fuels | S.I. 160/2017 | CONFIRMED | nora.ie |
 | RED II transposition | **S.I. 350 of 2022** — European Union (Renewable Energy) Regulations 2022; renamed BOS → **RTFO**; updated sustainability criteria | S.I. 350/2022 | CONFIRMED | nora.ie |
-| RED III transport transposition | **S.I. 664 of 2025** — European Union (Renewable Transport Fuel Obligation) Regulations 2025: obligation **32 % by energy** (from 25 %), advanced sub-target **5 %** (from 1.5 %), **crop cap 3 %** from 1 Jan 2026, **high-ILUC cap cut 75 %→60 %** of 2019 disposals, adds **RFNBOs** to the advanced obligation, allows certificates for renewable electricity at public recharging | S.I. 664/2025 | CONFIRMED | irishstatutebook.ie; nora.ie; mhc.ie |
+| RED III transport transposition | **S.I. 664 of 2025** — European Union (Renewable Transport Fuel Obligation) Regulations 2025: obligation **32 % by energy** (from 25 %), advanced sub-target **5 %** (from 1.5 %), **crop cap 3 %** from 1 Jan 2026, **high-ILUC cap cut 75 %→60 %** of 2019 disposals, adds **RFNBOs** to the advanced obligation, allows certificates for renewable electricity at public recharging | S.I. 664/2025 | CONFIRMED (gov.ie release + NORA + S.I. listing) | S6; nora.ie; V9 |
 | RED III (permitting, other) | **S.I. 274 of 2025** — planning/permitting elements of RED III (out of this scope) | S.I. 274/2025 | CONFIRMED | irishstatutebook.ie; gov.ie |
-| RED III status | Transport RED III elements **transposed via SI 664/2025**; note deadline was 21 May 2025 (SI dated 2025) | Dir. (EU) 2023/2413 | PRIMARY-ONLY | irishstatutebook.ie |
+| RED III status | Transport RED III elements **transposed via SI 664/2025** (effective 1 Jan 2026); deadline was 21 May 2025. Ireland is **NOT** among the states referred to the CJEU on 29 Apr 2026 (only PT, EL, Malta), consistent with transport RED III being transposed | Dir. (EU) 2023/2413 | CONFIRMED | V9; V3 (IE not listed) |
 
 ### 3.2 GHG-saving thresholds applied nationally
 
@@ -64,9 +65,9 @@
 
 | Rule | Detail | Confidence | Sources |
 |---|---|---|---|
-| Crop cap | Red (food/feed-crop) certificates limited to **3 % by energy from 1 Jan 2026** (was 2 %) | CONFIRMED | nora.ie; mhc.ie |
-| High-ILUC (palm) | High-ILUC-risk biofuel/biogas capped at a share of the operator's **2019 disposals**, reduced from **75 % → 60 %** under SI 664/2025; EU phase-to-0 by 2030 applies | CONFIRMED | nora.ie; irishstatutebook.ie |
-| Advanced sub-target | **5 %** advanced (Annex IX-A) from 2026; RFNBOs now count toward advanced obligation | CONFIRMED | irishstatutebook.ie; nora.ie |
+| Crop cap | Red (food/feed-crop) certificates limited to **3 % by energy from 1 Jan 2026** (was 2 %) | CONFIRMED | nora.ie; V9 |
+| High-ILUC (palm) | High-ILUC-risk biofuel/biogas capped at a share of the operator's **2019 disposals**, reduced from **75 % → 60 %** under SI 664/2025; EU phase-to-0 by 2030 applies | CONFIRMED | nora.ie; V9 |
+| Advanced sub-target | **5 %** advanced (Annex IX-A) from 2026; RFNBOs now count toward advanced obligation | CONFIRMED | V9; nora.ie |
 | Annex IX / waste (UCO) verification | Green = Annex IX-A; Orange includes Annex IX-B (UCO/animal fat); claims verified via recognised voluntary scheme + PoS + independent verifier; national Annex IX additions not identified | PRIMARY-ONLY | nora.ie |
 
 ### 3.7 Reporting / audit calendar
@@ -76,7 +77,7 @@
 | Obligation period | Annual (calendar-year based); NORA issues statements of account per reporting period | PRIMARY-ONLY | nora.ie |
 | RTFO returns / data submission | Periodic submissions to the RTFO online system; NORA sets determination dates per period (specific dates on NORA "RTFO Deadline Dates" page — not captured) | PRIMARY-ONLY (flag) | nora.ie |
 | Independent verification/assurance | Obligated parties must appoint **independent verifiers** to assure data submitted to NORA (annual assurance report) | PRIMARY-ONLY | nora.ie; UK RTFO assurance analogue |
-| Buy-out / penalty | Non-compliance buy-out: **€0.05 per MJ** (renewable obligation) and **€0.08 per MJ** (advanced obligation) | PRIMARY-ONLY | nora.ie |
+| Buy-out / penalty | Non-compliance buy-out: **€0.05 per MJ** (renewable obligation) and **€0.08 per MJ** (advanced obligation) | CONFIRMED (NORA + gov.ie Renewable Transport Fuel Policy, independent) | nora.ie; V9 |
 
 ## 4. Draft compliance-checklist items (this scope)
 
@@ -91,9 +92,7 @@
 
 ## 5. Conflicts and gaps
 
-- **SI 664/2025 full text** (403 to WebFetch) — re-verify obligation period definition, exact
-  return/determination deadlines, verifier standard, and buy-out figures directly on
-  irishstatutebook.ie. [FLAG]
+- **SI 664/2025 full text** (403, not retried) — the corroborator confirmed 32 %/5 %/3 %/high-ILUC 75→60 % and the €0.05/€0.08 buy-out from **independent** sources (gov.ie ministerial release via search; gov.ie Renewable Transport Fuel Policy PDF; NORA), but did not read the S.I. text verbatim. Re-verify obligation-period definition, exact return/determination deadlines, and verifier standard on irishstatutebook.ie when reachable. [FLAG]
 - **NORA-specific PoS/assurance mechanics and recognised-scheme list** partly corroborated via
   UK RTFO guidance (close analogue) — confirm the Irish list and Irish assurance guidance on
   nora.ie. [FLAG]
@@ -111,15 +110,17 @@
 | 3 | https://www.nora.ie/relevant-legislation | 1 | 2026-07-04 | Act 2010, SI 33/2012, SI 160/2017, SI 350/2022, SI 664/2025 |
 | 4 | https://www.nora.ie/rtfo | 1 | 2026-07-04 | RTFO online system, recognised voluntary schemes, verifier requirement |
 | 5 | https://www.nora.ie/determinations/determination-dates.342.html | 1 | 2026-07-04 | Determination/statement-of-account process (specific dates not shown) |
-| 6 | https://www.irishstatutebook.ie/eli/2025/si/664/made/en/print | 1 | 2026-07-04 | SI 664/2025 (403 on fetch; captured via Statute Book index) — 32%/5%, crop cap 3%, ILUC 75→60%, RFNBOs |
-| 7 | https://www.mhc.ie/latest/insights/new-measures-to-fast-track-renewable-energy-permissions | 2 | 2026-07-04 | SI 274/2025 vs SI 664/2025 distinction |
+| 6 | https://www.irishstatutebook.ie/eli/2025/si/664/made/en/print | 1 | 2026-07-04 | SI 664/2025 (403; captured via Statute Book index + gov.ie release) — 32%/5%, crop cap 3%, ILUC 75→60%, RFNBOs |
+| 7 | https://www.mhc.ie/latest/insights/new-measures-to-fast-track-renewable-energy-permissions | 2 | 2026-07-04 | SI 274/2025 (permitting) vs SI 664/2025 distinction — note: this page covers SI 274 only |
 | 8 | https://www.gov.uk/government/publications/rtfo-and-saf-mandate-third-party-assurance | 2 (UK analogue) | 2026-07-04 | Third-party verifier/assurance mechanics (RTFO model) |
 | 9 | https://energy.ec.europa.eu/topics/renewable-energy/bioenergy/voluntary-schemes_en | 1 | 2026-07-04 | EU-recognised voluntary schemes list |
 | 10 | https://energy.ec.europa.eu/topics/renewable-energy/bioenergy/biofuels/union-database-liquid-and-gaseous-renewable-and-recycled-carbon-fuels_en | 1 | 2026-07-04 | UDB legal basis, operational status, PoS recording |
+| V9 | https://assets.gov.ie/262016/0f9661c4-30d8-4ecd-ae1d-eaa5b313d225.pdf + gov.ie RTFO consultation / 2026-rates release (via search) | 1 | 2026-07-04 | Buy-out €0.05/€0.08 per MJ (independent of NORA); 2026 rates 32/5/3/75→60 |
+| V3 | https://energy.ec.europa.eu/news/april-infringements-package-key-decisions-energy-2026-04-29_en | 1 | 2026-07-04 | Only PT/EL/Malta referred to CJEU for RED III — IE not listed (transport RED III transposed) |
 
 ---
 **4-line summary — Ireland**
-- Transposition: RTFO under Energy Act 2010; RED II via SI 350/2022 (BOS→RTFO), sustainability SI 33/2012, GHG SI 160/2017; RED III transport transposed via SI 664/2025 (32% energy, advanced 5%, crop cap 3%, high-ILUC 75→60% of 2019, RFNBOs added) — permitting via SI 274/2025.
+- Transposition: RTFO under Energy Act 2010; RED II via SI 350/2022 (BOS→RTFO), sustainability SI 33/2012, GHG SI 160/2017; RED III transport transposed via SI 664/2025 (32% energy, advanced 5%, crop cap 3%, high-ILUC 75→60% of 2019, RFNBOs added) — permitting via SI 274/2025. IE not in the 29 Apr 2026 CJEU referral.
 - Certification: no national scheme — NORA-recognised EU voluntary schemes (ISCC EU, REDcert-EU, 2BSvs, UFAS…); PoS per consignment, independent third-party verifier assures data.
 - Registry/UDB: NORA administers the RTFO online register and issues RTFCs (Green/Orange/Red, 1 cert = 1 MJ); UDB operational since 15 Jan 2024, EU mandatory-use date pending.
-- Flags: SI 664/2025 full text 403 (deadlines/verifier standard PRIMARY-ONLY); some PoS/assurance mechanics corroborated via UK RTFO analogue — confirm Irish list/guidance; buy-out €0.05/€0.08 per MJ (NORA, single-source).
+- Flags: SI 664/2025 full text 403 (deadlines/verifier standard PRIMARY-ONLY); some PoS/assurance mechanics corroborated via UK RTFO analogue — confirm Irish list/guidance; buy-out €0.05/€0.08 per MJ now CONFIRMED (gov.ie policy independent of NORA).
