@@ -3,7 +3,7 @@
 - **Scope:** Section 3 of country-report template + draft Section-4 checklist items in this scope.
 - **Researched by:** sustainability-researcher
 - **Report date:** 2026-07-04
-- **Corroboration pass:** PENDING
+- **Corroboration pass:** DONE (source-corroborator, 2026-07-04)
 
 > Method note: the operative instrument is the **Наредба за критериите за
 > устойчивост на биогоривата и течните горива от биомаса** (Ordinance on
@@ -25,7 +25,7 @@
 | Latest amendment | Amended & supplemented, **State Gazette (ДВ) No. 26/2024, in force 26 March 2024** — retitled to add gaseous and solid biomass fuels | ДВ бр. 26/2024 | CONFIRMED | S3, S4 |
 | Framework statute | **Закон за енергията от възобновяеми източници (ZEVI)** — Energy from Renewable Sources Act; requires reliable, independent auditing of operators' sustainability & GHG-reduction compliance | ZEVI | CONFIRMED | S5, S6 |
 | Clean Air Act linkage | Fuel-quality / GHG-intensity requirements sit under the Clean Ambient Air Act framework (cross-ref) | Clean Air Act | PRIMARY-ONLY | S6 (registry) |
-| RED III (2023/2413) status | Bulgaria has **notified national measures** on the EUR-Lex NIM (28 measures across the 1 Jul 2024 and 21 May 2025 deadlines, incl. a **new/amended ZEVI published 10 June 2025**). **BUT** the Commission **opened infringement on 24 July 2025** for late/incomplete transposition. Net: **partially transposed / notified, but in infringement for incompleteness** — more advanced than HU/RO on notification | Dir. (EU) 2023/2413; NIM | CONFLICT / PRIMARY-ONLY | S7 (NIM), S5 |
+| RED III (2023/2413) status | Bulgaria has **notified 28 national measures** on the EUR-Lex NIM (across the 1 Jul 2024 and 21 May 2025 deadlines, incl. a **new/amended ZEVI published 10 June 2025**). **Corroborator correction:** the escalation is a **REASONED OPINION issued in the FEBRUARY 2025 package (INFR(2024)0211)** on the RED III **permitting-acceleration** provisions (insufficiently clear/precise transposition); Bulgaria is **not** on the December 2025 reasoned-opinion list. (The earlier draft's "opened infringement 24 July 2025 / CONFLICT" is superseded — the substantive escalation is the Feb 2025 reasoned opinion.) Net: **partially transposed / 28 measures notified, reasoned opinion outstanding on permitting** — more advanced than HU/RO on notification | Dir. (EU) 2023/2413; NIM | PRIMARY-ONLY / infringement | S7 (NIM), S11 (Feb 2025 package), S5 |
 
 ### 3.2 GHG-saving thresholds applied nationally
 
@@ -83,7 +83,7 @@
 
 ## 5. Conflicts and gaps
 
-- **CONFLICT (RED III status):** EUR-Lex NIM shows BG **notified** measures (incl. new ZEVI, June 2025), yet the Commission **opened infringement 24 July 2025**. Reconcile as partial/incomplete transposition; confirm which sustainability provisions are outstanding. [FLAG]
+- **RED III status corrected:** BG **notified 28 measures** (incl. new ZEVI, Jun 2025); the escalation is a **Feb 2025 reasoned opinion (INFR(2024)0211)** on permitting, not a "24 July 2025 opened infringement." BG is not on the Dec 2025 reasoned-opinion list. Confirm which permitting provisions remain outstanding. [FLAG]
 - **Ordinance PDF not machine-read** (binary; poppler absent) — re-verify GHG thresholds, palm/high-ILUC caps, exact reporting deadline, and the registry/certifying-body approval articles against the rendered text. [FLAG]
 - **No dedicated national sustainability registry** (Nabisy/BÜHG-equivalent) located; MOEW receives operator reports and approves certifying bodies. [GAP]
 - **Authority split MOEW vs Ministry of Energy vs SEDA:** MOEW is the sustainability competent authority (operator GHG reporting); SEDA handles RES-electricity/GO. Confirm the precise verifier of biofuel sustainability certificates. [FLAG — registry note]
@@ -103,11 +103,11 @@
 | S8 | https://energy.ec.europa.eu/topics/renewable-energy/bioenergy/voluntary-schemes_en | 1 | 2026-07-04 | EU-recognised voluntary schemes list |
 | S9 | https://www.seea.government.bg/en/about-seda-en (503 this pass) ; green-energy-portals SEDA profile | 1 / 2 | 2026-07-04 | SEDA role: RES targets, statistics, guarantees of origin (not biofuel-sustainability verifier) |
 | S10 | https://sure-system.org/en-us/udb/ ; https://www.iscc-system.org/about/news/union-database-udb/ | 2 | 2026-07-04 | UDB 15 Jan 2024 / 1 Oct 2024 collectors / mandatory-use pending |
+| S11 | https://energy.ec.europa.eu/news/february-infringement-package-key-decisions-energy-2025-02-12_en | 1 | 2026-07-04 | RED III **reasoned opinion** to BG (INFR(2024)0211), Feb 2025 — permitting |
 
 ---
 **4-line summary — Bulgaria**
-- Transposition: RED sustainability via the **Наредба за критериите за устойчивост на биогоривата** (amended ДВ No. 26/2024, in force 26 Mar 2024) under **ZEVI** + Clean Air Act; **RED III measures notified incl. new ZEVI (Jun 2025) but Commission opened infringement 24 Jul 2025** for incompleteness (CONFLICT).
+- Transposition: RED sustainability via the **Наредба за критериите за устойчивост на биогоривата** (amended ДВ No. 26/2024, in force 26 Mar 2024) under **ZEVI** + Clean Air Act; **28 RED III measures notified incl. new ZEVI (Jun 2025); Feb 2025 reasoned opinion (INFR(2024)0211) on permitting outstanding**.
 - Certification: **EU-recognised voluntary schemes accepted** (ISCC EU, REDcert, 2BSvs…); ordinance provides for approval of certifying bodies, audits, and issuance/withdrawal of compliance certificates; PoS per consignment.
 - Registry/UDB: verifying authority = **Ministry of Environment and Water (MOEW)** (operators report annual GHG intensity); SEDA handles RES-electricity/GO only; **no dedicated national biofuel registry** found; UDB applies via EU law (operational 15 Jan 2024, mandatory date pending).
-- Flags: ordinance PDF not machine-read (GHG thresholds/palm caps/reporting deadline PRIMARY-ONLY); RED III notified-vs-infringement conflict; no national palm/soy ban or Annex IX additions beyond EU; MOEW/Min.Energy/SEDA authority split to confirm.
-</content>
+- Flags: ordinance PDF not machine-read (GHG thresholds/palm caps/reporting deadline PRIMARY-ONLY); RED III status corrected (Feb 2025 reasoned opinion on permitting, not a 24 Jul 2025 infringement); no national palm/soy ban or Annex IX additions beyond EU; MOEW/Min.Energy/SEDA authority split to confirm.

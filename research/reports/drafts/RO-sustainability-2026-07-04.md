@@ -3,7 +3,7 @@
 - **Scope:** Section 3 of country-report template + draft Section-4 checklist items in this scope.
 - **Researched by:** sustainability-researcher
 - **Report date:** 2026-07-04
-- **Corroboration pass:** PENDING
+- **Corroboration pass:** DONE (source-corroborator, 2026-07-04)
 
 > Method note: primary basis is **OUG 80/2018** read via `legislatie.just.ro`
 > (DetaliiDocument/205029) with article-level detail confirmed by a second
@@ -23,7 +23,7 @@
 | RED sustainability + GHG monitoring | **OUG 80/2018** — conditions for placing petrol/diesel on the market, GHG-monitoring-and-reduction mechanism (FQD Art. 7a) and sustainability-criteria verification; amends Law 220/2008 on RES promotion | OUG 80/2018 | CONFIRMED | S1, S2 |
 | RES framework | **Law 220/2008** on the system for promoting energy from renewable sources (RED transposition backbone) | Law 220/2008 | PRIMARY-ONLY | S1, S3 |
 | National sustainability-certification methodology | Established as an **order of the competent authority** (Ministry of Energy) within 90 days of OUG 80/2018 entry into force; defines the **buletinul de trasabilitate a ciclului de viață** form and application methodology | OUG 80/2018 (delegating article) | PRIMARY-ONLY | S2 |
-| RED III (2023/2413) status | **Not transposed.** EUR-Lex NIM lists **no notified Romanian measures**; Commission sent a letter of formal notice + additional reasoned opinion. A draft biofuel law with advanced/RFNBO targets was reported in progress. Status: **in infringement** | Dir. (EU) 2023/2413 art. 36; NIM | PRIMARY-ONLY / infringement | S4, S1 (mandates) |
+| RED III (2023/2413) status | **Not transposed.** EUR-Lex NIM lists **no notified Romanian measures**. **Corroborator correction:** Romania is at the **letter-of-formal-notice stage only** — it is **not** on the February 2025 permitting reasoned-opinion list nor the December 2025 reasoned-opinion list. The earlier draft's "additional reasoned opinion" for Romania was **overstated** and is corrected. A draft biofuel law with advanced/RFNBO targets was reported in progress. Status: **in infringement — letter of formal notice** | Dir. (EU) 2023/2413 art. 36; NIM | PRIMARY-ONLY / infringement | S4, S10, S11, S1 (mandates) |
 | ⚠ Not applicable to RO | "DM 7 Aug 2024 National Sustainability Certification System" = **Italy**, not Romania | — | CORRECTION | S5 |
 
 ### 3.2 GHG-saving thresholds applied nationally
@@ -57,7 +57,7 @@
 | Rule | Detail | Confidence | Sources |
 |---|---|---|---|
 | High-ILUC (palm) | Follows the EU rule (DR (EU) 2019/807): high-ILUC feedstock capped at 2019 level, phased to 0 by 2030; low-ILUC-certified exempt. **No RO national palm/soy ban beyond EU** identified | UNCORROBORATED (gap) | — |
-| Crop-based cap | Conventional (crop) biofuels capped at **7 %** of final transport energy (OUG 80/2018 §9(2)) — mandates scope | PRIMARY-ONLY (cross-ref) | S1 |
+| Crop-based cap | Conventional (crop) biofuels capped at **7 %** of final transport energy (OUG 80/2018 §9(2)) — corroborator re-read primary; mandates scope | CONFIRMED (primary) | S1 |
 | Annex IX national additions | None identified; national lists follow EU Annex IX | UNCORROBORATED (gap) | — |
 | Waste/residue (UCO) verification | Verified via the mandatory annual third-party audit and/or voluntary-scheme PoS; no separate national UCO-audit rule extracted | PRIMARY-ONLY | S2 |
 
@@ -67,7 +67,7 @@
 |---|---|---|---|
 | Supplier annual report to the competent authority | Reporting window **15 January – 1 March each year** (OUG 80/2018 §8(5), §12(5)) | PRIMARY-ONLY | S2 |
 | Mandatory independent third-party audit | Annual; auditor accredited under Reg. (EC) 765/2008; audit report due **by 1 March** each calendar year (§12(5)); assesses sampling, data robustness, and voluntary-scheme PoS | PRIMARY-ONLY | S2 |
-| Penalties | Administrative fines **70,000–100,000 RON** for specification/GHG-target breaches (§13(2)); reported ~**€50,000–100,000** for deadline breaches exceeding 3 months (§13(3)) | PRIMARY-ONLY | S1, S2 |
+| Penalties | Administrative fines **70,000–100,000 RON** for specification/GHG-target breaches (§13(2)) — corroborator re-read primary; reported deadline-breach fines in lower bands (§13) | CONFIRMED (primary) | S1, S2 |
 
 ## 4. Draft compliance-checklist items (this scope)
 
@@ -82,18 +82,18 @@
 ## 5. Conflicts and gaps
 
 - **CONFLICT resolved:** the "DM 7 Aug 2024 national certification system" belongs to **Italy**, not Romania (agribiomasscert.com is Italian). Romania's mechanism is the OUG 80/2018 traceability bulletin. [FLAG — ensure lead does not re-import the Italian decree.]
+- **RED III status corrected:** letter of formal notice only; **no reasoned opinion** (RO not on the Feb 2025 or Dec 2025 reasoned-opinion lists). Earlier "additional reasoned opinion" removed. [FLAG]
 - **Biofuel GHG-saving thresholds (50/60/65 %)** are framework-level (RED via OUG 80/2018); not directly quoted from the RO article this pass. [FLAG]
 - **No dedicated national sustainability registry** (Nabisy/BÜHG-equivalent) located; verification runs on the batch bulletin + annual report. [GAP]
 - **Competent-authority split:** OUG 80/2018 §2 names the Ministry of Energy; the Ministry of Environment/ANPM's FQD GHG-reporting role should be re-checked. Registry entry lists ANRE + Ministry of Environment for **S**, which needs qualification. [FLAG — registry note]
 - **No RO palm/soy ban beyond EU; no Annex IX national additions** located. [GAP]
-- **RED III not transposed → infringement.** [FLAG]
 
 ## 6. Source log
 
 | ID | URL | Tier | Accessed | Supported |
 |---|---|---|---|---|
 | S1 | (repo) research/reports/drafts/RO-mandates-2026-07-04.md | — | 2026-07-04 | OUG 80/2018 framing, 7 % crop cap, 70k–100k RON fines, Ministry of Energy competent authority, RED III infringement |
-| S2 | https://legislatie.just.ro/Public/DetaliiDocument/205029 (OUG 80/2018) | 1 | 2026-07-04 | §2 competent authority (Min. Energy), §12(3) traceability bulletin, §12(8) voluntary schemes, §9(1) 6% FQD, §8(5)/§12(5) 15 Jan–1 Mar reporting + audit, §13(3) penalties |
+| S2 | https://legislatie.just.ro/Public/DetaliiDocument/205029 (OUG 80/2018) | 1 | 2026-07-04 | §2 competent authority (Min. Energy), §12(3) traceability bulletin, §12(8) voluntary schemes, §9(1) 6% FQD, §8(5)/§12(5) 15 Jan–1 Mar reporting + audit, §13 penalties; §9(2) 7% crop cap (corroborator re-read via /Public/DetaliiDocumentAfis/205029) |
 | S3 | https://legislatie.just.ro/Public/DetaliiDocument/208826 (OUG 80/2018 alt. record) ; gov.ro nota de fundamentare | 1 | 2026-07-04 | OUG 80/2018 record + explanatory note |
 | S4 | https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L2413 | 1 | 2026-07-04 | No RO RED III measures notified |
 | S5 | https://agribiomasscert.com/en/sustainability-certification-of-biofuels-ministerial-decree-of-07-08-2024/ | 2 | 2026-07-04 | DM 7 Aug 2024 = **Italy** (conflation correction) |
@@ -101,11 +101,12 @@
 | S7 | https://www.iea.org/policies/5091-national-system-of-sustainability-certification-for-biofuels | 2 (403 this pass) | 2026-07-04 | RO national certification scheme reference (not fully read — flag) |
 | S8 | https://energy.ec.europa.eu/.../union-database-liquid-and-gaseous-renewable-and-recycled-carbon-fuels_en | 1 | 2026-07-04 | UDB operational status, legal basis |
 | S9 | https://sure-system.org/en-us/udb/ ; https://www.iscc-system.org/about/news/union-database-udb/ | 2 | 2026-07-04 | UDB 15 Jan 2024 / 1 Oct 2024 collectors / mandatory-use pending |
+| S10 | https://energy.ec.europa.eu/news/february-infringement-package-key-decisions-energy-2025-02-12_en | 1 | 2026-07-04 | Feb 2025 RED III reasoned opinions — RO NOT listed |
+| S11 | https://energy.ec.europa.eu/news/december-infringements-package-key-decisions-energy-2025-12-11_en | 1 | 2026-07-04 | Dec 2025 RED III reasoned opinions — RO NOT listed |
 
 ---
 **4-line summary — Romania**
-- Transposition: RED sustainability + FQD GHG-monitoring via **OUG 80/2018** (amending Law 220/2008); competent authority = **Ministry of Energy** (§2); **RED III NOT transposed → in infringement** (no NIM notified).
+- Transposition: RED sustainability + FQD GHG-monitoring via **OUG 80/2018** (amending Law 220/2008); competent authority = **Ministry of Energy** (§2); **RED III NOT transposed → letter of formal notice only** (no reasoned opinion; earlier overstatement corrected).
 - Certification: **EU-recognised voluntary schemes accepted as full proof** (§12(8): ISCC EU, REDcert, 2BSvs…) alongside a national scheme (5-yr certificate); proof per batch = **buletinul de trasabilitate a ciclului de viață** accompanying the fuel to final sale.
 - Registry/UDB: **no dedicated national sustainability registry** found (batch bulletin + annual supplier report to Min. Energy); annual report window **15 Jan–1 Mar**, independent third-party audit due **1 March**; UDB applies via EU law (operational 15 Jan 2024, mandatory date pending).
-- Flags: corrected the **Italy "DM 7 Aug 2024"** conflation; GHG 50/60/65 % framework-level; ANRE is not the S-authority (Ministry of Energy is); no palm/soy ban or Annex IX additions beyond EU.
-</content>
+- Flags: corrected the **Italy "DM 7 Aug 2024"** conflation and the RO reasoned-opinion overstatement; GHG 50/60/65 % framework-level; ANRE is not the S-authority (Ministry of Energy is); no palm/soy ban or Annex IX additions beyond EU.
