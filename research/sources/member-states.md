@@ -171,10 +171,10 @@ Legend: **M** = mandates authority · **T** = tax/excise authority ·
 - **L:** PISRS — pisrs.si; Uradni list — uradni-list.si
 
 ## Spain (ES)
-- Scheme: annual renewable/biofuel sale-or-consumption targets; certificate system **(SICBIOS)** run by CNMC
-- **M:** Ministry for the Ecological Transition (MITECO) — miteco.gob.es
-- **T:** Agencia Tributaria (hydrocarbon tax) — sede.agenciatributaria.gob.es
-- **S:** CNMC (certification entity) — cnmc.es
+- Scheme: annual renewable/biofuel energy-share targets; certificate system **(SICBIOS)** administered by MITECO's DG for Energy Policy and Mines (DGPEM), under RD 376/2022 + Orden TED/728/2024 (which repealed the earlier CNMC circulars)
+- **M/S:** Ministry for the Ecological Transition (MITECO), DGPEM — miteco.gob.es
+- **T:** Agencia Tributaria (Impuesto sobre Hidrocarburos) — sede.agenciatributaria.gob.es
+- Note (2026-07-04): overall obligation 14 % (2026, RD 5/2026); RED III not yet transposed (reasoned opinions 2025)
 - **L:** Boletín Oficial del Estado — boe.es
 
 ## Sweden (SE)
