@@ -3,7 +3,7 @@
 - **Scope:** Section 3 of country-report template (sustainability/certification/registry/UDB/feedstock/operator calendar) + draft Section-4 checklist items in this scope.
 - **Researched by:** sustainability-researcher
 - **Report date:** 2026-07-04
-- **Corroboration pass:** pending (hand to source-corroborator)
+- **Corroboration pass:** completed 2026-07-04 (source-corroborator)
 
 > Note: gov.pl/web/kowr sub-pages 302-redirect to the portal root when fetched
 > headless; several KOWR facts are sourced from the KOWR portal landing text,
@@ -19,9 +19,17 @@
 |---|---|---|---|---|
 | Core act | **Act of 25 August 2006 on Biocomponents and Liquid Biofuels** (Ustawa o biokomponentach i biopaliwach ciekłych) — sets the biofuel/biocomponent framework, the KOWR registers and the national certification/sustainability system | Dz.U. 2006 nr 169 poz. 1199 (consolidated, as amended) | PRIMARY-ONLY | KOWR portal; member-states registry |
 | Companion act | **Energy Law** (Prawo energetyczne, Act of 10 April 1997) + **RES Act** (Ustawa o OZE 2015) — NCW/quality supervision by President of URE (mandates scope, cross-ref only) | Dz.U. 1997 nr 54 poz. 348 | PRIMARY-ONLY | member-states registry; URE |
-| RED II sustainability transposition | Sustainability & GHG-saving criteria transposed through the Biocomponents Act + implementing regulations of the Minister of Climate; verification via registered certification systems (national KZR INiG + EU voluntary schemes) | Act of 25 Aug 2006 (RED II amdt package) | PRIMARY-ONLY | KOWR portal; KZR INiG |
-| RED III (2023/2413) status | **Partial transposition in progress.** Amendment to the Act on Biocomponents and Liquid Biofuels reported published **12 Mar 2025**; Poland received a **letter of formal notice (Sep 2024)** for the 2023/2413 package but is **NOT named in the June 2026 energy infringement package** (only Cyprus named for RED III), indicating the outstanding transposition gap has been substantially closed | Directive (EU) 2023/2413; PL amending act 2025 | PRIMARY-ONLY (flag) | DG ENER June-2026 infringement package; USDA GAIN; EBB tracker |
+| RED II sustainability transposition | Sustainability & GHG-saving criteria transposed through the Biocomponents Act + implementing regulations of the Minister of Climate; verification via registered certification systems (national KZR INiG + EU voluntary schemes) | Act of 25 Aug 2006 (RED II amdt package, Dz.U. 2025 poz. 303) | PRIMARY-ONLY | KOWR portal; KZR INiG |
+| RED III (2023/2413) status | **NOT transposed — open infringement (CORRECTED).** The adopted Feb-2025 amendment (Dz.U. 2025 poz. 303, publ. 12 Mar 2025) transposes **RED II only**; its recital cites Directive 2018/2001. Poland received a **letter of formal notice for non-transposition of RED III on 24 Jul 2025** (26-MS batch; deadline 21 May 2025). The RED III transposition is still only a **draft bill (UC106, RCL 14 Jan 2026; planned entry 1 Jan 2027)**. Poland was not escalated in the June-2026 package, **but only Cyprus was escalated there**, so non-escalation does NOT mean the gap is closed. | Directive (EU) 2023/2413; Dz.U. 2025 poz. 303 (RED II); draft UC106 | CONFIRMED (not transposed) | DG ENER July-2025 package; gov.pl UC106; Dz.U. 2025 poz. 303 |
 | Verifying / administering authority | **KOWR** (Krajowy Ośrodek Wsparcia Rolnictwa — National Support Centre for Agriculture): keeps all statutory registers (producers, importers, certification-system administrators, certifying bodies, NCW-realising entities, farmers); actual per-consignment verification done by accredited **certifying bodies** under a registered scheme | Act of 25 Aug 2006 | CONFIRMED | KOWR portal; KZR INiG |
+
+> **Corroborator correction:** the original draft stated Poland was "NOT named in
+> the June 2026 energy infringement package (only Cyprus named for RED III),
+> indicating the outstanding transposition gap has been substantially closed."
+> This inference is **wrong**. Poland *was* named for RED III (formal notice,
+> 24 Jul 2025) and its transposition is still a draft (UC106). Not being named in
+> one later package reflects selective escalation (only Cyprus escalated), not
+> case closure. Aligned with the corrected PL-mandates draft.
 
 ### 3.2 GHG-saving thresholds applied nationally
 
@@ -115,8 +123,8 @@ chain (origin → processor → fuel supplier). [PRIMARY-ONLY — KZR INiG]
 
 ## 5. Conflicts and gaps
 
-- **Article-level citations** in the Biocomponents Act (register basis, reporting deadlines, penalties) not machine-parsed from ISAP on 2026-07-04 — corroborator to pin via isap.sejm.gov.pl.
-- **RED III instrument name & completeness:** the 2025 amending act reference (Dz.U. poz.) not captured; status inferred `PRIMARY-ONLY` from absence in June-2026 infringement package + USDA/EBB. [FLAG]
+- **RED III status — CORRECTED (was the priority conflict):** Poland is **not** substantially transposed. It is under an **open RED III formal-notice infringement (24 Jul 2025)** and the transposition is only a draft (UC106, RCL 14 Jan 2026, planned entry 1 Jan 2027). The earlier "gap substantially closed" reading has been struck. Aligned with PL-mandates.
+- **Article-level citations** in the Biocomponents Act (register basis, reporting deadlines, penalties) not machine-parsed from ISAP on 2026-07-04 — remains open; ISAP CAPTCHA-blocked and Dz.U. PDF not renderable locally.
 - **Full KOWR list of registered certification-system administrators** (which EU voluntary schemes) not directly fetched (page 302-redirected). [FLAG]
 - **Annual NCW report deadline** and **penalty figures** not pinned to Act text.
 - **RFNBO GHG threshold (70 %)**, **Annex IX national additions**, **UCO audit extras** not located (gaps).
@@ -135,13 +143,15 @@ chain (origin → processor → fuel supplier). [PRIMARY-ONLY — KZR INiG]
 | 7 | https://kib.pl/unijna-bazy-danych-udb-dla-biopaliw-i-bioplynow/ | 2 | 2026-07-04 | UDB onboarding: 16 Jan 2023 login, 28 Feb 2023 KZR INiG, 3 Apr 2023 mandatory; scope excludes solid biomass/biogas |
 | 8 | https://www.biznes.gov.pl/pl/opisy-procedur/-/proc/825 | 1 | 2026-07-04 | Quarterly producer report to KOWR; 45-day deadline; nil statement |
 | 9 | https://www.kowr.gov.pl/odnawialne-zrodla-energii/biokomponenty-i-biopaliwa/wytworcy/formularze | 1 | 2026-07-04 | KOWR reporting forms |
-| 10 | https://energy.ec.europa.eu/news/june-infringements-package-key-decisions-energy-2026-06-04_en | 1 | 2026-07-04 | Only Cyprus named for RED III in June 2026 — PL not named |
-| 11 | https://ebb-eu.org/news/overview-of-member-states-transposition-of-red-iii/ | 2 | 2026-07-04 | RED III transposition tracker (PL partial) |
-| 12 | https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Biofuel+Mandates+in+the+EU+by+Member+State+-+2025_Berlin_European+Union_E42025-0004 | 2 | 2026-07-04 | PL Biocomponents Act amendment published 12 Mar 2025 |
+| 10 | https://energy.ec.europa.eu/news/june-infringements-package-key-decisions-energy-2026-06-04_en | 1 | 2026-07-04 | June-2026 package escalated ONLY Cyprus for RED III (additional reasoned opinion) — non-escalation of PL ≠ closure |
+| 11 | https://ebb-eu.org/news/overview-of-member-states-transposition-of-red-iii/ | 2 | 2026-07-04 | RED III transposition tracker (PL not among the early transposers) |
+| 12 | https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Biofuel+Mandates+in+the+EU+by+Member+State+-+2025_Berlin_European+Union_E42025-0004 | 2 | 2026-07-04 | PL Biocomponents Act amendment published 12 Mar 2025 (RED II) |
+| 13 | https://energy.ec.europa.eu/news/commission-takes-action-ensure-complete-and-timely-transposition-eu-directives-key-decisions-energy-2025-07-24_en | 1 | 2026-07-04 | (Corroborator) PL received RED III formal notice 24 Jul 2025 (26-MS batch) |
+| 14 | https://www.gov.pl/web/premier/projekt-ustawy-o-zmianie-ustawy-o-biokomponentach-i-biopaliwach-cieklych-oraz-ustawy-o-odnawialnych-zrodlach-energii | 1 | 2026-07-04 | (Corroborator) UC106 RED III draft still pending (planned entry 1 Jan 2027) |
 
 ---
 **4-line summary — Poland**
-- Transposition: RED II via the 2006 Act on Biocomponents and Liquid Biofuels (+ Energy Law); RED III partial (2025 amending act) — no longer named in the June-2026 EU infringement package, so gap substantially closed.
+- Transposition: RED II via the 2006 Act on Biocomponents and Liquid Biofuels (+ Energy Law), as amended by Dz.U. 2025 poz. 303. **RED III NOT transposed — open infringement (formal notice 24 Jul 2025); transposition still a draft (UC106, planned entry 1 Jan 2027).** [CORRECTED]
 - Certification: national **KZR INiG** scheme (EU-recognised) plus accepted EU voluntary schemes (ISCC EU, REDcert-EU, 2BSvs); scheme administrators must be in KOWR's register; proof = scheme certificate + poświadczenie on mass balance.
 - Registry/UDB: KOWR keeps the statutory registers (producers/importers/NCW/scheme admins/certifiers) + Nabisy (EU-BM-22); UDB transaction recording mandatory since 3 Apr 2023 for liquid/gaseous transport biofuels.
-- Flags: article-level Act citations & 2025 RED III act reference unpinned; KOWR administrator list not fetched; annual NCW deadline/penalties unconfirmed; no PL-specific palm/soy extras found.
+- Flags: article-level Act citations & UDB/Nabisy interplay unpinned; KOWR administrator list not fetched; annual NCW deadline/penalties unconfirmed; no PL-specific palm/soy extras found.
