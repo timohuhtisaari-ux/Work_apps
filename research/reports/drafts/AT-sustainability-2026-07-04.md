@@ -3,11 +3,11 @@
 - **Scope:** Section 3 of country-report template (sustainability/certification/registry/UDB/feedstock/operator calendar) + draft Section-4 checklist items in this scope.
 - **Researched by:** sustainability-researcher
 - **Report date:** 2026-07-04
-- **Corroboration pass:** pending (hand to source-corroborator)
+- **Corroboration pass:** DONE (source-corroborator, 2026-07-04) — RIS re-tried, **still HTTP 503** on all endpoints; §-level KVO facts remain PRIMARY-ONLY/flagged. Palm+PFAD exclusion (1 Jul 2021) and RED-III-not-transposed status independently corroborated (UFOP/BMIMI; EUR-Lex NIM shows no AT transport measure).
 
-> Note: RIS (ris.bka.gv.at) was returning 503 on the research date; legal-text
-> facts were sourced from Umweltbundesamt, BMIMI (ministry) and biokraft-austria
-> (FCIO industry body) and are flagged for a RIS cross-check by the corroborator.
+> Note: RIS (ris.bka.gv.at) was returning 503 on the research date **and on the corroborator
+> re-try (2026-07-04)**; legal-text facts were sourced from Umweltbundesamt, BMIMI (ministry)
+> and biokraft-austria (FCIO industry body) and remain flagged for a RIS cross-check.
 
 ## 3. Sustainability & compliance requirements
 
@@ -19,7 +19,7 @@
 | RED II sustainability transposition | KVO 2012 amendment **BGBl. II Nr. 452/2022** (published 13 Dec 2022, in force Jan 2023) transposed RED II (2018/2001) sustainability & GHG-reduction provisions; refocused the obligation on GHG-intensity reduction | BGBl. II Nr. 452/2022 | CONFIRMED | biokraft-austria; BMIMI KVO page; Umweltbundesamt |
 | High-ILUC / DR 2019/807 | KVO amendment of 25 Jan 2021 (BGBl. II Nr. 630/2020, eff. 1 Jan 2021) implemented ILUC Delegated Reg. (EU) 2019/807 early | BGBl. II Nr. 630/2020 | CONFIRMED | UFOP; AEE; ORF; BMIMI |
 | Technical amendment 2024 | KVO amendment approved for publication 23 Jan 2024; removed the national accreditation mandate in §14(7) to align with Implementing Reg. (EU) 2022/996 (whose equivalent provision was suspended until 1 Jan 2025) | 2024 Novelle (BGBl. number to confirm) | PRIMARY-ONLY | BMIMI KVO page |
-| RED III (2023/2413) transport/sustainability | **NOT yet transposed** via KVO as of 2026-07-04. Deadline was 21 May 2025 → Austria in delay; direct application of RED III must be assumed. The EABG (Erneuerbaren-Ausbau-Beschleunigungsgesetz) draft covers RED III *permitting* (acceleration zones), not the transport GHG obligation | Directive (EU) 2023/2413 | PRIMARY-ONLY (flag) | Jarolim legal update; igwindkraft Umsetzungsradar; EUR-Lex |
+| RED III (2023/2413) transport/sustainability | **NOT yet transposed** via KVO as of 2026-07-04. Deadline was 21 May 2025 → Austria in delay; direct application of RED III must be assumed. EUR-Lex NIM for 2023/2413 shows **no Austrian transport measure** (Belgium's are listed). The EABG (Erneuerbaren-Ausbau-Beschleunigungsgesetz) draft covers RED III *permitting* (acceleration zones), not the transport GHG obligation | Directive (EU) 2023/2413 | PRIMARY-ONLY (flag) | Jarolim legal update; igwindkraft Umsetzungsradar; EUR-Lex NIM |
 | Verifying authority | **Umweltbundesamt GmbH** verifies/monitors KVO compliance and operates the elNa register; the climate/energy ministry (BMK, now split — mobility file at BMIMI) owns the policy | KVO 2012 | CONFIRMED | Umweltbundesamt; member-states registry |
 
 Registry-file note: the sustainability/mobility competence sits with **BMIMI**
@@ -40,8 +40,9 @@ Compliance with sustainability *and* GHG-saving criteria must be documented by
 [CONFIRMED — Umweltbundesamt/BMIMI]
 
 > Separate from the above, the *supplier obligation* itself is a GHG-intensity
-> reduction quota rising to **13 % by 2030** (BGBl. II Nr. 452/2022) — that is the
-> mandates researcher's scope; cross-referenced here only.
+> reduction quota rising to **13 % by 2030** (BGBl. II Nr. 452/2022; 13 % by 2030
+> corroborated by biokraft-austria) — that is the mandates researcher's scope;
+> cross-referenced here only.
 
 ### 3.3 Accepted certification schemes
 
@@ -98,7 +99,7 @@ Compliance with sustainability *and* GHG-saving criteria must be documented by
 | On-site inspections | Ad hoc by UBA experts | CONFIRMED | Umweltbundesamt |
 | Annual substitution/GHG-obligation report to the authority | Annual (exact statutory deadline **to confirm from KVO text / RIS**) | PRIMARY-ONLY (flag) | Umweltbundesamt |
 | Third-party certification audit | Per chosen EU voluntary scheme cycle (typically annual) | PRIMARY-ONLY | scheme rules |
-| Penalties for non-compliant proof | Non-sustainable / high-ILUC volumes cannot be counted toward the obligation; KVO administrative penalties apply (exact figures **to confirm from KVO/RIS**) | PRIMARY-ONLY (flag) | Umweltbundesamt |
+| Penalties for non-compliant proof | Non-sustainable / high-ILUC volumes cannot be counted toward the obligation; KVO administrative penalties apply (exact figures **to confirm from KVO/RIS**; see mandates section for the 600 €/t conflation caveat) | PRIMARY-ONLY (flag) | Umweltbundesamt |
 
 ## 4. Draft compliance-checklist items (this scope)
 
@@ -111,8 +112,11 @@ Compliance with sustainability *and* GHG-saving criteria must be documented by
 
 ## 5. Conflicts and gaps
 
-- **RIS unavailable (503)** on 2026-07-04 — all BGBl/§-level facts to be cross-checked against ris.bka.gv.at (Gesetzesnummer 20008075) by corroborator.
-- **RED III transport transposition:** not yet done via KVO; confirm whether any KVO Novelle 2025/2026 or EABG chapter transposes the transport GHG obligation. [FLAG]
+- **RIS unavailable (503) on 2026-07-04 AND on corroborator re-try** — all BGBl/§-level facts
+  remain to be cross-checked against ris.bka.gv.at (Gesetzesnummer 20008075).
+- **RED III transport transposition:** not yet done via KVO; EUR-Lex NIM confirms no AT
+  transport measure notified. Confirm whether any KVO Novelle 2025/2026 or EABG chapter
+  transposes the transport GHG obligation. [FLAG]
 - **2024 Novelle BGBl number** not captured — confirm.
 - **UDB mandatory-use date for AT operators** and elNa↔UDB hand-off not primary-sourced. [FLAG]
 - **GHG-saving threshold figures** (65 %/70 %) from secondary/RED baseline — confirm in KVO annex.
@@ -129,17 +133,18 @@ Compliance with sustainability *and* GHG-saving criteria must be documented by
 | 3 | https://www.umweltbundesamt.at/elna/elna-nhnachweis | 1 | 2026-07-04 | Nachhaltigkeitsnachweis workflow |
 | 4 | https://www.umweltbundesamt.at/elna/elna-recht | 1 | 2026-07-04 | Legal framework navigation (KVO) |
 | 5 | https://www.wko.at/oe/handel/energiehandel/elektronischer-nachhaltigkeitsnachweis | 2 | 2026-07-04 | §14 KVO registrant categories; process (updated 01.12.2023) |
-| 6 | https://www.bmimi.gv.at/themen/mobilitaet/co2_monitoring/kvo.html | 1 | 2026-07-04 | KVO legal basis, BGBl 452/2022, 630/2020, 2024 Novelle, RED II |
+| 6 | https://www.bmimi.gv.at/themen/mobilitaet/co2_monitoring/kvo.html | 1 | 2026-07-04 | KVO legal basis, BGBl 452/2022, 630/2020, 2024 Novelle, RED II (obligation figures NOT on page) |
 | 7 | https://www.bmimi.gv.at/dam/.../20250404_FAQs-Kraftstoffverordnung-2012_BMIMI.pdf | 1 | 2026-07-04 | Official FAQ (Apr 2025) — PDF image-only, not text-extractable (flag) |
-| 8 | https://biokraft-austria.at/rechtliche-rahmenbedingungen/ | 2 | 2026-07-04 | Amendment history, GHG-saving thresholds, 13% by 2030 |
+| 8 | https://biokraft-austria.at/rechtliche-rahmenbedingungen/ | 2 | 2026-07-04 | Amendment history, GHG-saving thresholds, 13% by 2030 (2022 amendment) |
 | 9 | https://www.jarolim.at/en/legal-update/umsetzung-der-red-iii-und-der-entwurf-der-eabg.html | 2 | 2026-07-04 | RED III delay; EABG covers permitting not transport |
 | 10 | https://www.ufop.de/english/news/austria-ends-crediting-biofuels-palm-oil-01-july-2021/ | 2 | 2026-07-04 | Palm high-ILUC crediting end 1 July 2021 |
 | 11 | https://infothek.bmimi.gv.at/aus-fuer-umweltschaedliches-palmoel-in-biokraftstoffen/ | 1 | 2026-07-04 | Palm/PFAD exclusion, KVO amdt 25 Jan 2021 |
 | 12 | https://energy.ec.europa.eu/news/eu-database-biofuels-becomes-operational-2024-01-15_en | 1 | 2026-07-04 | UDB operational 15 Jan 2024, Art 31a |
+| 13 | https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L2413 | 1 (EUR-Lex NIM) | 2026-07-04 | No Austrian RED III transport measure notified (corroborates non-transposition) |
 
 ---
 **4-line summary — Austria**
-- Transposition: RED II via KVO 2012 amdt BGBl II 452/2022 (in force Jan 2023); RED III transport/sustainability NOT yet transposed (deadline 21 May 2025 missed — direct-effect assumed).
+- Transposition: RED II via KVO 2012 amdt BGBl II 452/2022 (in force Jan 2023); RED III transport/sustainability NOT yet transposed (deadline 21 May 2025 missed; no AT transport measure in EUR-Lex NIM — direct-effect assumed).
 - Certification: free choice of EU-recognised voluntary schemes (ISCC EU, REDcert-EU, 2BSvs, SURE…) plus national AACS; elNa participation mandatory for all AT installations.
 - Registry/UDB: elNa (Umweltbundesamt GmbH), Nachhaltigkeitsnachweis per consignment on mass balance; UDB operational since 15 Jan 2024 (AT mandatory-use date to confirm).
-- Flags: RIS 503 (BGBl facts need cross-check); palm+PFAD high-ILUC excluded since 1 July 2021 (early mover); annual-report deadline, penalties, 2024 Novelle BGBl no. and UDB hand-off unpinned.
+- Flags: RIS 503 on research date AND corroborator re-try (BGBl facts need cross-check); palm+PFAD high-ILUC excluded since 1 July 2021 (early mover, CONFIRMED); annual-report deadline, penalties, 2024 Novelle BGBl no. and UDB hand-off unpinned.
