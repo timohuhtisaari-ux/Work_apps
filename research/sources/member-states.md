@@ -79,7 +79,8 @@ Legend: **M** = mandates authority · **T** = tax/excise authority ·
 
 ## Germany (DE)
 - Scheme: **GHG-reduction quota (THG-Quote)**, §§ 37a–37h BImSchG
-- **M:** Biokraftstoffquotenstelle at Hauptzollamt Frankfurt (Oder) — zoll.de; Federal Environment Ministry — bmuv.de (verify current ministry name); Umweltbundesamt — umweltbundesamt.de
+- **M:** Biokraftstoffquotenstelle at Hauptzollamt Frankfurt (Oder) — zoll.de; Federal Ministry for the Environment, Climate Action, Nature Conservation and Nuclear Safety (BMUKN, formerly BMUV) — bmukn.de; Umweltbundesamt — umweltbundesamt.de
+- Note (2026-07-04): RED III transposed by the Zweites THG-Quote-Gesetz (BGBl. 2026 I Nr. 163, in force 6/7 Jun 2026); 2026 quota 12 %, trajectory to 65 % by 2040; new RFNBO sub-quota and advanced-biofuels minimum
 - **T:** Customs (Energiesteuer) — zoll.de; Federal Ministry of Finance — bundesfinanzministerium.de
 - **S:** BLE (Federal Office for Agriculture and Food), **Nabisy** registry — ble.de / nabisy.ble.de
 - **L:** gesetze-im-internet.de
@@ -133,9 +134,9 @@ Legend: **M** = mandates authority · **T** = tax/excise authority ·
 - **L:** Laws of Malta — legislation.mt
 
 ## Netherlands (NL)
-- Scheme: **Energie voor Vervoer** — annual obligation (jaarverplichting) with tradable **HBE** units, under Besluit/Regeling energie vervoer
-- **M/S:** Dutch Emissions Authority (NEa) — emissieautoriteit.nl; Ministry of Infrastructure and Water Management — rijksoverheid.nl
-- **T:** Belastingdienst (fuel excise, accijns) — belastingdienst.nl
+- Scheme: **brandstoftransitieverplichting** — GHG-based per-sector obligation (land/binnenvaart/zeevaart) with tradable **ERE** units (Eenheid Reductie Emissies), under the recast Besluit/Regeling energie vervoer. Replaced the HBE *jaarverplichting* as of the 2026 compliance year (Stb. 2026, 83/117/137, in force 20 Jun 2026, retroactive to 1 Jan 2026)
+- **M/S:** Dutch Emissions Authority (NEa), Register Energie voor Vervoer (REV) — emissieautoriteit.nl; Ministry of Infrastructure and Water Management — rijksoverheid.nl
+- **T:** Belastingdienst / Douane (fuel excise, accijns); live rate list at douane.nl — belastingdienst.nl
 - **L:** wetten.overheid.nl
 
 ## Poland (PL)
