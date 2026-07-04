@@ -16,8 +16,8 @@ Legend: **M** = mandates authority · **T** = tax/excise authority ·
 ---
 
 ## Austria (AT)
-- Scheme: fuel substitution + GHG-reduction obligation under the **Kraftstoffverordnung**
-- **M/S:** Federal Ministry (climate/energy portfolio) — bmk.gv.at; **elNa** registry run by Umweltbundesamt — umweltbundesamt.at
+- Scheme: dual obligation under the **Kraftstoffverordnung 2012** — energy substitution (petrol/diesel sub-quotas) + GHG-intensity reduction
+- **M/S:** Federal Ministry for Innovation, Mobility and Infrastructure (**BMIMI**) — bmimi.gv.at; climate/energy portfolio — bmk.gv.at; **elNa** registry run by Umweltbundesamt — umweltbundesamt.at
 - **T:** Federal Ministry of Finance (Mineralölsteuer) — bmf.gv.at
 - **L:** Rechtsinformationssystem (RIS) — ris.bka.gv.at
 
