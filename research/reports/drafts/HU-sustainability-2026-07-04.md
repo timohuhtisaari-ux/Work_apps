@@ -3,7 +3,7 @@
 - **Scope:** Section 3 of country-report template + draft Section-4 checklist items in this scope.
 - **Researched by:** sustainability-researcher
 - **Report date:** 2026-07-04
-- **Corroboration pass:** PENDING
+- **Corroboration pass:** DONE (source-corroborator, 2026-07-04)
 
 > Method note: `njt.hu` was reachable this pass; the operative sustainability
 > decree was read via the consolidated law database `net.jogtar.hu`
@@ -12,6 +12,9 @@
 > Article-level figures parsed by the fetch model are labelled PRIMARY-ONLY where
 > a second Hungarian-source confirmation was not obtained; re-verify §-level
 > quotes directly in Magyar Közlöny / njt.hu on the corroboration pass.
+> **Corroborator note:** njt.hu returned HTTP 503 on retry (docid 2021-821-20-22);
+> §9 figures were instead re-confirmed on net.jogtar and against Magyar Közlöny
+> No. 162/2025.
 
 ## 3. Sustainability & compliance requirements
 
@@ -22,7 +25,7 @@
 | RED II/III sustainability + GHG criteria | **Government Decree 821/2021 (XII. 28.) Korm. rendelet** on the sustainability requirements and verification of biofuels, liquid bio-energy carriers and biomass fuels ("a bioüzemanyagok, folyékony bio-energiahordozók és biomasszából előállított tüzelőanyagok fenntarthatósági követelményeiről és igazolásáról") — the operative sustainability instrument | Decree 821/2021 | CONFIRMED | S1, S2, S3 |
 | Framework statute | **Act CXVII of 2010** on promoting renewable energy in transport and reducing transport GHG emissions — delegates sustainability rules to the decree; the in-force consolidated text references Dir. (EU) 2023/2413 | Act CXVII/2010 | CONFIRMED (via mandates draft S9) | S1 (mandates), S3 |
 | Predecessor | Government Decree 343/2010 (RED I sustainability regime), superseded by 821/2021 | Decree 343/2010 | PRIMARY-ONLY | S4 (secondary) |
-| RED III (2023/2413) status | Sustainability sub-elements are reflected in the amended Decree 821/2021 (high-ILUC taper, advanced-biofuel schedule) and the 2025 amendment to Act CXVII/2010, **but the EUR-Lex NIM collection lists NO notified Hungarian measures for RED III**; Commission opened infringement (letters of formal notice) for non-/incomplete notification. Net: transposed in domestic law, **in infringement for non-notification** | Dir. (EU) 2023/2413 art. 36; NIM | PRIMARY-ONLY / infringement | S5 (NIM), S1 (mandates cross-ref) |
+| RED III (2023/2413) status | Sustainability sub-elements are reflected in the amended Decree 821/2021 (high-ILUC taper, advanced-biofuel schedule) and the 2025 amendment to Act CXVII/2010, **but the EUR-Lex NIM collection showed no Hungarian measures in the visible extract**; the Commission opened infringement (letters of formal notice, 2024) and has since **escalated Hungary to a REASONED OPINION in the December 2025 package** (with Malta and Poland) for insufficiently clear/precise transposition information. Net: transposed in domestic law, **in infringement — escalated to reasoned opinion (Dec 2025)** | Dir. (EU) 2023/2413 art. 36; NIM | PRIMARY-ONLY / infringement | S5 (NIM), S11 (Dec 2025 package), S1 (mandates cross-ref) |
 
 ### 3.2 GHG-saving thresholds applied nationally
 
@@ -69,7 +72,8 @@ Only biofuels meeting these thresholds and the land-use criteria may count towar
 | Rule | Detail | Confidence | Sources |
 |---|---|---|---|
 | High-ILUC (palm) taper | Decree 821/2021 **§9(6a–6c)** caps high-ILUC-risk feedstock as a share of total transport fuel: **2023 0.08 % → 2024-25 0.06 % → 2026-27 0.04 % → 2028-29 0.02 % → 2030 0 %** (consistent with DR (EU) 2019/807; low-ILUC-certified exempt) | PRIMARY-ONLY | S3 |
-| Advanced (Annex IX-A) | §9(4): min. **1 % (2026) rising to 5.5 % (2030)** from waste/residue/lignocellulosic feedstocks (mandate side — mandates scope) | PRIMARY-ONLY (cross-ref) | S3, S1 |
+| Crop-based cap | §9(6): food/feed crop biofuels may not exceed their **2019 consumption level** (corroborator-read primary; RED 7 % ceiling as transposed) | PRIMARY-ONLY | S3 |
+| Advanced (Annex IX-A) | §9(4): min. **1 % (2026) rising to 5.5 % (2030)** from waste/residue/lignocellulosic feedstocks (mandate side — mandates scope; 5.5 %/2030 corroborator-confirmed in primary) | CONFIRMED (cross-ref) | S3, S1 |
 | National palm/soy ban beyond EU | **None identified** beyond the EU high-ILUC taper | UNCORROBORATED (gap) | — |
 | Annex IX national additions | None identified; national lists follow EU Annex IX | UNCORROBORATED (gap) | — |
 | Waste/residue (UCO) verification | Verified through the BÜHG/BIONYOM traceability chain and/or a voluntary scheme audit; specific UCO-audit rule not separately extracted | PRIMARY-ONLY | S2, S3 |
@@ -97,11 +101,11 @@ Only biofuels meeting these thresholds and the land-use criteria may count towar
 
 ## 5. Conflicts and gaps
 
-- **Decree 821/2021 §-level figures** (GHG ladder §3, high-ILUC taper §9(6a-6c), 20 March deadline §17, 5-yr retention §11) parsed from the consolidated fetch — PRIMARY-ONLY; re-verify against njt.hu / Magyar Közlöny on corroboration. [FLAG]
+- **Decree 821/2021 §-level figures** (GHG ladder §3, high-ILUC taper §9(6a-6c), 20 March deadline §17, 5-yr retention §11) parsed from the consolidated fetch — PRIMARY-ONLY; re-verify against njt.hu / Magyar Közlöny on corroboration. njt.hu was 503 on the corroboration retry. [FLAG]
 - **UDB ↔ BÜHG/BIONYOM linkage** and any HU-specific mandatory-use date not primary-sourced. [FLAG]
 - **List of voluntary schemes actually invoked in HU** and any national approval of certifying bodies not enumerated; NÉBIH confirms voluntary schemes are permitted generally. [FLAG]
 - **No national palm/soy ban** beyond the EU high-ILUC taper identified; **no Annex IX national additions** located. [GAP]
-- **RED III notification:** domestic measures exist but no NIM notified → infringement; confirm whether HU has since notified. [FLAG]
+- **RED III notification:** domestic measures exist but escalated to a **reasoned opinion (Dec 2025)** — confirm whether HU has since supplied the clarifying transposition information. [FLAG]
 
 ## 6. Source log
 
@@ -109,20 +113,19 @@ Only biofuels meeting these thresholds and the land-use criteria may count towar
 |---|---|---|---|---|
 | S1 | (repo) research/reports/drafts/HU-mandates-2026-07-04.md | — | 2026-07-04 | Act CXVII/2010, NAV enforcement §7, advanced 1→5.5 %, RED III infringement |
 | S2 | https://portal.nebih.gov.hu/egyeb/gyakran-ismetelt-kerdesek/buhg | 1 | 2026-07-04 | BÜHG/BIONYOM definitions, who registers, cert types, NÉBIH as authority, registration validity |
-| S3 | https://net.jogtar.hu/jogszabaly?docid=a2100821.kor (Decree 821/2021) | 1 (consolidated law db) | 2026-07-04 | GHG thresholds §3, high-ILUC taper §9, proof docs §5-8/§16/§18, 20 Mar deadline §17, 5-yr retention §11 |
+| S3 | https://net.jogtar.hu/jogszabaly?docid=a2100821.kor (Decree 821/2021) | 1 (consolidated law db) | 2026-07-04 | GHG thresholds §3, high-ILUC taper §9, crop cap = 2019 level §9(6), advanced 5.5 % 2030 §9(4), proof docs §5-8/§16/§18, 20 Mar deadline §17, 5-yr retention §11 |
 | S4 | Web search (Decree 343/2010 predecessor; USDA/EEA) | 2 | 2026-07-04 | Predecessor regime, national framework context |
-| S5 | https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L2413 | 1 | 2026-07-04 | No HU RED III measures notified |
+| S5 | https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L2413 | 1 | 2026-07-04 | No HU RED III measures in visible NIM extract |
 | S6 | https://portal.nebih.gov.hu/-/gazdalkodo-szervezet-es-egyeni-ceg-biouzemanyag-uveghazhatasu-gazkibocsatasi-nyilvantartasba-buhg-nyilvantartas-es-a-biouzemanyagok-es-folyekony-bio-e | 1 | 2026-07-04 | Registration procedure; voluntary schemes other than BÜHG permitted |
 | S7 | https://portal.nebih.gov.hu/-/a-buhg-nyilvantartasban-szereplo-cegek-adatai-biofuel-greenhouse-gas-emissions-inventory | 1 | 2026-07-04 | BÜHG = biofuel GHG emissions inventory |
 | S8 | https://energy.ec.europa.eu/topics/renewable-energy/bioenergy/voluntary-schemes_en | 1 | 2026-07-04 | EU-recognised voluntary schemes list |
 | S9 | https://energy.ec.europa.eu/topics/renewable-energy/bioenergy/biofuels/union-database-liquid-and-gaseous-renewable-and-recycled-carbon-fuels_en | 1 | 2026-07-04 | UDB operational status, legal basis |
 | S10 | https://www.iscc-system.org/about/news/union-database-udb/ ; https://sure-system.org/en-us/udb/ | 2 | 2026-07-04 | UDB 15 Jan 2024 access, 1 Oct 2024 collectors, mandatory-use pending |
+| S11 | https://energy.ec.europa.eu/news/december-infringements-package-key-decisions-energy-2025-12-11_en | 1 | 2026-07-04 | RED III **reasoned opinion** to HU (with Malta, Poland), Dec 2025 |
 
 ---
 **4-line summary — Hungary**
-- Transposition: RED II/III sustainability via **Government Decree 821/2021 (XII.28.)** under Act CXVII/2010; RED III sub-elements reflected domestically but **no NIM notified → in infringement**.
+- Transposition: RED II/III sustainability via **Government Decree 821/2021 (XII.28.)** under Act CXVII/2010; RED III sub-elements reflected domestically but escalated to a **reasoned opinion (Dec 2025)**.
 - Certification: dual route — national **BÜHG/BIONYOM** system run by **NÉBIH** (agricultural authority) **plus** EU-recognised voluntary schemes (ISCC EU, REDcert, 2BSvs…); proof = biomassza/fenntarthatósági igazolás + fenntarthatósági bizonyítvány, issuable only by BÜHG-registered operators.
 - Registry/UDB: **BÜHG** (GHG inventory) + **BIONYOM** (traceability) at NÉBIH, annual registration; **annual data return by 20 March**, 5-yr retention; UDB operational since 15 Jan 2024 (mandatory-use date pending, HU-UDB linkage a flag).
-- Flags: §-level figures PRIMARY-ONLY (re-verify on njt.hu); GHG ladder 50/60/65 %; high-ILUC (palm) taper to 0 % by 2030; no national palm/soy ban or Annex IX additions beyond EU.
-</content>
-</invoke>
+- Flags: §-level figures PRIMARY-ONLY (re-verify on njt.hu — 503 on retry); GHG ladder 50/60/65 %; high-ILUC (palm) taper to 0 % by 2030; crop cap = 2019 level; no national palm/soy ban or Annex IX additions beyond EU.
