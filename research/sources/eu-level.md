@@ -25,7 +25,7 @@ reference them.
 | European Commission, DG ENER — renewables/biofuels | https://energy.ec.europa.eu | Recognised voluntary certification schemes list, RED transposition status, Union Database (UDB) news |
 | Union Database for Biofuels (UDB) | via DG ENER | Chain-of-custody traceability obligations on operators |
 | European Commission, DG TAXUD — excise | https://taxation-customs.ec.europa.eu | "Taxes in Europe" database (TEDB) — official national excise rates twice a year in the excise duty tables |
-| European Commission, DG CLIMA | https://climate.ec.europa.eu | ETS2 (road transport fuels from 2027), FuelEU Maritime |
+| European Commission, DG CLIMA | https://climate.ec.europa.eu | ETS2 for road-transport/buildings fuels — established by Directive (EU) 2023/959 (Ch. IVa of Dir 2003/87/EC); obligation start postponed to 1 Jan 2028 (first surrender 2029, auctioning from 2027); FuelEU Maritime |
 | EUR-Lex national transposition (NIM) pages | https://eur-lex.europa.eu | Per-directive list of notified national implementing measures — the fastest map from a directive to each member state's transposing acts |
 | European Environment Agency | https://www.eea.europa.eu | RES-T shares monitoring (Tier 2) |
 

@@ -26,6 +26,25 @@ The skill acts as team lead: it dispatches the researcher agents in parallel,
 runs a mandatory independent corroboration pass, and assembles per-country
 compliance reports into `research/reports/`.
 
+### Current output (as of 2026-07-04)
+
+All **27 EU member states** have a completed, corroborated compliance report in
+`research/reports/<ISO2>-country-report-2026-07-04.md`, plus a cross-country
+comparison at `research/reports/eu-comparison-2026-07-04.md`. Each country report
+covers the biofuel mandate (2026 level + legislated trajectory to 2030),
+fuel taxation, and RED II/III sustainability/certification obligations, with a
+supplier compliance checklist and a conflicts/gaps section. Every fact carries a
+confidence label (`CONFIRMED` / `PRIMARY-ONLY` / `UNCORROBORATED` / `CONFLICT` /
+`PROPOSED`) and dated sources; unresolved gaps are listed honestly rather than
+filled from memory.
+
+Selected headline findings: obligation designs split across GHG-reduction (e.g.
+DE 12 %, SE 10 %, NL sector-based), energy-share (e.g. IE 32 %, FI 19.5 %),
+volume-blending, and tax-incentive (FR TIRUERT → IRICC 2027) systems; RED III
+transposition is uneven, with PT/EL/MT referred to the CJEU and CY carrying the
+most-advanced RED III infringement; and EU ETS2 for road-transport fuels applies
+from 1 Jan 2028 (Directive (EU) 2023/959) across all markets.
+
 ### Layout
 
 | Path | Purpose |
