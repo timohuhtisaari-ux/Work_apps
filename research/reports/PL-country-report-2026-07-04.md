@@ -48,7 +48,7 @@ Scope note: The NCW is enforced administratively by URE (reporting/penalties) wi
 
 - **RED III transposition status: NOT transposed (open infringement).** The adopted Act of 21 Feb 2025 (Dz.U. 2025 poz. 303, published 12 Mar 2025) transposes **RED II (2018/2001)** only; its own recital cites Directive 2018/2001. The EUR-Lex NIM page for RED III (2023/2413) lists no notified Polish RED III measure. Poland received a **letter of formal notice for non-transposition of RED III on 24 Jul 2025** (part of a 26-member-state batch; deadline was 21 May 2025). Poland was **not escalated in the June-2026 infringement package** — but only Cyprus was escalated there (additional reasoned opinion), so non-escalation does **not** indicate closure; the formal-notice case remains open. `CONFIRMED` (RED III not yet transposed; open infringement). (S15, S4, S5, S17, S18) — *Corroborator note: this aligns the PL-sustainability draft, which had incorrectly inferred from the June-2026 package that the gap was "substantially closed."*
 - **PROPOSED:** the government RED III transposition bill **UC106** ("projekt ustawy o zmianie ustawy o biokomponentach i biopaliwach ciekłych oraz ustawy o OZE"), published at RCL **14 Jan 2026**, would raise the RES-in-transport target to **29% by 2030**, restructure sub-targets, and raise the crop cap from 6.1% to 6.2%. Planned Council-of-Ministers adoption Q2 2026; planned entry into force **1 Jan 2027**. Not adopted. `PROPOSED`. (S16, S18)
-- **EU cross-cutting:** ETS2 compliance obligation for road-transport/buildings fuels starts **1 Jan 2028** (Reg. (EU) 2026/667, OJ 18 Mar 2026, postponing ETS2 by one year), with auctioning from 2027 — applies to Polish fuel suppliers alongside the NCW. `CONFIRMED`. (S20)
+- **EU cross-cutting:** ETS2 — established by Directive (EU) 2023/959 (Chapter IVa of Dir. 2003/87/EC) — has its compliance obligation for road-transport/buildings fuels starting **1 Jan 2028**; the one-year postponement was adopted in the early-2026 climate package alongside Reg. (EU) 2026/667 (OJ 18 Mar 2026; the 2040 climate-target amendment), with auctioning from 2027 — applies to Polish fuel suppliers alongside the NCW. `CONFIRMED`. (S20)
 
 ## 2. Fuel taxation
 
@@ -69,7 +69,7 @@ Scope note: Poland delivers biofuel support through the National Indicative Targ
 | Announced change — end of "CPN" fuel package | Reduced 8% VAT + max retail prices ended 30 Jun/1 Jul 2026; reduced (EU-minimum) excise ended 15–16 Jun 2026; standard excise restored | Package regulations expired | 16 Jun 2026 (excise); 1 Jul 2026 (VAT) | CONFIRMED (ADOPTED/expired) | T-S9, T-S10, T-S22, T-S23 (T2) |
 | Announced change — new temporary fuel-tax cut (VAT + excise + retail-tax exemption) 3 Jul–30 Sep 2026 | `PROPOSED` — bill (projekt ustawy) before the Sejm; not adopted | Draft bill | (proposed) 3 Jul–30 Sep 2026 | PROPOSED | T-S12 (T2) |
 | Announced change — windfall tax on fuel companies (~60% of extraordinary profits) | `PROPOSED` — not an excise measure; noted for context | Draft | (proposed) | PROPOSED | T-S13 (T2) |
-| ETS2 (road transport & buildings fuels) | Separate EU carbon price via allowances; **compliance obligation from 1 Jan 2028**, auctioning from 2027 (not a national excise) | Reg. (EU) 2026/667 (OJ 18 Mar 2026, postpones ETS2 by one year); ETS Directive 2003/87/EC as amended (Chapter IVa) | 1 Jan 2028 | CONFIRMED (adopted at EU level) | T-S24 (T1) |
+| ETS2 (road transport & buildings fuels) | Separate EU carbon price via allowances; **compliance obligation from 1 Jan 2028**, auctioning from 2027 (not a national excise) | ETS Directive 2003/87/EC, Chapter IVa (inserted by Directive (EU) 2023/959); one-year postponement adopted in the early-2026 package alongside Reg. (EU) 2026/667 (OJ 18 Mar 2026; the 2040 climate-target amendment) | 1 Jan 2028 | CONFIRMED (adopted at EU level) | T-S24 (T1) |
 
 ### Interaction with the mandate
 Poland's biofuel policy is **quota-based (NCW)**, not tax-incentive-based. There is no reduced excise or exemption for high blends (E85, B100, HVO100) — biocomponents used as standalone fuels are taxed at the diesel rate (1 160 PLN/1000 L). Consequently there is no Swedish/Finnish-style "relief limited to volumes above the obligation" condition, because there is no excise relief to condition. Support flows entirely through the NCW obligation and certificate value.
@@ -157,7 +157,7 @@ Compliance is documented on a **mass-balance** basis along the whole supply chai
 7. **File the quarterly NCW report to the President of URE** using the new template mandatory from 31 Jan 2026 (Dz.U. 2025 poz. 1618), and file the **quarterly producer report to KOWR within 45 days** of each calendar-quarter end (or a nil statement). → **URE** / **KOWR**.
 8. **Settle any shortfall correctly** — if at least 85% of the base NCW was achieved, pay the *opłata zastępcza* to the low-emission transport fund by **31 January**; otherwise expect an administrative penalty (*kara pieniężna*) from URE. → **URE** / low-emission transport fund.
 9. **Undergo the periodic third-party certification audit** (typically annual) under your chosen scheme, and retain documentation. → certifying body.
-10. **Prepare for ETS2**: road-transport fuel suppliers face an EU allowance-surrender obligation from **1 Jan 2028** (auctioning from 2027) under Reg. (EU) 2026/667. → national ETS2 authority.
+10. **Prepare for ETS2**: road-transport fuel suppliers face an EU allowance-surrender obligation from **1 Jan 2028** (auctioning from 2027) under ETS2 (Directive (EU) 2023/959, Chapter IVa of Dir. 2003/87/EC; the one-year postponement was adopted alongside Reg. (EU) 2026/667, the 2040 climate-target amendment). → national ETS2 authority.
 
 ## 5. Conflicts and gaps
 
@@ -204,7 +204,7 @@ Merged and deduplicated across the three section logs. IDs are namespaced by sec
 | S17 | https://energy.ec.europa.eu/news/commission-takes-action-ensure-complete-and-timely-transposition-eu-directives-key-decisions-energy-2025-07-24_en | 1 | 2026-07-04 | PL among 26 MS given RED III formal notice, 24 Jul 2025 *(= SU-13)* |
 | S18 | https://www.gov.pl/web/premier/projekt-ustawy-o-zmianie-ustawy-o-biokomponentach-i-biopaliwach-cieklych-oraz-ustawy-o-odnawialnych-zrodlach-energii | 1 | 2026-07-04 | UC106 RED III draft: 29% by 2030, entry 1 Jan 2027, crop cap 6.1→6.2% *(= SU-14)* |
 | S19 | https://enerad.pl/nowy-wzor-sprawozdania-kwartalnego-dla-realizujacych-narodowy-cel-wskaznikowy-od-2026-roku/ | 2 | 2026-07-04 | NCW 2026 = 10% (independent of S7) |
-| S20 | https://eur-lex.europa.eu/eli/reg/2026/667/oj/eng | 1 | 2026-07-04 | Reg (EU) 2026/667 postpones ETS2 to 1 Jan 2028, auctioning 2027 *(= T-S24)* |
+| S20 | https://eur-lex.europa.eu/eli/reg/2026/667/oj/eng | 1 | 2026-07-04 | Reg (EU) 2026/667 = 2040 climate-target amendment; one-year ETS2 postponement (obligation start 1 Jan 2028, auctioning 2027) adopted alongside it *(= T-S24)* |
 | S22 | https://www.teraz-srodowisko.pl/aktualnosci/dyrektywa-RED-II-ustawa-transport-nowelizacja-Stepien-11486.html | 2 | 2026-07-04 | advanced biofuels ≥3.5% by 2030 |
 
 ### Fuel taxation (Section 2) — access date 2026-07-04
@@ -222,7 +222,7 @@ Merged and deduplicated across the three section logs. IDs are namespaced by sec
 | T-S13 | https://www.infor.pl/twoje-pieniadze/koszty-utrzymania/7607120 | 2 | PROPOSED windfall tax |
 | T-S22 | https://www.infor.pl/twoje-pieniadze/koszty-utrzymania/7593981 | 2 | Independent confirmation excise up 16 Jun 2026 |
 | T-S23 | https://biznes.interia.pl/gospodarka/news-jest-decyzja-w-sprawie-akcyzy-na-benzyne-i-olej-napedowy-now,nId,23327385 | 2 | Independent confirmation of restoration |
-| T-S24 | https://eur-lex.europa.eu/eli/reg/2026/667/oj/eng | 1 | Reg (EU) 2026/667: ETS2 from 1 Jan 2028; auctioning 2027 *(= S20)* |
+| T-S24 | https://eur-lex.europa.eu/eli/reg/2026/667/oj/eng | 1 | Reg (EU) 2026/667 = 2040 climate-target amendment; one-year ETS2 postponement (obligation start 1 Jan 2028; auctioning 2027) adopted alongside it *(= S20)* |
 
 ### Sustainability (Section 3)
 

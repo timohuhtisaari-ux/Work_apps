@@ -44,7 +44,7 @@ Scope note: The binding transport-fuel obligation is a **GHG-intensity reduction
 | 2030 | **11%** | **≥ 5.5%** | UNCORROBORATED (both corroborated by 3+ independent Tier 2) | S3, S5, S6, S10, S11 |
 
 - **RED III transposition status: TRANSPOSED.** RED III (2023/2413) is implemented by **Act No. 42/2025 Sb.** (amends Air Protection Act 201/2012; published 20 Feb 2025, generally in force 1 Mar 2025, biofuel/GHG provisions deferred to **1 Jan 2026**, some to 1 Jan 2028) together with the **2026 amendment to Gov. Regulation No. 189/2018 Sb.** (effective 1 Jan 2026). The EUR-Lex NIM page for RED III lists a large set of notified Czech measures (≈78). Note: Czechia was nonetheless among the 26 MS given a RED III non-communication formal notice on 24 Jul 2025, but has since notified extensively and was not named in the June-2026 package. `CONFIRMED` (transposition adopted). (S2, S5, S9, S4, S12)
-- **EU cross-cutting:** ETS2 compliance obligation for road-transport/buildings fuels starts **1 Jan 2028** (Reg. (EU) 2026/667, OJ 18 Mar 2026 — postpones ETS2 by one year), auctioning from 2027 — MŽP is preparing the ETS2 framework in parallel. `CONFIRMED`. (S13)
+- **EU cross-cutting:** ETS2 — established by Directive (EU) 2023/959 (Chapter IVa of Dir. 2003/87/EC) — has its compliance obligation for road-transport/buildings fuels starting **1 Jan 2028**; the one-year postponement was adopted in the early-2026 climate package alongside Reg. (EU) 2026/667 (OJ 18 Mar 2026; the 2040 climate-target amendment), auctioning from 2027 — MŽP is preparing the ETS2 framework in parallel. `CONFIRMED`. (S13)
 
 ## 2. Fuel taxation
 
@@ -62,7 +62,7 @@ Scope note: A **temporary reduced diesel rate is live on the report date** (8 01
 | Biogas / biomethane (CNG/LNG for transport) | Historically favourable/low rate; 2026 value not verified | Zákon č. 353/2003 Sb. | 2026 | UNCORROBORATED / gap | T-S16 |
 | "Zelená nafta" (green diesel — agricultural excise refund) | Partial excise refund for farming diesel; max refund reduced during the temporary diesel cut but the support itself maintained | Zákon č. 353/2003 Sb. §57 | 2026 | PRIMARY-ONLY (news) | T-S15 (T2) |
 | Announced change — end of temporary diesel cut | Revert to 9 950 CZK/1000 L on expiry of the waiver (~20 Jul 2026), unless extended again | Ministry of Finance measure | ~20 Jul 2026 | CONFIRMED (adopted, scheduled) | T-S5, T-S14 (T2) |
-| ETS2 (road transport & buildings fuels) | Separate EU carbon price via allowances; **compliance obligation from 1 Jan 2028**, auctioning from 2027 (not a national excise) | Reg. (EU) 2026/667 (OJ 18 Mar 2026, postpones ETS2 by one year); ETS Directive as amended (Chapter IVa) | 1 Jan 2028 | CONFIRMED (adopted at EU level) | T-S18 (T1) |
+| ETS2 (road transport & buildings fuels) | Separate EU carbon price via allowances; **compliance obligation from 1 Jan 2028**, auctioning from 2027 (not a national excise) | ETS Directive 2003/87/EC, Chapter IVa (inserted by Directive (EU) 2023/959); one-year postponement adopted in the early-2026 package alongside Reg. (EU) 2026/667 (OJ 18 Mar 2026; the 2040 climate-target amendment) | 1 Jan 2028 | CONFIRMED (adopted at EU level) | T-S18 (T1) |
 
 ### Interaction with the mandate
 Czechia runs a blending + GHG-reduction obligation (Air Protection Act 201/2012) — see Section 1. The excise system layers a **state-aid-based reduction for pure/high-blend sustainable biofuels** (B100, SMN30) on top of that. Because the relief is conditional on RED sustainability criteria and is a notified state aid, it functions like the Sweden/Finland model of tax relief for qualifying biofuels; the exact 2026 rates and the current state-aid authorisation must be re-verified from the consolidated §45/§48 text (see Section 5 gaps).
@@ -149,7 +149,7 @@ Verification is on a **mass-balance** chain-of-custody basis under an EU-approve
 6. **Meet the annual GHG-intensity reduction duty** for the fuel pool placed on the market (≈6.25% reported for 2026, subject to the Tier-2 caveat in Section 5), including the phased advanced-biofuels sub-obligation and the ~1.7% Annex IX-B cap; advanced/waste feedstocks count double. → self; reported via the excise/consumption declaration to the **Customs Administration (Celní správa)** / **MoE CZ**.
 7. **Track certifier duties**: certificate copies sent immediately to MoE CZ, pre-audit notifications before each verification, and the certification body's **28 February** annual summary — ensure your auditor complies. → MoE CZ / certifier.
 8. **Undergo the periodic certification audit** and retain documentation; expect enforcement by **ČIŽP** (Czech Environmental Inspectorate) for non-compliant proof. → certifier / ČIŽP.
-9. **Prepare for ETS2**: road-transport fuel suppliers face an EU allowance-surrender obligation from **1 Jan 2028** (auctioning from 2027) under Reg. (EU) 2026/667; MŽP is building the national framework. → MŽP / national ETS2 authority.
+9. **Prepare for ETS2**: road-transport fuel suppliers face an EU allowance-surrender obligation from **1 Jan 2028** (auctioning from 2027) under ETS2 (Directive (EU) 2023/959, Chapter IVa of Dir. 2003/87/EC; the one-year postponement was adopted alongside Reg. (EU) 2026/667, the 2040 climate-target amendment); MŽP is building the national framework. → MŽP / national ETS2 authority.
 
 ## 5. Conflicts and gaps
 
@@ -186,7 +186,7 @@ Merged and deduplicated across the three section logs. IDs are namespaced by sec
 | S10 | https://ekolist.cz/cz/zpravodajstvi/zpravy/vlada-schvalila-novelu-narizeni-o-snizovani-emisi-z-pohonnych-hmot | 2 | 2026-07-04 | independent: GHG 11% by 2030; advanced ≥5.5%; UCO/animal-fat cap 1.7% |
 | S11 | https://www.enviweb.cz/131688 | 2 | 2026-07-04 | NV 189/2018 2026 amendment, advanced/RFNBO support |
 | S12 | https://energy.ec.europa.eu/news/commission-takes-action-ensure-complete-and-timely-transposition-eu-directives-key-decisions-energy-2025-07-24_en | 1 | 2026-07-04 | CZ among 26 MS given RED III formal notice 24 Jul 2025 *(= SU-7)* |
-| S13 | https://eur-lex.europa.eu/eli/reg/2026/667/oj/eng | 1 | 2026-07-04 | Reg (EU) 2026/667: ETS2 from 1 Jan 2028, auctioning 2027 *(= T-S18)* |
+| S13 | https://eur-lex.europa.eu/eli/reg/2026/667/oj/eng | 1 | 2026-07-04 | Reg (EU) 2026/667 = 2040 climate-target amendment; one-year ETS2 postponement (obligation start 1 Jan 2028, auctioning 2027) adopted alongside it *(= T-S18)* |
 
 ### Fuel taxation (Section 2) — access date 2026-07-04
 
@@ -200,7 +200,7 @@ Merged and deduplicated across the three section logs. IDs are namespaced by sec
 | T-S15 | https://www.businessinfo.cz/clanky/docasne-snizeni-spotrebni-dane-u-nafty-snizeni-maximalni-vyse-vratky-u-tzv-zelene-nafty-neomezuje-podporu/ | 2 | Zelená nafta (fetch 403; cited from search index) |
 | T-S16 | https://www.enviweb.cz/105195 | 2 | B100 2,19 CZK/L; SMN30 8,52 CZK/L; E85 refund 10,97 CZK/L (2016 scheme launch) |
 | T-S17 | https://www.euro.cz/clanky/stat-snizuje-spotrebni-dan-na-nektera-biopaliva-1357889/ | 2 | Biofuel relief scheme; E85 production ceased ~2021 |
-| T-S18 | https://eur-lex.europa.eu/eli/reg/2026/667/oj/eng | 1 | Reg (EU) 2026/667: ETS2 from 1 Jan 2028; auctioning 2027 *(= S13)* |
+| T-S18 | https://eur-lex.europa.eu/eli/reg/2026/667/oj/eng | 1 | Reg (EU) 2026/667 = 2040 climate-target amendment; one-year ETS2 postponement (obligation start 1 Jan 2028; auctioning 2027) adopted alongside it *(= S13)* |
 
 ### Sustainability (Section 3)
 

@@ -47,7 +47,7 @@ Scope note: The mandate is a **blending/reference-value obligation** under Act N
 
 - **Corroborator note (reference-value table):** the full §14b schedule inserted by **Act 363/2022** was read via a legal-database rendering (S11): **2023 = 8.6%, 2024 = 8.8%, 2025 = 9.2%, 2026 = 9.5%, 2027 = 10.0%, 2028 = 10.4%, 2029 = 10.8%, 2030 = 11.4%** — matching the draft exactly. Values upgraded PRIMARY-ONLY → CONFIRMED. Note an **industry FAQ (ZVVB) still lists the superseded flat 8.2% (2022–2030)** — that older schedule is stale; the Act 363/2022 rising schedule governs. **Priority-item answer: Regulation 31/2026 Z.z. did NOT revise the 2026+ reference-value table** — it establishes RED III *sustainability criteria*; the reference values remain those set by Act 363/2022 (the RED III amendment to §14 reviewed at NRSR did not alter the §14b percentages).
 - **RED III transposition status: TRANSPOSED (late).** RED III (2023/2413) is implemented by an amendment to **Act No. 309/2009 Coll.** plus **Regulation No. 31/2026 Z.z.** on sustainability criteria. Slovakia was among the **26 MS given a RED III non-communication formal notice on 24 Jul 2025** (deadline 21 May 2025), and is **not** named in the June-2026 package (only Cyprus escalated) — consistent with late completion. `PRIMARY-ONLY` on the amending-act number (not pinned down). (S7, S9, S10, S12)
-- **EU cross-cutting:** ETS2 compliance obligation for road-transport/buildings fuels starts **1 Jan 2028** (Reg. (EU) 2026/667, OJ 18 Mar 2026 — postpones ETS2 by one year), auctioning from 2027 (MŽP ETS2 preparation ongoing). `CONFIRMED`. (S13)
+- **EU cross-cutting:** ETS2 — established by Directive (EU) 2023/959 (Chapter IVa of Dir. 2003/87/EC) — has its compliance obligation for road-transport/buildings fuels starting **1 Jan 2028**; the one-year postponement was adopted in the early-2026 climate package alongside Reg. (EU) 2026/667 (OJ 18 Mar 2026; the 2040 climate-target amendment), auctioning from 2027 (MŽP ETS2 preparation ongoing). `CONFIRMED`. (S13)
 
 ## 2. Fuel taxation
 
@@ -64,7 +64,7 @@ Scope note: Slovakia's published mineral-oil rate table differentiates petrol by
 | Biofuel relief for liquid high blends (E85/B100/HVO100) | **No separate biofuel-content-based reduced excise found** in the current published rate table; petrol/diesel taxed by CN code irrespective of bio content. Support delivered via the blending obligation (Act 309/2009). | Zákon č. 98/2004 Z. z., §6 | 2026 | PRIMARY-ONLY / gap (see note) | T-S18 (T1) |
 | Announced change — proposed excise cut (petrol→359, diesel→330 EUR/1000 L, 1.5 yrs) | **REJECTED** by the National Council (did not proceed to 2nd reading) | Draft amendment, Apr 2025 | n/a (rejected) | CONFIRMED (rejected) | T-S19 (T2) |
 | Announced change — 2025 amendment to Act 98/2004 | Administrative/procedural changes only (reporting, e-signatures, warehouse definition); **no rate change** | Amendment passed NR SR 10 Jun 2025 | 2025 | PRIMARY-ONLY | T-S20, T-S21 (T2) |
-| ETS2 (road transport & buildings fuels) | Separate EU carbon price via allowances; **compliance obligation from 1 Jan 2028**, auctioning from 2027 (not a national excise) | Reg. (EU) 2026/667 (OJ 18 Mar 2026, postpones ETS2 by one year); ETS Directive as amended (Chapter IVa) | 1 Jan 2028 | CONFIRMED (adopted at EU level) | T-S22 (T1) |
+| ETS2 (road transport & buildings fuels) | Separate EU carbon price via allowances; **compliance obligation from 1 Jan 2028**, auctioning from 2027 (not a national excise) | ETS Directive 2003/87/EC, Chapter IVa (inserted by Directive (EU) 2023/959); one-year postponement adopted in the early-2026 package alongside Reg. (EU) 2026/667 (OJ 18 Mar 2026; the 2040 climate-target amendment) | 1 Jan 2028 | CONFIRMED (adopted at EU level) | T-S22 (T1) |
 
 ### Interaction with the mandate
 Slovakia's biofuel policy is a **blending obligation** under Act 309/2009 (see Section 1). Unlike Sweden/Finland, the current excise table shows **no reduced rate tied to biofuel content** for petrol or diesel — the only bio-relevant excise relief is the reduced rate for liquefied **biogas/biomethane** (141 vs. 182 EUR/1000 kg). Therefore no "relief limited to volumes above the obligation" state-aid condition applies to liquid road biofuels here, because there is no such excise relief to condition.
@@ -145,7 +145,7 @@ Verification on a **mass-balance** basis; GHG calculations and sustainability cr
 5. **Report to BOTH systems** — file the customs report (*hlásenie*) with the proof of origin to the **colný úrad** AND record transactions in the EU **UDB**, because SK BIO and UDB are not interconnected. → **colný úrad** / **SHMÚ** / **UDB**.
 6. **Achieve the 2026 reference value** — a 9.5% energy-content share of the annual petrol+diesel pool, including the 0.75% advanced-biofuel sub-target; advanced and UCO/animal-fat volumes count double. → self; verified via **MŽP / SHMÚ**.
 7. **Undergo the periodic certification audit** (typically annual) and retain documentation for verification by competent persons / SHMÚ. → certifier / SHMÚ.
-8. **Prepare for ETS2**: road-transport fuel suppliers face an EU allowance-surrender obligation from **1 Jan 2028** (auctioning from 2027) under Reg. (EU) 2026/667. → MŽP / national ETS2 authority.
+8. **Prepare for ETS2**: road-transport fuel suppliers face an EU allowance-surrender obligation from **1 Jan 2028** (auctioning from 2027) under ETS2 (Directive (EU) 2023/959, Chapter IVa of Dir. 2003/87/EC; the one-year postponement was adopted alongside Reg. (EU) 2026/667, the 2040 climate-target amendment). → MŽP / national ETS2 authority.
 
 ## 5. Conflicts and gaps
 
@@ -184,7 +184,7 @@ Merged and deduplicated across the three section logs. IDs are namespaced by sec
 | S10 | https://ekonomika.pravda.sk/ekologia/clanok/569845-podiel-pokrocilych-biopaliv-v-motorovych-palivach-sa-znizi-na-0-3/ | 2 | 2026-07-04 | Historical advanced 0.3% (context for conflict) |
 | S11 | https://zakony.judikaty.info/predpis/zakon-363/2022 | 1 (via index) | 2026-07-04 | §14b full table read: 2023 8.6 / 2024 8.8 / 2025 9.2 / 2026 9.5 / 2027 10.0 / 2028 10.4 / 2029 10.8 / 2030 11.4 |
 | S12 | https://energy.ec.europa.eu/news/commission-takes-action-ensure-complete-and-timely-transposition-eu-directives-key-decisions-energy-2025-07-24_en | 1 | 2026-07-04 | SK among 26 MS given RED III formal notice 24 Jul 2025 *(= SU-10)* |
-| S13 | https://eur-lex.europa.eu/eli/reg/2026/667/oj/eng | 1 | 2026-07-04 | Reg (EU) 2026/667: ETS2 from 1 Jan 2028, auctioning 2027 *(= T-S22)* |
+| S13 | https://eur-lex.europa.eu/eli/reg/2026/667/oj/eng | 1 | 2026-07-04 | Reg (EU) 2026/667 = 2040 climate-target amendment; one-year ETS2 postponement (obligation start 1 Jan 2028, auctioning 2027) adopted alongside it *(= T-S22)* |
 
 ### Fuel taxation (Section 2) — access date 2026-07-04
 
@@ -194,7 +194,7 @@ Merged and deduplicated across the three section logs. IDs are namespaced by sec
 | T-S19 | https://www.teraz.sk/ekonomika/spotrebna-dan-na-benzin-a-naftu-sa-ne/871433-clanok.html | 2 | Confirms current petrol 514 and diesel 368; proposed cut to 359/330 for 1.5 yrs rejected |
 | T-S20 | https://www.pwc.com/sk/sk/danove-a-pravne-novinky/zmeny-pri-spotrebnej-dani-z-mineralneho-oleja.html | 2 | 2025 amendment scope (administrative only) |
 | T-S21 | https://www.tpa-group.sk/en/news/what-will-change-from-1-july-2025-with-the-amended-excise-duties-act-and-the-vat-act/ | 2 | Administrative changes, no rate change |
-| T-S22 | https://eur-lex.europa.eu/eli/reg/2026/667/oj/eng | 1 | Reg (EU) 2026/667: ETS2 from 1 Jan 2028; auctioning 2027 *(= S13)* |
+| T-S22 | https://eur-lex.europa.eu/eli/reg/2026/667/oj/eng | 1 | Reg (EU) 2026/667 = 2040 climate-target amendment; one-year ETS2 postponement (obligation start 1 Jan 2028; auctioning 2027) adopted alongside it *(= S13)* |
 
 ### Sustainability (Section 3)
 
