@@ -3,7 +3,7 @@
 - **Scope:** Section 3 of country-report template + draft Section-4 checklist items in this scope.
 - **Researched by:** sustainability-researcher
 - **Report date:** 2026-07-04
-- **Corroboration pass:** PENDING
+- **Corroboration pass:** DONE 2026-07-04 (source-corroborator)
 
 > Method note: `diariodarepublica.pt` HTML detail pages render via JS and returned
 > empty to WebFetch; the DL 84/2022 gazette PDF (files.dre.pt) could not be page-rendered
@@ -19,9 +19,9 @@
 |---|---|---|---|---|
 | RED II sustainability + GHG transposition | **Decreto-Lei n.º 84/2022, de 9 de dezembro** (DR 1.ª série n.º 236/2022) — revoked DL 117/2010; strengthens sustainability/GHG criteria for biofuels, bioliquids, biomass fuels and RFNBOs; maintains the ECS at LNEG | DL 84/2022 | CONFIRMED | dgeg.gov.pt; ense-epe.pt; lneg.pt |
 | Predecessor / mandate diploma | DL 117/2010 (RED I sustainability, revoked); DL 8/2021 (incorporation targets, superseded by DL 84/2022) | DL 117/2010; DL 8/2021 | CONFIRMED | dgeg.gov.pt; ense-epe.pt |
-| RED III (2023/2413) transport/sustainability | **NOT YET ADOPTED.** Draft decree-law for *partial* RED III transposition was in public consultation **25 Sep – 25 Oct 2025** (ConsultaLEX proc. 373). Reproduces RED III 29 % transport target for 2030 and an autonomous advanced-biofuel/RFNBO/advanced-biogas quota (3 % 2026 → 7.5 % 2030). Not published in DR as of check date | Draft DL (ConsultaLEX 373); Dir. (EU) 2023/2413 | PROPOSED | consultalex.gov.pt; pwc.pt; zero.ong; abreuadvogados.com |
-| RED III infringement exposure | Transposition deadline was **21 May 2025**; PT missed it → in delay/likely infringement pending the decree-law | Dir. (EU) 2023/2413 art. 36 | PRIMARY-ONLY | eur-lex (deadline); PwC |
-| Cross-ref (mandates scope) | **Portaria n.º 226/2026/1, de 20 de maio** appears in the current biofuels legislation set — confirm whether it sets 2026 incorporation targets / partial RED III implementation (mandates agent) | Portaria 226/2026/1 | UNCORROBORATED (flag) | diariodarepublica.pt listing; epcol.pt |
+| RED III (2023/2413) transport/sustainability | **NOT YET ADOPTED.** Draft decree-law for *partial* RED III transposition was in public consultation **25 Sep – 25 Oct 2025** (ConsultaLEX proc. 373). Reproduces RED III 29 % transport target for 2030 and an autonomous advanced-biofuel/RFNBO/advanced-biogas quota (overall-transport **3 % 2026 → 7.5 % 2030**; road-transport-specific advanced+RFNBO **3 % 2026 → 12.5 % 2030** — two scopes, not a conflict). Not published in DR as of check date | Draft DL (ConsultaLEX 373); Dir. (EU) 2023/2413 | PROPOSED | consultalex.gov.pt; pwc.pt; zero.ong; abreuadvogados.com |
+| RED III infringement exposure | Deadline **21 May 2025** (permitting 1 Jul 2024). Escalation: letter of formal notice **Jul 2025** → reasoned opinion **Dec 2025** → **PT REFERRED TO THE CJEU 29 Apr 2026** (with Greece and Malta), Commission requesting financial sanctions. PT "has not yet notified any transposition measures" | Dir. (EU) 2023/2413 art. 36 | CONFIRMED | V3 (EU DG ENER, 29 Apr 2026 infringements package) |
+| Cross-ref (mandates scope) | **Portaria n.º 226/2026/1, de 20 de maio** sets the ISP-exemption procedure for advanced biofuels/renewable gas (see PT-tax); it does **not** set 2026 incorporation targets (those remain in DL 84/2022 art. 8) | Portaria 226/2026/1 | PRIMARY-ONLY | diariodarepublica.pt; epcol.pt |
 
 ### 3.2 GHG-saving thresholds applied nationally
 
@@ -81,7 +81,7 @@
 | TdB / TdC issuance | Monthly by ENSE from ECS-verified data | CONFIRMED | ense-epe.pt |
 | Annual national sustainability report | Published by ECS/LNEG (e.g. "Relatório de Sustentabilidade dos Biocombustíveis" — 2022 report published 29 Aug 2023) | CONFIRMED | lneg.pt |
 | Voluntary-scheme audit | Annual third-party certification audit per chosen EU scheme | PRIMARY-ONLY | scheme rules |
-| Incorporation-obligation reconciliation / penalties | Annual; compensation/penalty for TdB shortfall set in DL 84/2022 (exact figure = mandates scope) | UNCORROBORATED (flag) | ense-epe.pt |
+| Incorporation-obligation reconciliation / penalties | Annual; compensation for TdB shortfall = **€1,760 per missing TdB/TdC** (Despacho 21/DG/2024, art. 52 DL 84/2022, eff. 1 Mar 2023) — see PT-mandates | CONFIRMED | V1 (DGEG); PT-mandates |
 
 ## 4. Draft compliance-checklist items (this scope)
 
@@ -95,11 +95,11 @@
 
 ## 5. Conflicts and gaps
 
-- **DL 84/2022 full text not machine-read** (JS page + un-renderable PDF) — re-verify GHG-threshold figures, exact palm/high-ILUC caps, penalty amounts, and the reporting cadence in art. 19 directly. [FLAG]
-- **RED III not yet adopted** — draft decree-law in consultation Sep–Oct 2025; confirm whether it (or Portaria 226/2026/1) has since been published in DR. PT past the 21 May 2025 deadline. [FLAG]
+- **DL 84/2022 full text not machine-read** (JS page + un-renderable PDF) — re-verify GHG-threshold figures, exact palm/high-ILUC caps, and the reporting cadence in art. 19 directly. Penalty figure now resolved (€1,760/TdB via DGEG). [FLAG]
+- **RED III not yet adopted — escalated to CJEU referral 29 Apr 2026** (PT + EL + Malta), financial sanctions requested. Confirm whether the partial-transposition decree is subsequently published in DR. [CONFIRMED escalation — V3]
 - **"SAND" registry name** not confirmed; operative platform is BUE / ENSE biotickets. Registry entry may need correction. [FLAG]
 - **UDB↔ENSE/BUE linkage and PT mandatory-use date** not primary-sourced.
-- **Annex IX national additions** and exact penalty figure not located.
+- **Annex IX national additions** not located.
 
 ## 6. Source log
 
@@ -112,15 +112,17 @@
 | 5 | https://www.ense-epe.pt/communicated/balcao-unico-da-energia-metas-de-incorporacao-de-biocombustiveis-nos-combustiveis/ | 1 | 2026-07-04 | BUE registration, equal treatment of operators |
 | 6 | https://www.ense-epe.pt/news/a-reducao-da-utilizacao-do-oleo-de-palma-nos-biocombustiveis-em-portugal/ | 1 | 2026-07-04 | Palm reduction since 2015, double counting, UCO dominance |
 | 7 | https://www.lneg.pt/wp-content/uploads/2023/09/Relatorio-de-Sustentabilidade-dos-biocombustiveis-Portugal-2022-29082023.pdf | 1 | 2026-07-04 | Annual national sustainability report (2022, pub. 29 Aug 2023) |
-| 8 | https://www.pwc.pt/pt/temas-actuais/transposicao-da-diretiva-red-iii-em-portugal.html | 2 | 2026-07-04 | RED III draft status, 29% transport target, 49% 2030 |
+| 8 | https://www.pwc.pt/pt/temas-actuais/transposicao-da-diretiva-red-iii-em-portugal.html | 2 | 2026-07-04 | RED III draft status, 29% transport target |
 | 9 | https://zero.ong/noticias/transposicao-parcial-da-diretiva-ue-2023-2413-red-iii/ | 2 | 2026-07-04 | Partial RED III transposition, consultation |
-| 10 | https://abreuadvogados.com/en/conhecimento/publications/public-consultation-on-the-decree-law-transposing-partially-the-red-iii-directive/ | 2 | 2026-07-04 | Advanced/RFNBO/biogas quota 3% 2026 → 7.5% 2030 |
+| 10 | https://abreuadvogados.com/en/conhecimento/publications/public-consultation-on-the-decree-law-transposing-partially-the-red-iii-directive/ | 2 | 2026-07-04 | Advanced/RFNBO/biogas quota 3% 2026 → 7.5% 2030 (overall transport) |
 | 11 | https://energy.ec.europa.eu/topics/renewable-energy/bioenergy/voluntary-schemes_en | 1 | 2026-07-04 | EU-recognised voluntary schemes list |
 | 12 | https://energy.ec.europa.eu/topics/renewable-energy/bioenergy/biofuels/union-database-liquid-and-gaseous-renewable-and-recycled-carbon-fuels_en | 1 | 2026-07-04 | UDB legal basis, operational status, mandatory-use pending |
+| V1 | https://www.dgeg.gov.pt/pt/destaques/despacho-fixa-compensacao-por-titulos-tdb-e-tdc/ | 1 | 2026-07-04 | Compensation €1,760/TdB (Despacho 21/DG/2024; art.52 DL 84/2022; eff. 1 Mar 2023) |
+| V3 | https://energy.ec.europa.eu/news/april-infringements-package-key-decisions-energy-2026-04-29_en | 1 | 2026-07-04 | PT/EL/Malta referred to CJEU 29 Apr 2026 for RED III non-transposition; financial sanctions |
 
 ---
 **4-line summary — Portugal**
-- Transposition: RED II via Decreto-Lei 84/2022 (9 Dec 2022, revoked DL 117/2010); RED III NOT yet adopted — partial-transposition draft decree-law in public consultation 25 Sep–25 Oct 2025, PT past the 21 May 2025 deadline (PROPOSED).
+- Transposition: RED II via Decreto-Lei 84/2022 (9 Dec 2022, revoked DL 117/2010); RED III NOT yet adopted — partial-transposition draft in consultation 25 Sep–25 Oct 2025; **PT referred to CJEU 29 Apr 2026** (with EL/Malta), financial sanctions requested (PROPOSED domestically).
 - Certification: EU-recognised voluntary schemes only (ISCC EU, REDcert-EU, 2BSvs…); no separate national scheme; PoS per consignment; sustainability verified by ECS held at LNEG, TdB/TdC issued monthly by ENSE.
 - Registry/UDB: ENSE's Balcão Único da Energia (reporting under art.19(3) DL 84/2022); UDB operational since 15 Jan 2024, EU mandatory-use date pending, PT link to confirm.
-- Flags: DL 84/2022 full text not machine-read (GHG thresholds, palm caps, penalties PRIMARY-ONLY); no national palm ban beyond EU (UCO already dominant); "SAND" registry name unconfirmed (found BUE).
+- Flags: DL 84/2022 full text not machine-read (GHG thresholds, palm caps PRIMARY-ONLY); TdB-shortfall compensation resolved to €1,760/TdB; "SAND" registry name unconfirmed (found BUE).
