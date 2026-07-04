@@ -3,7 +3,7 @@
 - **Country:** Netherlands (NL)
 - **Report date:** 2026-07-04
 - **Researched by:** biofuel-mandates researcher
-- **Corroboration pass:** pending (corroborator to re-verify independently)
+- **Corroboration pass:** completed 2026-07-04 (source-corroborator); labels below are final
 - **Scope note:** Section 1 (biofuel mandates) only. Fuel taxation and sustainability
   certification are other agents' scope; cross-references are flagged where relevant.
 
@@ -24,7 +24,7 @@ comparator). The obligation now applies separately to three sectors: **land**
 |---|---|---|
 | Wet van 1 april 2026 tot wijziging van de Wet milieubeheer en de Wet op de accijns (implementatie Richtlijn (EU) 2023/2413 — vervoer) | Stb. 2026, 83 (parliamentary dossier 36766) | Adopted; Tweede Kamer 2 Oct 2025, Eerste Kamer 31 Mar 2026 |
 | Besluit van 19 mei 2026 tot wijziging van het Besluit energie vervoer en het Besluit brandstoffen luchtverontreiniging | Stb. 2026, 117 | Adopted, published 22 May 2026 |
-| Inwerkingtredingsbesluit (KB van 5 juni 2026) | Stb. 2026, 137 | Both instruments in force **20 June 2026 with retroactive effect to 1 January 2026** (except Wm art. 9.7.4.2(1)(e), not brought into force — an unworkable "pure ethanol" booking provision, fixed instead via the Besluit/Regeling) |
+| Inwerkingtredingsbesluit (KB van 5 juni 2026) | Stb. 2026, 137 | Both instruments in force **20 June 2026 with retroactive effect to 1 January 2026** (except Wm art. 9.7.4.2(1)(e), not brought into force — an unworkable "pure ethanol" booking provision, fixed instead via the Besluit/Regeling). Corroborator confirmed the enabling clause in Stb. 2026, 117 art. III (entry by KB, "terugwerken tot en met een in dat besluit te bepalen tijdstip") |
 | Consolidated Besluit energie vervoer | wetten.overheid.nl BWBR0040922, version valid from 20-06-2026 | In force |
 | Consolidated Regeling energie vervoer | wetten.overheid.nl BWBR0041050, version valid from 20-06-2026 | In force |
 
@@ -36,17 +36,17 @@ Register Energie voor Vervoer (REV).
 | Item | Value | Legal basis | Effective | Confidence | Sources |
 |---|---|---|---|---|---|
 | Obligation type | GHG-intensity reduction (% CO2-eq chain-emission reduction vs fossil comparator), per sector; expressed in EREs (1 ERE = 1 kg CO2-eq) | Wm titel 9.7 (as amended by Stb. 2026, 83); Besluit energie vervoer (Bev) art. 3, 5a, 5d | 20-06-2026, retroactive to 01-01-2026 | CONFIRMED | wetten.nl BWBR0040922; Stb. 2026, 117; NEa; Rabobank (checked 2026-07-04) |
-| Overall level 2026 — **sector land** | **14.4 %** | Bev art. 3(1) | 2026 compliance year | CONFIRMED | wetten.nl BWBR0040922; NEa sector-land page; AFS Energy (checked 2026-07-04) |
-| Overall level 2026 — **sector binnenvaart** | **2.5 %** (lowered from 3.8 % in the draft as a temporary 2026 mitigating measure) | Bev art. 5a(1) | 2026 compliance year | CONFIRMED | wetten.nl BWBR0040922; NEa sector-binnenvaart page; NEa news 10-12-2025 (checked 2026-07-04) |
-| Overall level 2026 — **sector zeevaart** | **2.9 %** (lowered from 3.6 % in the draft as a temporary 2026 mitigating measure) | Bev art. 5d(1) | 2026 compliance year | CONFIRMED | wetten.nl BWBR0040922; NEa sector-zeevaart page; NEa news 10-12-2025 (checked 2026-07-04) |
+| Overall level 2026 — **sector land** | **14.4 %** | Bev art. 3(1) | 2026 compliance year | CONFIRMED (corroborator re-verified against the Stb. 2026, 117 tables and consolidated Bev art. 3(1) verbatim, 2026-07-04) | wetten.nl BWBR0040922; Stb. 2026, 117 (tables); NEa sector-land page; AFS Energy (checked 2026-07-04) |
+| Overall level 2026 — **sector binnenvaart** | **2.5 %** (lowered from 3.8 % in the draft as a temporary 2026 mitigating measure) | Bev art. 5a(1) | 2026 compliance year | CONFIRMED (re-verified: Stb. 2026, 117 art. 5a table + consolidated Bev) | wetten.nl BWBR0040922; Stb. 2026, 117; NEa sector-binnenvaart page; NEa news 10-12-2025 (checked 2026-07-04) |
+| Overall level 2026 — **sector zeevaart** | **2.9 %** (lowered from 3.6 % in the draft as a temporary 2026 mitigating measure) | Bev art. 5d(1) | 2026 compliance year | CONFIRMED (re-verified: Stb. 2026, 117 art. 5d table + consolidated Bev) | wetten.nl BWBR0040922; Stb. 2026, 117; NEa sector-zeevaart page; NEa news 10-12-2025 (checked 2026-07-04) |
 | Petrol/diesel-pool sub-obligation | None under the ERE scheme (sector-based, fuel-neutral). Blend wall: filling stations must offer **E10** petrol (since 1 Oct 2019); B7 follows EN 590 standard (not a mandate instrument) | Besluit brandstoffen luchtverontreiniging (BWBR0029909), amended by Stb. 2019, 227 | 01-10-2019 | PRIMARY-ONLY (E10 basis verified; station-size threshold not re-verified) | Stb. 2019, 227 (checked 2026-07-04) |
-| Advanced biofuels (Annex IX-A) minimum — land | **min. 3.1 %** (2026) rising to 8.8 % (2030); no IX-A minimum for binnenvaart/zeevaart | Bev art. 3(4) | 2026 | CONFIRMED | wetten.nl BWBR0040922; Stb. 2026, 117; NEa sector-land page (checked 2026-07-04) |
-| Annex IX-B (UCO/animal fat) cap | Land: **max. 4.3 %** (2026–2030); binnenvaart: **max. 11.1 %**; zeevaart: **ERE-B prohibited** | Bev art. 3(5), 5a(4), 5d(3) | 2026 | CONFIRMED | wetten.nl BWBR0040922; Stb. 2026, 117; NEa sector pages (checked 2026-07-04) |
-| Crop-based (conventional) cap | Land: **max. 1.2 %** (2026–2030); binnenvaart and zeevaart: **ERE-C prohibited** | Bev art. 3(3), 5a(3), 5d(3) | 2026 | CONFIRMED | wetten.nl BWBR0040922; Stb. 2026, 117; NEa sector pages (checked 2026-07-04) |
-| RFNBO minimum | Land 2026: **min. 0.05 %**; binnenvaart 2026: **min. 0.02 %**; zeevaart 2026: none (starts 2027 at 0.02 %). Refinery route: **RARE** units (raffinagereductie-eenheden) from RFNBO (e.g. renewable H2) use in NL refineries may be used toward the RFNBO sub-target | Bev art. 3(6), 5a(5), 5d(4); Wm/Regeling energie vervoer arts. 28–29 (RARE) | 2026 | CONFIRMED (percentages); PRIMARY-ONLY (RARE mechanics) | wetten.nl BWBR0040922; NEa "Inboeken RARE's"; NEa ERE page (checked 2026-07-04) |
-| Cross-sector flexibility | Binnenvaart: up to **0.8 %** of the 2.5 % may be met with EREs from other sectors (2026); zeevaart: up to **1.1 %** of the 2.9 % (2026). Land: cross-sector use **not** allowed | Bev art. 5a(2), 5d(2) | 2026 | CONFIRMED | wetten.nl BWBR0040922; NEa sector pages (checked 2026-07-04) |
+| Advanced biofuels (Annex IX-A) minimum — land | **min. 3.1 %** (2026) rising to 8.8 % (2030); no IX-A minimum for binnenvaart/zeevaart | Bev art. 3(4) | 2026 | CONFIRMED (re-verified: Stb. 2026, 117 table "3.1/4.5/5.9/7.3/8.8" + consolidated Bev art. 3(4) "ten minste 3,1 procent") | wetten.nl BWBR0040922; Stb. 2026, 117; NEa sector-land page (checked 2026-07-04) |
+| Annex IX-B (UCO/animal fat) cap | Land: **max. 4.3 %** (2026–2030); binnenvaart: **max. 11.1 %**; zeevaart: **ERE-B prohibited** | Bev art. 3(5), 5a(4), 5d(3) | 2026 | CONFIRMED (re-verified: Stb. 2026, 117 + consolidated Bev "tot ten hoogste 4,3 procent") | wetten.nl BWBR0040922; Stb. 2026, 117; NEa sector pages (checked 2026-07-04) |
+| Crop-based (conventional) cap | Land: **max. 1.2 %** (2026–2030); binnenvaart and zeevaart: **ERE-C prohibited** | Bev art. 3(3), 5a(3), 5d(3) | 2026 | CONFIRMED (re-verified: Stb. 2026, 117 + consolidated Bev "tot ten hoogste 1,2 procent"). Related feedstock exclusion: biofuel from **soy or palm oil** may not be booked unless certified low-ILUC — Wm art. 9.7.4.2(1)(d), see sustainability section | wetten.nl BWBR0040922; Stb. 2026, 117; NEa sector pages (checked 2026-07-04) |
+| RFNBO minimum | Land 2026: **min. 0.05 %**; binnenvaart 2026: **min. 0.02 %**; zeevaart 2026: none (starts 2027 at 0.02 %). Refinery route: **RARE** units (raffinagereductie-eenheden) from RFNBO (e.g. renewable H2) use in NL refineries may be used toward the RFNBO sub-target | Bev art. 3(6), 5a(5), 5d(4); Wm/Regeling energie vervoer arts. 28–29 (RARE) | 2026 | CONFIRMED (percentages — re-verified against Stb. 2026, 117 RFNBO columns incl. land 0.05→1.45 % and zeevaart start 2027); PRIMARY-ONLY (RARE mechanics) | wetten.nl BWBR0040922; Stb. 2026, 117; NEa "Inboeken RARE's"; NEa ERE page (checked 2026-07-04) |
+| Cross-sector flexibility | Binnenvaart: up to **0.8 %** of the 2.5 % may be met with EREs from other sectors (2026); zeevaart: up to **1.1 %** of the 2.9 % (2026). Land: cross-sector use **not** allowed | Bev art. 5a(2), 5d(2) | 2026 | CONFIRMED (re-verified: Stb. 2026, 117 cross-sector columns 0.8→2.9 % / 1.1→2.5 %) | wetten.nl BWBR0040922; Stb. 2026, 117; NEa sector pages (checked 2026-07-04) |
 | Double counting | No double-counting multipliers in the ERE scheme; steering is via unit categories (caps/minima) and GHG performance. No multiplier provisions found in Bev | Bev (consolidated, 20-06-2026) | 2026 | PRIMARY-ONLY | wetten.nl BWBR0040922 (checked 2026-07-04) |
-| Buy-out / penalty | **No buy-out price.** Enforcement by NEa: bestuurlijke boete up to **EUR 450,000 per violation**, or **10 % of annual turnover** if turnover > EUR 4.5 m (Wm art. 18.16s); plus last onder dwangsom, ambtshalve vaststelling of deliveries/bookings, REV account blocking. Fine formula (boetesystematiek): EUR 5,000 fixed + variable amount (HBE-era: EUR 1.00 per missing unit for obligation shortfall; EUR 0.50 for misreported deliveries) x correction factor 0.125–4 | Wm art. 18.2f(2) & 18.16s; NEa Boetesystematiek Energie voor Vervoer; Beleidsregel bestuurlijke boete 2024 (in force 01-07-2024) | ongoing | PRIMARY-ONLY (statute text quoted in two NEa documents; Wm art. 18.16s consolidated text not fetched directly; per-unit values not yet republished for ERE) | NEa Boetesystematiek PDF; NEa handhavingsinstrumenten page (checked 2026-07-04) |
+| Buy-out / penalty | **No buy-out price.** Enforcement by NEa: bestuurlijke boete up to **EUR 450,000 per violation**, or **10 % of annual turnover** if turnover > EUR 4.5 m (Wm art. 18.16s(2)); plus last onder dwangsom, ambtshalve vaststelling of deliveries/bookings, REV account blocking. Fine formula (boetesystematiek): EUR 5,000 fixed + variable amount (HBE-era: EUR 1.00 per missing unit for obligation shortfall; EUR 0.50 for misreported deliveries) x correction factor 0.125–4 | Wm art. 18.2f(2) & 18.16s; NEa Boetesystematiek Energie voor Vervoer; Beleidsregel bestuurlijke boete 2024 (in force 01-07-2024) | ongoing | CONFIRMED (upgraded by corroborator: art. 18.16s(2) verbatim obtained via an independent legal mirror — "De boete … bedraagt ten hoogste € 450 000 per overtreding, of, indien de omzet … meer dan € 4 500 000 bedraagt, ten hoogste 10% van die omzet" — agreeing with the two NEa documents. Per-unit fine values still HBE-denominated; ERE update not yet published) | NEa Boetesystematiek PDF; NEa handhavingsinstrumenten page; uwwet.nl Wm ch. 18 mirror (corroboration pass, checked 2026-07-04) |
 
 Fossil comparators used for ERE calculation: **94 g CO2-eq/MJ** for fuels and
 **183 g CO2-eq/MJ** for electricity (NEa; corroborated by Rabobank —
@@ -64,7 +64,12 @@ factor of the consignment.
   plus **RARE** (refinery reduction units from RFNBO use in NL refineries,
   usable toward the RFNBO sub-target). Argus counts 16 tradable ticket types.
   (CONFIRMED: NEa ERE page + Argus.)
-- **Registry:** Register Energie voor Vervoer (REV), operated by NEa.
+- **Registry:** Register Energie voor Vervoer (REV), operated by NEa. The
+  renewed (ERE-based) REV is being released in phases: first release
+  29 June – 15 July 2026 (account opening, incl. boekingsdienstverleners);
+  booking of deliveries/charging sessions follows from the second release;
+  2026 deliveries bookable retroactively until 26-02-2027. (Corroboration
+  pass, NEa pages.)
 - **Obligated party:** the *leverancier tot eindverbruik* (linked to excise
   release for consumption, *uitslag tot verbruik* — cross-reference to tax
   section) delivering **>= 500,000 litres per sector per calendar year**
@@ -76,8 +81,10 @@ factor of the consignment.
 - **Creation of EREs (inboeken):** registered deliveries of renewable fuels,
   renewable electricity (charge-point data; minimum 2 million kWh/yr unless
   aggregated via a *boekingsdienstverlener* — Regeling energie vervoer art.
-  9(6)) and RFNBOs, verified by independent verifiers. (PRIMARY-ONLY for the
-  2 GWh threshold.)
+  9(6)) and RFNBOs, verified by independent verifiers. (2 GWh threshold
+  re-verified verbatim by corroborator in consolidated Regeling art. 9(6):
+  "De minimale hoeveelheid jaarlijks in te boeken elektriciteit … bedraagt
+  2 miljoen kWh" — remains PRIMARY-ONLY, single legal source.)
 - **Trading:** EREs freely tradable between REV account holders. (CONFIRMED.)
 - **Banking (sparen):** caps per Bev art. 29 / Wm art. 9.7.5.6 — obligated
   suppliers: the higher of **45,000 EREs or 10 % of the prior-year
@@ -89,7 +96,11 @@ factor of the consignment.
   balances were converted on **1 May 2026 at 1 HBE = 46 EREs**, same category
   mapping (HBE-G→ERE-G etc.); no conversion into ERE-R or ERE-E; aviation-derived
   HBEs converted into the land sector; sector allocation of converted units based
-  on 2025 booking results. (CONFIRMED: NEa news 05-03-2026 + NEa ERE page + Argus.)
+  on 2025 booking results. (CONFIRMED: NEa news 05-03-2026 + NEa ERE page + Argus.
+  Corroborator note: the separate NEa figure "HBE-reductiebijdrage 2026 = 47
+  kg/HBE" (news 30-06-2025) is a **different parameter** — the average realised
+  reduction per HBE used for old-system compliance assessment — and does **not**
+  contradict the 1:46 conversion rate.)
 - **Compliance calendar:** register fuel deliveries by **1 March**; hold
   sufficient EREs per sector by **1 April** (moved forward from 1 May);
   verification of shipping-sector delivery registrations by **1 May**.
@@ -100,7 +111,9 @@ factor of the consignment.
 ### 1.3 Future trajectory (legislated, in force — all rows CONFIRMED unless marked)
 
 CO2-eq chain-emission reduction, % per compliance year (Bev arts. 3, 5a, 5d;
-corroborated by NEa sector pages and Rabobank for 2030):
+corroborated by NEa sector pages and Rabobank for 2030; **full matrix below
+re-verified cell-by-cell against the Stb. 2026, 117 tables by the corroborator,
+2026-07-04 — all values match**):
 
 | Year | Land | — of which adv. IX-A min. | — RFNBO min. | Binnenvaart | — cross-sector max. | — RFNBO min. | Zeevaart | — cross-sector max. | — RFNBO min. |
 |---|---|---|---|---|---|---|---|---|---|
@@ -120,7 +133,8 @@ ERE-B prohibited.
   (announced 10 Dec 2025, citing Belgian implementation uncertainty); from 2027
   the originally planned trajectory resumes. The ministry indicated the 2027+
   shipping path could be revisited — treat any change as `PROPOSED` until
-  amended (no amending act found as of 2026-07-04).
+  amended (no amending act found as of 2026-07-04; corroborator re-checked for
+  post-20-June instruments and NEa announcements — none found).
 - **RED III transposition status:** transport provisions transposed **late**
   (deadline 21 May 2025): Wet Stb. 2026, 83 + Besluit Stb. 2026, 117, in force
   20 June 2026 with retroactive effect to 1 January 2026, so compliance year
@@ -135,17 +149,19 @@ ERE-B prohibited.
   land trajectory ending at **27.1 %** in 2030 and a **1.4 %** crop cap. The
   adopted Besluit (Stb. 2026, 117; consolidated BWBR0040922) sets **28.4 %**
   and **1.2 %**. Legal text prevails; not flagged as `CONFLICT` because the
-  secondary sources describe an earlier draft, but the corroborator should
-  prefer post-May-2026 secondary sources.
+  secondary sources describe an earlier draft, but post-May-2026 secondary
+  sources are preferred. (Corroborator re-confirmed 28.4 %/1.2 % in both the
+  Stb. tables and the consolidated Bev.)
 - **Dec-2025 announcement vs adopted law:** NEa's 10-12-2025 news stated
   cross-sector shares of 0.5 % (binnenvaart) / 0.9 % (zeevaart) for 2026; the
   adopted Bev arts. 5a(2)/5d(2) allow 0.8 % / 1.1 %. Reported per the legal
-  text; discrepancy noted (announcement predates adoption).
-- **Wm art. 18.16s:** the EUR 450,000 / 10 %-of-turnover maximum is quoted in
-  two NEa documents but the consolidated Wm article text could not be fetched
-  directly (wetten.overheid.nl full-text fetch truncates before ch. 18) —
-  hence PRIMARY-ONLY. Per-unit fine values in the Boetesystematiek are still
-  HBE-denominated (EUR 1.00/HBE); an ERE-denominated update was not located.
+  text; discrepancy noted (announcement predates adoption). Corroborator:
+  Stb. 2026, 117 tables confirm 0.8 %/1.1 %.
+- **Wm art. 18.16s — RESOLVED:** the EUR 450,000 / 10 %-of-turnover maximum is
+  now verified verbatim (independent mirror uwwet.nl, matching the NEa
+  documents); upgraded to CONFIRMED. Residual: per-unit fine values in the
+  Boetesystematiek are still HBE-denominated (EUR 1.00/HBE); an
+  ERE-denominated update was not located (re-checked 2026-07-04).
 - **EUR-Lex NIM page:** the NL section of the 2023/2413 NIM page could not be
   displayed in the fetch (page truncated at Czechia); NL notification evidenced
   only via the NIM PDF record (NIM:202503501).
@@ -153,6 +169,9 @@ ERE-B prohibited.
   (Tier 2) only — `UNCORROBORATED`; the NEa-published annual share should be
   verified.
 - **RVO PDF** (teammate note): not retried; NEa/wetten.nl sources sufficed.
+- **Post-drafting development (corroboration pass):** REV phased relaunch —
+  first release window 29 June – 15 July 2026 (account opening); booking from
+  the second release. No impact on obligation values.
 - **Registry correction needed:** `research/sources/member-states.md` NL entry
   still describes the HBE jaarverplichting; update to: brandstoftransitie-
   verplichting with ERE units under Besluit/Regeling energie vervoer (recast
@@ -190,3 +209,10 @@ Tier 2 — corroboration:
 25. AFS Energy, "Navigating the Netherlands' 2026 Renewable Energy Obligations" (12-11-2024, draft stage) — land 14.4 % (2026), maritime 8.2 % (2030). https://www.afsenergy.nl/blog-post/navigating-the-netherlands-2026-renewable-energy-obligations-in-the-transport-sector
 26. Normec Verifavia (28-07-2025) — ERE definition, scope extension to shipping. https://normecverifavia.com/news/understanding-the-dutch-fuel-transition-obligation-what-it-means-for-voluntary-insetting/
 27. GH2 / USDA GAIN search extracts — draft-stage figures (27.1 % 2030; 1.4 % crop cap) used only to document draft-vs-adopted evolution. https://www.gh2.org.in/netherlands-releases-draft-legislation-to-implement-red-iii-targets-in-transport-sector
+
+Corroboration pass (source-corroborator, all accessed 2026-07-04):
+28. Staatsblad 2026, 117 — direct fetch of the amending Besluit: full sector tables re-verified (land 14.4→28.4 % incl. IX-A minima 3.1→8.8 %, RFNBO minima 0.05→1.45 %, ERE-C 1.2 %, ERE-B 4.3 %; binnenvaart 2.5→14.5 % incl. cross-sector 0.8→2.9 %, IX-B 11.1 %; zeevaart 2.9→8.2 % incl. cross-sector 1.1→2.5 %, RFNBO from 2027); art. III entry-into-force/retroactivity clause; nota van toelichting palm/soy passage. https://zoek.officielebekendmakingen.nl/stb-2026-117.html
+29. wetten.overheid.nl BWBR0040922 (2026-06-20) — direct re-fetch: arts. 3, 5a, 5d values verbatim. https://wetten.overheid.nl/BWBR0040922/2026-06-20
+30. uwwet.nl, Wet milieubeheer hoofdstuk 18 mirror — art. 18.16s(2) verbatim (EUR 450,000 / 10 % of turnover above EUR 4.5 m). https://uwwet.nl/wetten-en-regelingen/privaatrecht/wet-milieubeheer/12-handhaving.htm
+31. NEa news 30-06-2025 — "HBE-reductiebijdrage 2026 = 47 kg/HBE" (distinct parameter from the 1:46 conversion; no conflict). https://www.emissieautoriteit.nl/actueel/nieuws/2025/06/30/nea-stelt-de-hbe-reductiebijdrage-voor-2026-vast-op-47-kg-hbe
+32. NEa inboeken pages (re-check) — REV phased release 29 June – 15 July 2026; retroactive booking window to 26-02-2027. https://www.emissieautoriteit.nl/regelgeving/hernieuwbare-energie-voor-vervoer-eres/inboeken-hernieuwbare-energie-vervoer
