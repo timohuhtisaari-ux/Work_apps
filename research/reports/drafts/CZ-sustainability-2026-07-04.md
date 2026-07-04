@@ -3,7 +3,7 @@
 - **Scope:** Section 3 of country-report template (sustainability/certification/registry/UDB/feedstock/operator calendar) + draft Section-4 checklist items in this scope.
 - **Researched by:** sustainability-researcher
 - **Report date:** 2026-07-04
-- **Corroboration pass:** pending (hand to source-corroborator)
+- **Corroboration pass:** completed 2026-07-04 (source-corroborator)
 
 > Note: the primary basis here is the **official MoE CZ (Ministerstvo životního
 > prostředí) Air-Protection-Department Communication of 07 Mar 2025** on
@@ -22,6 +22,13 @@
 | Implementing decrees | Air-Protection decrees (vyhlášky) on fuel quality & GHG (e.g. former Decree 415/2012 series) set detailed sustainability/GHG rules; exact current decree number flagged for e-sbirka.cz | Vyhláška under Act 201/2012 | PRIMARY-ONLY (flag) | member-states registry |
 | Verifying authority | **Ministry of the Environment (MoE CZ), Department of Air Protection** — registers certification bodies, receives certificate copies, pre-audit notifications and annual summaries; **Ministry of Agriculture** co-participates in verifications; **Czech Environmental Inspectorate (ČIŽP)** enforces | Act 201/2012 §21a/§21b, §36 | CONFIRMED | MoE CZ Communication; ČIŽP |
 | EU legal reference applied | Verification under **Commission Implementing Reg. (EU) 2022/996** and voluntary schemes approved under **Art. 30(5) of Directive (EU) 2018/2001** | Reg. (EU) 2022/996; RED Art. 30(5) | CONFIRMED | MoE CZ Communication |
+
+> **Corroborator note (RED III status):** consistent with the CZ-mandates draft —
+> RED III is transposed by Act 42/2025 + the 2026 NV 189/2018 amendment, and the
+> EUR-Lex NIM page lists ~78 notified Czech measures. Czechia *was* among the 26
+> MS given a RED III non-communication formal notice on **24 Jul 2025**, but has
+> since notified extensively and was **not** named in the June-2026 package.
+> Treat CZ transposition as adopted/largely complete.
 
 ### 3.2 GHG-saving thresholds applied nationally
 
@@ -109,7 +116,7 @@ voluntary scheme. [CONFIRMED — MoE CZ Communication]
 
 ## 5. Conflicts and gaps
 
-- **Operator-side annual reporting deadline** (§20/§21 Air Protection Act) and **penalty figures** not pinned to Act text — corroborator to check e-sbirka.cz.
+- **Operator-side annual reporting deadline** (§20/§21 Air Protection Act) and **penalty figures** not pinned to Act text — e-sbirka.cz remains JS-blocked; unresolved.
 - **Current implementing decree number** for sustainability/GHG detail not captured. [FLAG]
 - **GHG-saving thresholds (50/60/65/70 %)** stated from RED baseline, not a CZ decree citation. [FLAG]
 - **CZ-specific UDB mandatory-use date / national guidance** not located. [FLAG]
@@ -123,12 +130,13 @@ voluntary scheme. [CONFIRMED — MoE CZ Communication]
 | 2 | https://energy.ec.europa.eu/topics/renewable-energy/bioenergy/voluntary-schemes_en | 1 | 2026-07-04 | EU-recognised voluntary schemes list (schemes CZ relies on) |
 | 3 | https://www.chmi.cz/files/portal/docs/uoco/oez/emise/legislativa/201_2012_air_protection_act_EN.pdf | 1 | 2026-07-04 | Air Protection Act 201/2012 English text (framework) |
 | 4 | https://www.cizp.gov.cz/en/scope/protection-of-the-air-the-ozone-layer-and-the-earths-climate-system | 1 | 2026-07-04 | ČIŽP enforcement role |
-| 5 | https://energy.ec.europa.eu/news/june-infringements-package-key-decisions-energy-2026-06-04_en | 1 | 2026-07-04 | Only Cyprus named for RED III in June 2026 — CZ not named |
+| 5 | https://energy.ec.europa.eu/news/june-infringements-package-key-decisions-energy-2026-06-04_en | 1 | 2026-07-04 | June-2026 package escalated only Cyprus for RED III — CZ not named |
 | 6 | https://ebb-eu.org/news/overview-of-member-states-transposition-of-red-iii/ | 2 | 2026-07-04 | RED III transposition tracker |
+| 7 | https://energy.ec.europa.eu/news/commission-takes-action-ensure-complete-and-timely-transposition-eu-directives-key-decisions-energy-2025-07-24_en | 1 | 2026-07-04 | (Corroborator) CZ among 26 MS given RED III formal notice 24 Jul 2025 |
 
 ---
 **4-line summary — Czechia**
-- Transposition: RED II via **Air Protection Act 201/2012 Coll.**; RED III elements transposed by **Act 42/2025 Coll.** (in force 1 Mar 2025), extending verification to RFNBOs/RCFs — CZ not named in the June-2026 EU infringement package.
+- Transposition: RED II via **Air Protection Act 201/2012 Coll.**; RED III elements transposed by **Act 42/2025 Coll.** (in force 1 Mar 2025), extending verification to RFNBOs/RCFs — CZ received a RED III formal notice (24 Jul 2025) but has since notified ~78 measures and was not named in the June-2026 package.
 - Certification: **no national scheme** — relies on EU-recognised voluntary schemes (Art. 30(5)); certification bodies must register with **MoE CZ** (§21a, from 1 May 2025); solid biomass/biomethane exempt.
 - Registry/UDB: MoE CZ publishes a **register of authorised certification bodies** (no operator-facing national IT register); EU UDB operational since 15 Jan 2024 (CZ mandatory-use date to confirm).
 - Flags: operator annual-report deadline & penalties, current decree number, GHG-threshold citations and CZ UDB guidance unpinned; certifier annual summary due **28 February**.

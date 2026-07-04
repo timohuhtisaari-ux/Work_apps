@@ -3,7 +3,7 @@
 - **Scope:** Section 3 of country-report template (sustainability/certification/registry/UDB/feedstock/operator calendar) + draft Section-4 checklist items in this scope.
 - **Researched by:** sustainability-researcher
 - **Report date:** 2026-07-04
-- **Corroboration pass:** pending (hand to source-corroborator)
+- **Corroboration pass:** completed 2026-07-04 (source-corroborator)
 
 > Note: primary basis is **minzp.sk** (Ministry of Environment) and **SHMÚ's
 > Odbor emisie a biopalivá** (oeab.shmu.sk — operator of the national SK BIO
@@ -20,7 +20,7 @@
 | Core act | **Act No. 309/2009 Coll.** on the promotion of renewable energy sources and high-efficiency CHP — sets the biofuel sustainability regime and operator obligations | Act 309/2009 Z.z. (as amended) | CONFIRMED | minzp.sk; ZVVB; member-states registry |
 | Sustainability-criteria decree | **MoE Decree No. 271/2011 Coll.** — establishes the **sustainability criteria and GHG-emission-reduction targets** for fuels | Vyhláška 271/2011 Z.z. | CONFIRMED | ZVVB; SHMÚ; search corroboration |
 | RED III transposing measures | RED III (**Directive (EU) 2023/2413**) transposed via **amendment(s) to Act 309/2009** and new **MoE Decree No. 31/2026 Coll.** establishing sustainability criteria (RED III) | Directive (EU) 2023/2413; Act 309/2009 amdt; Decree 31/2026 | PRIMARY-ONLY | minzp.sk (Súčasný stav) |
-| RED III infringement history | SK received **letter of formal notice (Sep 2024)**, **reasoned opinion (Feb 2025)** and an **additional reasoned opinion (Oct 2025, INFR(2024)0252)**; SK is **NOT named in the June 2026 energy infringement package** (only Cyprus), indicating transposition has since been notified/completed | Directive (EU) 2023/2413 | PRIMARY-ONLY (flag) | DG ENER Feb-2025/June-2026 packages |
+| RED III infringement history | **CORRECTED.** The verified RED III non-communication action is the **letter of formal notice of 24 Jul 2025**, sent to SK as one of 26 MS (deadline 21 May 2025). SK is **NOT named in the June-2026 package** (only Cyprus escalated) — consistent with SK having since notified transposition, but non-escalation alone does not confirm closure. *(The draft's earlier "formal notice Sep 2024 / reasoned opinion Feb 2025 / additional reasoned opinion Oct 2025" chronology could not be verified and is chronologically inconsistent with the 21 May 2025 RED III deadline — treat as unverified/likely conflated.)* | Directive (EU) 2023/2413 | PRIMARY-ONLY (flag) | DG ENER July-2025 package; DG ENER June-2026 package |
 | Verifying authority | **Ministry of the Environment (minzp.sk)** owns the policy/criteria; **SHMÚ — Slovak Hydrometeorological Institute, Odbor emisie a biopalivá** operates the **national biofuel system & SK BIO register**; **Colný úrad (Financial Administration / customs)** receives operator reports (hlásenia) | Act 309/2009; Decree 271/2011 | CONFIRMED | SHMÚ; minzp.sk |
 
 ### 3.2 GHG-saving thresholds applied nationally
@@ -103,8 +103,9 @@ bodies. [PRIMARY-ONLY — SHMÚ]
 
 ## 5. Conflicts and gaps
 
-- **SK BIO / customs reporting deadlines** (monthly/quarterly/annual) not pinned to a primary legal citation — corroborator to check Act 309/2009 + Decree 271/2011 / 31/2026 on slov-lex.sk. [FLAG]
-- **Decree 31/2026 Coll.** (RED III sustainability criteria) content and exact effective date not fully captured; RED III completeness inferred from absence in June-2026 infringement package + minzp text. [FLAG]
+- **RED III infringement chronology — CORRECTED:** verified action is the **24 Jul 2025 formal notice** (26-MS batch); the draft's Sep-2024/Feb-2025/Oct-2025 dates are unverified and chronologically inconsistent with the 21 May 2025 deadline. SK not named in June-2026 (only Cyprus escalated).
+- **SK BIO / customs reporting deadlines** (monthly/quarterly/annual) not pinned to a primary legal citation — slov-lex.sk remains JS-blocked/redirect-chained; unresolved. [FLAG]
+- **Decree 31/2026 Coll.** (RED III sustainability criteria) content and exact effective date not fully captured; it establishes sustainability criteria and did **not** revise the §14b reference-value table (see mandates draft). [FLAG]
 - **GHG-saving threshold figures (50/60/65/70 %)** from RED baseline, not a direct Decree citation. [FLAG]
 - **Accepted-schemes list** sourced from ZVVB/producer pages, not an official minzp/SHMÚ scheme register. [FLAG]
 - **Penalty figures**, **Annex IX national additions**, **UCO audit extras**, **palm/soy extras** not located (gaps).
@@ -120,12 +121,13 @@ bodies. [PRIMARY-ONLY — SHMÚ]
 | 5 | https://www.meroco.sk/sk/o-nas/trvala-udrzatelnost-a-certifikacia | 2 | 2026-07-04 | Producer certified under ISCC EU |
 | 6 | https://www.enagro.sk/sk/profil/trvala-udrzatelnost-a-certifikacia | 2 | 2026-07-04 | Producer sustainability certification |
 | 7 | https://energy.ec.europa.eu/topics/renewable-energy/bioenergy/voluntary-schemes_en | 1 | 2026-07-04 | EU-recognised voluntary schemes list |
-| 8 | https://energy.ec.europa.eu/news/february-infringement-package-key-decisions-energy-2025-02-12_en | 1 | 2026-07-04 | SK reasoned opinion Feb 2025 (RED III) |
+| 8 | https://energy.ec.europa.eu/news/february-infringement-package-key-decisions-energy-2025-02-12_en | 1 | 2026-07-04 | Feb-2025 package (draft cited for SK RED III reasoned opinion — could not verify a RED III reasoned opinion for SK here) |
 | 9 | https://energy.ec.europa.eu/news/june-infringements-package-key-decisions-energy-2026-06-04_en | 1 | 2026-07-04 | Only Cyprus named for RED III in June 2026 — SK not named |
+| 10 | https://energy.ec.europa.eu/news/commission-takes-action-ensure-complete-and-timely-transposition-eu-directives-key-decisions-energy-2025-07-24_en | 1 | 2026-07-04 | (Corroborator) SK among 26 MS given RED III formal notice 24 Jul 2025 |
 
 ---
 **4-line summary — Slovakia**
-- Transposition: RED II via **Act 309/2009 Coll.** + **MoE Decree 271/2011** (sustainability criteria & GHG targets); RED III transposed via **Act 309/2009 amendment + new Decree 31/2026** — SK cleared reasoned opinions (Feb/Oct 2025) and is not named in the June-2026 EU package.
+- Transposition: RED II via **Act 309/2009 Coll.** + **MoE Decree 271/2011** (sustainability criteria & GHG targets); RED III transposed via **Act 309/2009 amendment + new Decree 31/2026** — SK received a RED III formal notice (24 Jul 2025) and is not named in the June-2026 EU package (chronology corrected).
 - Certification: **no Commission-approved national scheme**; accepts EU voluntary schemes (ISCC EU, REDcert, Bonsucro EU, RTRS EU RED, Better Biomass); proof = **potvrdenie o pôvode biopaliva** + scheme docs.
 - Registry/UDB: **SK BIO** operated by **SHMÚ** (live since 1 Jan 2024), reports/hlásenia to the **customs office**; operators must submit to **BOTH SK BIO and the UDB** (systems not interconnected).
 - Flags: SK BIO/customs reporting deadlines & penalties unpinned; Decree 31/2026 detail/effective date and GHG-threshold citations to confirm on slov-lex.sk; no SK-specific palm/soy extras found.
