@@ -110,8 +110,9 @@ Legend: **M** = mandates authority · **T** = tax/excise authority ·
 - **L:** Gazzetta Ufficiale — gazzettaufficiale.it; normattiva.it
 
 ## Latvia (LV)
-- Scheme: blending obligation (petrol/diesel bio-share requirements)
-- **M/S:** Ministry of Climate and Energy — kem.gov.lv
+- Scheme: **Transport Energy Law** (Transporta enerģijas likums, in force 1 Jan 2026, replaced the Biofuel Law) — combined GHG-reduction (16% from 2030) + advanced/RFNBO energy-share sub-obligation + transitional volumetric blending
+- **M:** Ministry of Climate and Energy — kem.gov.lv
+- **S:** State Environmental Service (VVD) — verifies sustainability and administers UDB data nationally (absorbed the Energy & Environment Agency 1 Oct 2025)
 - **T:** State Revenue Service (VID) — vid.gov.lv
 - **L:** Likumi.lv — likumi.lv
 
