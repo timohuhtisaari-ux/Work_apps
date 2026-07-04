@@ -3,7 +3,7 @@
 - **Country:** Portugal (PT)
 - **Report date:** 2026-07-04
 - **Researched by:** biofuel-mandates-researcher
-- **Corroboration pass:** pending
+- **Corroboration pass:** DONE 2026-07-04 (source-corroborator)
 
 ## 1. Biofuel mandates
 
@@ -21,15 +21,15 @@ transposition), Article 8 (metas de incorporação) and Articles 40–41 (TdB/Td
 | Item | Value | Legal basis | Effective | Confidence | Sources |
 |---|---|---|---|---|---|
 | Obligation type | Energy-content incorporation % of road fuels (low-carbon fuels) | DL 84/2022, art. 8 | 2022– | CONFIRMED | S1, S2, S8 |
-| Overall level 2026 | **13 %** (energy content) — the "13 % from 2025" step applies to 2025–2026 | DL 84/2022, art. 8 | 1 Jan 2025 (unchanged 2026) | PRIMARY-ONLY (schedule confirmed by 2 secondary; art.8 text not directly parsed) | S1, S6, S7 |
+| Overall level 2026 | **13 %** (energy content) — the "13 % from 2025" step applies to 2025–2026 | DL 84/2022, art. 8 | 1 Jan 2025 (unchanged 2026) | CONFIRMED (DGEG page read directly by corroborator: 13% 2025 / 14% 2027 / 16% 2029; + noctula S6 + ENSE) | S1, S6, V2 |
 | Petrol sub-target / blend wall | No separate statutory petrol energy sub-target located; EN228 E10 blend wall applies (FQD) | (FQD 98/70/EC) | — | UNCORROBORATED (national text not located) | — |
 | Diesel sub-target / blend wall | No separate statutory diesel energy sub-target located; EN590 B7 blend wall applies | (FQD 98/70/EC) | — | UNCORROBORATED | — |
-| Advanced biofuels (Annex IX-A) sub-target | Annual advanced-biofuel + biogas sub-quota exists; 2022 = 0.2 %, 2023 = 0.7 %, rising toward ~10 % effective share by 2030 (only 6 % of the road-fuel target may be met by conventional biofuel in 2030) | DL 84/2022, art. 8 / Anexo IX-A feedstocks | 2022– | PRIMARY-ONLY (2026 value not isolated) | S3, S6 |
+| Advanced biofuels (Annex IX-A / "Parte A") sub-target | **2.0 % (2025–2026)**, rising to **4 % (2027–2028)**, **7 % (2029)**, **10 % (2030)** of road fuels (Part A feedstocks). [Corrected — the earlier draft's 0.2 %/0.7 % were the 2022/2023 start values; DGEG page gives the current ladder.] | DL 84/2022, art. 8 / Anexo IX-A feedstocks | 2022– | PRIMARY-ONLY (DGEG Tier 1; single-institution) | V2, S3 |
 | Annex IX-B (UCO/animal fat) cap | Not separately located in national text (RED II 1.7 % cap is the EU baseline) | (RED II Annex IX-B) | — | UNCORROBORATED | — |
 | Crop-based cap | Conventional (crop) biofuels limited so that only ~6 % of the road-fuel target may be met by conventional biofuel by 2030 (consistent with RED II ≤7 % crop cap) | DL 84/2022, art. 8 | 2030 | PRIMARY-ONLY | S3 |
 | RFNBO / e-fuel provisions | RFNBO count as low-carbon fuels toward the obligation; no binding RFNBO sub-quota under current DL 84/2022 (a binding sub-quota is PROPOSED under RED III transposition — see 1.3) | DL 84/2022, arts. 2, 8 | 2022– | PRIMARY-ONLY | S1, S2 |
 | Double counting / multipliers | TdB system uses energy-content accounting with multipliers (advanced biofuels favoured; multipliers for electricity/RFNBO reported x-factors) — exact multipliers not isolated from primary text | DL 84/2022 + implementing portarias | 2022– | UNCORROBORATED (secondary only) | S7 |
-| Buy-out / compensation (penalty) | **Compensation = 2 × the highest TdB auction value of the last three DGEG auctions**; per the DGEG TdB-auction page (accessed 2026-07-04) this equals **€1,198 per missing TdB** (2 × €599). A separate DGEG Despacho 21/DG/2024 figure of **€1,760/TdB** is cited by DGEG's biofuels page — CONFLICT, see 1.4 | DL 8/2021 art. 24(1), maintained under DL 84/2022 | 2021– | CONFLICT | S8, S1 |
+| Buy-out / compensation (penalty) | **€1,760 per missing TdB or TdC** — fixed by **Despacho n.º 21/DG/2024, de 1 de agosto** (DGEG) under the methodology of **Anexo III / art. 52 of DL 84/2022**, in force since **1 Mar 2023**, reviewed biennially. [CONFLICT RESOLVED — the earlier €1,198 "2 × €599" figure was the TdB *auction* base-price mechanic, not the statutory non-compliance compensation.] | DL 84/2022 art. 52 + Anexo III; Despacho 21/DG/2024 | 1 Mar 2023– | CONFIRMED (two DGEG pages read directly) | V1, V2 |
 
 ### 1.2 Scheme mechanics
 
@@ -52,18 +52,22 @@ transposition), Article 8 (metas de incorporação) and Articles 40–41 (TdB/Td
 ### 1.3 Future trajectory
 
 Adopted (DL 84/2022, art. 8) overall energy-content trajectory — **CONFIRMED**
-(schedule) by two secondary sources against the primary framework:
+(DGEG page read directly by corroborator; also two secondary sources):
 
 | Year | Overall target | Status |
 |---|---|---|
 | 2022 | 11 % | CONFIRMED |
 | 2023 | 11.5 % | CONFIRMED |
-| 2025–2026 | 13 % | PRIMARY-ONLY / secondary-corroborated |
-| 2027–2028 | 14 % | CONFIRMED (schedule) |
-| 2029–2030 | 16 % | CONFIRMED (schedule) |
+| 2025–2026 | 13 % | CONFIRMED (DGEG V2 + noctula S6 + ENSE) |
+| 2027–2028 | 14 % | CONFIRMED (DGEG V2) |
+| 2029–2030 | 16 % | CONFIRMED (DGEG V2) |
 
 **RED III (Directive (EU) 2023/2413) transposition — NOT YET ADOPTED as of
-2026-07-04 (deadline was 21 May 2025 → Portugal is late/in infringement).**
+2026-07-04. Portugal was REFERRED TO THE CJEU on 29 April 2026 (with Greece and
+Malta), with the Commission requesting financial sanctions.** (V3)
+- Escalation path (V3, EU DG ENER): letter of formal notice **Jul 2025** →
+  reasoned opinion **Dec 2025** → **CJEU referral 29 Apr 2026** (financial
+  sanctions requested). Portugal "has not yet notified any transposition measures".
 - A draft Decree-Law for **partial** RED III transposition went to public
   consultation on ConsultaLEX **25 Sep – 25 Oct 2025**. (S4, S5)
 - TRIS standstill for the fuels ("combustíveis") decree ended **18 May 2026**;
@@ -71,46 +75,58 @@ Adopted (DL 84/2022, art. 8) overall energy-content trajectory — **CONFIRMED**
   2026**; both then proceed to Council of Ministers approval. Still **PROPOSED**. (S10)
 - Proposed transport provisions (`PROPOSED`): reproduces RED III 29 % RES-T by
   2030; creates an **autonomous combined sub-quota of advanced biofuels + RFNBO +
-  advanced biogas of 3 % in 2026**, rising to **8 % in 2027 (min 0.5 pp RFNBO)**
-  and **12.5 % in 2030 (min 1.5 pp RFNBO)** per one secondary source; a different
-  secondary cited 7.5 % for 2030 — CONFLICT among secondaries, see 1.4. (S3, S10)
+  advanced biogas**. [CONFLICT RESOLVED — the 12.5 % and 7.5 % figures are NOT
+  contradictory but two different scopes in the same draft decree: the
+  **road-transport-specific** combined advanced+RFNBO target is **3 % (2026) →
+  8 % (2027, min 0.5 pp RFNBO) → 12.5 % (2030, min 1.5 pp RFNBO)**, while the
+  **overall-transport** autonomous combined quota is **3 % (2026) → 7.5 % (2030)**.]
+  Still `PROPOSED`. (S3, S10)
 
-**EU-wide:** ETS2 compliance obligation for road-transport fuel suppliers starts
-1 Jan 2028 (Reg. (EU) 2026/667; auctioning from 2027) — applies to PT.
+**EU-wide:** ETS2 compliance obligation for road-transport fuel suppliers — allowance
+surrender begins **2028** (for 2027 emissions; auctioning from 2027) under
+**Directive (EU) 2023/959 (ETS2, Chapter IVa of Directive 2003/87/EC)**.
+[CORRECTION — the earlier draft cited "Reg. (EU) 2026/667"; that regulation is the
+**2040 EU climate-target** amendment to the Climate Law (2021/1119), NOT the ETS2
+instrument.] Applies to PT. (V4, V5)
 
 ### 1.4 Conflicts / gaps
 
-- **CONFLICT (penalty):** DGEG TdB-auction page gives compensation = 2 × highest
-  of last three auction values = **€1,198/TdB** (2026-07-04); DGEG biofuels page
-  cites **€1,760/TdB** via Despacho DG 21/DG/2024. Likely different determinations
-  (formula vs. fixed ceiling) or different reference periods — needs the Despacho
-  text to resolve.
-- **CONFLICT (proposed 2030 combined sub-quota):** 12.5 % vs 7.5 % across
-  secondaries; both `PROPOSED`, resolve against the notified draft decree.
+- **RESOLVED (penalty):** the statutory non-compliance compensation is **€1,760 per
+  missing TdB/TdC** (Despacho 21/DG/2024, art. 52 + Anexo III DL 84/2022, in force
+  1 Mar 2023, biennial review). The €1,198 (2 × €599) figure was the TdB **auction**
+  base price, not the compensation. **Correction applied.**
+- **RESOLVED (proposed 2030 combined sub-quota):** 12.5 % (road transport) vs 7.5 %
+  (overall transport) are different scopes in the same draft decree, both `PROPOSED`.
+- **CORRECTION (ETS2 legal basis):** Directive (EU) 2023/959, not Reg. (EU) 2026/667.
 - **Gaps:** could not directly parse DL 84/2022 art. 8 primary PDF (files.dre.pt
-  and diariodarepublica.pt returned binary/JS-only content in this environment);
-  per-year advanced sub-quota values 2024–2029, exact Annex IX-B/UCO cap, exact
-  double-counting multipliers, and banking/borrowing rules not isolated. Corroborator
-  should pull DL 84/2022 art. 8/40/41 verbatim from a rendered legal text.
+  returned binary; poppler not installed locally for page rendering); exact Annex IX-B/UCO
+  cap, exact double-counting multipliers, and banking/borrowing rules not isolated.
+  Advanced sub-quota ladder (2.0/4/7/10 %) rests on a single institution (DGEG) —
+  corroborate against a second Tier-1/Tier-2 source.
 
 ## Source log
 
 | ID | URL | Tier | Accessed | Supports |
 |---|---|---|---|---|
-| S1 | https://www.dgeg.gov.pt/pt/areas-setoriais/energia/eficiencia-energetica/biocombustiveis/biocombustiveis-em-portugal/ | 1 | 2026-07-04 | TdB/TdC art.40-41; €1,760 Despacho reference; obligation definition |
+| S1 | https://www.dgeg.gov.pt/pt/areas-setoriais/energia/eficiencia-energetica/biocombustiveis/biocombustiveis-em-portugal/ | 1 | 2026-07-04 | TdB/TdC art.40-41; obligation definition |
 | S2 | https://www.ense-epe.pt/biocombustiveis/incorporacao-metas-e-obrigacoes/ | 1 | 2026-07-04 | ENSE quarterly verification; obligated parties |
-| S3 | https://www.ense-epe.pt/news/metas-de-incorporacao-evolucao-do-decreto-lei-no-8-2021-para-o-decreto-lei-no-84-2022/ | 1 | 2026-07-04 | Advanced sub-target 2022=0.2%,2023=0.7%; 6% conventional cap 2030 |
+| S3 | https://www.ense-epe.pt/news/metas-de-incorporacao-evolucao-do-decreto-lei-no-8-2021-para-o-decreto-lei-no-84-2022/ | 1 | 2026-07-04 | Advanced sub-target 2022=0.2%,2023=0.7% (start years); 6% conventional cap 2030 |
 | S4 | https://www.dgeg.gov.pt/pt/destaques/consulta-publica-transposicao-parcial-da-diretiva-ue-2023-2413-red-iii/ | 1 | 2026-07-04 | RED III consultation 25 Sep–25 Oct 2025 |
 | S5 | https://www.consultalex.gov.pt/ConsultaPublica_Detail.aspx?Consulta_Id=373 | 1 | 2026-07-04 | RED III draft decree consultation record |
 | S6 | https://noctula.pt/dl-n-o-84-2022-portugal-reforca-meta-global-para-a-incorporacao-de-energias-renovaveis/ | 2 | 2026-07-04 | Year-by-year 11/11.5/13/14/16 schedule |
 | S7 | https://dre.tretas.org/dre/5151843/decreto-lei-84-2022-de-9-de-dezembro (via search snippet) | 2 | 2026-07-04 | art.8 schedule; quarterly TdB delivery |
-| S8 | https://www.dgeg.gov.pt/pt/areas-setoriais/energia/eficiencia-energetica/biocombustiveis/leilao-de-tdb/ | 1 | 2026-07-04 | Compensation formula €1,198; auction mechanics |
+| S8 | https://www.dgeg.gov.pt/pt/areas-setoriais/energia/eficiencia-energetica/biocombustiveis/leilao-de-tdb/ | 1 | 2026-07-04 | TdB auction mechanics (base price €599 ≠ compensation) |
 | S9 | https://diariodarepublica.pt/dr/detalhe/portaria/226-2026-1124493236 (via search) | 1 | 2026-07-04 | Portaria 226/2026/1 ISP exemption procedure |
 | S10 | https://www.ambienteonline.pt / eco.sapo.pt / pwc.pt RED III analyses (via search) | 2 | 2026-07-04 | Proposed RED III transport sub-quotas; standstill dates |
+| V1 | https://www.dgeg.gov.pt/pt/destaques/despacho-fixa-compensacao-por-titulos-tdb-e-tdc/ | 1 | 2026-07-04 | **Compensation €1,760/TdB**; Despacho 21/DG/2024 (1 Aug 2024); art.52 DL 84/2022; eff. 1 Mar 2023 |
+| V2 | https://www.dgeg.gov.pt/pt/areas-setoriais/energia/eficiencia-energetica/biocombustiveis/biocombustiveis-em-portugal/ | 1 | 2026-07-04 | Incorporation 13%(2025)/14%(2027)/16%(2029); advanced Parte-A 2.0/4/7/10%; penalty €1,760 (Anexo III) |
+| V3 | https://energy.ec.europa.eu/news/april-infringements-package-key-decisions-energy-2026-04-29_en | 1 | 2026-07-04 | PT/EL/Malta referred to CJEU 29 Apr 2026 for RED III non-transposition; financial sanctions |
+| V4 | https://eur-lex.europa.eu/eli/reg/2026/667/oj/eng | 1 | 2026-07-04 | Reg. (EU) 2026/667 = 2040 EU climate target (Climate Law amendment) — NOT ETS2 |
+| V5 | https://climate.ec.europa.eu/eu-action/carbon-markets/ets2-buildings-road-transport-and-additional-sectors_en | 1 | 2026-07-04 | ETS2 surrender from 2028 (2027 emissions); Directive (EU) 2023/959 |
 
 ## 5-line summary (Portugal)
 - Obligation type: energy-content incorporation % of road fuels (low-carbon fuels), TdB/TdC certificates, ENSE-verified.
-- Current level: **13 % (2026)** energy content (DL 84/2022 art. 8; "13 % from 2025").
+- Current level: **13 % (2026)** energy content (DL 84/2022 art. 8; "13 % from 2025") — CONFIRMED; advanced Parte-A sub-quota **2.0 % (2026)**.
 - Next legislated change: **14 % in 2027** (rising to 16 % in 2029–2030).
-- RED III status: **NOT transposed** — draft partial-transposition decree in TRIS standstill/Council-of-Ministers stage (late vs 21 May 2025 deadline); autonomous 3 % (2026) advanced+RFNBO+biogas sub-quota is `PROPOSED`.
-- Flags: `CONFLICT` on penalty (€1,198 vs €1,760/TdB); `CONFLICT` on proposed 2030 combined sub-quota (12.5 % vs 7.5 %); primary art.8 PDF unparsed (gap).
+- Penalty: **€1,760 per missing TdB/TdC** (Despacho 21/DG/2024; art. 52 DL 84/2022) — CONFLICT resolved.
+- RED III status: **NOT transposed — referred to CJEU 29 Apr 2026** (with EL/Malta), financial sanctions requested; autonomous advanced+RFNBO sub-quota `PROPOSED` (road-transport 3 %→12.5 % 2030 / overall-transport 3 %→7.5 % 2030). ETS2 legal basis corrected to Dir. (EU) 2023/959.
