@@ -92,9 +92,9 @@ Legend: **M** = mandates authority · **T** = tax/excise authority ·
 - **L:** Government Gazette (ΦΕΚ) — et.gr
 
 ## Hungary (HU)
-- Scheme: blending obligation under **Act CXVII of 2010** on renewable energy in transport
+- Scheme: energy-based renewable-fuel share obligation under **Act CXVII of 2010** + Decree 821/2021 §9 (amended by Decree 488/2025)
 - **M:** Ministry of Energy — kormany.hu; MEKH (energy regulator) — mekh.hu
-- **T:** National Tax and Customs Administration (NAV) — nav.gov.hu
+- **T/enforcement:** National Tax and Customs Administration (NAV) — nav.gov.hu (NAV enforces non-compliance fines)
 - **L:** Nemzeti Jogszabálytár — njt.hu
 
 ## Ireland (IE)
@@ -153,8 +153,8 @@ Legend: **M** = mandates authority · **T** = tax/excise authority ·
 - **L:** Diário da República — diariodarepublica.pt
 
 ## Romania (RO)
-- Scheme: blending obligation set by Government Decisions under the fuels framework
-- **M/S:** Ministry of Energy — energie.gov.ro; Ministry of Environment — mmediu.ro; ANRE — anre.ro
+- Scheme: volumetric blending obligation + 6% FQD GHG-intensity reduction under **OUG 80/2018**; the competent authority for the blending obligation is the **Ministry of Energy** (ANRE is the energy-market regulator, **not** the blending authority)
+- **M/S:** Ministry of Energy — energie.gov.ro; Ministry of Environment — mmediu.ro; ANRE (regulator) — anre.ro
 - **T:** ANAF — anaf.ro
 - **L:** Monitorul Oficial — monitoruloficial.ro; legislatie.just.ro
 
