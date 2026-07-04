@@ -3,7 +3,7 @@
 - **Scope:** Section 3 of country-report template + draft Section-4 checklist items in this scope.
 - **Researched by:** sustainability-researcher
 - **Report date:** 2026-07-04
-- **Corroboration pass:** pending
+- **Corroboration pass:** completed 2026-07-04 (source-corroborator)
 
 > Method note: Cyprus primary law hosts partly block automated fetches
 > (`meci.gov.cy`/`energy.gov.cy` return 307 redirects; `cylaw.org` decrees are
@@ -20,10 +20,10 @@
 
 | Item | Detail | Legal basis | Confidence | Sources |
 |---|---|---|---|---|
-| RED II sustainability + FQD GHG criteria | **Law 106(I)/2022** — "Fuel Emissions Standards, Sustainability Criteria and Reduction Act 2022" — transposes RED II sustainability criteria (Art. 29 no-go land rules) and the FQD GHG-intensity mechanism; sets verification/reporting for economic operators (per Impl. Reg. (EU) 2022/996) | Law 106(I)/2022 | PRIMARY-ONLY | S3, S4 |
+| RED II sustainability + FQD GHG criteria | **Law 106(I)/2022** — "Fuel Emissions Standards, Sustainability Criteria and Reduction Act 2022" — transposes RED II sustainability criteria (Art. 29 no-go land rules) and the FQD GHG-intensity mechanism; sets verification/reporting for economic operators (per Impl. Reg. (EU) 2022/996). Corroborator: EC Clean-Energy-Islands independently confirms Law 106(I)/2022 sets the RES-T ≥14%/2030 obligation | Law 106(I)/2022 | PRIMARY-ONLY | S3, S4, V-CEI |
 | RES-in-transport promotion | **Law 107(I)/2022** — promotion/encouragement of RES incl. transport RES; biofuel blending quota set by decree **ΚΔΠ (R.A.A.) 11/2020** | Law 107(I)/2022; ΚΔΠ 11/2020 | PRIMARY-ONLY | S2, S5 |
 | National sustainability-certification system | A **national system of sustainability certification for biofuels** exists (historically **Decree ΚΔΠ 55/2011** under the petroleum-products/fuel-specifications framework); economic operators demonstrate compliance via the national system **or** an EU voluntary scheme | ΚΔΠ 55/2011; Law 106(I)/2022 | UNCORROBORATED (decree text not read) | S8 |
-| RED III (2023/2413) status | **NOT fully transposed.** Letter of formal notice Sept 2024 (**INFR(2024)0213**); reasoned opinion Feb 2025; **additional reasoned opinion 4 June 2026** — Commission found the Directive "not yet fully transposed" (notably permitting-acceleration measures); **two months to respond** before possible **CJEU referral with financial sanctions**. Cyprus is the RED III escalation in the June 2026 energy package. Status: **advanced infringement (additional reasoned opinion) — CJEU-referral risk** | Dir. (EU) 2023/2413 Art. 36; INFR(2024)0213 | CONFIRMED | S6 |
+| RED III (2023/2413) status | **NOT fully transposed.** Letter of formal notice Sept 2024 (**INFR(2024)0213**); reasoned opinion Feb 2025; **additional reasoned opinion 4 June 2026** — Commission found the Directive "not yet fully transposed" (notably permitting-acceleration measures); **two months to respond** before possible **CJEU referral with financial sanctions**. Cyprus is the RED III escalation in the June 2026 energy package — **corroborator-confirmed by direct fetch of the EC June-2026 package [V6]** (only MS on RED III; most advanced of the four countries reviewed). Status: **advanced infringement (additional reasoned opinion) — CJEU-referral risk** | Dir. (EU) 2023/2413 Art. 36; INFR(2024)0213 | CONFIRMED | S6, V6 |
 
 ### 3.2 GHG-saving thresholds applied nationally
 
@@ -55,7 +55,7 @@
 |---|---|---|---|
 | High-ILUC (palm) | Follows EU rule (DR (EU) 2019/807): capped at 2019 level → 0 % by 2030 unless low-ILUC-certified; **no CY national palm/soy ban beyond EU** identified | UNCORROBORATED (gap) | — |
 | Crop-based cap | **7 %** of transport energy (RED-based, Law 106/107(I)/2022) — mandates scope | PRIMARY-ONLY | S2, S3 |
-| Annex IX-B (UCO/animal fat) cap | The **1.7 % Part B cap does NOT apply to Cyprus** (RED III Art. 27 derogation for Cyprus & Malta) | CONFIRMED (EU text) | S10 (mandates CY) |
+| Annex IX-B (UCO/animal fat) cap | The **1.7 % Part B cap does NOT apply to Cyprus** (RED III Art. 27 derogation for Cyprus & Malta) | CONFIRMED (EU text + USDA GAIN Tier-2) | S10 (mandates CY) |
 | Annex IX national additions | None identified; follows EU Annex IX (advanced path 0.2 %→1 % (2025)→3.5 % (2030)) | PRIMARY-ONLY | S3 |
 | Waste/residue (UCO) verification | Via voluntary-scheme PoS / national system; no separate national UCO-audit rule extracted | UNCORROBORATED (gap) | — |
 
@@ -82,7 +82,7 @@
 - **ΚΔΠ 55/2011 national-certification-system decree text not read** (cylaw scanned PDF); its current status vs Law 106(I)/2022 and any newer decree should be confirmed. [GAP]
 - **No dedicated national sustainability registry** located; reporting appears to run through MECI's monthly quota reporting. [GAP]
 - **Exact annual sustainability-report deadline and penalty figures** not confirmed from primary sources. [GAP]
-- **RED III:** additional reasoned opinion June 2026 (INFR(2024)0213) **confirmed** via the EC page — CJEU-referral risk within 2 months. [CONFIRMED]
+- **RED III:** additional reasoned opinion June 2026 (INFR(2024)0213) **confirmed** via the EC page (corroborator-verified) — CJEU-referral risk within 2 months; most advanced RED III case of the four countries. [CONFIRMED]
 - **No CY palm/soy ban beyond EU; no Annex IX national additions** located. [GAP]
 
 ## 6. Source log
@@ -99,10 +99,13 @@
 | S8 | (search rendering) Cyprus national system of sustainability certification for biofuels (ΚΔΠ 55/2011) | 2 | 2026-07-04 | National certification system OR voluntary schemes; PoS/self-declaration model |
 | S9 | https://sure-system.org/en-us/udb/ ; https://www.iscc-system.org/about/news/union-database-udb/ | 2 | 2026-07-04 | UDB establishment 21 Nov 2024; mandatory-use pending; certificate-suspension mechanic |
 | S10 | https://eur-lex.europa.eu/eli/dir/2023/2413/oj/eng | 1 | 2026-07-04 | RED III Art. 27 CY/MT derogation from 1.7% IX-B cap |
+| V-CEI | https://clean-energy-islands.ec.europa.eu/countries/cyprus/legal | 1/2 | 2026-07-04 (corroborator) | Independent confirmation: Law 106(I)/2022 sets RES-T ≥14% by 2030 |
+| V6 | https://energy.ec.europa.eu/news/june-infringements-package-key-decisions-energy-2026-06-04_en | 1 | 2026-07-04 (corroborator) | Additional reasoned opinion to Cyprus (INFR(2024)0213); only MS on RED III |
 
 ---
 **4-line summary — Cyprus**
-- Transposition: RED II sustainability + FQD via **Law 106(I)/2022** and RES via **Law 107(I)/2022** with ministerial decrees (ΚΔΠ); competent authority **MECI**; **RED III NOT fully transposed → additional reasoned opinion 4 June 2026 (INFR(2024)0213), CJEU-referral risk within 2 months** (confirmed).
+- Transposition: RED II sustainability + FQD via **Law 106(I)/2022** and RES via **Law 107(I)/2022** with ministerial decrees (ΚΔΠ); competent authority **MECI**; **RED III NOT fully transposed → additional reasoned opinion 4 June 2026 (INFR(2024)0213), CJEU-referral risk within 2 months** (corroborator-confirmed; only MS on RED III).
 - Certification: **national sustainability-certification system (ΚΔΠ 55/2011 lineage) OR EU-recognised voluntary schemes**; proof = self-declaration / sustainability declaration / **PoS** carrying the GHG-saving figure; GHG thresholds 50/60/65 % + ≥6 % FQD vs 94.1.
 - Registry/UDB: **no dedicated national sustainability registry** found — suppliers file **monthly** sales/blending reports to MECI; exact annual sustainability deadline a gap; UDB applies via EU law (mandatory-use date pending).
-- Flags: ΚΔΠ 55/2011 decree text not read; penalty figures unconfirmed; **Cyprus exempt from the 1.7 % IX-B cap**; no palm/soy ban or Annex IX additions beyond EU.
+- Flags: ΚΔΠ 55/2011 decree text not read; penalty figures unconfirmed; **Cyprus exempt from the 1.7 % IX-B cap** (CONFIRMED); no palm/soy ban or Annex IX additions beyond EU.
+</content>

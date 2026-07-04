@@ -3,7 +3,7 @@
 - **Scope:** Section 3 of country-report template + draft Section-4 checklist items in this scope.
 - **Researched by:** sustainability-researcher
 - **Report date:** 2026-07-04
-- **Corroboration pass:** pending
+- **Corroboration pass:** completed 2026-07-04 (source-corroborator)
 
 > Method note: primary basis is the **Uredba o trajnostnih merilih za biogoriva in
 > emisiji toplogrednih plinov goriv v prometu** (Ur. l. RS, `uradni-list.si` vsebina
@@ -20,8 +20,8 @@
 | Item | Detail | Legal basis | Confidence | Sources |
 |---|---|---|---|---|
 | RED II sustainability + GHG criteria | **Uredba o trajnostnih merilih za biogoriva in emisiji toplogrednih plinov goriv v prometu** — full sustainability-criteria transposition (land criteria, GHG thresholds, mass balance, accompanying certificate, voluntary schemes, monitoring). Art. 5–9 (criteria), Art. 6 (GHG), Art. 10 (schemes), Art. 12 (certificate), Art. 17–19 (monitoring/reporting) | Uredba, Ur. l. RS 2021-01-0873 | CONFIRMED | S1 |
-| RES-in-transport target framework | **Uredba o obnovljivih virih energije v prometu** (208/21, 93/22, 70/24) — annual RES-T energy-share target, crop cap, IX-B cap, advanced sub-target (mandates scope) | Uredba o OVE v prometu | PRIMARY-ONLY | S8 (mandates SI) |
-| RED III (2023/2413) primary transposition | **ZSROVE-1 — Zakon o spodbujanju rabe obnovljivih virov energije** (Ur. l. RS **112/2025**, 29 Dec 2025) transposes Dir. (EU) 2023/2413. Adopted **after** the 21 May 2025 deadline; Slovenia had a Sept 2024 letter of formal notice and was **not** escalated in June 2026. Transport implementing acts under ZSROVE-1 may follow — monitor | ZSROVE-1 | CONFIRMED (adoption) / assessment pending | S9, S8 (mandates SI) |
+| RES-in-transport target framework | **Uredba o obnovljivih virih energije v prometu** (208/21, 93/22, 70/24) — annual RES-T energy-share target, crop cap, IX-B cap, advanced sub-target (mandates scope) | Uredba o OVE v prometu | PRIMARY-ONLY (mandates: 2026=13.8% primary-verified) | S8 (mandates SI) |
+| RED III (2023/2413) primary transposition | **ZSROVE-1 — Zakon o spodbujanju rabe obnovljivih virov energije** (Ur. l. RS **112/2025**, 29 Dec 2025) transposes Dir. (EU) 2023/2413. Adoption corroborated by Borzen news [V-ZS]. Adopted **after** the 21 May 2025 deadline; Slovenia had a Sept 2024 letter of formal notice and was **not** escalated in June 2026 (corroborator-confirmed — only CY on RED III). Transport implementing acts under ZSROVE-1 may follow — monitor | ZSROVE-1 | CONFIRMED (adoption) / assessment pending | S9, S8, V-ZS, V6 |
 
 ### 3.2 GHG-saving thresholds applied nationally
 
@@ -60,8 +60,8 @@ From **Uredba Art. 6** (quoted this pass):
 |---|---|---|---|
 | Land criteria | High-biodiversity land, high-carbon-stock land, peatland excluded — Uredba Art. 7–8; EU agricultural compliance for crop feedstocks Art. 9 | CONFIRMED | S1 |
 | High-ILUC (palm) | Follows EU rule (DR (EU) 2019/807): high-ILUC-risk feedstock capped at 2019 level → 0 % by 2030 unless low-ILUC-certified. Handled via the RES-T decree / EU law; **no SI national palm/soy ban beyond EU** identified | UNCORROBORATED (gap) | S1, S8 |
-| Crop-based cap | **7 %** of transport energy (Uredba o OVE v prometu Art. 4(4)) — mandates scope | PRIMARY-ONLY | S8 |
-| Annex IX-B (UCO/animal fat) cap | **1.7 %** (Uredba o OVE v prometu Art. 6(2)) — mandates scope; Slovenia is **not** in the CY/MT derogation | PRIMARY-ONLY | S8 |
+| Crop-based cap | **7 %** of transport energy (Uredba o OVE v prometu Art. 4(4)) — mandates scope; primary-verified [V-UL via mandates] | PRIMARY-ONLY | S8 |
+| Annex IX-B (UCO/animal fat) cap | **1.7 %** (Uredba o OVE v prometu Art. 6(2)) — mandates scope; primary-verified; Slovenia is **not** in the CY/MT derogation | PRIMARY-ONLY | S8 |
 | Annex IX national additions | None identified; follows EU Annex IX | UNCORROBORATED (gap) | — |
 | Waste/residue (UCO) verification | Verified via voluntary-scheme PoS + the spremno potrdilo + monitoring-contractor check; no separate national UCO-audit rule extracted | PRIMARY-ONLY | S1 |
 
@@ -72,7 +72,7 @@ From **Uredba Art. 6** (quoted this pass):
 | Annual operator report to the monitoring contractor | **by 28 February** — Uredba Art. 18(1) | CONFIRMED | S1 |
 | Monitoring contractor → ministry (aggregate) report | **by 31 March** — Uredba Art. 18(3) | CONFIRMED | S1 |
 | Independent verification / audit | Voluntary-scheme audit + monitoring-contractor verification (Art. 17); auditors under a Commission-approved scheme (Art. 10(2)) | CONFIRMED | S1 |
-| Penalties | Set in the parent RES-promotion act (**ZSROVE-1**), not in the Uredba — exact amounts not located (mandates scope gap) | GAP | S9 (mandates SI) |
+| Penalties | Set in the parent RES-promotion act (**ZSROVE-1**), not in the Uredba — exact amounts not located (corroborator: ZSROVE-1 PDF not parseable). Mandates-scope gap | GAP | S9 (mandates SI), V-ZS |
 
 ## 4. Draft compliance-checklist items (this scope)
 
@@ -86,9 +86,9 @@ From **Uredba Art. 6** (quoted this pass):
 ## 5. Conflicts and gaps
 
 - **No dedicated national sustainability registry** (Nabisy-equivalent) located — Slovenia relies on the accompanying certificate + monitoring-contractor route. [GAP]
-- **ZSROVE-1 (112/2025) UDB and penalty provisions** not read line-by-line this pass; whether ZSROVE-1 introduces a national UDB obligation or revises the Uredba's monitoring regime should be checked once implementing acts appear. [FLAG]
+- **ZSROVE-1 (112/2025) UDB and penalty provisions** not read line-by-line this pass (corroborator: PDF not parseable); whether ZSROVE-1 introduces a national UDB obligation or revises the Uredba's monitoring regime should be checked once implementing acts appear. [FLAG]
 - **High-ILUC palm** handled via EU law / RES-T decree; **no SI-specific ban beyond EU; no Annex IX national additions** located. [GAP]
-- Uredba article numbers cited from a single successful fetch of the uradni-list page; a second independent read (PISRS URED8173) recommended for the corroborator. [FLAG — PRIMARY-ONLY on some items]
+- Uredba article numbers cited from a single successful fetch of the uradni-list page; a second independent read (PISRS URED8173) recommended (PISRS remained JS-only this pass). [FLAG — PRIMARY-ONLY on some items]
 
 ## 6. Source log
 
@@ -101,10 +101,13 @@ From **Uredba Art. 6** (quoted this pass):
 | S8 | (repo) research/reports/drafts/SI-mandates-2026-07-04.md | — | 2026-07-04 | Uredba o OVE v prometu: 7% crop cap, 1.7% IX-B, advanced path; RED III / ZSROVE-1 status |
 | S9 | https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2025-01-3977 | 1 | 2026-07-04 | ZSROVE-1, Ur. l. RS 112/2025 (29 Dec 2025), transposes RED III |
 | S10 | https://sure-system.org/en-us/udb/ ; https://www.iscc-system.org/about/news/union-database-udb/ | 2 | 2026-07-04 | UDB establishment 21 Nov 2024; mandatory-use pending; scheme onboarding / certificate-suspension mechanic |
+| V-ZS | https://borzen.si/en-us/about-us/news/details/v-uradnim-listu-rs-objavljen-zakon-o-spodbujanju-rabe-obnovljivih-virov-energije-zsrove-1 | 2 | 2026-07-04 (corroborator) | Independent corroboration of ZSROVE-1 publication (112/2025, 29 Dec 2025) |
+| V6 | https://energy.ec.europa.eu/news/june-infringements-package-key-decisions-energy-2026-06-04_en | 1 | 2026-07-04 (corroborator) | June 2026: only CY escalated on RED III (SI not escalated) |
 
 ---
 **4-line summary — Slovenia**
-- Transposition: RED II sustainability via the **Uredba o trajnostnih merilih za biogoriva** (Ur. l. RS 2021-01-0873); RED III primary transposition **ZSROVE-1 adopted (Ur. l. RS 112/2025, 29 Dec 2025)**, late but not escalated June 2026 (Commission assessment likely pending).
+- Transposition: RED II sustainability via the **Uredba o trajnostnih merilih za biogoriva** (Ur. l. RS 2021-01-0873); RED III primary transposition **ZSROVE-1 adopted (Ur. l. RS 112/2025, 29 Dec 2025)**, late but not escalated June 2026 (corroborator-confirmed; Commission assessment likely pending).
 - Certification: **EU-recognised voluntary schemes OR direct Art. 5–9 verification** (Uredba Art. 10); proof per consignment = **spremno potrdilo** with GHG value + compliance declaration; GHG thresholds 50/60/65 % (biofuels), 70 %→80 % (biomass fuels from 2026).
 - Registry/UDB: **no dedicated national registry** found — reporting via **monitoring contractors** to MOPE; annual operator report **by 28 Feb**, contractor→ministry **by 31 Mar**; UDB applies via EU law (mandatory-use date pending).
-- Flags: ZSROVE-1 UDB/penalty provisions not yet read line-by-line; no SI palm/soy ban or Annex IX additions beyond EU; some Uredba items PRIMARY-ONLY pending a second independent read.
+- Flags: ZSROVE-1 UDB/penalty provisions not yet read line-by-line (PDF not parseable); no SI palm/soy ban or Annex IX additions beyond EU; some Uredba items PRIMARY-ONLY pending a second independent read.
+</content>

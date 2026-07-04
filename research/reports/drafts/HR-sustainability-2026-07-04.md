@@ -3,7 +3,7 @@
 - **Scope:** Section 3 of country-report template + draft Section-4 checklist items in this scope.
 - **Researched by:** sustainability-researcher
 - **Report date:** 2026-07-04
-- **Corroboration pass:** pending
+- **Corroboration pass:** completed 2026-07-04 (source-corroborator)
 
 > Method note: primary basis is the **Zakon o biogorivima za prijevoz** (consolidated
 > text via `zakon.hr/z/189`, fetched 2026-07-04) and the implementing **Pravilnik o
@@ -23,7 +23,7 @@
 | RED II sustainability + GHG criteria | Transposed in the **Zakon o biogorivima za prijevoz** (NN 65/09, 145/10, 26/11, 144/12, 14/14, 94/18, 52/21). Art. **17.a** sets the five sustainability requirements (biodiverse land, high-carbon-stock land, peatland, sustainable soil/forest management, GHG saving); Art. 17.a(3) makes compliance a condition for counting biofuel toward the national goal; Art. 17.a(4) delegates the GHG-calculation methodology to a rulebook | Zakon o biogorivima za prijevoz, Art. 17.a | PRIMARY-ONLY | S1 |
 | Implementing sustainability rulebook | **Pravilnik o načinu i uvjetima primjene zahtjeva održivosti u proizvodnji i korištenju biogoriva** — sets the proof-of-sustainability certificate, mass-balance, voluntary-scheme acceptance and verification mechanics. Original NN 83/2013; HERA's propisi list shows a **2021** re-issue ("Regulation on Sustainability Requirements Implementation, 2021") — exact NN number not confirmed this pass | Pravilnik (NN 83/2013; 2021 re-issue) | PRIMARY-ONLY / gap on current NN | S2, S3 |
 | FQD GHG-intensity reduction | Suppliers must reduce transport-fuel lifecycle GHG intensity by **at least 6 %** vs the 2010 fossil baseline (94.1 gCO2eq/MJ) | Zakon Art. 29.a(1) | PRIMARY-ONLY | S1 |
-| RED III (2023/2413) status | **NOT transposed.** Letter of formal notice in the **Sept 2024** non-communication package; Croatia was **not** escalated in the June 2026 energy package (only Cyprus was, on RED III). A draft amendment to the biofuels-in-transport law is in public consultation (not adopted). Status: **in infringement — letter of formal notice** | Dir. (EU) 2023/2413 Art. 36; NIM | PRIMARY-ONLY / infringement | S8, S9 (mandates S-HR) |
+| RED III (2023/2413) status | **NOT transposed.** Letter of formal notice in the **Sept 2024** non-communication package; Croatia was **not** escalated in the June 2026 energy package (only Cyprus was, on RED III — **corroborator confirmed** by direct fetch of the EC June-2026 package). A draft amendment to the biofuels-in-transport law is in public consultation (not adopted). Status: **in infringement — letter of formal notice** | Dir. (EU) 2023/2413 Art. 36; NIM | PRIMARY-ONLY / infringement (status corroborated) | S8, S9, V6 |
 
 ### 3.2 GHG-saving thresholds applied nationally
 
@@ -70,7 +70,7 @@
 | Public-transport / public-sector evidence | **by 28 February** — Art. 31 | PRIMARY-ONLY | S1 |
 | Ministry confirmation of compliance | **by 30 April** — Art. 27(1) | PRIMARY-ONLY | S1 |
 | Independent verification / audit | Monitoring by authorised persons; audits restricted to certified entities — Art. 28(4)–(5); voluntary-scheme audit cycle applies to PoS | PRIMARY-ONLY | S1 |
-| Penalties | Administrative fines under Art. 33 (kuna bands pre-euro; euro conversion pending — mandates scope) + special environmental charge for non-placement | PRIMARY-ONLY (euro amount UNCORROBORATED) | S1 (mandates HR) |
+| Penalties | Administrative fines under Art. 33 (kuna bands confirmed via zakon.hr [V1]: 10,000–150,000 / 2,000–15,000 / 2,000–50,000 kuna; euro conversion pending — mandates scope) + special environmental charge for non-placement | PRIMARY-ONLY (euro amount UNCORROBORATED) | S1 (mandates HR), V1 |
 
 ## 4. Draft compliance-checklist items (this scope)
 
@@ -89,6 +89,7 @@
 - **Biofuel GHG thresholds (50/60/65 %)** framework-level, not quoted from the HR rulebook text (nn.hr 503). [FLAG]
 - **No HR palm/soy ban beyond EU; no Annex IX national additions** located. [GAP]
 - **UDB:** no HR implementing provision (RED III not transposed); certificate-suspension mechanic is scheme-administered (Tier 2). [FLAG]
+- **RED III infringement status corroborated** (June 2026 package: only CY escalated on RED III; HR remains at Sept-2024 letter-of-formal-notice stage). [CONFIRMED — V6]
 
 ## 6. Source log
 
@@ -104,10 +105,13 @@
 | S8 | (repo) research/reports/drafts/HR-mandates-2026-07-04.md | — | 2026-07-04 | RED III formal notice Sept 2024; not escalated June 2026 |
 | S9 | https://energy.ec.europa.eu/news/june-infringements-package-key-decisions-energy-2026-06-04_en | 1 | 2026-07-04 | June 2026 package: only Cyprus escalated on RED III |
 | S10 | https://sure-system.org/en-us/udb/ ; https://www.iscc-system.org/about/news/union-database-udb/ | 2 | 2026-07-04 | UDB 21 Nov 2024 establishment; mandatory-use date pending; scheme onboarding / certificate-suspension mechanic |
+| V1 | https://www.zakon.hr/z/189/zakon-o-biogorivima-za-prijevoz | 1 | 2026-07-04 (corroborator) | Art. 33 penalty bands (kuna); Art. 8(4)(6)(7) advanced/IX-B |
+| V6 | https://energy.ec.europa.eu/news/june-infringements-package-key-decisions-energy-2026-06-04_en ; https://energy.ec.europa.eu/news/april-infringements-package-key-decisions-energy-2026-04-29_en | 1 | 2026-07-04 (corroborator) | June 2026: only CY on RED III; April 2026: HR RO on electricity market design (2024/1711), not RED III |
 
 ---
 **4-line summary — Croatia**
-- Transposition: RED II sustainability via **Zakon o biogorivima za prijevoz** (Art. 17.a) + the sustainability-requirements **Pravilnik** (NN 83/2013; 2021 re-issue); **RED III NOT transposed → letter of formal notice (Sept 2024)**, in infringement, not escalated June 2026.
+- Transposition: RED II sustainability via **Zakon o biogorivima za prijevoz** (Art. 17.a) + the sustainability-requirements **Pravilnik** (NN 83/2013; 2021 re-issue); **RED III NOT transposed → letter of formal notice (Sept 2024)**, in infringement, not escalated June 2026 (corroborator-confirmed).
 - Certification: **EU-recognised voluntary schemes accepted** (ISCC EU, REDcert, 2BSvs…); proof per consignment = sustainability **certificate ("potvrda")**; no stand-alone national scheme beyond the Pravilnik framework.
 - Registry/UDB: **no dedicated national sustainability registry** found (Ministry verification, Art. 27; HROTE = incentive administrator); annual report to the Ministry **by 28 Feb**, confirmation by 30 Apr; UDB applies via EU law (mandatory-use date pending).
 - Flags: current sustainability-Pravilnik NN number unconfirmed (nn.hr/hera.hr 503); HROTE vs Ministry verification split to confirm; GHG 50/60/65 % framework-level; no palm/soy ban or Annex IX additions beyond EU.
+</content>

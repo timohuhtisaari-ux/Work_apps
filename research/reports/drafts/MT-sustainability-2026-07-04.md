@@ -3,7 +3,7 @@
 - **Scope:** Section 3 of country-report template + draft Section-4 checklist items in this scope.
 - **Researched by:** sustainability-researcher
 - **Report date:** 2026-07-04
-- **Corroboration pass:** pending
+- **Corroboration pass:** completed 2026-07-04 (source-corroborator)
 
 > Method note: `legislation.mt` serves JS-only landing pages (full S.L. text not
 > machine-readable via the fetch tool), so subordinate-legislation content is drawn
@@ -19,14 +19,14 @@
 
 | Item | Detail | Legal basis | Confidence | Sources |
 |---|---|---|---|---|
-| RED II sustainability + GHG criteria | **S.L. 545.37 — Biofuels, Bioliquids and Biomass Fuels (Sustainability Criteria) Regulations** — Malta's sustainability-criteria transposition (RED II Art. 29 land + GHG criteria, PoS). **⚠ REPEALED by Legal Notice 95 of 2026** — a replacement instrument is implied but **not located** this pass | S.L. 545.37 (repealed by LN 95/2026) | PRIMARY-ONLY / superseded | S2, S3 |
-| Biofuel market / substitution obligation | **S.L. 545.15 — Petroleum for the Biofuels and Bioliquids Market Regulations** — substitution obligation, EN-standard compliance, REWS authorisation; **still in force** | S.L. 545.15 | PRIMARY-ONLY | S3, S4 |
-| Former RES-promotion regs | **S.L. 545.35 — Promotion of Energy from Renewable Sources Regulations — REPEALED by Legal Notice 93 of 2026** (national re-regulation under way) | S.L. 545.35 (repealed by LN 93/2026) | PRIMARY-ONLY | S5 (mandates MT) |
-| RED III (2023/2413) status | **NOT transposed.** Letter of formal notice **July 2025**; reasoned opinion **December 2025**; **referred to the CJEU on 29 April 2026 (IP/26/839) with a request for financial sanctions** (alongside Greece and Portugal). Malta notified some measures but did not give sufficiently clear information on transposition. The 2026 repeals (LN 93 & 95) indicate ongoing re-regulation. Status: **referred to CJEU (advanced infringement)** | Dir. (EU) 2023/2413 Art. 36; IP/26/839 | CONFIRMED | S6, S5 (mandates MT) |
+| RED II sustainability + GHG criteria | **S.L. 545.37 — Biofuels, Bioliquids and Biomass Fuels (Sustainability Criteria) Regulations** — Malta's sustainability-criteria transposition (RED II Art. 29 land + GHG criteria, PoS). **⚠ REPEALED by Legal Notice 95 of 2026** — a replacement instrument is implied but **NOT located** (corroborator 2026-07-04: targeted searches for LN 95/2026 / LN 96/2026 / a 2026 sustainability-criteria legal notice returned nothing; legislation.mt JS-only). **Whether any replacement sustainability instrument is in force is unresolved.** | S.L. 545.37 (repealed by LN 95/2026) | PRIMARY-ONLY / superseded — replacement GAP | S2, S3 |
+| Biofuel market / substitution obligation | **S.L. 545.15 — Petroleum for the Biofuels and Bioliquids Market Regulations** — substitution obligation, EN-standard compliance, REWS authorisation; **still in force** (not among the 2026 repeals located) | S.L. 545.15 | PRIMARY-ONLY | S3, S4 |
+| Former RES-promotion regs | **S.L. 545.35 — Promotion of Energy from Renewable Sources Regulations — REPEALED by Legal Notice 93 of 2026** (national re-regulation under way; replacement not located) | S.L. 545.35 (repealed by LN 93/2026) | PRIMARY-ONLY | S5 (mandates MT) |
+| RED III (2023/2413) status | **NOT transposed.** Letter of formal notice **July 2025**; reasoned opinion **December 2025**; **referred to the CJEU on 29 April 2026 (IP/26/839) with a request for financial sanctions** (alongside Greece and Portugal). **Corroborator-confirmed by direct fetch of the EC April-2026 energy package [V6]** ("referring Greece, Malta and Portugal to the Court of Justice … with requests to impose financial sanctions"). Malta notified some measures but did not give sufficiently clear information on transposition. The 2026 repeals (LN 93 & 95) indicate ongoing re-regulation. Status: **referred to CJEU (advanced infringement)** | Dir. (EU) 2023/2413 Art. 36; IP/26/839 | CONFIRMED | S6, V6 |
 
 ### 3.2 GHG-saving thresholds applied nationally
 
-- **Biofuels/bioliquids:** RED thresholds apply via S.L. 545.37 (while in force) / its replacement — **50 %** (pre-5 Oct 2015 installations), **60 %** (6 Oct 2015–31 Dec 2020), **65 %** (from 1 Jan 2021); **70 %** RFNBO/RCF. Not quoted from the MT text (legislation.mt JS-only) → framework-level. [PRIMARY-ONLY / framework — S2, S7]
+- **Biofuels/bioliquids:** RED thresholds apply via S.L. 545.37 (while in force) / its (unlocated) replacement — **50 %** (pre-5 Oct 2015 installations), **60 %** (6 Oct 2015–31 Dec 2020), **65 %** (from 1 Jan 2021); **70 %** RFNBO/RCF. Not quoted from the MT text (legislation.mt JS-only) → framework-level. [PRIMARY-ONLY / framework — S2, S7]
 - **Supplier FQD target:** ≥6 % lifecycle GHG-intensity reduction vs the 94.1 gCO2eq/MJ baseline applies as EU baseline; MT-specific provision not read this pass. [UNCORROBORATED — S7]
 
 ### 3.3 Accepted certification schemes & proof of sustainability
@@ -55,7 +55,7 @@
 |---|---|---|---|
 | High-ILUC (palm) | Follows EU rule (DR (EU) 2019/807): capped at 2019 level → 0 % by 2030 unless low-ILUC-certified; **no MT national palm/soy ban beyond EU** identified | UNCORROBORATED (gap) | — |
 | Crop-based cap | **7 %** of transport energy (RED-based) — mandates scope | PRIMARY-ONLY | S4 (mandates MT) |
-| Annex IX-B (UCO/animal fat) cap | The **1.7 % Part B cap does NOT apply to Malta** (RED III Art. 27 derogation for Cyprus & Malta) | CONFIRMED (EU text) | S10 |
+| Annex IX-B (UCO/animal fat) cap | The **1.7 % Part B cap does NOT apply to Malta** (RED III Art. 27 derogation for Cyprus & Malta) | CONFIRMED (EU text + USDA GAIN Tier-2) | S10 |
 | Double counting | Biofuels from wastes/residues, non-food cellulosic and ligno-cellulosic material count **twice** their energy content (S.L. 545.15) | PRIMARY-ONLY | S3 |
 | Annex IX national additions | None identified; follows EU Annex IX (≥3.5 % advanced by 2030) | PRIMARY-ONLY | S4 |
 | Waste/residue (UCO) verification | Via voluntary-scheme PoS; no separate national UCO-audit rule extracted | UNCORROBORATED (gap) | — |
@@ -79,10 +79,10 @@
 
 ## 5. Conflicts and gaps
 
-- **Post-2026 sustainability instrument unresolved:** **S.L. 545.37 repealed by LN 95/2026** and **S.L. 545.35 repealed by LN 93/2026** — the **replacement legal notice(s)** carrying the current sustainability-criteria and RES-promotion rules were **not located** (legislation.mt JS-only; search did not surface the LN texts). Confirm which instrument now carries RED sustainability criteria. [GAP — key]
+- **Post-2026 sustainability instrument unresolved (KEY):** **S.L. 545.37 repealed by LN 95/2026** and **S.L. 545.35 repealed by LN 93/2026** — the **replacement legal notice(s)** carrying the current sustainability-criteria and RES-promotion rules were **not located** (corroborator: legislation.mt JS-only; targeted searches for LN 95/96 of 2026 and a 2026 sustainability-criteria instrument surfaced nothing). Cannot confirm whether a replacement is in force or whether a regulatory gap currently exists. Confirm which instrument now carries RED sustainability criteria. **RANK: highest compliance risk (possible live gap in the national sustainability-criteria transposition).**
 - **No dedicated national sustainability registry** located; compliance runs on REWS authorisations + PoS. [GAP]
 - **Exact annual report deadline and penalty figures** not located. [GAP]
-- **RED III:** referral to CJEU 29 Apr 2026 (IP/26/839) with financial sanctions **confirmed**; the 2026 repeals suggest a transposition attempt in progress. [CONFIRMED referral / re-regulation FLAG]
+- **RED III:** referral to CJEU 29 Apr 2026 (IP/26/839) with financial sanctions **confirmed** (corroborator-verified via EC April-2026 package); the 2026 repeals suggest a transposition attempt in progress. [CONFIRMED referral / re-regulation FLAG]
 - **No MT palm/soy ban beyond EU; no Annex IX national additions** located. [GAP]
 
 ## 6. Source log
@@ -99,10 +99,12 @@
 | S8 | https://energy.ec.europa.eu/topics/renewable-energy/bioenergy/biofuels/union-database-liquid-and-gaseous-renewable-and-recycled-carbon-fuels_en | 1 | 2026-07-04 | UDB legal basis Art. 31a; 2022/996 Art. 18 |
 | S9 | https://sure-system.org/en-us/udb/ ; https://www.iscc-system.org/about/news/union-database-udb/ | 2 | 2026-07-04 | UDB establishment 21 Nov 2024; mandatory-use pending; certificate-suspension mechanic |
 | S10 | https://eur-lex.europa.eu/eli/dir/2023/2413/oj/eng | 1 | 2026-07-04 | RED III Art. 27 CY/MT derogation from 1.7% IX-B cap |
+| V6 | https://energy.ec.europa.eu/news/april-infringements-package-key-decisions-energy-2026-04-29_en | 1 | 2026-07-04 (corroborator) | Confirms Greece/Malta/Portugal referred to CJEU on RED III with financial sanctions; FLN Jul 2025 / RO Dec 2025 |
 
 ---
 **4-line summary — Malta**
-- Transposition: RED II sustainability via **S.L. 545.37 (Sustainability Criteria Regs)** + market obligation via **S.L. 545.15**, but **S.L. 545.37 was repealed by LN 95/2026 and S.L. 545.35 by LN 93/2026** (re-regulation under way; replacement not located); **RED III NOT transposed → referred to CJEU 29 Apr 2026 (IP/26/839) with financial sanctions**.
+- Transposition: RED II sustainability via **S.L. 545.37 (Sustainability Criteria Regs)** + market obligation via **S.L. 545.15**, but **S.L. 545.37 was repealed by LN 95/2026 and S.L. 545.35 by LN 93/2026** (re-regulation under way; **replacement not located — possible live gap**); **RED III NOT transposed → referred to CJEU 29 Apr 2026 (IP/26/839) with financial sanctions** (corroborator-confirmed).
 - Certification: **EU-recognised voluntary schemes** with imported **Proof of Sustainability** per consignment; GHG thresholds 50/60/65 % (framework); double counting for wastes/residues.
-- Registry/UDB: **no dedicated national sustainability registry** found — **REWS** authorises/ supervises, EWA sets policy; annual report deadline a gap; UDB applies via EU law (mandatory-use date pending).
-- Flags: **post-2026 replacement sustainability instrument unresolved** (LN 93 & 95/2026 repeals); annual deadline + penalties gaps; **Malta exempt from the 1.7 % IX-B cap**; no palm/soy ban or Annex IX additions beyond EU.
+- Registry/UDB: **no dedicated national sustainability registry** found — **REWS** authorises/supervises, EWA sets policy; annual report deadline a gap; UDB applies via EU law (mandatory-use date pending).
+- Flags: **post-2026 replacement sustainability instrument unresolved** (LN 93 & 95/2026 repeals — replacement not located); annual deadline + penalties gaps; **Malta exempt from the 1.7 % IX-B cap** (CONFIRMED); no palm/soy ban or Annex IX additions beyond EU.
+</content>
