@@ -3,7 +3,7 @@
 - **Country:** Finland (FI)
 - **Report date:** 2026-07-04
 - **Researched by:** sustainability-researcher (section 3 + section 4 items in scope)
-- **Corroboration pass:** pending
+- **Corroboration pass:** completed 2026-07-04 (source-corroborator)
 - All facts verified by live fetch on **2026-07-04** unless otherwise dated. Mandate levels (jakeluvelvoite) and tax rates are other agents' scope — cross-references only.
 
 ## 3. Sustainability & compliance requirements
@@ -13,16 +13,16 @@
 | Item | Finding | Effective | Confidence | Sources |
 |---|---|---|---|---|
 | Core act | **Kestävyyslaki — Laki biopolttoaineista, bionesteistä ja biomassapolttoaineista (393/2013)**; title updated in 2025 (appears in tax guidance as "laki eräiden polttoaineiden kestävyydestä") | in force | CONFIRMED (act) / PRIMARY-ONLY (new title wording) | Finlex 393/2013 landing page (T1, 2026-07-04); TEM news 2025-07-03 (T1, 2026-07-04); vero.fi reference (T1, 2026-07-04) |
-| RED III sustainability transposition | **Laki 500/2025** amending 393/2013 (from HE 37/2025; also repealed jakeluvelvoitelaki 7 § 7 mom. — UDB provision moved into the kestävyys framework). **In force 4 Jul 2025.** Finland's RED III sustainability side is **transposed** | 4 Jul 2025 | CONFIRMED | Finlex säädöskokoelma 2025/500 (T1, 2026-07-04); TEM news "Uusiutuvan energian kestävyyslait voimaan" 2025-07-03 (T1, 2026-07-04); Energiavirasto news 2025-09-18 (T1, 2026-07-04) |
+| RED III sustainability transposition | **Laki 500/2025** amending 393/2013 (from HE 37/2025; also repealed jakeluvelvoitelaki 7 § 7 mom. — UDB provision moved into the kestävyys framework). **In force 4 Jul 2025.** Finland's RED III sustainability side is **transposed**. **Corroborator note:** this confirms the mandates/sustainability split — the jakeluvelvoite package is 841/2024 (mandates scope), the sustainability act is 500/2025 (this scope); the lead's brief conflated them | 4 Jul 2025 | CONFIRMED (act number/date); PRIMARY-ONLY on internal § numbers (Finlex full text not renderable) | Finlex säädöskokoelma 2025/500 (T1, 2026-07-04); TEM news "Uusiutuvan energian kestävyyslait voimaan" 2025-07-03 (T1, 2026-07-04); Energiavirasto news 2025-09-18 (T1, 2026-07-04) |
 | Earlier amendments | 2023 amendment (approved 12 Dec 2023, in force 1 Jan 2024): small biogas plants (<2 MW but >1 GWh/a) may demonstrate sustainability; simplified systems; links to R/T excise classes (cross-ref tax researcher) | 1 Jan 2024 | CONFIRMED | Energiavirasto news "Eduskunta hyväksyi kestävyyslain muutoksen" (T1, 2026-07-04); TEM (T1) |
-| Scope after RED III | Extended to **all plants ≥ 7.5 MW total thermal input using solid biomass** for electricity/heat/cooling (previously 20 MW outside ETS); ~70 new installations; stricter forest/agricultural biomass criteria | 4 Jul 2025 (GHG tiers from 1 Jan 2026) | CONFIRMED | TEM news 2025-07-03 (T1); Energiavirasto news 2025-09-18 + Kestävyysinfo 7.10.2025 (T1, 2026-07-04) |
+| Scope after RED III | Extended to **all plants ≥ 7.5 MW total thermal input using solid biomass** for electricity/heat/cooling (previously 20 MW outside ETS); ~70 new installations; stricter forest/agricultural biomass criteria | 4 Jul 2025 (GHG tiers from 1 Jan 2026) | CONFIRMED (2 × T1: TEM + Energiavirasto) / PRIMARY-ONLY on the exact § | TEM news 2025-07-03 (T1); Energiavirasto news 2025-09-18 + Kestävyysinfo 7.10.2025 (T1, 2026-07-04) |
 | Verifying authority | **Energiavirasto** (Energy Authority): approves sustainability systems and verifiers, supervises compliance, issues advance rulings (ennakkotieto) on raw-material classification | in force | CONFIRMED | Energiavirasto "Biomassojen ja biopolttoaineiden kestävyys" + "Kestävyys ja liikennepolttoaineiden päästöjen vähentäminen" (T1, 2026-07-04) |
 
 ### 3.2 GHG-saving thresholds applied nationally
 
 | Fuel / use | Threshold | Confidence | Sources |
 |---|---|---|---|
-| Biofuels/bioliquids (transport & heating oil) | 50 % / 60 % / 65 % by installation start date (RED II Art. 29(10) tiers, transposed in kestävyyslaki) | PRIMARY-ONLY for the FI statute section (Finlex full text not renderable); EU tiers CONFIRMED | RED II 2018/2001 Art. 29(10) EUR-Lex (T1); Energiavirasto operator guidance framework (T1, 2026-07-04); Danish/Swedish parallels for tier structure |
+| Biofuels/bioliquids (transport & heating oil) | 50 % / 60 % / 65 % by installation start date (RED II Art. 29(10) tiers, transposed in kestävyyslaki) | PRIMARY-ONLY for the FI statute section (Finlex full text not renderable); EU tiers CONFIRMED | RED II 2018/2001 Art. 29(10) EUR-Lex (T1); Energiavirasto operator guidance framework (T1, 2026-07-04) |
 | RFNBOs | ≥ 70 % lifecycle GHG saving | CONFIRMED | Energiavirasto RFNBO webinar/guidance 2025 (T1, 2026-07-04); RED II Art. 25(2) (T1) |
 | Biomass fuels (el/heat/cool) | New requirement from **1 Jan 2026** for plants where biomass use predates 2021: **80 % vs fossil reference** for ≥10 MW plants whose biomass use began ≥15 years ago; RED III tiers otherwise | 1 Jan 2026 | CONFIRMED | Energiavirasto news 2025-09-18 (T1, 2026-07-04); Kestävyysinfo 7.10.2025 (T1) |
 
@@ -56,7 +56,7 @@
 | Verifier audit | At approval; periodic per todentajaohje; reports filed with the selvitys | Energiavirasto-approved todentaja | PRIMARY-ONLY (frequency not pinned) | Energiavirasto todentajaohje (T1, 2026-07-04) |
 | Re-approval of sustainability system | Every **5 years** | Energiavirasto | CONFIRMED | Energiavirasto sustainability page (T1, 2026-07-04) |
 | UDB transaction recording | ongoing, "without delay" | European Commission UDB / supervised by Energiavirasto | PRIMARY-ONLY | Finlex 2025/500 + Kestävyysinfo (T1, 2026-07-04) |
-| Consequence of non-compliant proof | Energy without valid sustainability demonstration is **treated as fossil** (loses jakeluvelvoite credit, tax class, subsidies; recovery demands possible); kestävyyslaki also contains supervision and penalty provisions (exact §§ unverified — gap) | — | CONFIRMED (fossil treatment) / UNCORROBORATED (specific penalty §§) | Energiavirasto guidance (T1, 2026-07-04); Enemi (T2, 2026-07-04) |
+| Consequence of non-compliant proof | Energy without valid sustainability demonstration is **treated as fossil** (loses jakeluvelvoite credit, tax class, subsidies; recovery demands possible); kestävyyslaki also contains supervision and penalty provisions (exact §§ unverified — gap) | — | CONFIRMED (fossil treatment) / UNCORROBORATED (specific penalty §§ in laki 500/2025 — Finlex text not renderable) | Energiavirasto guidance (T1, 2026-07-04); Enemi (T2, 2026-07-04) |
 
 ## 4. Compliance checklist items (sustainability scope) — draft
 
@@ -71,16 +71,15 @@
 
 ## 5. Conflicts and gaps
 
-- Lead's brief referenced an "**841/2024** package" for RED III: not located as a kestävyyslaki amendment. The RED III sustainability amendment is **500/2025** (HE 37/2025). 841/2024 may belong to the jakeluvelvoite/other package — flag to lead/mandates researcher. `CONFLICT/uncertain`.
-- **Finlex full statute text not machine-readable** (new Finlex UI renders via JS; both /ajantasa/ and /alkup/ endpoints returned navigation only). Section numbers for GHG thresholds, UDB duty and penalties therefore unverified; corroborator should pull the Finlex PDF or Edilex.
-- Energiavirasto PDFs (kestävyyskriteeriohje, Kestävyysinfo 7.10.2025) could not be text-extracted in this environment (binary; no poppler). Their content is reflected via Energiavirasto HTML pages; corroborator with PDF tooling should confirm UDB details and penalty provisions.
+- **Resolved:** the lead's brief referenced an "**841/2024** package" for RED III sustainability; the RED III **sustainability** amendment is **500/2025** (HE 37/2025). 841/2024 is the **jakeluvelvoite/mandates** package (mandates researcher's scope). Confirmed by the corroborator via Finlex + TEM. Not a live conflict.
+- **Finlex full statute text not machine-readable** (new Finlex UI renders via JS; corroborator re-tested /ajantasa/, /alkup/, /saadoskokoelma/ and the English collection page — all returned navigation only; the Finlex/HE PDFs are binary and cannot be rendered here, no poppler). Section numbers for the 7.5 MW threshold, UDB duty and penalties in laki 500/2025 therefore remain **unverified** — corroborator could not close these; needs a pass with PDF/browser tooling or Edilex access.
 - Verifier audit frequency and kestävyyslaki penalty sections (laiminlyöntimaksu/seuraamusmaksu?) remain unverified.
 
 ## 6. Source log (all accessed 2026-07-04)
 
 | # | Source | Tier | Supported |
 |---|---|---|---|
-| 1 | https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/2025/500 | 1 | Act 500/2025 existence/title (full text not renderable) |
+| 1 | https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/2025/500 | 1 | Act 500/2025 existence/title (full text not renderable — corroborator re-tested) |
 | 2 | https://tem.fi/-/uusiutuvan-energian-kestavyyslait-voimaan (2025-07-03) | 1 | Entry into force 4 Jul 2025, RED III, 7.5 MW scope, UDB provision repeal |
 | 3 | https://energiavirasto.fi/biomassojen-ja-biopolttoaineiden-kestavyys | 1 | Who needs approval, 5-yr validity, verifiers, kestävyystodistus, voluntary schemes, 31 Mar selvitys, KEKRI |
 | 4 | https://energiavirasto.fi/-/toiminnanharjoittajan-kestavyyskriteeriohje-paivitetty-mukana-kestavyyslain-uudet-vaatimukset- (2025-09-18) | 1 | 7.5 MW scope, forest biomass, 80 % tier from 1 Jan 2026, 31 Dec 2025 deadlines |
@@ -92,3 +91,4 @@
 | 10 | https://energy.ec.europa.eu/.../union-database-liquid-and-gaseous-renewable-and-recycled-carbon-fuels_en | 1 | UDB operator categories, Art. 31a |
 | 11 | https://www.enemi.com/todentamispalvelut/kestavyyskriteeritodentaminen/ | 2 | Verifier practice, "treated as fossil" consequence, FINAS accreditation |
 | 12 | USDA FAS GAIN "Biofuels Annual" EU 2025 (E42025-0004, 2025-08-12) | 2 | General corroboration of FI framework within EU |
+</content>
