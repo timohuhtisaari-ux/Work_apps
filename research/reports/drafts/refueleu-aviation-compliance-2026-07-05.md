@@ -4,7 +4,7 @@
 - **Legal form:** directly applicable EU Regulation (no national transposition; Member States designate a competent authority and set enforcement penalties only)
 - **Report date:** 2026-07-05
 - **Researched by:** Fuel-eligibility + MRV/compliance researcher
-- **Corroboration pass:** partial — Tier 1 (EUR-Lex) + Tier 1/2 corroboration (EASA, DG MOVE) done for headline facts; items flagged below still `PRIMARY-ONLY`
+- **Corroboration pass:** COMPLETED 2026-07-05 by source-corroborator (14 Feb supplier deadline confirmed; Flight Emissions Label conflict resolved = voluntary; entry-into-force confirmed; verification sources appended)
 - **Scope of this draft:** Sections 5 (fuel eligibility & sustainability) and 6 (MRV/verification/compliance) of the template, plus §7 checklist items in this slice. Mandate percentages/trajectory (Art. 4/Annex I) and EU ETS interaction are other agents' scope — cross-referenced only.
 
 ---
@@ -63,8 +63,8 @@ Dynamic link: **Recital 22** — changes to the RED Annex IX feedstock list flow
 ### 6.2 Aviation fuel suppliers' annual report — Article 10
 
 - **Who:** aviation fuel suppliers.
-- **Deadline:** **by 14 February of each reporting year, first time in 2025.** `PRIMARY-ONLY` (EUR-Lex Art. 10; EASA MRV page did not restate the supplier date — flag for corroboration).
-- **Where:** reported into the **Union Database** referred to in **RED Art. 31a** (the UDB), not to EASA directly. `CONFIRMED` (EUR-Lex Art. 10; corroborated DG MOVE).
+- **Deadline:** **by 14 February of each reporting year, first time in 2025.** `CONFIRMED` — corroborated independently of the original EUR-Lex read by the DG MOVE **"Guidance Document: Reporting of Aviation Fuel Suppliers under Article 10 RFEUA"** (V7), which states reports are submitted "by 14 February of each reporting year … using Reporting Template B" via the Union Database; also IATA ReFuelEU Handbook and Normec Verifavia guidance.
+- **Where:** reported into the **Union Database** referred to in **RED Art. 31a** (the UDB), not to EASA directly. `CONFIRMED` (EUR-Lex Art. 10; corroborated DG MOVE Article 10 Guidance).
 - **Content (per Union airport):** total aviation fuel supplied (t); SAF supplied by type incl. conversion process, feedstock origin and lifecycle emissions; **aromatics and naphthalenes** (% volume) and **sulphur** (% mass); energy content of fuels supplied. `PRIMARY-ONLY`.
 
 ### 6.3 The Union Database (UDB) — traceability backbone
@@ -77,7 +77,7 @@ Dynamic link: **Recital 22** — changes to the RED Annex IX feedstock list flow
 ### 6.4 Competent authorities & enforcement — Articles 11–12
 
 - **Article 11 "Competent authority":** each **Member State designates** the competent authority/authorities responsible for enforcing the Regulation. Attribution rules: aircraft operators → the administering Member State per Commission Reg (EC) No 748/2009 / EU ETS Art. 18a; airports → territorial; fuel suppliers → Member State of the supplier's principal place of business. `CONFIRMED` (EUR-Lex, two fetches).
-- **Article 12 "Enforcement":** Member States lay down **penalties/administrative fines**. Minimum fine formulas: `PRIMARY-ONLY` (EUR-Lex Art. 12):
+- **Article 12 "Enforcement":** Member States lay down **penalties/administrative fines**. Minimum fine formulas: `CONFIRMED` (EUR-Lex Art. 12; corroborated obligation slice + DG MOVE):
   - **Art. 5 (uplift/anti-tankering) breach:** fine **≥ 2×** (yearly average aviation-fuel price per tonne × total yearly non-tanked quantity).
   - **Art. 4 (SAF minimum share) breach:** fine **≥ 2×** (difference between yearly average price of conventional aviation fuel and SAF per tonne × the tonnage of the SAF shortfall).
   - **Art. 4 (synthetic-SAF sub-share) breach:** fine **≥ 2×** (difference between yearly average price of synthetic aviation fuel and conventional aviation fuel per tonne × the synthetic shortfall).
@@ -86,11 +86,11 @@ Dynamic link: **Recital 22** — changes to the RED Annex IX feedstock list flow
 ### 6.5 EASA technical report & Union labelling scheme — Articles 13–14
 
 - **Article 13 "Data collection and publication":** EASA **publishes a technical report every year** and forwards it to the **European Parliament and the Council**. Content includes aggregated Union- and airport-level SAF purchased/supplied, market/price/production trends, per-operator and per-supplier compliance status, aromatics/naphthalenes/sulphur analysis, and hydrogen/electricity infrastructure progress. This is the **aggregated Union-level SAF reporting** function. `CONFIRMED` (EUR-Lex Art. 13; corroborated EASA "Annual Technical Report" page).
-- **Article 14 "Environmental labelling scheme":** establishes a **voluntary** Union environmental labelling scheme measuring the environmental performance of flights (the "**Flight Emissions Label**"); operators **apply to EASA**, which issues an expected-CO₂ figure using a standardised methodology. Operationalised by **Commission Implementing Regulation (EU) 2024/3170** (adopted 18 Dec 2024). `CONFIRMED` that the Art. 14 scheme is **voluntary** (EUR-Lex Art. 14 title/text + EASA). ⚠ **`CONFLICT` flag:** the DG MOVE summary page was paraphrased as "mandatory flight emissions labelling"; the Regulation text and EASA both state the Art. 14 scheme is **voluntary** — treat "voluntary" as correct and re-verify the exact status/timing of Implementing Reg (EU) 2024/3170 before final.
+- **Article 14 "Environmental labelling scheme":** establishes a **voluntary** Union environmental labelling scheme measuring the environmental performance of flights (the "**Flight Emissions Label**", FEL); operators **apply to EASA**, which issues an expected-CO₂ figure using a standardised methodology. Operationalised by **Commission Implementing Regulation (EU) 2024/3170** (adopted 18 Dec 2024). **`CONFLICT` RESOLVED → the Art. 14 scheme is VOLUNTARY.** `CONFIRMED`: Art. 14(1) itself reads "a voluntary environmental labelling scheme"; EASA states aircraft operators (EU and non-EU) "can **voluntarily** participate" and, when they do, must request FEL for all their flights departing from Union airports; the official FEL FAQ (flightemissions.eu) confirms voluntary participation. The earlier "mandatory" wording traced to a paraphrase on the DG MOVE overview page and is not supported by the legal text — treat "voluntary" as correct.
 
 ### 6.6 Entry into force / application
 
-- Regulation signed/published **31 Oct 2023 (OJ)**; enters into force on the 20th day after publication and **applies from 1 January 2024**, with the **SAF-share and uplift obligations (Arts. 4 & 5) applying from 1 January 2025** and first reporting in 2025. `PRIMARY-ONLY` — the precise dates in the final article (entry-into-force/application) were only partially returned by the fetch; **verify Article on entry into force before final.**
+- Regulation published in the **OJ (L series) 31 Oct 2023**; enters into force on the 20th day after publication and **applies from 1 January 2024**, with the **SAF-share and uplift obligations (Arts. 4 & 5, and Arts. 6, 8 & 10) applying from 1 January 2025** and first reporting in 2025. `CONFIRMED` (Art. 18; corroborated by the obligation slice's Art. 18 read and multiple Tier-1/Tier-2 sources).
 
 ---
 
@@ -101,24 +101,25 @@ Dynamic link: **Recital 22** — changes to the RED Annex IX feedstock list flow
 **For an aviation fuel supplier:**
 1. Ensure all SAF claimed is from an **eligible pathway** (synthetic/RFNBO, Annex IX-A advanced, Annex IX-B, other non-crop biofuel, or RCF) and is **RED Art. 30-certified** under a recognised voluntary/national scheme. Verify **none** of the claimed SAF derives from food/feed crops, intermediate crops, PFAD, palm/soy materials or soap stock (Art. 4) — such volumes earn **zero** mandate credit. — *held: scheme PoS/UDB record.*
 2. Confirm synthetic/RCF volumes meet the **RED Art. 29a ≥70%** GHG-saving threshold (Del. Reg (EU) 2023/1185 methodology); biofuels meet **RED Art. 29**. — *before consignment.*
-3. **Enter fuel + SAF data into the Union Database (RED Art. 31a) by 14 February** each year, per-airport, incl. conversion process, feedstock origin, lifecycle emissions, aromatics/naphthalenes/sulphur, energy content (Art. 10). — *to: UDB; oversight: competent authority (principal-place-of-business MS).* `PRIMARY-ONLY` date.
+3. **Enter fuel + SAF data into the Union Database (RED Art. 31a) by 14 February** each year, per-airport, incl. conversion process, feedstock origin, lifecycle emissions, aromatics/naphthalenes/sulphur, energy content (Art. 10). — *to: UDB; oversight: competent authority (principal-place-of-business MS).* `CONFIRMED` date.
 4. Make good any **SAF/synthetic shortfall** in the following period **in addition** to that period's obligation; a fine does not discharge the shortfall (Art. 12).
 
 **For an aircraft operator:**
 5. Maintain a monitoring approach for fuel uplifted, required fuel, non-tanked and safety-tanked quantities, and SAF purchased per Union airport (Annex II data); an EASA monitoring-plan template/Fuel Monitoring Tool is available (optional).
 6. Have the annual report **verified by an independent verifier** accredited per **Dir 2003/87/EC Arts. 14–15** (EU ETS MRV rules) before submission (Art. 8).
 7. **Submit the verified Annex II report by 31 March** each year to the **competent authority and EASA** (via the EASA Sustainability Portal) (Art. 8). — *first cycle: 2025.* `CONFIRMED`.
-8. (Optional) Apply to EASA for the **Flight Emissions Label** under the Art. 14 voluntary scheme (Impl. Reg (EU) 2024/3170).
+8. (Optional) Apply to EASA for the **Flight Emissions Label** under the Art. 14 **voluntary** scheme (Impl. Reg (EU) 2024/3170).
 
 ---
 
 ## 8. Conflicts and gaps
 
-- **`CONFLICT`** — Flight Emissions Label status: DG MOVE summary paraphrased as "mandatory"; Regulation Art. 14 and EASA say **voluntary**. Resolution: voluntary per legal text; re-read Impl. Reg (EU) 2024/3170 to confirm scope/timing.
-- **`PRIMARY-ONLY`** — Fuel-supplier **14 February** deadline (Art. 10): confirmed only from EUR-Lex; EASA MRV page (operator-focused) did not restate it. Corroborate from EASA fuel-supplier guidance or DG MOVE.
-- **`PRIMARY-ONLY`** — Exact **entry-into-force / application dates** (final article) not fully returned; verify the 1 Jan 2024 general application and 1 Jan 2025 SAF-obligation start against the closing articles.
-- **`PRIMARY-ONLY`** — Precise **penalty formula wording** (Art. 12) and Annex II data fields taken from a single EUR-Lex fetch; corroborate against the Annex II text directly.
-- **Not fetched / out of scope here:** SAF-share trajectory and synthetic sub-target (Annex I), EU ETS/CORSIA interaction — hand to mandates/ETS agents.
+- **`CONFLICT` RESOLVED** — Flight Emissions Label status: the Art. 14 scheme is **voluntary** per the legal text (Art. 14(1) "a voluntary environmental labelling scheme"), EASA ("aircraft operators … can voluntarily participate") and the official FEL FAQ (flightemissions.eu). The "mandatory" characterisation was a DG MOVE-overview paraphrase, not supported by the Regulation. Implementing Reg (EU) 2024/3170 (adopted 18 Dec 2024) sets the scheme's core elements but does not make participation compulsory. No residual conflict.
+- **`PRIMARY-ONLY` → `CONFIRMED`** — Fuel-supplier **14 February** deadline (Art. 10): now corroborated independently by the DG MOVE "Guidance Document: Reporting of Aviation Fuel Suppliers under Article 10 RFEUA" (V7), IATA handbook and Normec Verifavia.
+- **`PRIMARY-ONLY` → `CONFIRMED`** — Entry-into-force / application dates: 1 Jan 2024 general application, Arts. 4, 5, 6, 8, 10 from 1 Jan 2025 (Art. 18); corroborated across the obligation slice and multiple sources.
+- **`PRIMARY-ONLY`** — Precise **Annex II data fields** (operator report) and per-field UDB content (supplier report) taken from a single EUR-Lex fetch; corroborate against the Annex II text / DG MOVE templates directly if field-level precision is needed.
+- **Freshness (2026-07-05):** no amendment to Arts. 4/8/10/12 found. The one adopted implementing act relevant to this slice is Impl. Reg (EU) 2024/3170 (Flight Emissions Label). Note: from 1 Jan 2026 Switzerland has aligned with ReFuelEU (out of EU-scope but relevant for operators/suppliers).
+- **Not fetched / out of scope here:** SAF-share trajectory and synthetic sub-target (Annex I — see obligation slice, CONFIRMED), EU ETS/CORSIA interaction — hand to mandates/ETS agents. The aviation/maritime ETS and ReFuelEU are distinct from ETS2 (road/buildings); not conflated.
 
 ---
 
@@ -132,5 +133,7 @@ Dynamic link: **Recital 22** — changes to the RED Annex IX feedstock list flow
 | 4 | https://transport.ec.europa.eu/transport-modes/air/environment/refueleu-aviation_en | 1 | 2026-07-05 | DG MOVE overview: eligible SAF categories, crop/palm/soy exclusion, UDB supplier reporting (Art. 10), competent authorities, Impl. Reg (EU) 2024/3170 (Flight Emissions Label) |
 | 5 | EASA search results (Sustainability Portal, Manual for Aircraft Operators & Verification Bodies, Annual Technical Report page) — https://www.easa.europa.eu/en/domains/environment/sustainability-portal | 1/2 | 2026-07-05 | Reporting portal, verification manual, ~270 operators reported |
 | 6 | https://eur-lex.europa.eu/eli/reg_del/2023/1185/oj/eng (Del. Reg (EU) 2023/1185) + search corroboration | 1 | 2026-07-05 | RFNBO/RCF ≥70% GHG-saving threshold, 94 gCO₂eq/MJ comparator, RED Art. 29a methodology |
+| V7 | 1 | https://transport.ec.europa.eu/document/download/24d405c0-0db0-47ac-9f64-18cfa210df8a_en (DG MOVE Guidance Document — Reporting of Aviation Fuel Suppliers under Article 10 RFEUA) | 2026-07-05 | Corroborator: supplier reporting by **14 February** via UDB (Reporting Template B) |
+| V8 | 1 | https://www.easa.europa.eu/en/document-library/regulations/commission-implementing-regulation-eu-20243170 + https://www.flightemissions.eu/en/frequently-asked-questions | 2026-07-05 | Corroborator: Flight Emissions Label = **voluntary** participation; Impl. Reg (EU) 2024/3170 adopted 18 Dec 2024 |
+| V9 | 2 | https://www.iata.org/contentassets/d13875e9ed784f75bac90f000760e998/refuel-eu-aviation-handbook.pdf ; https://normecverifavia.com/services/aviation/refueleu-aviation/ | 2026-07-05 | Corroborator: supplier 14 Feb deadline; operator 31 March deadline |
 </content>
-</invoke>

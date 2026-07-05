@@ -5,7 +5,7 @@
 - **Consolidated text used:** CELEX 02023R2405-20231031 (consolidated as of 31 Oct 2023; no amendments applied as of access date).
 - **Report date:** 2026-07-05
 - **Researched by:** biofuel-mandates researcher (EU-level slice: core obligation + flexibility + penalties)
-- **Corroboration pass:** pending (draft) — key figures cross-checked against Tier-2 sources; corroborator to assign final labels.
+- **Corroboration pass:** COMPLETED 2026-07-05 by source-corroborator (trajectory independently corroborated; verification sources appended)
 
 > Scope note: this draft covers only sections 1–4 (scope, core obligation & trajectory, flexibility, penalties). Sections 5–9 (fuel eligibility/sustainability, MRV, checklist, gaps, full log) are assigned to other agents; a partial source log is included below.
 
@@ -42,23 +42,23 @@ Geographic coverage: obligations attach at each **Union airport** (EU airports a
 |---|---|---|---|---|---|
 | **SAF minimum share** | **2 %** | Art. 4(1) + Annex I | 2025-01-01 (2025–2029) | CONFIRMED | S1, S2, S3, S4 |
 | SAF minimum share | **6 %** | Annex I | 2030-01-01 | CONFIRMED | S1, S2, S3, S4 |
-| SAF minimum share | **20 %** | Annex I | 2035-01-01 | CONFIRMED | S1, S2 |
-| SAF minimum share | **34 %** | Annex I | 2040-01-01 | CONFIRMED | S1, S2 |
-| SAF minimum share | **42 %** | Annex I | 2045-01-01 | CONFIRMED | S1, S2 |
+| SAF minimum share | **20 %** | Annex I | 2035-01-01 | CONFIRMED | S1, S2, V1, V2 |
+| SAF minimum share | **34 %** | Annex I | 2040-01-01 | CONFIRMED | S1, S2, V1, V2, V3 |
+| SAF minimum share | **42 %** | Annex I | 2045-01-01 | CONFIRMED | S1, S2, V1, V2, V3 |
 | SAF minimum share | **70 %** | Annex I | 2050-01-01 | CONFIRMED | S1, S2, S3 |
 
 **Synthetic aviation fuel (e-SAF) sub-quota — Annex I:**
 
 | Item | Value | Legal basis | Effective | Confidence | Sources |
 |---|---|---|---|---|---|
-| e-SAF sub-quota | **1.2 %** as an **average over 2030–2031**, of which a **minimum 0.7 % each year** | Annex I | 2030-01-01 | CONFIRMED | S1, S3 |
-| e-SAF sub-quota | **2.0 %** as an **average over 2032–2034**; within this: min **1.2 %/yr for 2032–2033**, and min **2.0 % from 1 Jan 2034** | Annex I | 2032-01-01 | CONFIRMED | S1 |
-| e-SAF sub-quota | **5 %** | Annex I | 2035-01-01 | CONFIRMED | S1 |
-| e-SAF sub-quota | **10 %** | Annex I | 2040-01-01 | CONFIRMED | S1 |
-| e-SAF sub-quota | **15 %** | Annex I | 2045-01-01 | CONFIRMED | S1 |
-| e-SAF sub-quota | **35 %** | Annex I | 2050-01-01 | CONFIRMED | S1 |
+| e-SAF sub-quota | **1.2 %** as an **average over 2030–2031**, of which a **minimum 0.7 % each year** | Annex I | 2030-01-01 | CONFIRMED | S1, S3, V1, V3 |
+| e-SAF sub-quota | **2.0 %** as an **average over 2032–2034**; within this: min **1.2 %/yr for 2032–2033**, and min **2.0 % from 1 Jan 2034** | Annex I | 2032-01-01 | CONFIRMED | S1, V3 |
+| e-SAF sub-quota | **5 %** | Annex I | 2035-01-01 | CONFIRMED | S1, V3 |
+| e-SAF sub-quota | **10 %** | Annex I | 2040-01-01 | CONFIRMED | S1, V3 |
+| e-SAF sub-quota | **15 %** | Annex I | 2045-01-01 | CONFIRMED | S1, V3 |
+| e-SAF sub-quota | **35 %** | Annex I | 2050-01-01 | CONFIRMED | S1, V1, V3 |
 
-Note on the averaging rule: for 2030–2031 and 2032–2034 the synthetic sub-quota is expressed as a **period average** with an annual floor, so a supplier may under-supply e-SAF in the first year of the window provided the two/three-year average and the annual minimum floor are met. This is the "2030–2031 averaging" the task flagged — verified verbatim in Annex I.
+Note on the averaging rule: for 2030–2031 and 2032–2034 the synthetic sub-quota is expressed as a **period average** with an annual floor, so a supplier may under-supply e-SAF in the first year of the window provided the two/three-year average and the annual minimum floor are met. This is the "2030–2031 averaging" the task flagged — verified in Annex I and independently corroborated (V3).
 
 **Anti-tankering / uplift obligation (Art. 5) — on aircraft operators, not suppliers:**
 
@@ -85,7 +85,7 @@ Mechanics/administration: suppliers report to the competent authority and the Ag
 
 ## 4. Penalties & economic instruments
 
-All fines sit in **Article 12 ("Enforcement")** — imposed by Member State competent authorities (Art. 11). Fines must be "proportionate and dissuasive" and meet the statutory floors below. (Note: task referenced "Articles 12–13"; in the consolidated text the **fines are all in Art. 12**, while **Art. 13** is "Data collection and publication." Flagged so the lead does not mis-cite.)
+All fines sit in **Article 12 ("Enforcement")** — imposed by Member State competent authorities (Art. 11). Fines must be "proportionate and dissuasive" and meet the statutory floors below. (Note: task referenced "Articles 12–13"; in the consolidated text the **fines are all in Art. 12**, while **Art. 13** is "Data collection and publication." Flagged so the lead does not mis-cite. Corroborator: confirmed — Art. 12 = penalties, Art. 13 = data publication.)
 
 | Item | Value / formula | Legal basis | Effective | Confidence | Sources |
 |---|---|---|---|---|---|
@@ -96,7 +96,7 @@ All fines sit in **Article 12 ("Enforcement")** — imposed by Member State comp
 | **Price-methodology transparency** | When imposing a fine, the competent authority must **explain the methodology applied for determining the price**; the Agency publishes price information/trends annually (Art. 13) | Art. 12(7), Art. 13 | 2025-01-01 | PRIMARY-ONLY | S1 |
 | Illustrative magnitude (Tier-2, not legal) | Using 2024 EASA reference prices (~€700/t jet fuel, ~€2,000/t biofuel-SAF, ~€7,700/t e-kerosene): SAF-shortfall fine ≈ **€2,700/t**; e-SAF-shortfall fine ≈ **€14,000/t** | (illustration) | — | UNCORROBORATED (single Tier-2) | S3 |
 
-**EU ETS interaction:** ReFuelEU Aviation is a supply/uplift mandate and operates **alongside** the EU Emissions Trading System for aviation and CORSIA (separate instruments); the Regulation itself does not set an ETS price. Detailed ETS/CORSIA interaction is out of this slice's scope — flagged for the section-4 (economic instruments) / another agent to complete.
+**EU ETS interaction:** ReFuelEU Aviation is a supply/uplift mandate and operates **alongside** the EU Emissions Trading System for aviation and CORSIA (separate instruments); the Regulation itself does not set an ETS price. Detailed ETS/CORSIA interaction is out of this slice's scope — flagged for the section-4 (economic instruments) / another agent to complete. (Note: the aviation/maritime ETS and ReFuelEU are distinct from **ETS2** (road/buildings); do not conflate.)
 
 ---
 
@@ -110,11 +110,16 @@ All fines sit in **Article 12 ("Enforcement")** — imposed by Member State comp
 | S4 | 2 | Search corroboration incl. climatecatalyst.org / synhelion.com / trade.gov | 2026-07-05 | Corroboration: 2% (2025), 6% (2030), 70% (2050); directly-applicable, obligations from 2025 |
 | S5 | 2 | https://www.easa.europa.eu/en/domains/environment/eaer/sustainable-aviation-fuels | 2026-07-05 | 2%→70% trajectory; EASA reporting tool, EU SAF Clearing House, Reference Price for Aviation Fuels Report |
 | S6 | 2 | EASA SAF page (as above) | 2026-07-05 | Labelling / clearing-house context for book-and-claim status |
+| V1 | 1 | https://www.easa.europa.eu/en/domains/environment/eaer/sustainable-aviation-fuels | 2026-07-05 | Corroborator: SAF 2%→70% and e-SAF 1.2% (2030) → 35% (2050) |
+| V2 | 2 | https://synhelion.com/news/a-brief-overview-of-saf-regulation-in-europe-refueleu-aviation | 2026-07-05 | Corroborator: SAF 2%/6%/20%/70% and 34%(2040)/42%(2045); e-SAF 1.2%(2030)/35%(2050) |
+| V3 | 2 | https://tracker.carbongap.org/policy/refueleu-aviation/ + independent search corroboration | 2026-07-05 | Corroborator: e-SAF sub-mandate 0%(2025)/1.2%(2030)/2%(2032)/5%(2035)/10%(2040)/15%(2045)/35%(2050) — full year-by-year mapping |
 
 **Gaps / follow-ups:**
+- **Potential year-mapping conflict resolved:** one auto-fetched Tier-2 briefing (Bracewell) appeared to place 42 % at 2040 with 15 % synthetic; this was a fetch-model misattribution. Multiple independent sources (EASA V1, synhelion V2, e-fuels S3, policy-tracker/search V3) confirm the correct mapping: SAF 34 % (2040) / 42 % (2045) / 70 % (2050) and e-SAF 5 % (2035) / 10 % (2040) / 15 % (2045) / 35 % (2050). No residual conflict.
 - EUR-Lex plain-language summary page (`.../summary/refueleu-aviation-sustainable-air-transport.html`) returned HTTP 404 on 2026-07-05 — substitute the consolidated legal text (S1) as primary.
-- Direct fetch of e-fuels.com (S3) returned HTTP 403; corroboration taken from the search-engine snippet only — corroborator should re-verify from an independent Tier-2 (IATA ReFuelEU Handbook PDF, Norton Rose Fulbright briefing) without reusing S3.
-- Illustrative €/t penalty magnitudes (S3) are single-source Tier-2 — marked UNCORROBORATED.
+- Direct fetch of e-fuels.com (S3) returned HTTP 403; corroboration taken from the search-engine snippet; corroborator additionally verified from independent Tier-1 (EASA) and Tier-2 (synhelion, carbongap) — see V1–V3.
+- Illustrative €/t penalty magnitudes (S3) remain single-source Tier-2 — UNCORROBORATED.
+- Freshness (2026-07-05): no amending act to Annex I trajectory found. Implementing Regulation (EU) 2024/3170 (Flight Emissions Label, Art. 14) is the relevant adopted implementing act; it does not alter the SAF/e-SAF trajectory.
 - ETS/CORSIA interaction, fuel eligibility/sustainability (RED II/III link), MRV cycle and compliance checklist (template sections 5–9) are out of this slice.
 
 ---
@@ -126,4 +131,5 @@ All fines sit in **Article 12 ("Enforcement")** — imposed by Member State comp
 3. **e-SAF sub-quota (Annex I):** 1.2% averaged over 2030–2031 (≥0.7%/yr floor) → 2.0% averaged over 2032–2034 → 5% (2035) → 10% (2040) → 15% (2045) → 35% (2050). [CONFIRMED]
 4. **Anti-tankering (Art. 5):** each aircraft operator must uplift ≥90% of yearly required aviation fuel at each Union airport. [CONFIRMED]
 5. **Flexibility (Art. 15):** transitional weighted-average across all Union airports from 1 Jan 2025 to 31 Dec 2034, then per-airport; shortfalls must be made up the following period (Art. 12(8)); no operational book-and-claim in current text.
-6. **Penalties (Art. 12):** fines ≥ 2× the per-tonne price difference (conventional vs SAF / vs synthetic) × non-compliant quantity for suppliers, and ≥ 2× fuel price × non-tanked quantity for operators; **CONFLICT/UNCORROBORATED flags:** none material — one nit: task's "Arts. 12–13" for penalties is actually **all Art. 12** (Art. 13 = data publication); illustrative €/t magnitudes are UNCORROBORATED single-source.
+6. **Penalties (Art. 12):** fines ≥ 2× the per-tonne price difference (conventional vs SAF / vs synthetic) × non-compliant quantity for suppliers, and ≥ 2× fuel price × non-tanked quantity for operators; task's "Arts. 12–13" for penalties is actually **all Art. 12** (Art. 13 = data publication) — confirmed; illustrative €/t magnitudes are UNCORROBORATED single-source.
+</content>

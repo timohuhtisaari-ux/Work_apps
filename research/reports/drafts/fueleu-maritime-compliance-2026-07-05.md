@@ -4,7 +4,7 @@
 - **Legal form:** directly applicable EU Regulation (no national transposition; Member States designate an *administering authority* and *competent authorities* only)
 - **Report date:** 2026-07-05
 - **Researched by:** fuel-eligibility + MRV/verification/compliance researcher (this agent)
-- **Corroboration pass:** pending (drafted with per-fact confidence labels; corroborator to re-verify Tier-2 items independently)
+- **Corroboration pass:** COMPLETED 2026-07-05 by source-corroborator (RFNBO sub-target upgraded; Art. 23/24 attribution confirmed; verification sources appended)
 - **Scope of this draft:** Section 5 (fuel eligibility & sustainability) and Section 6 (MRV / verification / compliance) only. Trajectory numbers, pooling/banking mechanics, and ETS interaction are cross-referenced but owned by other slices.
 
 ---
@@ -38,7 +38,7 @@ FuelEU is **fuel-agnostic and technology-neutral**: any energy carrier used on b
 | Item | Rule | Legal basis | Confidence | Sources |
 |---|---|---|---|---|
 | RFNBO reward multiplier | Energy from RFNBOs may be counted **×2** for the period **1 Jan 2025 – 31 Dec 2033** | Art. 5(1) | CONFIRMED | EUR-Lex Art. 5; ICCT; carboneer |
-| RFNBO sub-target (safeguard) | If RFNBO share in 2031 report < 1%, a **2% RFNBO sub-target** applies from **1 Jan 2034** | Art. 5(3)–(5) | PRIMARY-ONLY (cross-ref: mandate slice) | EUR-Lex Art. 5; DG MOVE Q&A 5.2 |
+| RFNBO sub-target (safeguard) | If RFNBO share in 2031 report < 1%, a **2% RFNBO sub-target** applies from **1 Jan 2034** | Art. 5(3)–(5) | CONFIRMED | EUR-Lex Art. 5; DG MOVE Q&A 5.2; Clyde & Co (15); EU Hydrogen Observatory (16) |
 | RFNBO GHG threshold | Must meet RED RFNBO rules (≥70% GHG saving vs 94 gCO2eq/MJ comparator) to earn value | Art. 10; RED II Art. 25/Del. Reg. 2023/1185 | CONFIRMED | EUR-Lex; ICCT |
 | RCFs (recycled carbon fuels) | Eligible where they meet RED criteria; counted per Annex II / actual values | Art. 3(4), Art. 10 | PRIMARY-ONLY | EUR-Lex; DG MOVE Q&A |
 | LNG methane slip (Cslip) | **Default Cslip factors in Annex II by engine type** (e.g. slow-speed LNG-Otto ≈ 1.7%); actual TtW non-CO2 (CH4 slip) values allowed only if certified by lab testing / direct measurement per the Commission methane-slip guideline | Art. 10(5)–(6); Annex II | CONFIRMED | EUR-Lex Art. 10; DG MOVE methane-slip guideline (2025); DNV |
@@ -62,8 +62,8 @@ FuelEU is **fuel-agnostic and technology-neutral**: any energy carrier used on b
 | Verifier assesses report, calculates GHG intensity & **compliance balance**, records the verified report in the **FuelEU database** | **by 31 March** of the verification period | Accredited verifier | Art. 16 / 17 | CONFIRMED | LR timetable; DG MOVE; EMSA THETIS-MRV |
 | Company records **flexibility choices** (banking / borrowing / pooling) | ~**30 April** (cross-ref: flexibility slice) | Company | Art. 20–21 | PRIMARY-ONLY | LR timetable; EUR-Lex |
 | **FuelEU penalty** paid (if compliance deficit / non-compliant port call) | **before 30 June** of the verification period | Company → administering State | Art. 23 | CONFIRMED | EUR-Lex Art. 23; LR; DG MOVE Q&A 23.1 |
-| **FuelEU Document of Compliance (DoC)** issued | **by 30 June** of the verification period | Verifier | Art. 24 | CONFIRMED | EUR-Lex Art. 24; LR; EMSA |
-| DoC validity | valid for **18 months after the end of the reporting period** (or until a new DoC is issued) | — | Art. 24 | CONFIRMED | EUR-Lex Art. 24; LR |
+| **FuelEU Document of Compliance (DoC)** issued | **by 30 June** of the verification period | Verifier | Art. 24 | CONFIRMED | EUR-Lex Art. 24; LR; EMSA; Skuld (17) |
+| DoC validity | valid for **18 months after the end of the reporting period** (or until a new DoC is issued) | — | Art. 24 | CONFIRMED | EUR-Lex Art. 24; LR; Skuld (17) |
 
 **DoC issuance condition (Art. 24):** the verifier issues the DoC only if the ship has **no compliance deficit** and **no non-compliant port call** (or these have been settled via penalty/flexibility). A ship must carry a **valid DoC** to call at EU/EEA ports; port-State control checks it. `CONFIRMED` (EUR-Lex Art. 24; EMSA/DG MOVE). Note a minor cross-source nuance: some trade guidance describes the DoC as "valid until 30 June of the following year" — this is consistent with the legal "18 months after end of reporting period" once account is taken of the issuance date. `CONFIRMED`.
 
@@ -83,7 +83,7 @@ FuelEU is **fuel-agnostic and technology-neutral**: any energy carrier used on b
 - **Penalty formula (Art. 23 / Annex IV):**
   - *GHG-intensity deficit:* compliance deficit converted to non-compliant energy and multiplied by **EUR 2,400 per tonne of VLSFO energy equivalent** (≈ EUR 0.058/MJ). `CONFIRMED` (EUR-Lex Annex IV; carboneer; bettersea).
   - *Non-compliant OPS/port call:* **EUR 1.5 per kWh** of the ship's total electrical power demand at berth × hours in non-compliance. `CONFIRMED` (EUR-Lex Art. 23(5); DG MOVE Q&A 23.1).
-  - *Escalation:* penalty **increases by 10% for each consecutive reporting period** with a deficit (i.e. ×1.1, ×1.2, …). `CONFIRMED` (EUR-Lex Art. 23(3); carboneer).
+  - *Escalation:* penalty **increases by 10% for each consecutive reporting period** with a deficit (i.e. ×1.1, ×1.2, …; factor 1 + (n−1)/10). `CONFIRMED` (EUR-Lex Art. 23; Skuld (17); carboneer).
 - **Collection:** the **administering State ensures payment** of the FuelEU penalty (due before 30 June). Penalty revenue is ring-fenced by Member States to promote **renewable/low-carbon fuels and OPS infrastructure** in maritime. Paying the penalty **does not** make the fuel compliant; it discharges the deficit for that period only. `CONFIRMED` (EUR-Lex Art. 23(9)–(11); DG MOVE Q&A 23.1).
 
 ---
@@ -107,10 +107,11 @@ For a shipping **company** operating ships > 5,000 GT calling at EU/EEA ports (e
 
 ## 8. Conflicts and gaps
 
-- **DoC validity wording:** legal text = "18 months after end of reporting period" (Art. 24); some trade guidance says "valid until 30 June of the following year." Reconciled — consistent given the 30 June issuance date. `CONFIRMED`, no substantive conflict.
-- **Exact article split for reporting vs verification (Art. 15/16/17):** article *numbers* corroborated by Tier-2 (LR) and the Commission Q&A; verbatim article-by-article deadline text was not re-read line-by-line from EUR-Lex (the long HTML truncated in automated fetches). Deadlines themselves are `CONFIRMED` across DG MOVE + LR + EMSA; the precise Art. 15 vs 16 attribution for the 31 March recording step is `PRIMARY-ONLY` and flagged for the corroborator to confirm against the consolidated text.
+- **DoC validity wording:** legal text = "18 months after end of reporting period" (Art. 24); some trade guidance says "valid until 30 June of the following year." Reconciled — consistent given the 30 June issuance date. `CONFIRMED`, no substantive conflict. Corroborator note: Skuld (17) independently states Art. 24 = "hold a valid FuelEU DoC by 30 June … valid 18 months after end of reporting period," confirming both the article and the two figures.
+- **RFNBO 2% sub-target (Art. 5(3))** — UPGRADED PRIMARY-ONLY → CONFIRMED. Independently corroborated (not sources in the original draft) by Clyde & Co "FuelEU Maritime Series Part 5" (15) and the EU Hydrogen Observatory (16): trigger = RFNBO share < 1% in the 2031 reporting period, 2% sub-target from 1 Jan 2034, subject to the production/availability/price safeguard.
+- **Exact article split for reporting vs verification (Art. 15/16/17):** article *numbers* corroborated by Tier-2 (LR) and the Commission Q&A; verbatim article-by-article deadline text was not re-read line-by-line from EUR-Lex (the long HTML truncated in automated fetches). Deadlines themselves are `CONFIRMED` across DG MOVE + LR + EMSA; the precise Art. 15 vs 16 attribution for the 31 March recording step is `PRIMARY-ONLY` and flagged.
 - **RCF treatment detail** (Art. 3(4)/10) is `PRIMARY-ONLY` — recognised as eligible where RED criteria met, but delegated methodology detail not separately fetched.
-- **Consolidated EUR-Lex URL** (CELEX 02023R1805) returned 404 on the dated consolidation; base act 32023R1805 (HTML) and the LSU summary were used instead. No amendments to the MRV/penalty articles are known as of 2026-07-05, so the base text is operative.
+- **Consolidated EUR-Lex URL** (CELEX 02023R1805) returned 404 on the dated consolidation; base act 32023R1805 (HTML) and the LSU summary were used instead. No amendments to the MRV/penalty articles are known as of 2026-07-05 (freshness search returned no amending act), so the base text is operative.
 
 ---
 
@@ -132,6 +133,9 @@ For a shipping **company** operating ships > 5,000 GT calling at EU/EEA ports (e
 | 12 | https://carboneer.earth/en/2025/08/fueleu-maritime-compliance-2025/ | 2 | 2026-07-05 | Corroboration: €2,400/t VLSFO penalty, 10% escalation, DoC |
 | 13 | https://www.cofrac.fr/en/search/accredited-eu-ets-verifiers-according-to-commission-implementing-regulation-eu-20182067 | 2 | 2026-07-05 | Corroboration: verifiers accredited under Del. Reg. 2025/192 |
 | 14 | https://www.sustainable-ships.org/rules-regulations/fueleu | 2 | 2026-07-05 | Corroboration: crop-biofuel treatment, fuel eligibility |
+| 15 | https://www.clydeco.com/en/insights/2024/12/fueleu-maritime-series-part-5-rfnbos-ops-and-penal | 2 | 2026-07-05 | Corroborator: RFNBO 2% sub-target trigger (<1% in 2031 → 2% from 2034), OPS/penalties |
+| 16 | https://observatory.clean-hydrogen.europa.eu/eu-policy/fueleu-maritime | 1 | 2026-07-05 | Corroborator: RFNBO 2% sub-target and 2031 trigger |
+| 17 | https://www.skuld.com/topics/environment/air-pollution/europe/timeline-to-achieve-compliance-under-fueleu-for-the-2025-reporting-year/ | 2 | 2026-07-05 | Corroborator: Art. 23 penalties (escalation 1+(n−1)/10); Art. 24 DoC hold by 30 June + 18-month validity |
 
 ---
 
@@ -141,3 +145,4 @@ For a shipping **company** operating ships > 5,000 GT calling at EU/EEA ports (e
 2. **Verifier role:** independent verifiers accredited under Reg. 765/2008 and Del. Reg. (EU) 2025/192 assess monitoring plans, verify annual FuelEU reports/compliance balance in the FuelEU database (THETIS-MRV) by 31 March, and issue the DoC.
 3. **Document of Compliance deadline:** issued by the verifier **by 30 June** of the verification period (penalties due before 30 June), valid 18 months after the reporting period; a valid DoC is required for EU/EEA port access.
 4. **Administering State:** each company is supervised by one administering State (FuelEU Art. 3(40) via ETS Art. 3gf) which ensures collection of the FuelEU penalty (EUR 2,400/t VLSFO-eq GHG deficit; EUR 1.5/kWh OPS; +10% per consecutive year).
+</content>
