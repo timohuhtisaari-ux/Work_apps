@@ -49,7 +49,14 @@ instruments rather than country reports (template:
 - `research/reports/refueleu-aviation-2026-07-05.md` — **ReFuelEU Aviation**
   (Regulation (EU) 2023/2405): the SAF supply share (2 % in 2025 → 70 % by
   2050), the e-SAF sub-quota, the ≥90 % anti-tankering rule, and the Union
-  Database / EASA reporting regime. Each country report
+  Database / EASA reporting regime.
+- `research/reports/cross-border-reporting-allocation-2026-07-05.md` — companion
+  deep-dive on **how the reporting/enforcement obligation is allocated across
+  Member States** for multi-country operators: FuelEU's one-administering-State-
+  per-company rule vs ReFuelEU's administering-MS-per-aircraft-operator and
+  single-competent-authority-per-supplier (principal place of business) model,
+  with worked examples. The two regulation reports carry a summary of this in
+  their section 6a. Each country report
 covers the biofuel mandate (2026 level + legislated trajectory to 2030),
 fuel taxation, and RED II/III sustainability/certification obligations, with a
 supplier compliance checklist and a conflicts/gaps section. Every fact carries a

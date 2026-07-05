@@ -168,6 +168,40 @@ Dynamic link: **Recital 22** — changes to the RED Annex IX feedstock list flow
 - **Article 13 "Data collection and publication":** EASA **publishes a technical report every year** and forwards it to the **European Parliament and the Council**. Content includes aggregated Union- and airport-level SAF purchased/supplied, market/price/production trends, per-operator and per-supplier compliance status, aromatics/naphthalenes/sulphur analysis, and hydrogen/electricity infrastructure progress. This is the **aggregated Union-level SAF reporting** function. `CONFIRMED` (EUR-Lex Art. 13 (S1); corroborated EASA "Annual Technical Report" page (S3)).
 - **Article 14 "Environmental labelling scheme":** establishes a **voluntary** Union environmental labelling scheme measuring the environmental performance of flights (the "**Flight Emissions Label**", FEL); operators **apply to EASA**, which issues an expected-CO₂ figure using a standardised methodology. Operationalised by **Commission Implementing Regulation (EU) 2024/3170** (adopted 18 Dec 2024). **`CONFLICT` RESOLVED → the Art. 14 scheme is VOLUNTARY.** `CONFIRMED`: Art. 14(1) itself reads "a voluntary environmental labelling scheme"; EASA states aircraft operators (EU and non-EU) "can **voluntarily** participate" and, when they do, must request FEL for all their flights departing from Union airports; the official FEL FAQ (flightemissions.eu) confirms voluntary participation. The earlier "mandatory" wording traced to a paraphrase on the DG MOVE overview page and is not supported by the legal text — treat "voluntary" as correct.
 
+## 6a. Cross-border reporting allocation (operators/suppliers active in several Member States)
+
+ReFuelEU has **two obligated parties**, each with its own single-point-of-contact
+allocation — neither reports separately to every State it serves.
+
+- **Aircraft operators → one administering Member State.** Determined via
+  Commission Reg. (EC) 748/2009 / Art. 18a of the EU-ETS Directive (the Member
+  State that granted the operating licence; otherwise the State with the greatest
+  attributed aviation emissions), applied by **Art. 11(5)**. The operator files
+  **one** annual Annex II report **by 31 March** to that State's competent
+  authority **and EASA** (Art. 8) — not to each destination country. `CONFIRMED`.
+- **Fuel suppliers → one enforcing competent authority = the Member State of the
+  supplier's principal place of business** (Art. 11(7); "principal place of
+  business" defined in Art. 3(21); fallback under Art. 11(8) = the State where it
+  supplied most aviation fuel in 2023 / its first Union year). This holds **even
+  when the supplier serves airports in several Member States**. `CONFIRMED`.
+- **But supplier reporting stays per-airport:** the supplier reports the fuel and
+  SAF volumes at **each Union airport** as separate lines **into the Union
+  Database by 14 February** (Art. 10). So the per-airport granularity is a
+  **data** attribute; **enforcement jurisdiction is single-State**. Until 31 Dec
+  2034 the SAF share may be met as a weighted average across all the supplier's
+  Union airports (Art. 15).
+- **EASA** aggregates and publishes (annual technical report, digital tool,
+  voluntary Flight Emissions Label) but **does not enforce** — Member-State
+  competent authorities (Art. 11(1)) impose the Art. 12 fines.
+
+*Worked examples:* a supplier headquartered in Belgium that fuels airports in
+BE/DE/PL is enforced **only by Belgium**, yet reports each airport's volumes into
+the UDB. A French-licensed aircraft operator flying to 10 States files **one**
+Annex II report to **France** + EASA.
+
+Full detail, the two-regime comparison, and the source log are in the companion
+report `cross-border-reporting-allocation-2026-07-05.md`.
+
 ## 7. Compliance checklist for an obligated operator
 
 Two obligated parties. Each step: action → deadline → authority/system.

@@ -139,6 +139,39 @@ FuelEU is **fuel-agnostic and technology-neutral**: any energy carrier used on b
   - *Escalation:* penalty **increases by 10% for each consecutive reporting period** with a deficit (i.e. ×1.1, ×1.2, …; factor 1 + (n−1)/10). `CONFIRMED` (S1 Art. 23; Skuld (V3); carboneer S19).
 - **Collection:** the **administering State ensures payment** of the FuelEU penalty (due before 30 June). Penalty revenue is ring-fenced by Member States to promote **renewable/low-carbon fuels and OPS infrastructure** in maritime. Paying the penalty **does not** make the fuel compliant; it discharges the deficit for that period only. `CONFIRMED` (S1 Art. 23(9)–(11); DG MOVE Q&A 23.1 (S3)).
 
+## 6a. Cross-border reporting allocation (companies operating in several Member States)
+
+A shipping company calling at ports in many EU/EEA States does **not** report or
+settle separately in each one. The obligated unit is the **company** (the ISM
+entity — shipowner or the manager/bareboat charterer that assumed ISM
+responsibility, Art. 3(13)), never the individual ship or the flag State, and
+each company has exactly **one "administering State"** that supervises its whole
+in-scope fleet EU-wide.
+
+- **How the administering State is set** (Art. 3(40) imports Art. 3gf(1) of the
+  EU-ETS Directive 2003/87/EC): a company **registered in a Member State** → that
+  Member State; a **third-country company** → the Member State with the **greatest
+  estimated number of port calls over the preceding four monitoring years**
+  (SafeSeaNet data); fallback → the State of its first in-scope voyage.
+  `CONFIRMED`.
+- **The Commission publishes the company↔administering-authority list** (initial
+  list 1 Feb 2024; updated every two years for registration changes, every four
+  years for the port-call re-attribution of unregistered companies). `CONFIRMED`.
+- **One channel:** the company files per-ship monitoring plans + the annual
+  FuelEU report through **one accredited verifier** into the central **FuelEU
+  database (EMSA THETIS-MRV)**; any penalty is paid to, and the Document of
+  Compliance overseen by, that **single administering State** — not each port
+  State.
+
+*Worked example:* a Greece-registered company operating 12 ships that call in
+GR/IT/ES/FR/NL has **Greece** as administering State for all 12 ships and all
+voyages; IT/ES/FR/NL receive no separate FuelEU filing. (If it were
+Panama-registered, its administering State would be whichever of those five had
+the most port calls over the last four monitoring years.)
+
+Full detail, the two-regime comparison, and the source log are in the companion
+report `cross-border-reporting-allocation-2026-07-05.md`.
+
 ## 7. Compliance checklist for an obligated operator
 
 For a shipping **company** operating ships **> 5 000 GT** calling at EU/EEA ports. Each step: action → deadline → authority/system.
