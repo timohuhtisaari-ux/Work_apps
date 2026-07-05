@@ -3,7 +3,7 @@
 - **Scope:** Section 3 of country report + Section 4 checklist items in sustainability scope
 - **Researched by:** sustainability-researcher
 - **Access dates:** all live fetches 2026-07-05 unless noted
-- **Corroboration pass:** pending (corroborator)
+- **Corroboration pass:** completed 2026-07-05 (corroborator) — see notes in §5
 
 > Framing: Norway is an **EEA member**, not an EU member. It does **not** transpose RED III on the EU timetable. Its biofuel sustainability regime lives in national law (Produktforskriften ch. 3) and mirrors the EU Renewable Energy Directive as incorporated into the EEA Agreement. RED II (2018/2001) and RED III (2023/2413) were **not yet incorporated into the EEA Agreement / Norwegian law** at the time of the sources checked — a central flag below.
 
@@ -65,9 +65,10 @@ Per **Produktforskriften § 3-6** (calculation per Annexes I, II, IV):
 7. Budget for penalty exposure: **overtredelsesgebyr up to 15 G (~NOK 1.86 m)**. [Miljødirektoratet]
 
 ## 5. Conflicts / gaps
-- **§3-6 GHG tiers vs RED II 65%:** national text shows 35/50/60% only; verify no 65% tier and confirm RED II incorporation status. `FLAG`.
-- **UDB status:** inferred from RED II non-incorporation; needs an explicit Miljødirektoratet/EEA confirmation. `FLAG`.
-- **miljodirektoratet.no returned HTTP 403** to WebFetch; Miljødirektoratet facts sourced via search snippets of its official pages + Lovdata. Corroborator should re-fetch (e.g. via cache/authenticated route) the veileder, penalties page (§13), and reporting page.
+- **§3-6 GHG tiers vs RED II 65%:** national text shows 35/50/60% only; verify no 65% tier and confirm RED II incorporation status. `FLAG` — **NOT independently re-verified this pass** (miljodirektoratet.no still returns HTTP 403 to WebFetch; Lovdata §3-6 not re-fetched at article level). Remains `PRIMARY-ONLY`.
+- **UDB status:** inferred from RED II non-incorporation; needs an explicit Miljødirektoratet/EEA confirmation. `FLAG` — unresolved this pass.
+- **Corroborator note — high-deforestation / palm exclusion (CONFIRMED, cross-ref NO-mandates):** the statutory exclusion of high-deforestation-risk biofuels (palm/palm by-products) from counting toward the mandate — both within and outside the mandate, from 1 Jan 2020 (Storting 2019-budget resolution) — is **independently corroborated** by multiple Tier-2 sources (EcoWatch, Bioenergy International, Preferred by Nature, Rainforest Foundation Norway). This supports §3.6's near-zero-palm practical outcome, though the specific 2024 POME ~4% figure remains Tier-2/UNCORROBORATED.
+- **miljodirektoratet.no returned HTTP 403** to WebFetch (persisted through the corroboration pass); Miljødirektoratet facts sourced via search snippets of its official pages + Lovdata. Penalty (15 G), reporting-by-31-March, and veileder items remain `PRIMARY-ONLY` — not independently re-fetched.
 - Palm/POME 2024 share (~4%) and the advanced-definition change are Tier-2/primary-thin — confirm against official annual statistics and forskrift 2024-12-16 nr. 3392.
 
 ## 6. Source log
@@ -82,9 +83,10 @@ Per **Produktforskriften § 3-6** (calculation per Annexes I, II, IV):
 | 7 | https://www.miljodirektoratet.no/ansvarsomrader/klima/transport/biodrivstoff/ | 1 | 2026-07-05 (search snippet) | palm 2023 nil / POME growth; imports 99% context |
 | 8 | https://energy.ec.europa.eu/topics/renewable-energy/bioenergy/voluntary-schemes_en | 1 | 2026-07-05 | EU-recognised voluntary schemes list (ISCC EU, REDcert, 2BSvs, RSB, etc.) |
 | 9 | https://www.anskaffelser.no/.../veileder-i-innkjop-av-biodrivstoff-... | 2 | 2026-07-05 (search) | public-procurement palm/PFAD-free guidance (context) |
+| 10 | https://www.ecowatch.com/norway-bans-palm-oil-2622712445.html ; bioenergyinternational.com ; preferredbynature.org | 2 | 2026-07-05 | **Corroborator:** high-deforestation biofuel exclusion within & outside mandate from 1 Jan 2020 |
 
 ## 4-line summary — Norway
 1. **Transposition:** Produktforskriften ch. 3 (2004-06-01 nr. 922) + ILUC-directive forskrift; mirrors EU RED but RED II/RED III not yet incorporated into EEA — GHG tiers 35/50/60% only (no 65%). `PRIMARY-ONLY`.
 2. **Certification regime:** EU-recognised voluntary schemes (ISCC EU, REDcert-EU, 2BSvs…) accepted via §3-10; mass-balance proof (§3-10a); Annex V feedstock classes. `PRIMARY-ONLY`.
 3. **Registry/UDB:** national annual report to Miljødirektoratet (by 31 March, auditor-verified §3-11); **no UDB onboarding** for NO operators (RED II not in EEA). `PRIMARY-ONLY / inferred FLAG`.
-4. **Flags:** no statutory palm ban but near-zero palm in practice; "advanced" narrowed to Annex V Part A on 1 Jan 2025; overtredelsesgebyr up to 15 G (~NOK 1.86 m); miljodirektoratet.no 403 on direct fetch — corroborator to re-verify.
+4. **Flags:** no statutory palm ban but near-zero palm in practice (high-deforestation exclusion CONFIRMED, Tier-2); "advanced" narrowed to Annex V Part A on 1 Jan 2025; overtredelsesgebyr up to 15 G (~NOK 1.86 m); miljodirektoratet.no 403 persists — §3-6 GHG tiers, UDB, penalty remain PRIMARY-ONLY.
