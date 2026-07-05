@@ -36,7 +36,20 @@ markets are in that file's appendix). The non-EU regimes are described on their
 own terms — Norway's *omsetningskrav* (EEA), the UK's post-Brexit RTFO + SAF
 Mandate, and Switzerland's CO2-compensation obligation — without imposing EU
 RED III or ETS2 obligations. Their registry scaffolding is in
-`research/sources/non-eu-states.md`. Each country report
+`research/sources/non-eu-states.md`.
+
+Two **EU sectoral regulations** are also covered, as directly-applicable
+instruments rather than country reports (template:
+`research/templates/regulation-report.md`):
+
+- `research/reports/fueleu-maritime-2026-07-05.md` — **FuelEU Maritime**
+  (Regulation (EU) 2023/1805): the well-to-wake GHG-intensity limit on ships
+  >5000 GT (−2 % in 2025 → −80 % by 2050), the RFNBO sub-quota, on-shore-power
+  rule, the EUR 2400/t FuelEU penalty, and the maritime EU ETS phase-in.
+- `research/reports/refueleu-aviation-2026-07-05.md` — **ReFuelEU Aviation**
+  (Regulation (EU) 2023/2405): the SAF supply share (2 % in 2025 → 70 % by
+  2050), the e-SAF sub-quota, the ≥90 % anti-tankering rule, and the Union
+  Database / EASA reporting regime. Each country report
 covers the biofuel mandate (2026 level + legislated trajectory to 2030),
 fuel taxation, and RED II/III sustainability/certification obligations, with a
 supplier compliance checklist and a conflicts/gaps section. Every fact carries a
