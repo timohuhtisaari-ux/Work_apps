@@ -49,12 +49,13 @@ Legend: **M** = mandates authority · **T** = tax/excise authority ·
 - Status: **not EU/EEA** — bilateral relationship only; no RED/ETS2 obligations.
   Swiss ETS is linked to the EU ETS (stationary + aviation) but road fuels are
   handled under the CO2 Act, not ETS2.
-- Scheme: **no blending mandate** historically; biofuels were promoted via a
-  **mineral-oil-tax exemption** for fuels meeting ecological/social criteria —
-  that exemption **expired end-2023**. Fuel importers instead face a **CO2
-  compensation obligation** under the **CO2 Act** (importers must offset part of
-  transport CO2, partly via renewable fuels). Verify the current 2026 mechanism
-  and any share requirement.
+- Scheme: **no blending mandate**. Two instruments run in parallel: (1) a
+  **mineral-oil-tax relief** for renewable fuels meeting ecological/social
+  criteria — this did **not** expire in 2023; the revised CO2 Act extended it to
+  **31 Dec 2030** (BAZG); and (2) a **CO2 compensation obligation** on fuel
+  importers under the **CO2 Act / CO2 Ordinance** (in force 1 Jan 2026), who must
+  offset a share of transport CO2 (≈30 % in 2026), partly via renewable fuels.
+  Verify the current 2026 figures.
 - **M/S:** Federal Office for the Environment (FOEN / BAFU) — bafu.admin.ch;
   Swiss Federal Office of Energy (SFOE / BFE) — bfe.admin.ch
 - **T:** Federal Office for Customs and Border Security (BAZG / OFDF) —
