@@ -248,5 +248,22 @@ underlying reports and should not be relied on as settled:
 
 ---
 
-*End of comparison. All values trace to the 27 files
-`research/reports/<ISO2>-country-report-2026-07-04.md`.*
+## Appendix — Non-EU markets (Norway, United Kingdom, Switzerland)
+
+These three are **not EU member states**, so EU RED III transposition and EU ETS2 do
+not apply; each runs its own regime (see the individual reports). Placed apart from the
+27-row tables because their obligation designs are not directly comparable.
+
+| Country | EU relationship | Obligation type | 2026 level | Next step | Headline petrol/diesel excise | Biofuel tax relief? | Certification / registry |
+|---|---|---|---|---|---|---|---|
+| **Norway (NO)** | EEA | Volume-% sales mandate (*omsetningskrav*), per segment | Road **20 vol%** (≥13.5% adv/IX-B, ≥1% adv-only); maritime 7%; other 11%; aviation 2% | 2027: road **21%**, maritime 8%, other 12% | veibruksavgift 3.77 / 2.28 NOK/L + CO2-avgift 3.80 / 4.42 NOK/L (zero road-use window 1 Apr–1 Sep 2026) | No (full veibruksavgift on liquid biofuel since 2020; biogenic share escapes CO2-avgift) | EU voluntary schemes; annual report to Miljødirektoratet; **not** in EU UDB |
+| **United Kingdom (GB)** | Post-Brexit (independent) | Certificate obligation (RTFO, RTFCs) + separate SAF Mandate | RTFO **12.5%** of fuel by volume (crop cap 3%; buy-out 50p/80p); **SAF 3.60%** of jet fuel | RTFO → 14.6% by 2032; SAF → 10% by 2030 (PtL from 2028) | Fuel duty **52.95 ppl** (5p cut), staged to 57.95 by Mar 2027; identical for diesel | No (differential abolished 2010) | DfT-approved scheme list; RTFO Operating System (ROS); road transport **not** in UK ETS |
+| **Switzerland (CH)** | Bilateral (autonomous) | **No blending mandate** — CO2 **compensation** obligation on fuel importers + aviation SAF mandate | Compensate **30%** of transport CO2 (≥12% domestic; 5 Rp/L cap); aviation **SAF 2%** | Compensation → 35% (2027) … **50% (2030)** | Mineral oil tax+surtax **76.82 / 79.57 Rp/L** | **Yes** — renewable-fuel mineral-oil-tax relief to **31 Dec 2030** (no above-mandate condition) | IBTV proof (BAFU) + Pronovo guarantees of origin; **not** in EU UDB |
+
+**Non-EU open flags:** UK RTFO GHG-saving threshold is an unresolved `CONFLICT` (50/60% vs 55–65%, authoritative PDF unreadable); Switzerland's obligation-trigger threshold and shortfall penalty are `GAP`s; Norway's RED II/III EEA-incorporation status and national GHG tiers are `PRIMARY-ONLY`/gap (miljodirektoratet.no bot-blocked). All three enforce strong feedstock limits — Norway's high-deforestation (palm) exclusion since 2020 and Switzerland's categorical food/feed-crop ban are stricter than the EU high-ILUC rule.
+
+---
+
+*End of comparison. EU values trace to the 27 files
+`research/reports/<ISO2>-country-report-2026-07-04.md`; the non-EU appendix traces to the
+`NO`/`GB`/`CH` reports.*

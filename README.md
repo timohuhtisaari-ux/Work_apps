@@ -28,9 +28,15 @@ compliance reports into `research/reports/`.
 
 ### Current output (as of 2026-07-04)
 
-All **27 EU member states** have a completed, corroborated compliance report in
+All **27 EU member states plus Norway, the United Kingdom and Switzerland**
+(30 markets) have a completed, corroborated compliance report in
 `research/reports/<ISO2>-country-report-2026-07-04.md`, plus a cross-country
-comparison at `research/reports/eu-comparison-2026-07-04.md`. Each country report
+comparison at `research/reports/eu-comparison-2026-07-04.md` (the three non-EU
+markets are in that file's appendix). The non-EU regimes are described on their
+own terms — Norway's *omsetningskrav* (EEA), the UK's post-Brexit RTFO + SAF
+Mandate, and Switzerland's CO2-compensation obligation — without imposing EU
+RED III or ETS2 obligations. Their registry scaffolding is in
+`research/sources/non-eu-states.md`. Each country report
 covers the biofuel mandate (2026 level + legislated trajectory to 2030),
 fuel taxation, and RED II/III sustainability/certification obligations, with a
 supplier compliance checklist and a conflicts/gaps section. Every fact carries a
