@@ -8,7 +8,7 @@
 
 ## Executive summary
 
-ReFuelEU Aviation sets a rising **sustainable aviation fuel (SAF) supply mandate** on aviation fuel suppliers and an **anti-tankering uplift obligation** on aircraft operators at **Union airports** (> 800 000 passengers or > 100 000 tonnes freight), applying generally from **1 January 2024** with the core obligations from **1 January 2025**. Suppliers must ensure the fuel made available contains a minimum SAF share rising from **2% (2025) → 6% (2030) → 20% (2035) → 34% (2040) → 42% (2045) → 70% (2050)**, with a synthetic (e-SAF/RFNBO) sub-quota from 1.2% (averaged 2030–2031) to **35% (2050)**; aircraft operators must uplift **≥ 90%** of their yearly required fuel at each Union airport. Eligible SAF is limited to synthetic fuels, advanced and Annex IX biofuels and recycled carbon fuels certified under the RED apparatus — **food/feed-crop, palm/soy and PFAD pathways earn zero mandate credit** (Art. 4). Non-compliance draws administrative fines of **at least 2× the relevant per-tonne price difference × the shortfall** (Art. 12), and a fine does not release a supplier from making up the shortfall the following period. Compliance runs on annual reporting — aircraft operators file a verified Annex II report by **31 March** to the competent authority and EASA, and suppliers report into the **Union Database by 14 February** — with ReFuelEU operating alongside (not within) the EU ETS for aviation and CORSIA.
+ReFuelEU Aviation sets a rising **sustainable aviation fuel (SAF) supply mandate** on aviation fuel suppliers and an **anti-tankering uplift obligation** on aircraft operators at **Union airports** (> 800 000 passengers or > 100 000 tonnes freight), applying generally from **1 January 2024** with the core obligations from **1 January 2025**. Suppliers must ensure the fuel made available contains a minimum SAF share rising from **2% (2025) → 6% (2030) → 20% (2035) → 34% (2040) → 42% (2045) → 70% (2050)**, with a synthetic (e-SAF/RFNBO) sub-quota from 1.2% (averaged 2030–2031) to **35% (2050)**; aircraft operators must uplift **≥ 90%** of their yearly required fuel at each Union airport. Eligible SAF is limited to synthetic fuels, advanced and Annex IX biofuels and recycled carbon fuels certified under the RED apparatus — **food/feed-crop, palm/soy and PFAD pathways earn zero mandate credit** (Art. 4). Non-compliance draws administrative fines of **at least 2× the relevant per-tonne price difference × the shortfall** (Art. 12), and a fine does not release a supplier from making up the shortfall the following period. Compliance runs on annual reporting — aircraft operators file a verified Annex II report by **31 March** to the competent authority and EASA, and suppliers report into the **Union Database by 14 February** (the UDB is operational since 15 Jan 2024 but **not yet mandatory/sanctioned** — reporting runs on a transitional footing and aircraft operators in fact file via EASA's Sustainability Portal, not the UDB; see §6.6) — with ReFuelEU operating alongside (not within) the EU ETS for aviation and CORSIA.
 
 ## 1. Scope & who is bound
 
@@ -168,6 +168,45 @@ Dynamic link: **Recital 22** — changes to the RED Annex IX feedstock list flow
 - **Article 13 "Data collection and publication":** EASA **publishes a technical report every year** and forwards it to the **European Parliament and the Council**. Content includes aggregated Union- and airport-level SAF purchased/supplied, market/price/production trends, per-operator and per-supplier compliance status, aromatics/naphthalenes/sulphur analysis, and hydrogen/electricity infrastructure progress. This is the **aggregated Union-level SAF reporting** function. `CONFIRMED` (EUR-Lex Art. 13 (S1); corroborated EASA "Annual Technical Report" page (S3)).
 - **Article 14 "Environmental labelling scheme":** establishes a **voluntary** Union environmental labelling scheme measuring the environmental performance of flights (the "**Flight Emissions Label**", FEL); operators **apply to EASA**, which issues an expected-CO₂ figure using a standardised methodology. Operationalised by **Commission Implementing Regulation (EU) 2024/3170** (adopted 18 Dec 2024). **`CONFLICT` RESOLVED → the Art. 14 scheme is VOLUNTARY.** `CONFIRMED`: Art. 14(1) itself reads "a voluntary environmental labelling scheme"; EASA states aircraft operators (EU and non-EU) "can **voluntarily** participate" and, when they do, must request FEL for all their flights departing from Union airports; the official FEL FAQ (flightemissions.eu) confirms voluntary participation. The earlier "mandatory" wording traced to a paraphrase on the DG MOVE overview page and is not supported by the legal text — treat "voluntary" as correct.
 
+### 6.6 Current reporting status — the Union Database is operational but NOT yet mandatory
+
+An important reality check as of **July 2026**: although Article 10 designates the
+Union Database (UDB) as the supplier reporting channel, the UDB is **not yet a
+mandatory, sanctioned single system**, so today's reporting runs on a
+transitional footing:
+
+- **UDB status:** the UDB has been **operational since 15 January 2024** for
+  liquid renewable/recycled-carbon fuels (gaseous fuels phased in later in 2024),
+  under RED III Art. 31a + **Impl. Reg. (EU) 2022/996** (as amended by
+  **2024/805** and **2025/196**). Crucially, **no mandatory-use / sanction date
+  has been agreed** with Member States as of July 2026 — 2024 and 2025 are
+  treated as **transitional** years. `CONFIRMED` (EC DG ENER; corroborated
+  REDcert, ISCC). *(Note: Del. Reg. (EU) 2023/1640 is the co-processing
+  methodology act, NOT a UDB act — a common mis-citation.)*
+- **Aviation fuel suppliers:** already submit their Article 10 data using
+  **Reporting Template B into the UDB by 14 February**, but on the above
+  non-sanctioned transitional basis. Onboarding to the UDB (DG ENER) is required
+  to do so.
+- **Aircraft operators do NOT use the UDB:** they file the verified **Annex II
+  report through EASA's Sustainability Portal** (the ReFuelEU digital reporting
+  tool, invitation-based) by **31 March** — a **separate** channel from the
+  supplier UDB route. `CONFIRMED` (EASA).
+- **It is already running:** two reporting rounds have taken place (2024 and 2025
+  data). For 2024 data, EASA's Annual Technical Report recorded ~83/123 suppliers
+  and ~262/351 aircraft operators submitting — consistent with a system that is
+  live but still bedding in without sanctions. `PRIMARY-ONLY` (EASA ATR).
+- **What changes when the UDB becomes mandatory:** once the Commission sets the
+  mandatory-use/sanction date, supplier data recording in the UDB becomes
+  enforceable and Member-State verification/audit of UDB entries (Art. 10 +
+  RED Art. 31a) is relied upon before EASA aggregation. Until then the
+  supplier-UDB and operator-EASA-portal channels remain **separate**; the UDB is
+  a traceability backbone, not yet a single merged reporting system.
+
+> Contrast with **FuelEU Maritime**, whose reporting does **not** depend on the
+> UDB at all — it runs through **EMSA's THETIS-MRV / FuelEU database** (live since
+> 1 Aug 2024; access rules set by Impl. Reg. (EU) 2026/394). See the companion
+> report `udb-status-interim-reporting-2026-07-05.md`.
+
 ## 6a. Cross-border reporting allocation (operators/suppliers active in several Member States)
 
 ReFuelEU has **two obligated parties**, each with its own single-point-of-contact
@@ -258,5 +297,6 @@ Two obligated parties. Each step: action → deadline → authority/system.
 
 1. **Obligation & trajectory:** directly-applicable Regulation (EU) 2023/2405 binds **aviation fuel suppliers** (SAF share 2% 2025 → 6% 2030 → 20% 2035 → 34% 2040 → 42% 2045 → 70% 2050, with an e-SAF sub-quota 1.2% avg 2030–2031 → 35% 2050) and **aircraft operators** (≥ 90% uplift/anti-tankering) at Union airports; core obligations from 1 Jan 2025.
 2. **Penalty:** administrative fines ≥ 2× the relevant per-tonne price difference (conventional vs SAF / vs synthetic) × the shortfall for suppliers, and ≥ 2× fuel price × non-tanked quantity for operators (Art. 12); a fine does not discharge the make-up obligation.
-3. **Key compliance deadline:** aircraft operators file a verified Annex II report by **31 March** to the competent authority + EASA; fuel suppliers report into the Union Database by **14 February** (both first in 2025).
-4. **Top flag:** illustrative penalty magnitudes are UNCORROBORATED (single Tier-2), and the Annex II operator data-fields are PRIMARY-ONLY (single EUR-Lex fetch).
+3. **Key compliance deadline:** aircraft operators file a verified Annex II report by **31 March** to the competent authority + EASA (via EASA's Sustainability Portal); fuel suppliers report by **14 February** into the Union Database (both first in 2025).
+4. **Current-state caveat (§6.6):** the UDB is operational (15 Jan 2024) but **not yet mandatory/sanctioned** — 2024/2025 are transitional; operator (EASA portal) and supplier (UDB) channels remain separate; two rounds have already run.
+5. **Top flag:** illustrative penalty magnitudes are UNCORROBORATED (single Tier-2), and the Annex II operator data-fields are PRIMARY-ONLY (single EUR-Lex fetch).

@@ -56,7 +56,13 @@ instruments rather than country reports (template:
   per-company rule vs ReFuelEU's administering-MS-per-aircraft-operator and
   single-competent-authority-per-supplier (principal place of business) model,
   with worked examples. The two regulation reports carry a summary of this in
-  their section 6a. Each country report
+  their section 6a.
+- `research/reports/udb-status-interim-reporting-2026-07-05.md` — current-state
+  note (July 2026): the **Union Database is operational (15 Jan 2024) but not yet
+  mandatory/sanctioned**, so aviation-fuel volumes are reported today via EASA's
+  Sustainability Portal (aircraft operators) and the UDB on a transitional
+  footing (suppliers), while FuelEU Maritime reports via **EMSA THETIS-MRV**,
+  independent of the UDB. Reflected in the ReFuelEU report's section 6.6. Each country report
 covers the biofuel mandate (2026 level + legislated trajectory to 2030),
 fuel taxation, and RED II/III sustainability/certification obligations, with a
 supplier compliance checklist and a conflicts/gaps section. Every fact carries a
