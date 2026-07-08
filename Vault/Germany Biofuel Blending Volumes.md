@@ -1,4 +1,30 @@
-# Biofuel Blending Volumes in Germany (2022–2026)
+---
+title: Germany Biofuel Blending Volumes
+aliases:
+  - German biofuel blending
+  - BAFA biofuel volumes
+  - THG-Quote biofuels
+tags:
+  - energy/biofuels
+  - germany
+  - data/bafa
+  - data/ble
+  - commodities/transport-fuels
+type: research-report
+status: living-document
+country: Germany
+latest_data: "2026-04"
+sources_primary:
+  - BAFA Amtliche Mineralöldaten (monthly, tonnes)
+  - BLE Evaluations- und Erfahrungsbericht (annual, energy)
+created: 2026-07-08
+updated: "2026-07-08"
+---
+
+> [!info] Related
+> [[BAFA]] · [[BLE]] · [[THG-Quote]] · [[HVO]] · [[FAME]] · [[Bioethanol]] · [[Biomethane]] · [[ReFuelEU Aviation]]
+> Machine-readable data: `research/data/bafa-monthly-blending.csv`
+
 
 **Research report — official sources (BAFA, BLE, Zoll, Umweltbundesamt), with fuel-type breakdown**
 *Compiled 2026-07-08. Sections 1–7 verified against primary PDFs/pages by three independent verifiers. Section 8 (monthly 2025–2026 update) extracted directly from BAFA's monthly Amtliche Mineralöldaten PDFs.*
