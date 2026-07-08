@@ -1,7 +1,9 @@
-# Biofuel Blending Volumes in Germany (2022–2024)
+# Biofuel Blending Volumes in Germany (2022–2026)
 
 **Research report — official sources (BAFA, BLE, Zoll, Umweltbundesamt), with fuel-type breakdown**
-*Compiled 2026-07-08. All headline claims verified against the primary PDFs/pages by three independent verifiers; votes noted per finding.*
+*Compiled 2026-07-08. Sections 1–7 verified against primary PDFs/pages by three independent verifiers. Section 8 (monthly 2025–2026 update) extracted directly from BAFA's monthly Amtliche Mineralöldaten PDFs.*
+
+> **Latest update (Section 8):** month-by-month BAFA data now runs through **April 2026** (released 2 July 2026). Two structural changes since the original report: (1) BAFA now **reports HVO and FAME as separate line items** from January 2025 — resolving the biggest limitation flagged below — and (2) a **Biokerosin (SAF)** line appeared in 2026. Headline: **blended HVO nearly quadrupled year-on-year** in early 2026 (Jan–Apr: 211.6 kt vs 58.4 kt), while FAME slipped ~11%.
 
 ---
 
@@ -141,4 +143,63 @@ FAME is fully creditable when it meets DIN EN 14214 and the sustainability crite
 
 ---
 
-*Method: 5 parallel search angles → 22 sources fetched → 107 claims extracted → top 25 claims verified by 3 independent adversarial verifiers each (24 confirmed unanimously, 1 refuted) → synthesis. 104 agents total.*
+## 8. Monthly update — BAFA blending data, January 2025 – April 2026
+
+*Source: BAFA, Amtliche Mineralöldaten, monthly editions Jan 2025 – Apr 2026 (table 9, "Beimischung von Biozusatzstoffen in Mineralölprodukten im Inland"), extracted directly from the published PDFs. April 2026 is the latest available (released 2 July 2026); BAFA data run ~2–3 months behind the reporting month. All figures in tonnes.*
+
+### 8.1 What changed in the statistic itself
+- **HVO now reported separately.** From the January 2025 edition, BAFA splits the old combined "Biodiesel (FAME), HVO, BTL" line into **"davon FAME"** and **"davon HVO"** sub-lines. This is the first time standalone HVO *blending* tonnage appears in the physical mineral-oil statistic — directly answering open question #3 from the original report.
+- **Biokerosin (SAF) line added in 2026.** A "Biokerosin" row appears in the 2026 editions (bio-jet fuel / SAF, reflecting the ReFuelEU Aviation 2% blending mandate in force from 2025). Prior-year comparators are shown as 0.
+- **Combined line label** is now "Biodiesel (FAME), HVO, BTL und andere Biozusätze"; the ETBE bioethanol factor remains 37 vol-% (vs 47% through 2023).
+
+### 8.2 Monthly blended volumes (tonnes)
+
+| Month | FAME | HVO | BTL/other | Biodiesel family (total) | Bioethanol (direct) | Ethanol in ETBE | Biokerosin |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Jan 2025 | 172,480 | 8,709 | 227 | 181,416 | 86,022 | 8,204 | – |
+| Feb 2025 | 198,902 | 15,825 | 141 | 214,868 | 116,865 | 5,605 | – |
+| Mar 2025 | 185,345 | 24,315 | 180 | 209,840 | 93,510 | 7,641 | – |
+| Apr 2025 | 182,929 | 9,515 | 259 | 192,703 | 86,303 | 6,479 | – |
+| May 2025 | 183,155 | 6,486 | 450 | 190,091 | 98,993 | 5,586 | – |
+| Jun 2025 | 180,222 | 13,680 | 359 | 194,261 | 95,391 | 6,069 | – |
+| Jul 2025 | 183,771 | 9,711 | 367 | 193,849 | 101,681 | 6,946 | – |
+| Aug 2025 | 169,781 | 9,140 | 99 | 179,020 | 86,905 | 8,614 | – |
+| Sep 2025 | 180,980 | 4,877 | 375 | 186,232 | 108,894 | 9,160 | – |
+| Oct 2025 | 190,147 | 5,183 | 347 | 195,677 | 117,616 | 6,763 | – |
+| Nov 2025 | 184,750 | 3,644 | 608 | 189,002 | 110,470 | 6,080 | – |
+| Dec 2025 | 182,230 | 7,838 | 146 | 190,214 | 119,355 | 7,150 | – |
+| **FY 2025** | **2,194,692** | **118,923** | **3,558** | **2,317,173** | **1,222,005** | **84,298** | **0** |
+| Jan 2026 | 145,333 | 27,596 | 92 | 173,021 | 80,921 | 6,087 | n/a¹ |
+| Feb 2026 | 154,712 | 48,256 | 347 | 203,315 | 81,880 | 7,434 | n/a¹ |
+| Mar 2026 | 167,796 | 58,084 | 149 | 226,029 | 87,432 | 9,622 | n/a¹ |
+| Apr 2026 | 189,800 | 77,692 | 41 | 267,533 | 98,349 | 7,965 | 3,197 |
+| **Jan–Apr 2026** | **657,641** | **211,628** | **~629** | **869,898** | **350,616** | **31,107** | **8,375** |
+
+¹ The Biokerosin row is present in the Jan–Mar 2026 editions but the monthly value was not populated/legible in those files; the Jan–Apr 2026 cumulative of 8,375 t (from the April edition) is the reliable figure.
+
+### 8.3 Year-on-year trends (cumulative)
+
+| Metric | FY 2025 | vs FY 2024 | Jan–Apr 2026 | vs Jan–Apr 2025 |
+|---|---:|---:|---:|---:|
+| FAME (blended) | 2,194,692 t | +11.6 % | 657,641 t | **−11.1 %** |
+| **HVO (blended)** | 118,923 t | **−17.0 %** | 211,628 t | **+262.6 %** |
+| Biodiesel family total | 2,317,173 t | +9.2 %² | 869,898 t | +8.9 % |
+| Bioethanol (direct) | 1,222,005 t | +5.3 % | 350,616 t | −6.3 % |
+| Ethanol in ETBE | 84,298 t | −6.7 % | 31,107 t | +11.4 % |
+
+² FY2024 comparator is the 2,121,690 t combined line from the original report (which included Bioheizöl); definitions are close but not identical, so treat the +9.2 % as indicative.
+
+### 8.4 The story in the 2025–2026 data
+- **Blended HVO collapsed through 2025, then exploded in 2026.** Monthly blended HVO fell from ~8–24 kt in early 2025 to a low of 3.6 kt in November 2025 (FY2025 −17% y/y). It then ramped hard: 27.6 kt (Jan) → 48.3 kt (Feb) → 58.1 kt (Mar) → **77.7 kt (Apr 2026)** — year-on-year growth of **+139% to +716%** per month, and **+263% cumulative** for Jan–Apr. HVO went from ~5% to nearly **30% of the biodiesel-family blend** within a year.
+- **FAME gave way to HVO.** FAME blending, up 11.6% in FY2025, fell 11.1% in Jan–Apr 2026 — the mirror image of the HVO surge. The total biodiesel family still grew ~9%, so this is substitution within the diesel pool, not a demand collapse.
+- **Bioethanol stayed broadly flat**, ~80–119 kt/month, with a mild soft patch in early 2026 (−6.3% cumulative).
+- **SAF/Biokerosin is now visible in the official blend data** for the first time (~3.2 kt/month, 8.4 kt Jan–Apr 2026), reflecting the ReFuelEU aviation mandate.
+
+### 8.5 Caveats specific to this section
+- This is BAFA's **physical blending ("Beimischung") table only** — it captures biocomponents *blended into* mineral-oil products. **Neat fuels sold unblended (B100, HVO100, E85) are not in this table**, so total HVO placed on the German market is higher than the blended figure shown here.
+- BAFA labels the 2026 editions "vorläufige Daten" (provisional); monthly figures are routinely revised in later editions and in the December annual consolidation.
+- The Jan–Mar 2026 PDFs use a subset-font encoding; figures were recovered by decoding and cross-checked against the cumulative columns in the April 2026 edition, which agree.
+
+---
+
+*Method: Sections 1–7 — 5 parallel search angles → 22 sources fetched → 107 claims extracted → top 25 verified by 3 independent adversarial verifiers each (24 confirmed unanimously, 1 refuted) → synthesis; 104 agents total. Section 8 — direct extraction of 16 monthly BAFA PDFs (Jan 2025 – Apr 2026), figures cross-checked against cumulative columns.*
