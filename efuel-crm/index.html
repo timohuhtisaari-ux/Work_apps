@@ -1,0 +1,938 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>E-Fuel Producer CRM</title>
+<style>
+:root{
+  --bg:#F2F5F4; --surface:#FFFFFF; --surface2:#E9EEEC;
+  --ink:#1B2523; --ink2:#57645F; --ink3:#8B9793;
+  --line:#D9E1DE; --line2:#C8D2CE;
+  --accent:#0E6E63; --accent-ink:#0B5A51; --accent-soft:#DCEBE8;
+  --crit:#B3261E; --crit-ink:#93251F; --crit-soft:#F6E0DE;
+  --warn:#8F5B00; --warn-ink:#7A4E00; --warn-soft:#F4E7CB;
+  --ok:#2E6B33; --ok-soft:#DFEDDE;
+  --shadow:0 1px 2px rgba(20,30,28,.06),0 10px 30px rgba(20,30,28,.10);
+  --radius:10px;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0F1513; --surface:#171E1C; --surface2:#1F2825;
+    --ink:#E6ECEA; --ink2:#A2AFAA; --ink3:#717E79;
+    --line:#2A3430; --line2:#37423E;
+    --accent:#57BFAE; --accent-ink:#7ED2C3; --accent-soft:#173F39;
+    --crit:#E1837C; --crit-ink:#ECA09A; --crit-soft:#3E1E1B;
+    --warn:#D8A94F; --warn-ink:#E4BC70; --warn-soft:#3A2E13;
+    --ok:#82BE86; --ok-soft:#1D3320;
+    --shadow:0 1px 2px rgba(0,0,0,.35),0 12px 32px rgba(0,0,0,.45);
+  }
+}
+:root[data-theme="light"]{
+  --bg:#F2F5F4; --surface:#FFFFFF; --surface2:#E9EEEC;
+  --ink:#1B2523; --ink2:#57645F; --ink3:#8B9793;
+  --line:#D9E1DE; --line2:#C8D2CE;
+  --accent:#0E6E63; --accent-ink:#0B5A51; --accent-soft:#DCEBE8;
+  --crit:#B3261E; --crit-ink:#93251F; --crit-soft:#F6E0DE;
+  --warn:#8F5B00; --warn-ink:#7A4E00; --warn-soft:#F4E7CB;
+  --ok:#2E6B33; --ok-soft:#DFEDDE;
+  --shadow:0 1px 2px rgba(20,30,28,.06),0 10px 30px rgba(20,30,28,.10);
+}
+:root[data-theme="dark"]{
+  --bg:#0F1513; --surface:#171E1C; --surface2:#1F2825;
+  --ink:#E6ECEA; --ink2:#A2AFAA; --ink3:#717E79;
+  --line:#2A3430; --line2:#37423E;
+  --accent:#57BFAE; --accent-ink:#7ED2C3; --accent-soft:#173F39;
+  --crit:#E1837C; --crit-ink:#ECA09A; --crit-soft:#3E1E1B;
+  --warn:#D8A94F; --warn-ink:#E4BC70; --warn-soft:#3A2E13;
+  --ok:#82BE86; --ok-soft:#1D3320;
+  --shadow:0 1px 2px rgba(0,0,0,.35),0 12px 32px rgba(0,0,0,.45);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg); color:var(--ink);
+  font:400 14.5px/1.5 ui-sans-serif,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+.mono{font-family:ui-monospace,"SF Mono","Cascadia Mono",Consolas,Menlo,monospace;font-variant-numeric:tabular-nums;}
+h1,h2,h3{margin:0;text-wrap:balance}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer;padding:0}
+input,select,textarea{
+  font:inherit;color:var(--ink);background:var(--surface);
+  border:1px solid var(--line2);border-radius:7px;padding:7px 10px;width:100%;
+}
+input:focus,select:focus,textarea:focus,button:focus-visible,a:focus-visible,tr[tabindex]:focus-visible{
+  outline:2px solid var(--accent);outline-offset:1px;
+}
+textarea{resize:vertical;min-height:64px}
+label{display:block;font-size:12px;font-weight:600;color:var(--ink2);margin:0 0 4px;}
+a{color:var(--accent-ink)}
+.wrap{max-width:1180px;margin:0 auto;padding:20px 24px 80px;}
+
+/* ---------- header ---------- */
+header.app{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:6px 0 18px;}
+.logo{width:38px;height:38px;flex:none;border-radius:9px;background:var(--accent);display:grid;place-items:center;}
+.logo svg{display:block}
+.titleblock .eyebrow{font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--accent-ink);}
+.titleblock h1{font-size:20px;font-weight:700;letter-spacing:-.01em;}
+.spacer{flex:1}
+.btn{
+  display:inline-flex;align-items:center;gap:7px;border-radius:8px;padding:8px 13px;
+  font-weight:600;font-size:13.5px;border:1px solid var(--line2);background:var(--surface);
+  color:var(--ink);white-space:nowrap;
+}
+.btn:hover{border-color:var(--accent);color:var(--accent-ink)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+:root[data-theme="dark"] .btn.primary{color:#06211D}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .btn.primary{color:#06211D} }
+.btn.primary:hover{filter:brightness(1.06);color:#fff}
+:root[data-theme="dark"] .btn.primary:hover{color:#06211D}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .btn.primary:hover{color:#06211D} }
+.btn.danger{color:var(--crit-ink);border-color:var(--crit)}
+.btn.small{padding:5px 10px;font-size:12.5px}
+.btn.ghost{border-color:transparent;background:transparent;color:var(--ink2)}
+.btn.ghost:hover{color:var(--accent-ink)}
+
+/* ---------- KPI strip ---------- */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:4px 0 20px;}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;}
+.kpi .lbl{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);}
+.kpi .num{font-size:30px;font-weight:700;letter-spacing:-.02em;line-height:1.15;margin-top:2px;font-variant-numeric:tabular-nums;}
+.kpi .sub{font-size:12px;color:var(--ink3);margin-top:1px}
+.kpi.alert{border-color:var(--crit);background:var(--crit-soft)}
+.kpi.alert .num,.kpi.alert .lbl{color:var(--crit-ink)}
+.kpi.watch{border-color:var(--warn);background:var(--warn-soft)}
+.kpi.watch .num,.kpi.watch .lbl{color:var(--warn-ink)}
+
+/* ---------- tabs & toolbar ---------- */
+.tabs{display:flex;gap:2px;border-bottom:1px solid var(--line);margin-bottom:14px;}
+.tab{padding:9px 16px 10px;font-weight:600;font-size:14px;color:var(--ink2);border-bottom:2px solid transparent;margin-bottom:-1px;}
+.tab.active{color:var(--accent-ink);border-bottom-color:var(--accent)}
+.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:14px;}
+.toolbar input[type=search]{max-width:280px}
+.toolbar select{width:auto}
+
+/* ---------- tables ---------- */
+.tablewrap{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow-x:auto;box-shadow:0 1px 2px rgba(20,30,28,.04);}
+table{border-collapse:collapse;width:100%;min-width:860px;}
+thead th{
+  text-align:left;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--ink2);padding:10px 14px;border-bottom:1px solid var(--line);background:var(--surface2);
+}
+tbody td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top;font-size:13.5px;}
+tbody tr:last-child td{border-bottom:none}
+tbody tr.rowlink{cursor:pointer}
+tbody tr.rowlink:hover td{background:var(--accent-soft)}
+.cell-main{font-weight:650;font-size:14px}
+.cell-sub{color:var(--ink2);font-size:12.5px;margin-top:1px}
+.snippet{color:var(--ink2);max-width:260px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;}
+
+/* pills & chips */
+.pill{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.02em;padding:3px 9px;border-radius:999px;white-space:nowrap;}
+.pill.active{background:var(--accent-soft);color:var(--accent-ink)}
+.pill.prospect{background:var(--surface2);color:var(--ink2)}
+.pill.onhold{background:var(--warn-soft);color:var(--warn-ink)}
+.pill.dormant{background:var(--surface2);color:var(--ink3)}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;padding:3px 9px;border-radius:7px;white-space:nowrap;font-variant-numeric:tabular-nums;}
+.chip.crit{background:var(--crit-soft);color:var(--crit-ink)}
+.chip.warn{background:var(--warn-soft);color:var(--warn-ink)}
+.chip.ok{background:var(--ok-soft);color:var(--ok)}
+.chip.none{color:var(--ink3)}
+.dot{width:7px;height:7px;border-radius:50%;background:currentColor;flex:none}
+
+/* ---------- empty state ---------- */
+.empty{
+  background:var(--surface);border:1px dashed var(--line2);border-radius:var(--radius);
+  padding:52px 24px;text-align:center;color:var(--ink2);
+}
+.empty h3{font-size:16px;color:var(--ink);margin-bottom:6px}
+.empty p{margin:0 0 18px;font-size:13.5px}
+.empty .btn{margin:0 5px}
+
+/* ---------- slide-over panel ---------- */
+.scrim{position:fixed;inset:0;background:rgba(10,16,14,.45);z-index:40;}
+aside.panel{
+  position:fixed;top:0;right:0;bottom:0;width:min(520px,100vw);z-index:50;
+  background:var(--surface);border-left:1px solid var(--line);box-shadow:var(--shadow);
+  display:flex;flex-direction:column;
+}
+.panel-head{display:flex;align-items:flex-start;gap:10px;padding:18px 20px 14px;border-bottom:1px solid var(--line);}
+.panel-head h2{font-size:18px;font-weight:700;letter-spacing:-.01em}
+.panel-body{overflow-y:auto;padding:18px 20px 30px;flex:1}
+.sect{margin-bottom:22px}
+.sect > .eyebrow{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);margin-bottom:8px;}
+.card{background:var(--surface2);border-radius:9px;padding:12px 14px;font-size:13.5px;}
+.card .row{display:flex;gap:8px;margin:3px 0}
+.card .row .k{color:var(--ink2);width:82px;flex:none;font-size:12.5px;padding-top:1px}
+.nextbox{border-left:3px solid var(--accent);background:var(--accent-soft);border-radius:6px;padding:11px 13px;font-size:13.5px;}
+.nextbox.crit{border-left-color:var(--crit);background:var(--crit-soft)}
+.nextbox.warn{border-left-color:var(--warn);background:var(--warn-soft)}
+.logitem{border-left:2px solid var(--line2);padding:2px 0 10px 12px;margin-left:4px;position:relative;}
+.logitem::before{content:"";position:absolute;left:-5px;top:6px;width:8px;height:8px;border-radius:50%;background:var(--accent);}
+.logitem .d{font-size:12px;font-weight:700;color:var(--ink2)}
+.logitem p{margin:2px 0 0;font-size:13.5px;white-space:pre-wrap}
+.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.formgrid .full{grid-column:1/-1}
+.panel-actions{display:flex;gap:9px;flex-wrap:wrap;padding-top:4px}
+.projchip{display:flex;align-items:center;gap:10px;background:var(--surface2);border-radius:8px;padding:9px 12px;margin-bottom:7px;font-size:13px;}
+.projchip .nm{font-weight:650}
+.projchip .meta{color:var(--ink2);font-size:12px}
+
+/* ---------- modal ---------- */
+.modal{
+  position:fixed;z-index:60;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:min(760px,calc(100vw - 32px));max-height:min(86vh,820px);display:flex;flex-direction:column;
+  background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);
+}
+.modal.narrow{width:min(560px,calc(100vw - 32px))}
+.modal-head{display:flex;align-items:center;gap:10px;padding:16px 20px;border-bottom:1px solid var(--line);}
+.modal-head h2{font-size:16px;font-weight:700}
+.modal-body{padding:18px 20px;overflow-y:auto}
+.modal-foot{display:flex;gap:9px;justify-content:flex-end;padding:14px 20px;border-top:1px solid var(--line);}
+.hint{font-size:12.5px;color:var(--ink3);margin:6px 0 0}
+.codebox{font-family:ui-monospace,"SF Mono",Consolas,monospace;font-size:12.5px;background:var(--surface2);border-radius:7px;padding:10px 12px;overflow-x:auto;white-space:pre;color:var(--ink2);}
+
+/* toast */
+#toast{
+  position:fixed;bottom:22px;left:50%;transform:translateX(-50%);z-index:80;
+  background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:9px;
+  font-size:13.5px;font-weight:600;box-shadow:var(--shadow);opacity:0;pointer-events:none;
+  transition:opacity .2s;max-width:calc(100vw - 40px);
+}
+#toast.show{opacity:1}
+#toast.crit{background:var(--crit);color:#fff}
+
+.iconbtn{padding:6px;border-radius:7px;color:var(--ink2);line-height:0}
+.iconbtn:hover{background:var(--surface2);color:var(--ink)}
+.hidden{display:none !important}
+@media (max-width:640px){
+  .wrap{padding:14px 14px 70px}
+  .formgrid{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion: reduce){ *{transition:none !important;animation:none !important} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="app">
+    <div class="logo" aria-hidden="true">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+        <circle cx="7" cy="7" r="3.2" stroke="#fff" stroke-width="1.7"/>
+        <circle cx="15.5" cy="11.5" r="2.6" stroke="#fff" stroke-width="1.7"/>
+        <circle cx="8.5" cy="16" r="2.2" stroke="#fff" stroke-width="1.7"/>
+        <path d="M9.6 9.2l3.4 1.4M9.3 13.9l1-1" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="titleblock">
+      <div class="eyebrow">RFNBO follow-up &amp; monitoring</div>
+      <h1>E-Fuel Producer CRM</h1>
+    </div>
+    <div class="spacer"></div>
+    <button class="btn small" data-action="export-db" title="Download all CRM data as a JSON file">Export backup</button>
+    <button class="btn small" data-action="restore-db" title="Restore CRM data from a JSON backup file">Restore backup</button>
+  </header>
+
+  <div class="kpis" id="kpis"></div>
+
+  <nav class="tabs" role="tablist">
+    <button class="tab active" id="tab-producers" role="tab" data-action="tab" data-tab="producers">Producers</button>
+    <button class="tab" id="tab-projects" role="tab" data-action="tab" data-tab="projects">Projects</button>
+  </nav>
+
+  <section id="view-producers">
+    <div class="toolbar">
+      <input type="search" id="q" placeholder="Search company, contact, country…" aria-label="Search producers">
+      <select id="fStatus" aria-label="Filter by status">
+        <option value="all">All statuses</option>
+        <option>Active</option><option>Prospect</option><option>On hold</option><option>Dormant</option>
+      </select>
+      <select id="fSort" aria-label="Sort producers">
+        <option value="deadline">Sort: deadline first</option>
+        <option value="lastdisc">Sort: longest silent first</option>
+        <option value="company">Sort: company A–Z</option>
+      </select>
+      <div class="spacer"></div>
+      <button class="btn primary" data-action="add-producer">+ Add producer</button>
+    </div>
+    <div id="producerList"></div>
+  </section>
+
+  <section id="view-projects" class="hidden">
+    <div class="toolbar">
+      <input type="search" id="pq" placeholder="Search project, producer, product…" aria-label="Search projects">
+      <div class="spacer"></div>
+      <button class="btn" data-action="open-import">⤓ Import from RFNBO model</button>
+      <button class="btn primary" data-action="project-new">+ Add project</button>
+    </div>
+    <div id="projectList"></div>
+  </section>
+</div>
+
+<div id="layer"></div>
+<div id="toast" role="status"></div>
+<input type="file" id="restoreFile" accept=".json,application/json" class="hidden">
+<input type="file" id="importFile" accept=".json,application/json" class="hidden">
+
+<script>
+"use strict";
+/* ================= storage ================= */
+const LS_KEY = "efuelCRM.v1";
+function loadDB(){
+  try{
+    const raw = localStorage.getItem(LS_KEY);
+    if(raw){
+      const d = JSON.parse(raw);
+      if(d && Array.isArray(d.producers) && Array.isArray(d.projects)) return d;
+    }
+  }catch(e){}
+  return {producers:[], projects:[]};
+}
+let db = loadDB();
+function save(){
+  try{ localStorage.setItem(LS_KEY, JSON.stringify(db)); }
+  catch(e){ toast("Could not save to browser storage", true); }
+}
+
+/* ================= helpers ================= */
+const uid = () => "id" + Math.random().toString(36).slice(2,9) + Date.now().toString(36);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const byId = id => document.getElementById(id);
+const val = id => { const el = byId(id); return el ? el.value.trim() : ""; };
+const todayISO = () => { const d = new Date(); return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); };
+function fmtDate(iso){
+  if(!iso) return "—";
+  const d = new Date(iso + (iso.length === 10 ? "T00:00:00" : ""));
+  if(isNaN(d)) return esc(iso);
+  return d.toLocaleDateString("en-GB", {day:"numeric", month:"short", year:"numeric"});
+}
+function daysUntil(iso){
+  if(!iso) return null;
+  const t = new Date(); t.setHours(0,0,0,0);
+  const d = new Date(iso + "T00:00:00");
+  if(isNaN(d)) return null;
+  return Math.round((d - t) / 86400000);
+}
+function deadlineChip(iso){
+  const n = daysUntil(iso);
+  if(n === null) return '<span class="chip none">no deadline</span>';
+  const date = fmtDate(iso);
+  if(n < 0)  return `<span class="chip crit mono"><span class="dot"></span>${date} · ${-n} d overdue</span>`;
+  if(n === 0) return `<span class="chip warn mono"><span class="dot"></span>due today</span>`;
+  if(n <= 7) return `<span class="chip warn mono"><span class="dot"></span>${date} · in ${n} d</span>`;
+  return `<span class="chip ok mono">${date}</span>`;
+}
+function statusPill(s){
+  const cls = {Active:"active", Prospect:"prospect", "On hold":"onhold", Dormant:"dormant"}[s] || "prospect";
+  return `<span class="pill ${cls}">${esc(s || "Prospect")}</span>`;
+}
+function lastDiscussion(p){
+  if(!p.discussions || !p.discussions.length) return null;
+  return p.discussions.slice().sort((a,b) => (b.date||"").localeCompare(a.date||""))[0];
+}
+function toast(msg, isErr){
+  const t = byId("toast");
+  t.textContent = msg;
+  t.className = "show" + (isErr ? " crit" : "");
+  clearTimeout(toast._t);
+  toast._t = setTimeout(() => t.className = "", 3200);
+}
+
+/* ================= ui state ================= */
+const ui = {
+  tab: "producers", q: "", pq: "", status: "all", sort: "deadline",
+  panelId: null, panelEdit: false, deleteArmed: null,
+  modal: null,           // null | "import" | "import-preview" | "project" | "confirm-restore"
+  importRows: null, projectId: null, projectPresetProducer: null,
+  pendingRestore: null
+};
+
+/* ================= KPIs ================= */
+function renderKPIs(){
+  const overdue = db.producers.filter(p => { const n = daysUntil(p.deadline); return n !== null && n < 0; }).length;
+  const week    = db.producers.filter(p => { const n = daysUntil(p.deadline); return n !== null && n >= 0 && n <= 7; }).length;
+  byId("kpis").innerHTML = `
+    <div class="kpi"><div class="lbl">Producers tracked</div><div class="num">${db.producers.length}</div><div class="sub">${db.producers.filter(p=>p.status==="Active").length} active relationships</div></div>
+    <div class="kpi ${overdue ? "alert" : ""}"><div class="lbl">Overdue follow-ups</div><div class="num">${overdue}</div><div class="sub">${overdue ? "needs attention now" : "all caught up"}</div></div>
+    <div class="kpi ${week ? "watch" : ""}"><div class="lbl">Due within 7 days</div><div class="num">${week}</div><div class="sub">upcoming next steps</div></div>
+    <div class="kpi"><div class="lbl">RFNBO projects</div><div class="num">${db.projects.length}</div><div class="sub">linked to producers</div></div>`;
+}
+
+/* ================= producers list ================= */
+function producerMatches(p, q){
+  if(!q) return true;
+  const hay = [p.company, p.country, p.contactName, p.contactRole, p.email, p.phone, p.products, p.nextSteps].join(" ").toLowerCase();
+  return hay.includes(q.toLowerCase());
+}
+function sortedProducers(){
+  let list = db.producers.filter(p => producerMatches(p, ui.q) && (ui.status === "all" || (p.status||"Prospect") === ui.status));
+  if(ui.sort === "company"){
+    list.sort((a,b) => (a.company||"").localeCompare(b.company||""));
+  } else if(ui.sort === "lastdisc"){
+    list.sort((a,b) => {
+      const da = lastDiscussion(a), dbb = lastDiscussion(b);
+      return (da ? da.date : "0000").localeCompare(dbb ? dbb.date : "0000");
+    });
+  } else {
+    list.sort((a,b) => {
+      const na = daysUntil(a.deadline), nb = daysUntil(b.deadline);
+      if(na === null && nb === null) return (a.company||"").localeCompare(b.company||"");
+      if(na === null) return 1;
+      if(nb === null) return -1;
+      return na - nb;
+    });
+  }
+  return list;
+}
+function renderProducers(){
+  const host = byId("producerList");
+  if(!db.producers.length){
+    host.innerHTML = `<div class="empty">
+      <h3>No producers yet</h3>
+      <p>Track e-fuel / RFNBO producers: contacts, discussions, next steps and deadlines.</p>
+      <button class="btn primary" data-action="add-producer">+ Add first producer</button>
+      <button class="btn" data-action="sample-data">Load sample data</button>
+    </div>`;
+    return;
+  }
+  const list = sortedProducers();
+  if(!list.length){ host.innerHTML = `<div class="empty"><h3>No matches</h3><p>Try a different search or status filter.</p></div>`; return; }
+  host.innerHTML = `<div class="tablewrap"><table>
+    <thead><tr>
+      <th>Producer</th><th>Contact</th><th>Status</th><th>Last discussion</th><th>Next steps</th><th>Deadline</th>
+    </tr></thead>
+    <tbody>${list.map(p => {
+      const ld = lastDiscussion(p);
+      const nProj = db.projects.filter(x => x.producerId === p.id).length;
+      return `<tr class="rowlink" tabindex="0" data-action="open-producer" data-id="${p.id}">
+        <td><div class="cell-main">${esc(p.company)}</div>
+            <div class="cell-sub">${esc(p.country || "")}${p.products ? " · " + esc(p.products) : ""}${nProj ? ` · ${nProj} project${nProj>1?"s":""}` : ""}</div></td>
+        <td><div>${esc(p.contactName || "—")}</div><div class="cell-sub">${esc(p.contactRole || "")}</div>
+            <div class="cell-sub">${p.email ? `<a href="mailto:${esc(p.email)}">${esc(p.email)}</a>` : ""}</div></td>
+        <td>${statusPill(p.status)}</td>
+        <td>${ld ? `<div class="mono cell-sub" style="font-weight:700">${fmtDate(ld.date)}</div><div class="snippet">${esc(ld.note)}</div>` : '<span class="cell-sub">no discussions logged</span>'}</td>
+        <td><div class="snippet">${esc(p.nextSteps || "—")}</div></td>
+        <td>${deadlineChip(p.deadline)}</td>
+      </tr>`;
+    }).join("")}</tbody></table></div>`;
+}
+
+/* ================= projects list ================= */
+function producerName(id){ const p = db.producers.find(x => x.id === id); return p ? p.company : null; }
+function renderProjects(){
+  const host = byId("projectList");
+  if(!db.projects.length){
+    host.innerHTML = `<div class="empty">
+      <h3>No RFNBO projects yet</h3>
+      <p>Add projects manually, or import them from your RFNBO model as JSON.</p>
+      <button class="btn primary" data-action="open-import">⤓ Import from RFNBO model</button>
+      <button class="btn" data-action="project-new">+ Add project</button>
+      ${db.producers.length ? "" : '<button class="btn" data-action="sample-data">Load sample data</button>'}
+    </div>`;
+    return;
+  }
+  const q = ui.pq.toLowerCase();
+  const list = db.projects.filter(pr => {
+    if(!q) return true;
+    return [pr.name, producerName(pr.producerId), pr.country, pr.product, pr.phase, pr.notes].join(" ").toLowerCase().includes(q);
+  }).slice().sort((a,b) => (a.cod||"9999") > (b.cod||"9999") ? 1 : -1);
+  if(!list.length){ host.innerHTML = `<div class="empty"><h3>No matches</h3><p>Try a different search.</p></div>`; return; }
+  host.innerHTML = `<div class="tablewrap"><table>
+    <thead><tr>
+      <th>Project</th><th>Producer</th><th>Country</th><th>Product</th><th>Capacity</th><th>Electrolyzer</th><th>COD</th><th>Phase</th><th></th>
+    </tr></thead>
+    <tbody>${list.map(pr => `<tr>
+      <td><div class="cell-main">${esc(pr.name)}</div>${pr.notes ? `<div class="snippet cell-sub">${esc(pr.notes)}</div>` : ""}</td>
+      <td>${pr.producerId ? `<button class="btn ghost small" data-action="open-producer" data-id="${pr.producerId}" style="padding:0;font-weight:650">${esc(producerName(pr.producerId) || "—")}</button>` : '<span class="cell-sub">—</span>'}</td>
+      <td>${esc(pr.country || "—")}</td>
+      <td>${esc(pr.product || "—")}</td>
+      <td class="mono">${pr.capacity ? esc(pr.capacity) + " kt/a" : "—"}</td>
+      <td class="mono">${pr.electrolyzerMW ? esc(pr.electrolyzerMW) + " MW" : "—"}</td>
+      <td class="mono">${esc(pr.cod || "—")}</td>
+      <td>${pr.phase ? `<span class="pill prospect">${esc(pr.phase)}</span>` : "—"}</td>
+      <td style="white-space:nowrap">
+        <button class="iconbtn" data-action="project-edit" data-id="${pr.id}" title="Edit project" aria-label="Edit ${esc(pr.name)}">✎</button>
+        <button class="iconbtn" data-action="project-del" data-id="${pr.id}" title="Delete project" aria-label="Delete ${esc(pr.name)}">🗑</button>
+      </td>
+    </tr>`).join("")}</tbody></table></div>`;
+}
+
+/* ================= slide-over panel ================= */
+function panelHTML(){
+  if(ui.panelId === null && !ui.panelEdit) return "";
+  const p = db.producers.find(x => x.id === ui.panelId) || {};
+  const isNew = !p.id;
+  if(ui.panelEdit){
+    return `<div class="scrim" data-action="close-panel"></div>
+    <aside class="panel" role="dialog" aria-modal="true" aria-label="${isNew ? "Add producer" : "Edit producer"}">
+      <div class="panel-head"><h2>${isNew ? "Add producer" : "Edit " + esc(p.company)}</h2>
+        <div class="spacer"></div><button class="iconbtn" data-action="close-panel" aria-label="Close">✕</button></div>
+      <div class="panel-body">
+        <div class="formgrid">
+          <div class="full"><label for="f_company">Company *</label><input id="f_company" value="${esc(p.company||"")}" placeholder="e.g. Nordlys eFuels"></div>
+          <div><label for="f_country">Country</label><input id="f_country" value="${esc(p.country||"")}"></div>
+          <div><label for="f_status">Status</label><select id="f_status">
+            ${["Active","Prospect","On hold","Dormant"].map(s=>`<option ${((p.status||"Prospect")===s)?"selected":""}>${s}</option>`).join("")}
+          </select></div>
+          <div><label for="f_contactName">Contact person</label><input id="f_contactName" value="${esc(p.contactName||"")}"></div>
+          <div><label for="f_contactRole">Role / title</label><input id="f_contactRole" value="${esc(p.contactRole||"")}"></div>
+          <div><label for="f_email">Email</label><input id="f_email" type="email" value="${esc(p.email||"")}"></div>
+          <div><label for="f_phone">Phone</label><input id="f_phone" value="${esc(p.phone||"")}"></div>
+          <div class="full"><label for="f_products">Products (e-methanol, e-SAF, …)</label><input id="f_products" value="${esc(p.products||"")}"></div>
+          <div class="full"><label for="f_nextSteps">Next steps</label><textarea id="f_nextSteps">${esc(p.nextSteps||"")}</textarea></div>
+          <div><label for="f_deadline">Deadline for next step</label><input id="f_deadline" type="date" value="${esc(p.deadline||"")}"></div>
+          <div class="full"><label for="f_notes">General notes</label><textarea id="f_notes">${esc(p.notes||"")}</textarea></div>
+        </div>
+        <div class="panel-actions" style="margin-top:18px">
+          <button class="btn primary" data-action="save-producer">${isNew ? "Add producer" : "Save changes"}</button>
+          <button class="btn" data-action="${isNew ? "close-panel" : "cancel-edit"}">Cancel</button>
+        </div>
+      </div>
+    </aside>`;
+  }
+  /* read view */
+  const ld = lastDiscussion(p);
+  const n = daysUntil(p.deadline);
+  const nextCls = n === null ? "" : (n < 0 ? "crit" : (n <= 7 ? "warn" : ""));
+  const projs = db.projects.filter(x => x.producerId === p.id);
+  const logs = (p.discussions||[]).slice().sort((a,b) => (b.date||"").localeCompare(a.date||""));
+  return `<div class="scrim" data-action="close-panel"></div>
+  <aside class="panel" role="dialog" aria-modal="true" aria-label="${esc(p.company)}">
+    <div class="panel-head">
+      <div><h2>${esc(p.company)}</h2>
+        <div class="cell-sub" style="margin-top:3px">${esc(p.country||"")}${p.products ? " · " + esc(p.products) : ""} &nbsp;${statusPill(p.status)}</div></div>
+      <div class="spacer"></div><button class="iconbtn" data-action="close-panel" aria-label="Close">✕</button>
+    </div>
+    <div class="panel-body">
+      <div class="sect">
+        <div class="eyebrow">Contact</div>
+        <div class="card">
+          <div class="row"><span class="k">Person</span><span>${esc(p.contactName||"—")}${p.contactRole ? `, <span style="color:var(--ink2)">${esc(p.contactRole)}</span>` : ""}</span></div>
+          <div class="row"><span class="k">Email</span><span>${p.email ? `<a href="mailto:${esc(p.email)}">${esc(p.email)}</a>` : "—"}</span></div>
+          <div class="row"><span class="k">Phone</span><span class="mono">${esc(p.phone||"—")}</span></div>
+          ${p.notes ? `<div class="row"><span class="k">Notes</span><span style="white-space:pre-wrap">${esc(p.notes)}</span></div>` : ""}
+        </div>
+      </div>
+      <div class="sect">
+        <div class="eyebrow">Next steps &amp; deadline</div>
+        <div class="nextbox ${nextCls}">
+          <div style="white-space:pre-wrap">${esc(p.nextSteps || "No next steps defined.")}</div>
+          <div style="margin-top:8px">${deadlineChip(p.deadline)}</div>
+        </div>
+      </div>
+      <div class="sect">
+        <div class="eyebrow">Log a discussion</div>
+        <div class="formgrid">
+          <div><label for="d_date">Date</label><input id="d_date" type="date" value="${todayISO()}"></div>
+          <div class="full"><label for="d_note">What was discussed</label><textarea id="d_note" placeholder="Call / meeting summary…"></textarea></div>
+        </div>
+        <div style="margin-top:9px"><button class="btn small primary" data-action="log-discussion" data-id="${p.id}">Log discussion</button></div>
+      </div>
+      <div class="sect">
+        <div class="eyebrow">Discussion history ${logs.length ? `(${logs.length})` : ""}</div>
+        ${logs.length ? logs.map(l => `<div class="logitem">
+            <span class="d mono">${fmtDate(l.date)}</span>
+            <button class="iconbtn" style="float:right" data-action="del-discussion" data-id="${p.id}" data-log="${l.id}" title="Delete entry" aria-label="Delete log entry">✕</button>
+            <p>${esc(l.note)}</p></div>`).join("")
+          : `<div class="cell-sub">Nothing logged yet.${ld ? "" : " The last-discussion column fills in from entries here."}</div>`}
+      </div>
+      <div class="sect">
+        <div class="eyebrow">RFNBO projects (${projs.length})</div>
+        ${projs.map(pr => `<div class="projchip"><div style="flex:1"><div class="nm">${esc(pr.name)}</div>
+            <div class="meta">${[pr.product, pr.capacity ? pr.capacity + " kt/a" : null, pr.electrolyzerMW ? pr.electrolyzerMW + " MW" : null, pr.cod ? "COD " + pr.cod : null, pr.phase].filter(Boolean).map(esc).join(" · ")}</div></div>
+            <button class="iconbtn" data-action="project-edit" data-id="${pr.id}" title="Edit project" aria-label="Edit ${esc(pr.name)}">✎</button></div>`).join("")}
+        <button class="btn small" data-action="project-new" data-producer="${p.id}" style="margin-top:4px">+ Add project for ${esc(p.company)}</button>
+      </div>
+      <div class="panel-actions">
+        <button class="btn" data-action="edit-producer">✎ Edit details</button>
+        <button class="btn danger" data-action="del-producer" data-id="${p.id}">${ui.deleteArmed === p.id ? "Really delete? This removes the producer" : "Delete producer"}</button>
+      </div>
+    </div>
+  </aside>`;
+}
+
+/* ================= RFNBO model import ================= */
+const EXAMPLE_JSON = `[
+  {
+    "project": "Havvind e-Methanol Phase 1",
+    "producer": "Nordlys eFuels",
+    "country": "Norway",
+    "product": "e-Methanol",
+    "capacity_kta": 80,
+    "electrolyzer_mw": 120,
+    "cod": 2028,
+    "phase": "FEED",
+    "notes": "Offshore wind PPA under negotiation"
+  }
+]`;
+function pickField(obj, names){
+  const norm = {};
+  for(const k of Object.keys(obj)) norm[k.toLowerCase().replace(/[^a-z0-9]/g,"")] = obj[k];
+  for(const n of names) if(norm[n] !== undefined && norm[n] !== null && norm[n] !== "") return norm[n];
+  return undefined;
+}
+function mapModelRow(o){
+  if(typeof o !== "object" || o === null || Array.isArray(o)) return null;
+  const name = pickField(o, ["project","projectname","name","title","plant","plantname"]);
+  if(!name) return null;
+  return {
+    sel: true,
+    name: String(name),
+    producer: String(pickField(o, ["producer","company","developer","owner","sponsor","operator"]) ?? ""),
+    country:  String(pickField(o, ["country","location","region","site"]) ?? ""),
+    product:  String(pickField(o, ["product","fuel","output","producttype","fueltype","endproduct"]) ?? ""),
+    capacity: pickField(o, ["capacitykta","capacityktpa","capacity","annualcapacity","capacitykt","outputkta","productionkta"]),
+    electrolyzerMW: pickField(o, ["electrolyzermw","electrolysermw","electrolyzercapacitymw","electrolysercapacitymw","electrolyzercapacity","electrolysercapacity","mwel","mw"]),
+    cod:   pickField(o, ["cod","codyear","startyear","startup","startupyear","operational","operationalyear","commissioning"]),
+    phase: String(pickField(o, ["phase","status","stage","maturity","developmentphase"]) ?? ""),
+    notes: String(pickField(o, ["notes","note","comment","comments","description","remarks"]) ?? "")
+  };
+}
+function parseModelJSON(text){
+  let data;
+  try{ data = JSON.parse(text); }
+  catch(e){ throw new Error("Not valid JSON: " + e.message); }
+  let rows = Array.isArray(data) ? data
+           : Array.isArray(data.projects) ? data.projects
+           : Array.isArray(data.rows) ? data.rows
+           : Array.isArray(data.data) ? data.data
+           : [data];
+  const mapped = rows.map(mapModelRow).filter(Boolean);
+  if(!mapped.length) throw new Error("No projects recognized. Each project needs at least a “project” / “name” field.");
+  return mapped;
+}
+function findProducerByName(name){
+  const n = (name||"").trim().toLowerCase();
+  if(!n) return null;
+  return db.producers.find(p => (p.company||"").trim().toLowerCase() === n) || null;
+}
+
+/* ================= modals ================= */
+function projectFormHTML(pr, presetProducer){
+  const producerId = pr ? pr.producerId : (presetProducer || "");
+  return `<div class="formgrid">
+    <div class="full"><label for="pj_name">Project name *</label><input id="pj_name" value="${esc(pr ? pr.name : "")}" placeholder="e.g. Havvind e-Methanol Phase 1"></div>
+    <div class="full"><label for="pj_producer">Producer</label><select id="pj_producer">
+      <option value="">— not linked —</option>
+      ${db.producers.slice().sort((a,b)=>(a.company||"").localeCompare(b.company||"")).map(p =>
+        `<option value="${p.id}" ${p.id === producerId ? "selected" : ""}>${esc(p.company)}</option>`).join("")}
+    </select></div>
+    <div><label for="pj_country">Country</label><input id="pj_country" value="${esc(pr ? pr.country : "")}"></div>
+    <div><label for="pj_product">Product</label><input id="pj_product" value="${esc(pr ? pr.product : "")}" placeholder="e-Methanol / e-SAF / e-NH3 / H2" list="productlist">
+      <datalist id="productlist"><option>RFNBO Hydrogen</option><option>e-Methanol</option><option>e-Ammonia</option><option>e-SAF</option><option>e-Methane</option><option>e-Diesel</option></datalist></div>
+    <div><label for="pj_capacity">Capacity (kt/a)</label><input id="pj_capacity" type="number" min="0" step="any" value="${esc(pr && pr.capacity != null ? pr.capacity : "")}"></div>
+    <div><label for="pj_mw">Electrolyzer (MW)</label><input id="pj_mw" type="number" min="0" step="any" value="${esc(pr && pr.electrolyzerMW != null ? pr.electrolyzerMW : "")}"></div>
+    <div><label for="pj_cod">COD (year)</label><input id="pj_cod" value="${esc(pr ? pr.cod : "")}" placeholder="2028"></div>
+    <div><label for="pj_phase">Phase</label><input id="pj_phase" value="${esc(pr ? pr.phase : "")}" placeholder="Concept / Pre-FEED / FEED / FID / Construction / Operating" list="phaselist">
+      <datalist id="phaselist"><option>Concept</option><option>Pre-FEED</option><option>FEED</option><option>FID</option><option>Construction</option><option>Operating</option></datalist></div>
+    <div class="full"><label for="pj_notes">Notes</label><textarea id="pj_notes">${esc(pr ? pr.notes : "")}</textarea></div>
+  </div>`;
+}
+function modalHTML(){
+  if(!ui.modal) return "";
+  if(ui.modal === "project"){
+    const pr = ui.projectId ? db.projects.find(x => x.id === ui.projectId) : null;
+    return `<div class="scrim" data-action="close-modal"></div>
+    <div class="modal narrow" role="dialog" aria-modal="true" aria-label="${pr ? "Edit project" : "Add project"}">
+      <div class="modal-head"><h2>${pr ? "Edit project" : "Add RFNBO project"}</h2>
+        <div class="spacer"></div><button class="iconbtn" data-action="close-modal" aria-label="Close">✕</button></div>
+      <div class="modal-body">${projectFormHTML(pr, ui.projectPresetProducer)}</div>
+      <div class="modal-foot">
+        <button class="btn" data-action="close-modal">Cancel</button>
+        <button class="btn primary" data-action="project-save">${pr ? "Save changes" : "Add project"}</button>
+      </div>
+    </div>`;
+  }
+  if(ui.modal === "import"){
+    return `<div class="scrim" data-action="close-modal"></div>
+    <div class="modal" role="dialog" aria-modal="true" aria-label="Import from RFNBO model">
+      <div class="modal-head"><h2>Import projects from RFNBO model</h2>
+        <div class="spacer"></div><button class="iconbtn" data-action="close-modal" aria-label="Close">✕</button></div>
+      <div class="modal-body">
+        <p style="margin:0 0 10px;font-size:13.5px;color:var(--ink2)">
+          Paste a JSON export from your RFNBO model below, or upload a <span class="mono">.json</span> file.
+          A single project, an array, or an object with a <span class="mono">projects</span> list all work —
+          common field names (<span class="mono">project, producer, country, product, capacity_kta, electrolyzer_mw, cod, phase</span>) are recognized automatically.</p>
+        <label for="importText">RFNBO model JSON</label>
+        <textarea id="importText" style="min-height:180px;font-family:ui-monospace,Consolas,monospace;font-size:12.5px" placeholder='${esc(EXAMPLE_JSON)}'></textarea>
+        <div style="display:flex;gap:9px;margin-top:10px;flex-wrap:wrap">
+          <button class="btn small" data-action="import-upload">Upload .json file…</button>
+          <button class="btn small ghost" data-action="import-example">Insert example</button>
+        </div>
+      </div>
+      <div class="modal-foot">
+        <button class="btn" data-action="close-modal">Cancel</button>
+        <button class="btn primary" data-action="import-parse">Preview import →</button>
+      </div>
+    </div>`;
+  }
+  if(ui.modal === "import-preview"){
+    const rows = ui.importRows || [];
+    const nSel = rows.filter(r => r.sel).length;
+    return `<div class="scrim" data-action="close-modal"></div>
+    <div class="modal" role="dialog" aria-modal="true" aria-label="Review import">
+      <div class="modal-head"><h2>Review ${rows.length} project${rows.length > 1 ? "s" : ""} from RFNBO model</h2>
+        <div class="spacer"></div><button class="iconbtn" data-action="close-modal" aria-label="Close">✕</button></div>
+      <div class="modal-body">
+        <div class="tablewrap" style="box-shadow:none"><table style="min-width:720px">
+          <thead><tr><th></th><th>Project</th><th>Producer</th><th>Product</th><th>Capacity</th><th>MW</th><th>COD</th><th>Phase</th></tr></thead>
+          <tbody>${rows.map((r, i) => {
+            const match = findProducerByName(r.producer);
+            return `<tr>
+              <td><input type="checkbox" style="width:auto" ${r.sel ? "checked" : ""} data-action="import-toggle" data-idx="${i}" aria-label="Include ${esc(r.name)}"></td>
+              <td><div class="cell-main" style="font-size:13.5px">${esc(r.name)}</div>${r.country ? `<div class="cell-sub">${esc(r.country)}</div>` : ""}</td>
+              <td>${r.producer ? `<div>${esc(r.producer)}</div><div class="cell-sub">${match ? "↳ links to existing producer" : "↳ new producer will be created"}</div>` : '<span class="cell-sub">not linked</span>'}</td>
+              <td>${esc(r.product || "—")}</td>
+              <td class="mono">${r.capacity != null ? esc(r.capacity) : "—"}</td>
+              <td class="mono">${r.electrolyzerMW != null ? esc(r.electrolyzerMW) : "—"}</td>
+              <td class="mono">${esc(r.cod ?? "—")}</td>
+              <td>${esc(r.phase || "—")}</td>
+            </tr>`;
+          }).join("")}</tbody></table></div>
+        <p class="hint">Producers named in the file that aren't in the CRM yet are created automatically (as Prospects) and linked.</p>
+      </div>
+      <div class="modal-foot">
+        <button class="btn" data-action="import-back">← Back</button>
+        <button class="btn primary" data-action="import-run" ${nSel ? "" : "disabled"}>Import ${nSel} project${nSel === 1 ? "" : "s"}</button>
+      </div>
+    </div>`;
+  }
+  if(ui.modal === "confirm-restore"){
+    const b = ui.pendingRestore || {producers:[], projects:[]};
+    return `<div class="scrim" data-action="close-modal"></div>
+    <div class="modal narrow" role="dialog" aria-modal="true" aria-label="Restore backup">
+      <div class="modal-head"><h2>Restore backup?</h2>
+        <div class="spacer"></div><button class="iconbtn" data-action="close-modal" aria-label="Close">✕</button></div>
+      <div class="modal-body">
+        <p style="margin:0;font-size:13.5px">This replaces the current data
+        (<b>${db.producers.length}</b> producers, <b>${db.projects.length}</b> projects) with the backup
+        (<b>${b.producers.length}</b> producers, <b>${b.projects.length}</b> projects). This cannot be undone.</p>
+      </div>
+      <div class="modal-foot">
+        <button class="btn" data-action="close-modal">Cancel</button>
+        <button class="btn danger" data-action="restore-confirm">Replace data</button>
+      </div>
+    </div>`;
+  }
+  return "";
+}
+
+/* ================= render root ================= */
+function render(){
+  renderKPIs();
+  byId("view-producers").classList.toggle("hidden", ui.tab !== "producers");
+  byId("view-projects").classList.toggle("hidden", ui.tab !== "projects");
+  byId("tab-producers").classList.toggle("active", ui.tab === "producers");
+  byId("tab-projects").classList.toggle("active", ui.tab === "projects");
+  renderProducers();
+  renderProjects();
+  byId("layer").innerHTML = panelHTML() + modalHTML();
+}
+
+/* ================= actions ================= */
+function saveProducerForm(){
+  const company = val("f_company");
+  if(!company){ toast("Company name is required", true); byId("f_company").focus(); return; }
+  const data = {
+    company, country: val("f_country"), status: val("f_status"),
+    contactName: val("f_contactName"), contactRole: val("f_contactRole"),
+    email: val("f_email"), phone: val("f_phone"), products: val("f_products"),
+    nextSteps: val("f_nextSteps"), deadline: val("f_deadline"), notes: val("f_notes")
+  };
+  let p = db.producers.find(x => x.id === ui.panelId);
+  if(p){ Object.assign(p, data); toast("Producer updated"); }
+  else { p = Object.assign({id: uid(), discussions: []}, data); db.producers.push(p); toast("Producer added"); }
+  ui.panelId = p.id; ui.panelEdit = false;
+  save(); render();
+}
+function saveProjectForm(){
+  const name = val("pj_name");
+  if(!name){ toast("Project name is required", true); byId("pj_name").focus(); return; }
+  const data = {
+    name, producerId: val("pj_producer") || null, country: val("pj_country"),
+    product: val("pj_product"), capacity: val("pj_capacity") || null,
+    electrolyzerMW: val("pj_mw") || null, cod: val("pj_cod"),
+    phase: val("pj_phase"), notes: val("pj_notes")
+  };
+  const pr = db.projects.find(x => x.id === ui.projectId);
+  if(pr){ Object.assign(pr, data); toast("Project updated"); }
+  else { db.projects.push(Object.assign({id: uid()}, data)); toast("Project added"); }
+  ui.modal = null; ui.projectId = null; ui.projectPresetProducer = null;
+  save(); render();
+}
+function runImport(){
+  const rows = (ui.importRows || []).filter(r => r.sel);
+  let created = 0;
+  for(const r of rows){
+    let producerId = null;
+    if(r.producer){
+      let p = findProducerByName(r.producer);
+      if(!p){
+        p = {id: uid(), company: r.producer.trim(), country: r.country || "", status: "Prospect",
+             contactName:"", contactRole:"", email:"", phone:"", products: r.product || "",
+             nextSteps:"", deadline:"", notes:"Created via RFNBO model import", discussions:[]};
+        db.producers.push(p); created++;
+      }
+      producerId = p.id;
+    }
+    db.projects.push({
+      id: uid(), name: r.name, producerId, country: r.country, product: r.product,
+      capacity: r.capacity != null ? r.capacity : null,
+      electrolyzerMW: r.electrolyzerMW != null ? r.electrolyzerMW : null,
+      cod: r.cod != null ? String(r.cod) : "", phase: r.phase, notes: r.notes
+    });
+  }
+  ui.modal = null; ui.importRows = null; ui.tab = "projects";
+  save(); render();
+  toast(`Imported ${rows.length} project${rows.length === 1 ? "" : "s"}${created ? ` · created ${created} new producer${created === 1 ? "" : "s"}` : ""}`);
+}
+function exportDB(){
+  const blob = new Blob([JSON.stringify(db, null, 2)], {type: "application/json"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "efuel-crm-backup-" + todayISO() + ".json";
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+  toast("Backup downloaded");
+}
+function loadSample(){
+  const P = (company,country,status,contactName,contactRole,email,phone,products,nextSteps,deadline,discussions) =>
+    ({id:uid(),company,country,status,contactName,contactRole,email,phone,products,nextSteps,deadline,notes:"",discussions:discussions.map(d=>({id:uid(),date:d[0],note:d[1]}))});
+  const shift = (days) => { const d = new Date(); d.setDate(d.getDate()+days); return d.toISOString().slice(0,10); };
+  const p1 = P("Nordlys eFuels","Norway","Active","Ingrid Solheim","VP Commercial","ingrid.solheim@example.com","+47 900 00 000","e-Methanol",
+    "Send term sheet for offtake MoU; align on RED III RFNBO compliance documentation.", shift(-3),
+    [[shift(-17),"Teams call: they target FID in Q2 next year. Interested in a 10-year offtake with indexation. Asked for our RFNBO GHG-methodology view."]]);
+  const p2 = P("Baltica PtX","Finland","Active","Jussi Rantanen","Business Development Lead","jussi.rantanen@example.com","+358 40 000 0000","e-SAF, RFNBO Hydrogen",
+    "Review their draft LOI and confirm site visit date.", shift(4),
+    [[shift(-6),"Site pre-visit call: grid connection secured (110 kV), PPA shortlist of 3 wind parks. Want LOI signed before summer break."]]);
+  const p3 = P("HyMar Synfuels","Spain","Prospect","Lucía Ferrer","Head of Origination","lucia.ferrer@example.com","+34 600 000 000","e-Ammonia",
+    "Intro meeting to qualify: volumes, timeline, certification approach.", shift(12),
+    [[shift(-30),"Met at conference. Early-stage 200 kt/a e-ammonia project in Andalusia, seeking anchor offtakers."]]);
+  const p4 = P("Vireo Energy","Denmark","On hold","Mads Kjeldsen","CCO","mads.kjeldsen@example.com","+45 20 00 00 00","e-Methane",
+    "Re-engage once their electrolyzer supplier decision is made (expected Q4).", shift(60),
+    [[shift(-45),"They paused commercial talks pending electrolyzer tender results and updated CAPEX."]]);
+  db.producers.push(p1,p2,p3,p4);
+  db.projects.push(
+    {id:uid(),name:"Havvind e-Methanol Phase 1",producerId:p1.id,country:"Norway",product:"e-Methanol",capacity:80,electrolyzerMW:120,cod:"2028",phase:"FEED",notes:"Offshore wind PPA under negotiation"},
+    {id:uid(),name:"Kemi e-SAF Plant",producerId:p2.id,country:"Finland",product:"e-SAF",capacity:60,electrolyzerMW:200,cod:"2029",phase:"Pre-FEED",notes:"Biogenic CO2 from pulp mill"},
+    {id:uid(),name:"Andalusia Green Ammonia",producerId:p3.id,country:"Spain",product:"e-Ammonia",capacity:200,electrolyzerMW:350,cod:"2030",phase:"Concept",notes:""}
+  );
+  save(); render();
+  toast("Sample data loaded — replace it with your real pipeline");
+}
+
+/* ================= event wiring ================= */
+document.addEventListener("click", (e) => {
+  if(e.target.closest("a[href]")) return; // let mailto/links work without triggering the row
+  const el = e.target.closest("[data-action]");
+  if(!el) return;
+  const a = el.dataset.action, id = el.dataset.id;
+  if(a !== "del-producer") ui.deleteArmed = null;
+  switch(a){
+    case "tab": ui.tab = el.dataset.tab; render(); break;
+    case "add-producer": ui.panelId = null; ui.panelEdit = true; render(); byId("f_company") && byId("f_company").focus(); break;
+    case "open-producer": ui.panelId = id; ui.panelEdit = false; render(); break;
+    case "close-panel": ui.panelId = null; ui.panelEdit = false; render(); break;
+    case "edit-producer": ui.panelEdit = true; render(); break;
+    case "cancel-edit": ui.panelEdit = false; render(); break;
+    case "save-producer": saveProducerForm(); break;
+    case "del-producer": {
+      if(ui.deleteArmed === id){
+        db.projects.forEach(pr => { if(pr.producerId === id) pr.producerId = null; });
+        db.producers = db.producers.filter(p => p.id !== id);
+        ui.panelId = null; ui.deleteArmed = null;
+        save(); render(); toast("Producer deleted — its projects were kept, unlinked");
+      } else { ui.deleteArmed = id; render(); }
+      break;
+    }
+    case "log-discussion": {
+      const p = db.producers.find(x => x.id === id); if(!p) break;
+      const note = val("d_note");
+      if(!note){ toast("Write a short summary first", true); byId("d_note").focus(); break; }
+      (p.discussions = p.discussions || []).push({id: uid(), date: val("d_date") || todayISO(), note});
+      save(); render(); toast("Discussion logged");
+      break;
+    }
+    case "del-discussion": {
+      const p = db.producers.find(x => x.id === id); if(!p) break;
+      p.discussions = (p.discussions || []).filter(l => l.id !== el.dataset.log);
+      save(); render();
+      break;
+    }
+    case "project-new": ui.modal = "project"; ui.projectId = null; ui.projectPresetProducer = el.dataset.producer || null; render(); break;
+    case "project-edit": ui.modal = "project"; ui.projectId = id; ui.projectPresetProducer = null; render(); break;
+    case "project-save": saveProjectForm(); break;
+    case "project-del": {
+      const pr = db.projects.find(x => x.id === id);
+      db.projects = db.projects.filter(x => x.id !== id);
+      save(); render(); toast(`Deleted “${pr ? pr.name : "project"}”`);
+      break;
+    }
+    case "open-import": ui.modal = "import"; render(); break;
+    case "import-example": byId("importText").value = EXAMPLE_JSON; break;
+    case "import-upload": byId("importFile").click(); break;
+    case "import-parse": {
+      try{
+        const text = val("importText");
+        if(!text){ toast("Paste JSON or upload a file first", true); break; }
+        ui.importRows = parseModelJSON(text);
+        ui.modal = "import-preview"; render();
+      }catch(err){ toast(err.message, true); }
+      break;
+    }
+    case "import-toggle": ui.importRows[Number(el.dataset.idx)].sel = el.checked; render(); break;
+    case "import-back": ui.modal = "import"; render(); break;
+    case "import-run": runImport(); break;
+    case "close-modal": ui.modal = null; ui.importRows = null; ui.projectId = null; ui.projectPresetProducer = null; ui.pendingRestore = null; render(); break;
+    case "export-db": exportDB(); break;
+    case "restore-db": byId("restoreFile").click(); break;
+    case "restore-confirm": {
+      if(ui.pendingRestore){ db = ui.pendingRestore; ui.pendingRestore = null; ui.modal = null; save(); render(); toast("Backup restored"); }
+      break;
+    }
+    case "sample-data": loadSample(); break;
+  }
+});
+document.addEventListener("keydown", (e) => {
+  if(e.key === "Escape"){
+    if(ui.modal){ ui.modal = null; ui.importRows = null; ui.pendingRestore = null; render(); }
+    else if(ui.panelId !== null || ui.panelEdit){ ui.panelId = null; ui.panelEdit = false; render(); }
+  }
+  if(e.key === "Enter" && e.target.matches && e.target.matches("tr.rowlink")){
+    e.target.click();
+  }
+});
+byId("q").addEventListener("input", e => { ui.q = e.target.value.trim(); renderProducers(); });
+byId("pq").addEventListener("input", e => { ui.pq = e.target.value.trim(); renderProjects(); });
+byId("fStatus").addEventListener("change", e => { ui.status = e.target.value; renderProducers(); });
+byId("fSort").addEventListener("change", e => { ui.sort = e.target.value; renderProducers(); });
+byId("importFile").addEventListener("change", (e) => {
+  const f = e.target.files[0]; e.target.value = "";
+  if(!f) return;
+  const r = new FileReader();
+  r.onload = () => {
+    try{
+      ui.importRows = parseModelJSON(String(r.result));
+      ui.modal = "import-preview"; render();
+    }catch(err){ toast(err.message, true); }
+  };
+  r.readAsText(f);
+});
+byId("restoreFile").addEventListener("change", (e) => {
+  const f = e.target.files[0]; e.target.value = "";
+  if(!f) return;
+  const r = new FileReader();
+  r.onload = () => {
+    try{
+      const d = JSON.parse(String(r.result));
+      if(!d || !Array.isArray(d.producers) || !Array.isArray(d.projects)) throw new Error("Not a valid CRM backup file");
+      ui.pendingRestore = d; ui.modal = "confirm-restore"; render();
+    }catch(err){ toast(err.message, true); }
+  };
+  r.readAsText(f);
+});
+
+render();
+</script>
+</body>
+</html>
