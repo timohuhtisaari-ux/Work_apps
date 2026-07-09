@@ -251,6 +251,7 @@ aside.panel{
     <button class="btn small" id="remindersBtn" data-action="open-reminders" title="Follow-ups that are due or late">Reminders</button>
     <button class="btn small" data-action="export-db" title="Download all CRM data as a JSON file">Export backup</button>
     <button class="btn small" data-action="restore-db" title="Restore CRM data from a JSON backup file">Restore backup</button>
+    <button class="btn small ghost" data-action="open-cleanup" title="Remove imported data or clear everything">Clean up…</button>
   </header>
 
   <div class="kpis" id="kpis"></div>
@@ -951,6 +952,7 @@ function projectFormHTML(pr, presetProducer){
 function modalHTML(){
   if(!ui.modal) return "";
   if(ui.modal === "reminders") return remindersModalHTML();
+  if(ui.modal === "cleanup") return cleanupModalHTML();
   if(ui.modal === "project"){
     const pr = ui.projectId ? db.projects.find(x => x.id === ui.projectId) : null;
     return `<div class="scrim" data-action="close-modal"></div>
@@ -1093,7 +1095,7 @@ function runImport(){
       if(!p){
         p = {id: uid(), company: r.producer.trim(), country: r.country || "", stage: "Identified",
              contactName:"", contactRole:"", email:"", phone:"", products: r.product || "",
-             nextSteps:"", deadline:"", notes:"Created via project JSON import", discussions:[]};
+             nextSteps:"", deadline:"", notes:"Created via project JSON import", discussions:[], source:"import"};
         db.producers.push(p); created++;
       }
       producerId = p.id;
@@ -1102,7 +1104,7 @@ function runImport(){
       id: uid(), name: r.name, producerId, country: r.country, product: r.product,
       capacity: r.capacity != null ? r.capacity : null,
       electrolyzerMW: r.electrolyzerMW != null ? r.electrolyzerMW : null,
-      cod: r.cod != null ? String(r.cod) : "", phase: r.phase, notes: r.notes
+      cod: r.cod != null ? String(r.cod) : "", phase: r.phase, notes: r.notes, source: "import"
     });
   }
   ui.modal = null; ui.importRows = null; ui.tab = "projects";
@@ -1161,6 +1163,67 @@ function panelDirty(){
   if(st && p.id && st.value !== (p.stage || "Contacted")) return true;
   return false;
 }
+/* ================= cleanup ================= */
+function isImportedProducer(p){
+  return p.source === "import" || /Created via (RFNBO model|project JSON) import/.test(p.notes || "");
+}
+function cleanupStats(){
+  const impProducers = db.producers.filter(isImportedProducer);
+  const impIds = new Set(impProducers.map(p => p.id));
+  const impProjects = db.projects.filter(pr => pr.source === "import" || (pr.producerId && impIds.has(pr.producerId)));
+  const touched = impProducers.filter(p => (p.discussions && p.discussions.length) || p.nextSteps || p.deadline || p.owner || p.contactName || p.email || p.phone);
+  return {impProducers, impProjects, touched};
+}
+function cleanupModalHTML(){
+  const {impProducers, impProjects, touched} = cleanupStats();
+  return `<div class="scrim" data-action="close-modal"></div>
+  <div class="modal narrow" role="dialog" aria-modal="true" aria-label="Clean up data">
+    <div class="modal-head"><h2>Clean up data</h2>
+      <div class="spacer"></div><button class="iconbtn" data-action="close-modal" aria-label="Close">✕</button></div>
+    <div class="modal-body">
+      <div class="sect" style="margin-bottom:18px">
+        <div class="eyebrow">Remove imported data</div>
+        <p style="margin:6px 0 10px;font-size:13.5px;color:var(--ink2)">
+          This removes everything that came in via JSON import:
+          <b>${impProducers.length} producer${impProducers.length === 1 ? "" : "s"}</b> and
+          <b>${impProjects.length} project${impProjects.length === 1 ? "" : "s"}</b>.
+          Producers you added yourself and their projects are not touched.</p>
+        ${touched.length ? `<label class="chk" style="display:flex;gap:8px;align-items:flex-start;font-size:13px;color:var(--ink2);cursor:pointer">
+          <input type="checkbox" id="keepTouched" checked style="width:auto;margin-top:2px">
+          <span>Keep the <b>${touched.length}</b> imported producer${touched.length === 1 ? "" : "s"} I've worked on
+          (logged discussions, contacts, owner or next steps) — and their projects</span></label>` : ""}
+        <div style="margin-top:12px;display:flex;gap:9px;flex-wrap:wrap">
+          <button class="btn danger" data-action="cleanup-run" ${impProducers.length || impProjects.length ? "" : "disabled"}>Remove imported data</button>
+          <button class="btn small ghost" data-action="export-db" title="Download a JSON backup before cleaning up">Download backup first</button>
+        </div>
+      </div>
+      <div class="sect" style="border-top:1px solid var(--line);padding-top:16px;margin-bottom:0">
+        <div class="eyebrow">Start over</div>
+        <p style="margin:6px 0 10px;font-size:13.5px;color:var(--ink2)">Delete ALL producers and projects
+          (${db.producers.length} / ${db.projects.length}). This cannot be undone.</p>
+        <button class="btn danger small" data-action="clear-all">${ui.clearAllArmed ? "Really delete everything?" : "Clear all data…"}</button>
+      </div>
+    </div>
+    <div class="modal-foot"><button class="btn" data-action="close-modal">Close</button></div>
+  </div>`;
+}
+function runCleanup(){
+  const keep = byId("keepTouched") ? byId("keepTouched").checked : false;
+  const {impProducers, touched} = cleanupStats();
+  const keptIds = new Set(keep ? touched.map(p => p.id) : []);
+  const removeIds = new Set(impProducers.filter(p => !keptIds.has(p.id)).map(p => p.id));
+  const nProducers = removeIds.size;
+  const before = db.projects.length;
+  db.projects = db.projects.filter(pr => {
+    if(pr.producerId && keptIds.has(pr.producerId)) return true;
+    if(pr.producerId && removeIds.has(pr.producerId)) return false;
+    return !(pr.source === "import");
+  });
+  db.producers = db.producers.filter(p => !removeIds.has(p.id));
+  ui.modal = null;
+  save(); render();
+  toast(`Removed ${nProducers} producers and ${before - db.projects.length} projects${keptIds.size ? ` — kept ${keptIds.size} you've worked on` : ""}`);
+}
 function exportDB(){
   const blob = new Blob([JSON.stringify(db, null, 2)], {type: "application/json"});
   const a = document.createElement("a");
@@ -1209,7 +1272,17 @@ document.addEventListener("click", (e) => {
   const a = el.dataset.action, id = el.dataset.id;
   if(a !== "del-producer" && a !== "project-del") ui.deleteArmed = null;
   if(a !== "close-panel") ui.closeArmed = null;
+  if(a !== "clear-all") ui.clearAllArmed = false;
   switch(a){
+    case "open-cleanup": ui.modal = "cleanup"; ui.clearAllArmed = false; render(); break;
+    case "cleanup-run": runCleanup(); break;
+    case "clear-all": {
+      if(!ui.clearAllArmed){ ui.clearAllArmed = true; render(); break; }
+      db = {producers: [], projects: []};
+      ui.clearAllArmed = false; ui.modal = null; ui.panelId = null; ui.panelEdit = false;
+      save(); render(); toast("All data cleared — fresh start");
+      break;
+    }
     case "tab": ui.tab = el.dataset.tab; render(); break;
     case "family": ui.family = el.dataset.fam; renderProducers(); renderProjects(); break;
     case "phase": ui.phase = el.dataset.ph; renderProjects(); break;
