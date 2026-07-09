@@ -571,6 +571,11 @@ function pickField(obj, names){
   for(const n of names) if(norm[n] !== undefined && norm[n] !== null && norm[n] !== "") return norm[n];
   return undefined;
 }
+const FUEL_LABELS = {emethanol:"e-Methanol", eammonia:"e-Ammonia", esaf:"e-SAF", emethane:"e-Methane", ediesel:"e-Diesel", eh2diesel:"Green H2 / e-Diesel", h2:"RFNBO Hydrogen", greenh2:"RFNBO Hydrogen"};
+function prettyFuel(s){
+  const key = String(s||"").toLowerCase().replace(/[^a-z0-9]/g,"");
+  return FUEL_LABELS[key] || String(s||"");
+}
 function mapModelRow(o){
   if(typeof o !== "object" || o === null || Array.isArray(o)) return null;
   const name = pickField(o, ["project","projectname","name","title","plant","plantname"]);
@@ -580,8 +585,8 @@ function mapModelRow(o){
     name: String(name),
     producer: String(pickField(o, ["producer","company","developer","owner","sponsor","operator"]) ?? ""),
     country:  String(pickField(o, ["country","location","region","site"]) ?? ""),
-    product:  String(pickField(o, ["product","fuel","output","producttype","fueltype","endproduct"]) ?? ""),
-    capacity: pickField(o, ["capacitykta","capacityktpa","capacity","annualcapacity","capacitykt","outputkta","productionkta"]),
+    product:  prettyFuel(pickField(o, ["product","fuel","output","producttype","fueltype","endproduct"]) ?? ""),
+    capacity: pickField(o, ["capacitykta","capacityktpa","capacityktperyear","capacityktyr","capacity","annualcapacity","capacitykt","outputkta","productionkta"]),
     electrolyzerMW: pickField(o, ["electrolyzermw","electrolysermw","electrolyzercapacitymw","electrolysercapacitymw","electrolyzercapacity","electrolysercapacity","mwel","mw"]),
     cod:   pickField(o, ["cod","codyear","startyear","startup","startupyear","operational","operationalyear","commissioning"]),
     phase: String(pickField(o, ["phase","status","stage","maturity","developmentphase"]) ?? ""),

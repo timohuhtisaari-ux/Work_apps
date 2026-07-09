@@ -1,0 +1,1362 @@
+[
+  {
+    "project": "Kassø e-Methanol Facility",
+    "producer": "European Energy (with Mitsui & Co.)",
+    "country": "Denmark",
+    "product": "e-Methanol",
+    "capacity_kta": 42,
+    "cod": 2025,
+    "phase": "Operating",
+    "notes": "TRL 9 · confidence: high · end-use: maritime/industry · FID 2022 · Offtakers: A.P. Moller-Maersk (initial 10,000 mt; broader framework up to 300,000 t/yr across sites), Novo Nordisk, LEGO Group · https://europeanenergy.com/kasso/"
+  },
+  {
+    "project": "FlagshipONE",
+    "producer": "Ørsted (originally Liquid Wind)",
+    "country": "Sweden",
+    "product": "e-Methanol",
+    "capacity_kta": 50,
+    "cod": null,
+    "phase": "Cancelled",
+    "notes": "TRL 8 · confidence: high · end-use: maritime · FID 2022 · https://orsted.com/en/media/news/2022/12/20221220609311"
+  },
+  {
+    "project": "Örnsköldsvik e-methanol (ex-FlagshipONE revival)",
+    "producer": "Liquid Wind (in bankruptcy)",
+    "country": "Sweden",
+    "product": "e-Methanol",
+    "capacity_kta": 100,
+    "cod": null,
+    "phase": "Cancelled",
+    "notes": "TRL 7 · confidence: high · end-use: maritime · https://www.seatrade-maritime.com/alternative-fuels/liquid-wind-picks-up-abandoned-swedish-e-methanol-project-doubles-capacity"
+  },
+  {
+    "project": "FlagshipTWO (Korstaverket, Sundsvall)",
+    "producer": "Liquid Wind (in bankruptcy)",
+    "country": "Sweden",
+    "product": "e-Methanol",
+    "capacity_kta": 100,
+    "cod": null,
+    "phase": "Cancelled",
+    "notes": "TRL 8 · confidence: high · ~700 MEUR capex · end-use: maritime/industry · https://www.liquidwind.com/news/liquid-winds-second-efuel-facility-granted-environmental-permit"
+  },
+  {
+    "project": "Huelva Green Methanol Hub (Port of Huelva)",
+    "producer": "Cepsa (Moeve) and C2X",
+    "country": "Spain",
+    "product": "e-Methanol",
+    "capacity_kta": 300,
+    "cod": 2029,
+    "phase": "FEED",
+    "notes": "TRL 7 · confidence: medium · ~1000 MEUR capex · end-use: maritime/industry · https://www.c2xglobal.com/news/c2x-and-cepsa-announce-green-methanol-project-ambition-in-spain/"
+  },
+  {
+    "project": "Green MEIGA",
+    "producer": "Iberdrola and FORESA",
+    "country": "Spain",
+    "product": "e-Methanol",
+    "capacity_kta": 100,
+    "cod": 2029,
+    "phase": "FEED",
+    "notes": "TRL 7 · confidence: high · ~500 MEUR capex · end-use: maritime/industry · Offtakers: FORESA (resin/formaldehyde value chain), maritime · https://www.iberdrola.com/about-us/what-we-do/green-hydrogen/green-meiga"
+  },
+  {
+    "project": "Green UMIA (Caldas de Reis)",
+    "producer": "Iberdrola and FORESA",
+    "country": "Spain",
+    "product": "e-Methanol",
+    "capacity_kta": 2.9,
+    "cod": 2026,
+    "phase": "Feasibility",
+    "notes": "TRL 7 · confidence: high · ~40 MEUR capex · end-use: industry · Offtakers: FORESA · https://www.iberdrola.com/press-room/news/detail/iberdrola-and-foresa-advance-in-their-alliance-to-lead-green-methanol-production-in-spain"
+  },
+  {
+    "project": "Green Fuels for Denmark (Avedøre)",
+    "producer": "Ørsted",
+    "country": "Denmark",
+    "product": "e-Methanol",
+    "capacity_kta": 50,
+    "cod": null,
+    "phase": "Cancelled",
+    "notes": "TRL 6 · confidence: high · end-use: maritime/aviation/road · Offtakers: Consortium partners (Maersk, DSV, DFDS, SAS, Copenhagen Airports) - non-binding · https://orsted.com/en/what-we-do/renewable-energy-solutions/power-to-x/green-fuels-for-denmark"
+  },
+  {
+    "project": "Joensuu e-methanol plant",
+    "producer": "P2X Solutions",
+    "country": "Finland",
+    "product": "e-Methanol",
+    "capacity_kta": 33,
+    "cod": 2029,
+    "phase": "FEED",
+    "notes": "TRL 7 · confidence: high · end-use: maritime/industry · FID 2026 · https://p2x.fi/en/project/"
+  },
+  {
+    "project": "e-fuels Amsterdam (Zenith terminal PtL)",
+    "producer": "INERATEC and Zenith Energy",
+    "country": "Netherlands",
+    "product": "e-Methanol",
+    "capacity_kta": 35,
+    "cod": null,
+    "phase": "Feasibility",
+    "notes": "TRL 7 · confidence: medium · end-use: maritime/aviation · https://www.ineratec.de/en/news/ineratec-and-zenith-work-commercial-scale-e-fuel-plant-port-amsterdam"
+  },
+  {
+    "project": "HyNetherlands (HyNL)",
+    "producer": "ENGIE, OCI Global and EEW",
+    "country": "Netherlands",
+    "product": "e-Methanol",
+    "capacity_kta": 70,
+    "cod": 2028,
+    "phase": "FEED",
+    "notes": "TRL 6 · confidence: low · end-use: maritime/industry · Offtakers: OCI Global (e-methanol value chain) · https://www.hynetherlands.nl/en/project/"
+  },
+  {
+    "project": "HIF Matagorda eFuels Facility",
+    "producer": "HIF Global (HIF USA)",
+    "country": "USA",
+    "product": "e-Methanol",
+    "capacity_kta": 1400,
+    "cod": 2030,
+    "phase": "FEED",
+    "notes": "TRL 7 · confidence: high · ~6500 MEUR capex · end-use: maritime/aviation/road/industry · Offtakers: Idemitsu Kosan (LOI, e-methanol offtake to Japan); eFuel One GmbH (HoA ~100,000 t/yr, Feb 2026) · https://hifglobal.com/locations/matagorda"
+  },
+  {
+    "project": "HIF Haru Oni e-Fuels Facility",
+    "producer": "HIF Global (with Porsche, Siemens Energy, ENAP, MAN, Enel)",
+    "country": "Chile",
+    "product": "e-Methanol",
+    "capacity_kta": 0.35,
+    "cod": 2022,
+    "phase": "Operating",
+    "notes": "TRL 8 · confidence: high · end-use: road/maritime · FID 2021 · Offtakers: Porsche (with Shell e-fuels supply agreement signed 2025) · https://hifglobal.com/locations/hif-haru-oni"
+  },
+  {
+    "project": "HIF Cabo Negro e-Fuels Facility",
+    "producer": "HIF Global (with Techint E&C)",
+    "country": "Chile",
+    "product": "e-Methanol",
+    "capacity_kta": 174,
+    "cod": 2028,
+    "phase": "FEED",
+    "notes": "TRL 7 · confidence: high · ~1200 MEUR capex · end-use: maritime/road/industry · https://hifglobal.com/locations/cabonegro"
+  },
+  {
+    "project": "HIF Paysandú e-Fuels Facility",
+    "producer": "HIF Global (HIF Uruguay, with ANCAP)",
+    "country": "Uruguay",
+    "product": "e-Methanol",
+    "capacity_kta": 880,
+    "cod": 2029,
+    "phase": "Feasibility",
+    "notes": "TRL 6 · confidence: high · ~5000 MEUR capex · end-use: maritime/road/industry · FID 2026 · Offtakers: eFuel One GmbH (Germany) HoA; ~100,000 t/yr certified e-methanol to Europe · https://hifglobal.com/media/news-description/2025/12/19/hif-global-and-government-of-uruguay-sign-agreement-to-accelerate-e-fuels-project-in-paysand%C3%BA"
+  },
+  {
+    "project": "European Energy Suape e-Methanol Facility",
+    "producer": "European Energy (with Petrobras)",
+    "country": "Brazil",
+    "product": "e-Methanol",
+    "capacity_kta": 100,
+    "cod": 2028,
+    "phase": "FEED",
+    "notes": "TRL 8 · confidence: medium · ~350 MEUR capex · end-use: maritime/industry · Offtakers: Petrobras partnership; shipping/chemicals offtake targeted · https://europeanenergy.com/2025/08/29/european-energy-posts-solid-h1-2025-results-achieves-record-construction-activity-and-launches-landmark-e-methanol-facility/"
+  },
+  {
+    "project": "StormFisher / Varennes Low-Carbon (RFNBO) Methanol Plant",
+    "producer": "StormFisher Hydrogen",
+    "country": "Canada",
+    "product": "e-Methanol",
+    "capacity_kta": 72,
+    "cod": 2029,
+    "phase": "FEED",
+    "notes": "TRL 7 · confidence: high · ~450 MEUR capex · end-use: maritime/industry · FID 2027 · Offtakers: Targeting marine transport; none publicly confirmed · https://www.stormfisher.com/budgetary-and-economic-impact-of-an-amendment-to-qualifye-methanol-production-projects-under-the-clean-hydrogen-investment-tax-credit/"
+  },
+  {
+    "project": "C2X Green Methanol Project (Suez Canal Economic Zone / Ain Sokhna)",
+    "producer": "C2X (A.P. Moller Holding / Maersk-founded; ENEOS investor)",
+    "country": "Egypt",
+    "product": "e-Methanol",
+    "capacity_kta": 300,
+    "cod": 2028,
+    "phase": "Feasibility",
+    "notes": "TRL 7 · confidence: medium · ~3000 MEUR capex · end-use: maritime · Offtakers: Maersk expected long-term offtaker (methanol bunker fuel); no binding deal confirmed · https://www.marinelink.com/news/cx-advances-green-methanol-production-508536"
+  },
+  {
+    "project": "Damietta Green Methanol Plant",
+    "producer": "Scatec ASA (with ANRPC)",
+    "country": "Egypt",
+    "product": "e-Methanol",
+    "capacity_kta": 40,
+    "cod": null,
+    "phase": "Feasibility",
+    "notes": "TRL 6 · confidence: low · ~420 MEUR capex · end-use: maritime · https://egyptoil-gas.com/news/anrpc-scatec-sign-green-methanol-project-agreement/"
+  },
+  {
+    "project": "Dhofar / Salalah e-Methanol Supply and Bunkering Hub",
+    "producer": "HIF Global (HIF EMEA), Acciona Nordex Green Hydrogen, Al Meera Investments",
+    "country": "Oman",
+    "product": "e-Methanol",
+    "capacity_kta": 0,
+    "cod": null,
+    "phase": "Feasibility",
+    "notes": "TRL 4 · confidence: low · end-use: maritime · https://global-efuels.com/news/oman-signs-mou-to-explore-e-methanol-project-in-dhofar-region/"
+  },
+  {
+    "project": "NEOM ENOWA CO2-to-Methanol & MTG Demonstration Plant (HIDC)",
+    "producer": "ENOWA (NEOM) and Saudi Aramco; thyssenkrupp Uhde (EPC)",
+    "country": "Saudi Arabia",
+    "product": "e-Methanol",
+    "capacity_kta": 4,
+    "cod": 2026,
+    "phase": "Construction",
+    "notes": "TRL 7 · confidence: high · end-use: road/industry · FID 2023 · Offtakers: Internal/demonstration use; e-gasoline for light-duty transport · https://www.thyssenkrupp.com/en/newsroom/press-releases/pressdetailpage/thyssenkrupp-uhde-awarded-contract-by-enowa-to-supply-a-green-methanol-and-methanol-to-gasoline-plant-238928"
+  },
+  {
+    "project": "Liaoyuan Tianying E-Methanol Project (Phase 1)",
+    "producer": "Anhui Tianying Environmental (Tianying Group), CRI technology",
+    "country": "China",
+    "product": "e-Methanol",
+    "capacity_kta": 170,
+    "cod": 2026,
+    "phase": "Construction",
+    "notes": "TRL 8 · confidence: high · end-use: maritime · FID 2023 · https://carbonrecycling.com/projects/tianying-e-methanol"
+  },
+  {
+    "project": "Songyuan Hydrogen Energy Industrial Park Phase I (Qing Hydrogen No.1)",
+    "producer": "China Energy Engineering Corp (Energy China / CEEC)",
+    "country": "China",
+    "product": "e-Methanol",
+    "capacity_kta": 20,
+    "cod": 2025,
+    "phase": "Operating",
+    "notes": "TRL 9 · confidence: high · ~3800 MEUR capex · end-use: maritime/industry · FID 2023 · https://www.globaltimes.cn/page/202512/1350756.shtml"
+  },
+  {
+    "project": "Jixian Wind-Hydrogen-Storage-Methanol Project (Shuangyashan)",
+    "producer": "Undisclosed developer (Heilongjiang)",
+    "country": "China",
+    "product": "e-Methanol",
+    "capacity_kta": 119,
+    "cod": 2028,
+    "phase": "FID",
+    "notes": "TRL 7 · confidence: high · ~760 MEUR capex · end-use: maritime · FID 2026 · https://fuelcellsworks.com/2025/07/17/h2/china-starts-construction-on-584m-green-hydrogen-e-methanol-plant-in-heilongjiang"
+  },
+  {
+    "project": "Goldwind Bayannur Wind-Chemicals Mega-Project",
+    "producer": "Goldwind",
+    "country": "China",
+    "product": "e-Methanol",
+    "capacity_kta": 600,
+    "cod": 2028,
+    "phase": "FID",
+    "notes": "TRL 7 · confidence: high · ~2500 MEUR capex · end-use: maritime/industry · FID 2025 · https://fuelcellsworks.com/2025/09/11/clean-energy/goldwind-greenlights-2-7b-hydrogen-ammonia-and-methanol-mega-project-in-northern-china"
+  },
+  {
+    "project": "Inner Mongolia Ordos 'Liquid Sunshine' Green Hydrogen-Methanol",
+    "producer": "Inner Mongolia Liquid Sunshine Energy Technology (Geely-linked)",
+    "country": "China",
+    "product": "e-Methanol",
+    "capacity_kta": 500,
+    "cod": null,
+    "phase": "Cancelled",
+    "notes": "TRL 6 · confidence: high · end-use: road/maritime · FID 2024 · Offtakers: Geely (methanol vehicles) / not fully disclosed · https://www.gem.wiki/Inner_Mongolia_Ordos_%22Liquid_Sunshine%22_Green_Hydrogen_Methanol_wind_and_solar_farm"
+  },
+  {
+    "project": "Inner Mongolia Yide Hydrogen Green Methanol Plant (Baotou)",
+    "producer": "Inner Mongolia Yide Hydrogen Energy",
+    "country": "China",
+    "product": "e-Methanol",
+    "capacity_kta": 350,
+    "cod": 2028,
+    "phase": "FID",
+    "notes": "TRL 7 · confidence: medium · end-use: maritime/industry · FID 2025 · https://energiesmedia.com/inner-mongolia-approves-green-methanol-facility/"
+  },
+  {
+    "project": "LONGi Green Methanol Project (Urad Rear Banner)",
+    "producer": "LONGi Green Energy",
+    "country": "China",
+    "product": "e-Methanol",
+    "capacity_kta": 210,
+    "cod": 2027,
+    "phase": "Construction",
+    "notes": "TRL 7 · confidence: high · ~300 MEUR capex · end-use: maritime · FID 2025 · https://interestingengineering.com/innovation/china-longi-farm-waste-green-methanol"
+  },
+  {
+    "project": "HIF Tasmania eFuels Facility (Burnie)",
+    "producer": "HIF Global (HIF Asia Pacific)",
+    "country": "Australia",
+    "product": "e-Methanol",
+    "capacity_kta": 208,
+    "cod": 2030,
+    "phase": "FEED",
+    "notes": "TRL 7 · confidence: high · ~1850 MEUR capex · end-use: maritime/aviation/road · Offtakers: Idemitsu (minority equity ~USD 114m; supply chain to Japan), ENEOS, Mitsui O.S.K. Lines (MOL), Mabanaft (heads of agreement) · https://hifglobal.com/locations/tasmania"
+  },
+  {
+    "project": "South East Queensland Power-to-X",
+    "producer": "European Energy Australia",
+    "country": "Australia",
+    "product": "e-Methanol",
+    "capacity_kta": 90,
+    "cod": null,
+    "phase": "Feasibility",
+    "notes": "TRL 7 · confidence: medium · end-use: maritime · https://europeanenergy.com/green-solutions/ptx/"
+  },
+  {
+    "project": "ABEL Energy Bell Bay Powerfuels",
+    "producer": "ABEL Energy",
+    "country": "Australia",
+    "product": "e-Methanol",
+    "capacity_kta": 360,
+    "cod": 2030,
+    "phase": "FEED",
+    "notes": "TRL 6 · confidence: medium · ~800 MEUR capex · end-use: maritime · https://abelenergy.com.au/bell-bay-powerfuels"
+  },
+  {
+    "project": "Southeast Asia Green e-Methanol Pilot (Singapore)",
+    "producer": "PTTEP, Air Liquide, YTL PowerSeraya, Oiltanking, Kenoil, Maersk (6-party MoU)",
+    "country": "Singapore",
+    "product": "e-Methanol",
+    "capacity_kta": 50,
+    "cod": null,
+    "phase": "Feasibility",
+    "notes": "TRL 5 · confidence: low · end-use: maritime · Offtakers: Maersk (consortium member / offtake intent) · https://safety4sea.com/partnership-aims-to-establish-first-green-e-methanol-plant-in-southeast-asia/"
+  },
+  {
+    "project": "Antofagasta Mining Energy Renewable (AMER)",
+    "producer": "Air Liquide (with EDF Renewables, Proman, Sowitec, Copec)",
+    "country": "Chile",
+    "product": "e-Methanol",
+    "capacity_kta": 60,
+    "cod": null,
+    "phase": "Feasibility",
+    "notes": "TRL 6 · confidence: medium · end-use: maritime/road/industry · Offtakers: Copec (Chile fuel retailer) as partner · https://h2bulletin.com/chiles-corfo-selects-six-green-hydrogen-projects/"
+  },
+  {
+    "project": "HØST PtX Esbjerg",
+    "producer": "Copenhagen Infrastructure Partners (CIP)",
+    "country": "Denmark",
+    "product": "e-Ammonia",
+    "capacity_kta": 600,
+    "cod": 2030,
+    "phase": "FEED",
+    "notes": "TRL 7 · confidence: high · ~2000 MEUR capex · end-use: maritime/industry · FID 2026 · Offtakers: Offtake/distribution partnership signed for green ammonia as maritime fuel and fertiliser feedstock; specific binding offtakers not fully disclosed · https://hoestptxesbjerg.dk/about-ptx/"
+  },
+  {
+    "project": "REDDAP (Ramme dynamic green ammonia plant)",
+    "producer": "Skovgaard Energy / Topsoe / Vestas",
+    "country": "Denmark",
+    "product": "e-Ammonia",
+    "capacity_kta": 5,
+    "cod": 2025,
+    "phase": "Operating",
+    "notes": "TRL 9 · confidence: high · end-use: industry/maritime · FID 2022 · Offtakers: First-of-a-kind demonstration; offtake into fertiliser value chain · https://www.topsoe.com/press-releases/worlds-first-of-its-kind-green-ammonia-plant-inaugurated-by-skovgaard-energy-vestas-and-topsoe"
+  },
+  {
+    "project": "GreenH Slagentangen (Slagen Energy Hub)",
+    "producer": "GreenH (with Grieg Edge, North Ammonia, Esso Norge/ExxonMobil)",
+    "country": "Norway",
+    "product": "e-Ammonia",
+    "capacity_kta": 100,
+    "cod": 2027,
+    "phase": "FID",
+    "notes": "TRL 7 · confidence: high · end-use: maritime · FID 2025 · Offtakers: Direct bunkering to be offered at Slagen; maritime fuel focus, specific offtakers not disclosed · https://ammoniaenergy.org/articles/greenh-takes-fid-on-slagen-project-nel-to-supply-electrolysers/"
+  },
+  {
+    "project": "Narvik Green Ammonia (Kvandal)",
+    "producer": "Aker Horizons / Statkraft",
+    "country": "Norway",
+    "product": "e-Ammonia",
+    "capacity_kta": 350,
+    "cod": null,
+    "phase": "Cancelled",
+    "notes": "TRL 7 · confidence: high · end-use: maritime/industry · Offtakers: Seeking maritime/industry offtakers in Norway; no binding agreements confirmed · https://www.statkraft.com/newsroom/news-and-stories/2023/aker-horizons-and-statkraft-join-forces-to-develop-large-scale-green-ammonia-project-in-narvik/"
+  },
+  {
+    "project": "Yara Herøya (HEGRA / Porsgrunn green ammonia)",
+    "producer": "Yara",
+    "country": "Norway",
+    "product": "e-Ammonia",
+    "capacity_kta": 20,
+    "cod": 2024,
+    "phase": "Operating",
+    "notes": "TRL 9 · confidence: high · end-use: industry/maritime · FID 2021 · Offtakers: Yara internal (green fertiliser); early green-ammonia maritime volumes · https://www.spglobal.com/energy/en/news-research/latest-news/energy-transition/061024-yara-starts-up-europes-largest-green-hydrogen-plant-in-norway"
+  },
+  {
+    "project": "Iverson eFuels (Sauda)",
+    "producer": "Hy2gen / Trafigura / Copenhagen Infrastructure Partners",
+    "country": "Norway",
+    "product": "e-Ammonia",
+    "capacity_kta": 200,
+    "cod": null,
+    "phase": "Cancelled",
+    "notes": "TRL 7 · confidence: high · end-use: maritime · Offtakers: Trafigura (trading/offtake); maritime fuel · https://ammoniaenergy.org/articles/600-tonnes-per-day-green-ammonia-in-norway/"
+  },
+  {
+    "project": "Ørsted-Yara Sluiskil (Zeeland green ammonia)",
+    "producer": "Ørsted / Yara",
+    "country": "Netherlands",
+    "product": "e-Ammonia",
+    "capacity_kta": 75,
+    "cod": null,
+    "phase": "Cancelled",
+    "notes": "TRL 7 · confidence: high · end-use: industry/maritime · Offtakers: Yara internal (carbon-neutral fertiliser feedstock); potential future shipping fuel · https://www.yara.com/corporate-releases/orsted-and-yara-seek-to-develop-groundbreaking-green-ammonia-project-in-the-netherlands/"
+  },
+  {
+    "project": "MadoquaPower2X",
+    "producer": "Madoqua Ventures / Power2X / CIP",
+    "country": "Portugal",
+    "product": "e-Ammonia",
+    "capacity_kta": 300,
+    "cod": 2028,
+    "phase": "FEED",
+    "notes": "TRL 7 · confidence: high · ~1000 MEUR capex · end-use: industry/maritime · FID 2026 · Offtakers: Targeting industrial and maritime offtakers; not fully disclosed · https://madoquapower2x.com/"
+  },
+  {
+    "project": "SwitcH2 floating green ammonia FPSO",
+    "producer": "SwitcH2 (with ABB)",
+    "country": "Portugal",
+    "product": "e-Ammonia",
+    "capacity_kta": 243,
+    "cod": 2029,
+    "phase": "FEED",
+    "notes": "TRL 6 · confidence: medium · end-use: maritime/industry · FID 2026 · Offtakers: Not disclosed · https://new.abb.com/news/detail/129194/abbs-automation-and-electrification-technology-to-support-floating-green-ammonia-production-vessel"
+  },
+  {
+    "project": "Onuba / Andalusia Green Hydrogen Valley (green ammonia)",
+    "producer": "Moeve (formerly Cepsa) / Fertiberia",
+    "country": "Spain",
+    "product": "e-Ammonia",
+    "capacity_kta": 200,
+    "cod": 2028,
+    "phase": "Construction",
+    "notes": "TRL 8 · confidence: high · ~1000 MEUR capex · end-use: maritime/aviation/industry · FID 2026 · Offtakers: Fertiberia (ammonia/fertiliser feedstock); Moeve refineries; third-party industrial · https://www.moeveglobal.com/en/press/cepsa-and-fertiberia-will-produce-green-hydrogen"
+  },
+  {
+    "project": "Fertiberia Puertollano (Iberdrola green ammonia)",
+    "producer": "Fertiberia / Iberdrola",
+    "country": "Spain",
+    "product": "e-Ammonia",
+    "capacity_kta": 17,
+    "cod": 2022,
+    "phase": "Operating",
+    "notes": "TRL 8 · confidence: high · ~150 MEUR capex · end-use: industry · FID 2020 · Offtakers: Fertiberia (green fertiliser feedstock) · https://www.iberdrola.com/about-us/what-we-do/green-hydrogen/puertollano-green-hydrogen-plant"
+  },
+  {
+    "project": "GAIA (Green Ammonia in Asturias)",
+    "producer": "EDP",
+    "country": "Spain",
+    "product": "e-Ammonia",
+    "capacity_kta": 180,
+    "cod": null,
+    "phase": "FEED",
+    "notes": "TRL 6 · confidence: medium · end-use: industry/maritime · Offtakers: Not disclosed · https://edp.com/en/europe/spain/projects/energy-transition/gaia"
+  },
+  {
+    "project": "GreeNH3",
+    "producer": "Supercritical Solutions / ScottishPower / Proton Ventures",
+    "country": "United Kingdom",
+    "product": "e-Ammonia",
+    "capacity_kta": 0,
+    "cod": null,
+    "phase": "Feasibility",
+    "notes": "TRL 4 · confidence: medium · end-use: industry · Offtakers: Not disclosed (demonstration) · https://www.scottishpower.com/news/pages/global_first_as_greenh3_secures_uk_government_funding.aspx"
+  },
+  {
+    "project": "First Ammonia - Victoria, Texas",
+    "producer": "First Ammonia (with Uniper offtake)",
+    "country": "USA",
+    "product": "e-Ammonia",
+    "capacity_kta": 100,
+    "cod": 2029,
+    "phase": "FEED",
+    "notes": "TRL 7 · confidence: high · ~700 MEUR capex · end-use: maritime/industry · FID 2026 · Offtakers: Uniper (full offtake of initial modules) · https://firstammonia.com/first-ammonia-and-uniper-announced-cooperation-on-green-ammonia-project-in-texas/"
+  },
+  {
+    "project": "Hydrogen City / Corpus Christi green ammonia",
+    "producer": "Green Hydrogen International (GHI)",
+    "country": "USA",
+    "product": "e-Ammonia",
+    "capacity_kta": 1000,
+    "cod": 2030,
+    "phase": "Feasibility",
+    "notes": "TRL 5 · confidence: medium · end-use: maritime/aviation/industry · Offtakers: Not disclosed · https://www.ghi-corp.com/projects/hydrogen-city"
+  },
+  {
+    "project": "Project Nujio'qonik",
+    "producer": "World Energy GH2",
+    "country": "Canada",
+    "product": "e-Ammonia",
+    "capacity_kta": 1200,
+    "cod": null,
+    "phase": "Cancelled",
+    "notes": "TRL 6 · confidence: high · end-use: maritime/industry · Offtakers: European export; not firmly contracted · https://worldenergygh2.com/about/"
+  },
+  {
+    "project": "Point Tupper Green Fuels Project",
+    "producer": "EverWind Fuels",
+    "country": "Canada",
+    "product": "e-Ammonia",
+    "capacity_kta": 240,
+    "cod": 2028,
+    "phase": "FEED",
+    "notes": "TRL 8 · confidence: high · end-use: maritime/industry · FID 2026 · Offtakers: European export markets; offtake under development · https://everwindfuels.com/projects/point-tupper-green-fuels-project/"
+  },
+  {
+    "project": "Avina Clean Hydrogen - Texas Gulf Coast ammonia",
+    "producer": "Avina Clean Hydrogen",
+    "country": "USA",
+    "product": "e-Ammonia",
+    "capacity_kta": 200,
+    "cod": 2028,
+    "phase": "FEED",
+    "notes": "TRL 6 · confidence: medium · ~2000 MEUR capex · end-use: maritime/industry · FID 2026 · Offtakers: Not disclosed · https://hydrogen-central.com/avina-clean-hydrogen-completes-feed-for-800000-mtpa-clean-ammonia-facility/"
+  },
+  {
+    "project": "ATOME Villeta Green Fertilizer Project",
+    "producer": "ATOME PLC",
+    "country": "Paraguay",
+    "product": "e-Ammonia",
+    "capacity_kta": 260,
+    "cod": 2029,
+    "phase": "FID",
+    "notes": "TRL 8 · confidence: high · ~615 MEUR capex · end-use: industry · FID 2026 · Offtakers: Yara International (full 260 kt/yr green CAN fertiliser, 10-year deal) · https://ammoniaenergy.org/articles/atomes-paraguay-project-reaches-fid/"
+  },
+  {
+    "project": "H2 Magallanes",
+    "producer": "TotalEnergies (TE H2, ex-Total Eren)",
+    "country": "Chile",
+    "product": "e-Ammonia",
+    "capacity_kta": 4400,
+    "cod": 2031,
+    "phase": "Feasibility",
+    "notes": "TRL 5 · confidence: medium · ~16000 MEUR capex · end-use: maritime/industry · Offtakers: Export-oriented; not disclosed · https://www.h2magallanes.cl/en/"
+  },
+  {
+    "project": "HNH Energy (San Gregorio)",
+    "producer": "HNH Energy (AustriaEnergy, Ökowind, CIP)",
+    "country": "Chile",
+    "product": "e-Ammonia",
+    "capacity_kta": 1000,
+    "cod": 2030,
+    "phase": "FEED",
+    "notes": "TRL 6 · confidence: medium · ~11000 MEUR capex · end-use: maritime/industry · FID 2026 · Offtakers: Export-oriented (Europe); not disclosed · https://h2lac.org/en/news/hnh-energys-green-ammonia-project-enters-the-environmental-process-in-chile/"
+  },
+  {
+    "project": "Project Iracema (Pecém)",
+    "producer": "Casa dos Ventos / Comerc / Transhydrogen Alliance",
+    "country": "Brazil",
+    "product": "e-Ammonia",
+    "capacity_kta": 2200,
+    "cod": 2028,
+    "phase": "FEED",
+    "notes": "TRL 6 · confidence: medium · ~4000 MEUR capex · end-use: maritime/industry · FID 2027 · Offtakers: Export to Europe via Port of Rotterdam · https://ammoniaenergy.org/articles/renewable-ammonia-exports-from-brazil-project-iracema/"
+  },
+  {
+    "project": "Fortescue Pecém (Brasil Fortescue)",
+    "producer": "Fortescue",
+    "country": "Brazil",
+    "product": "e-Ammonia",
+    "capacity_kta": 900,
+    "cod": 2029,
+    "phase": "Feasibility",
+    "notes": "TRL 6 · confidence: medium · ~3700 MEUR capex · end-use: maritime/industry · FID 2026 · Offtakers: European offtake corridors; not disclosed · https://energy.fortescue.com/en/our-green-projects/pecem"
+  },
+  {
+    "project": "Unigel Camaçari green H2/ammonia",
+    "producer": "Unigel",
+    "country": "Brazil",
+    "product": "e-Ammonia",
+    "capacity_kta": 60,
+    "cod": null,
+    "phase": "Construction",
+    "notes": "TRL 8 · confidence: medium · end-use: industry · FID 2021 · Offtakers: Captive (Unigel fertiliser); Petrobras tolling agreement discussed · https://ammoniaenergy.org/articles/brazils-first-electrolysis-based-ammonia-plant-takes-shape/"
+  },
+  {
+    "project": "NEOM Green Hydrogen Complex (NGHC)",
+    "producer": "NEOM Green Hydrogen Company (ACWA Power, Air Products, NEOM/PIF)",
+    "country": "Saudi Arabia",
+    "product": "e-Ammonia",
+    "capacity_kta": 1200,
+    "cod": 2027,
+    "phase": "Construction",
+    "notes": "TRL 8 · confidence: high · ~8400 MEUR capex · end-use: maritime/industry · FID 2023 · Offtakers: Air Products (30-year exclusive offtake of all green ammonia) · https://nghc.com/news/worlds-largest-green-hydrogen-plant-reaches-80-construction-completion-across-all-sites/"
+  },
+  {
+    "project": "Yanbu Green Hydrogen Hub",
+    "producer": "ACWA Power (with EnBW, ITOCHU)",
+    "country": "Saudi Arabia",
+    "product": "e-Ammonia",
+    "capacity_kta": 2200,
+    "cod": 2030,
+    "phase": "FEED",
+    "notes": "TRL 8 · confidence: high · end-use: maritime/industry · FID 2026 · Offtakers: ITOCHU (Japan) co-developer/offtaker; EnBW co-developer/minority investor · https://www.zawya.com/en/projects/industry/acwa-says-feed-completion-for-yanbu-green-hydrogen-hub-likely-by-mid-2026-kiav6qe1"
+  },
+  {
+    "project": "ACME Duqm Green Ammonia (Phase 1)",
+    "producer": "ACME Group / Scatec (50:50 JV)",
+    "country": "Oman",
+    "product": "e-Ammonia",
+    "capacity_kta": 100,
+    "cod": 2027,
+    "phase": "Construction",
+    "notes": "TRL 8 · confidence: high · ~600 MEUR capex · end-use: maritime/industry · FID 2023 · Offtakers: Yara (binding 15-year offtake for full 100 kt/yr Phase 1, to Europe) · https://www.gasworld.com/story/acmes-oman-green-ammonia-project-set-for-4-2bn-expansion/2252475.article/"
+  },
+  {
+    "project": "HyPort Duqm Green Ammonia",
+    "producer": "OQ / DEME / bp (49%)",
+    "country": "Oman",
+    "product": "e-Ammonia",
+    "capacity_kta": 330,
+    "cod": 2030,
+    "phase": "FEED",
+    "notes": "TRL 7 · confidence: high · end-use: maritime/industry · FID 2026 · Offtakers: Uniper exploring offtake; not yet confirmed · https://ammoniaenergy.org/articles/progress-in-oman-mega-projects/"
+  },
+  {
+    "project": "ENGIE-POSCO Duqm Green Ammonia (Block Z1-02)",
+    "producer": "ENGIE / POSCO consortium (Samsung E&A, KOSPO, EWP, PTTEP)",
+    "country": "Oman",
+    "product": "e-Ammonia",
+    "capacity_kta": 1200,
+    "cod": null,
+    "phase": "Cancelled",
+    "notes": "TRL 7 · confidence: high · end-use: maritime/industry · Offtakers: POSCO / KOSPO / KOEN — first shipment to South Korea ~2030 · https://en.newsroom.engie.com/news/engie-and-posco-led-consortium-to-develop-a-green-ammonia-project-of-up-to-a-1-2mtpa-in-oman-8360-314df.html"
+  },
+  {
+    "project": "SalalaH2 Green Ammonia",
+    "producer": "OQ, Marubeni, Samsung C&T, Dutco",
+    "country": "Oman",
+    "product": "e-Ammonia",
+    "capacity_kta": 1000,
+    "cod": 2030,
+    "phase": "FEED",
+    "notes": "TRL 7 · confidence: high · ~5000 MEUR capex · end-use: maritime/industry · FID 2026 · Offtakers: Not confirmed · https://www.blackridgeresearch.com/blog/latest-list-of-top-largest-biggest-green-hydrogen-plants-projects-oman-middle-east"
+  },
+  {
+    "project": "Egypt Green Hydrogen (Ain Sokhna)",
+    "producer": "Scatec (lead), Fertiglobe, Orascom Construction, Sovereign Fund of Egypt, EETC",
+    "country": "Egypt",
+    "product": "e-Ammonia",
+    "capacity_kta": 74,
+    "cod": 2027,
+    "phase": "Construction",
+    "notes": "TRL 8 · confidence: high · end-use: maritime/industry · Offtakers: Fertiglobe (20-year offtake; H2Global award ~EUR 1000/t delivered to Europe) · https://www.scatec.com/en/scatecs-egypt-green-hydrogen-project-signed-20-year-offtake-agreement-with-fertiglobe-based-on-h2global-award/"
+  },
+  {
+    "project": "AMEA Power Green Ammonia (Ain Sokhna/SCZone)",
+    "producer": "AMEA Power",
+    "country": "Egypt",
+    "product": "e-Ammonia",
+    "capacity_kta": 235,
+    "cod": 2028,
+    "phase": "Feasibility",
+    "notes": "TRL 6 · confidence: medium · end-use: maritime/industry · Offtakers: Not confirmed · https://www.ameapower.com/press-release-amea-power-has-signed-a-memorandum-of-understanding-to-produce-390000-tonnes-of-green-ammonia-per-annum-in-egypt/"
+  },
+  {
+    "project": "Hyphen Green Hydrogen/Ammonia (Tsau Khaeb, Lüderitz)",
+    "producer": "Hyphen Hydrogen Energy (ENERTRAG, Nicholas Holdings)",
+    "country": "Namibia",
+    "product": "e-Ammonia",
+    "capacity_kta": 1000,
+    "cod": 2028,
+    "phase": "Feasibility",
+    "notes": "TRL 7 · confidence: high · ~8700 MEUR capex · end-use: maritime/industry · FID 2026 · Offtakers: European buyers via H2Global; offtake under negotiation; Rotterdam import infrastructure · https://hyphenafrica.com/the-hyphen-project/"
+  },
+  {
+    "project": "Coega Green Ammonia Project",
+    "producer": "Hive Hydrogen South Africa (Hive Energy, Built Africa)",
+    "country": "South Africa",
+    "product": "e-Ammonia",
+    "capacity_kta": 1000,
+    "cod": 2029,
+    "phase": "FEED",
+    "notes": "TRL 7 · confidence: high · ~5800 MEUR capex · end-use: maritime/industry · FID 2027 · Offtakers: ~3.6 Mt/yr offtake reported (Far East/Europe); ITOCHU MoU for equity/offtake · https://www.miningweekly.com/article/south-africas-58bn-green-hydrogen-ammonia-project-advancing-2026-05-19"
+  },
+  {
+    "project": "Prieska Power Reserve",
+    "producer": "Prieska Power Reserve (PPR)",
+    "country": "South Africa",
+    "product": "e-Ammonia",
+    "capacity_kta": 72,
+    "cod": 2027,
+    "phase": "FEED",
+    "notes": "TRL 6 · confidence: medium · end-use: industry/maritime · FID 2026 · Offtakers: Not disclosed · https://www.southafricanbusiness.co.za/04/2024/renewable-energy/northern-cape-takes-the-lead-in-green-hydrogen/"
+  },
+  {
+    "project": "OCP Green Ammonia Programme (Southern Morocco)",
+    "producer": "OCP Group",
+    "country": "Morocco",
+    "product": "e-Ammonia",
+    "capacity_kta": 200,
+    "cod": 2027,
+    "phase": "Feasibility",
+    "notes": "TRL 7 · confidence: medium · end-use: industry · Offtakers: Captive (OCP fertiliser feedstock); potential export · https://ammoniaenergy.org/articles/ocp-group-renewable-ammonia-production-facility-planned-for-southern-morocco/"
+  },
+  {
+    "project": "ORNX Consortium Green Ammonia (Laayoune)",
+    "producer": "ORNX consortium (Ortus / Acciona / Nordex)",
+    "country": "Morocco",
+    "product": "e-Ammonia",
+    "capacity_kta": 560,
+    "cod": null,
+    "phase": "Feasibility",
+    "notes": "TRL 6 · confidence: high · ~4200 MEUR capex · end-use: industry/maritime · Offtakers: Not disclosed · https://www.agbi.com/industry/2026/02/morocco-signs-green-ammonia-project-with-global-consortium/"
+  },
+  {
+    "project": "Chbika Green Ammonia",
+    "producer": "TE H2 (TotalEnergies/EREN), CIP, A.P. Møller Capital",
+    "country": "Morocco",
+    "product": "e-Ammonia",
+    "capacity_kta": 200,
+    "cod": null,
+    "phase": "Feasibility",
+    "notes": "TRL 6 · confidence: high · ~1400 MEUR capex · end-use: maritime/industry · Offtakers: European export; not confirmed · https://www.ecofinagency.com/news-industry/0307-47531-morocco-targets-european-green-hydrogen-market-with-chbika-ammonia-project"
+  },
+  {
+    "project": "AMAN Green Hydrogen/Ammonia",
+    "producer": "CWP Global",
+    "country": "Mauritania",
+    "product": "e-Ammonia",
+    "capacity_kta": 10000,
+    "cod": 2030,
+    "phase": "Feasibility",
+    "notes": "TRL 5 · confidence: medium · end-use: maritime/industry · Offtakers: European export; not confirmed · https://cwp.global/terra/projects/"
+  },
+  {
+    "project": "Envision Chifeng Green Hydrogen & Ammonia",
+    "producer": "Envision Energy",
+    "country": "China",
+    "product": "e-Ammonia",
+    "capacity_kta": 320,
+    "cod": 2025,
+    "phase": "Operating",
+    "notes": "TRL 9 · confidence: high · end-use: maritime/industry · FID 2022 · Offtakers: LOTTE Fine Chemical (South Korea) + customers in Japan/Singapore/Korea/Europe; first certified marine ammonia bunkering (Dalian) · https://carboncredits.com/chinas-envision-energy-launches-worlds-largest-green-hydrogen-and-ammonia-plant/"
+  },
+  {
+    "project": "Da'an Wind-Solar Green Hydrogen-Ammonia Integration Project",
+    "producer": "Jilin Electric Power (State Power Investment Corp)",
+    "country": "China",
+    "product": "e-Ammonia",
+    "capacity_kta": 180,
+    "cod": 2025,
+    "phase": "Operating",
+    "notes": "TRL 9 · confidence: high · end-use: industry/maritime · FID 2022 · Offtakers: Domestic industrial and export; not disclosed · https://www.yicaiglobal.com/news/chinas-jilin-electric-begins-operations-at-worlds-largest-single-unit-green-ammonia-project"
+  },
+  {
+    "project": "Songyuan Integrated Green Hydrogen-Ammonia-Methanol Project (Phase 1)",
+    "producer": "China Energy Engineering Group (Energy China)",
+    "country": "China",
+    "product": "e-Ammonia",
+    "capacity_kta": 200,
+    "cod": 2025,
+    "phase": "Operating",
+    "notes": "TRL 9 · confidence: high · end-use: industry/maritime · FID 2023 · Offtakers: Not disclosed · https://www.globaltimes.cn/page/202512/1350756.shtml"
+  },
+  {
+    "project": "AM Green Kakinada (AMGA-K1)",
+    "producer": "AM Green (Greenko group)",
+    "country": "India",
+    "product": "e-Ammonia",
+    "capacity_kta": 1000,
+    "cod": 2028,
+    "phase": "Construction",
+    "notes": "TRL 8 · confidence: high · end-use: maritime/industry · FID 2024 · Offtakers: Uniper (up to 500 kt/yr, from 2028) · https://ammoniaenergy.org/articles/am-green-production-nears-at-indias-first-renewable-ammonia-mega-project/"
+  },
+  {
+    "project": "ACME-IHI Gopalpur Green Ammonia (Odisha)",
+    "producer": "ACME Group / IHI Corporation JV",
+    "country": "India",
+    "product": "e-Ammonia",
+    "capacity_kta": 405,
+    "cod": 2030,
+    "phase": "FEED",
+    "notes": "TRL 8 · confidence: high · ~2200 MEUR capex · end-use: maritime/industry · Offtakers: IFFCO (200 kt/yr); Japan CfD price support for 228 kt/yr over 25 years from Sept 2030 · https://renewablewatch.in/2026/07/02/acme-ihi-jv-secures-japans-cfd-subsidy-for-green-ammonia-project-in-odisha/"
+  },
+  {
+    "project": "Allied Green Ammonia (AGA) Northern Territory",
+    "producer": "Allied Green Ammonia",
+    "country": "Australia",
+    "product": "e-Ammonia",
+    "capacity_kta": 959,
+    "cod": 2030,
+    "phase": "FEED",
+    "notes": "TRL 8 · confidence: high · end-use: maritime/industry · FID 2026 · Offtakers: Trammo (MOU for up to 100% of production) · https://research.csiro.au/hyresource/allied-green-ammonia/"
+  },
+  {
+    "project": "Murchison Green Hydrogen / Ammonia",
+    "producer": "Copenhagen Infrastructure Partners (CIP)",
+    "country": "Australia",
+    "product": "e-Ammonia",
+    "capacity_kta": 1800,
+    "cod": 2032,
+    "phase": "FEED",
+    "notes": "TRL 6 · confidence: high · end-use: maritime/industry · FID 2027 · Offtakers: Non-binding interest from Japan/Korea; AUD 814m Hydrogen Headstart incentive for first ~1.5 GW stage · https://research.csiro.au/hyresource/murchison-hydrogen-renewables-project/"
+  },
+  {
+    "project": "Western Green Energy Hub (WGEH) Stage 1",
+    "producer": "InterContinental Energy / CWP Global / Mirning Green Energy",
+    "country": "Australia",
+    "product": "e-Ammonia",
+    "capacity_kta": 1400,
+    "cod": 2034,
+    "phase": "Feasibility",
+    "notes": "TRL 6 · confidence: high · end-use: maritime/industry · FID 2029 · Offtakers: >1.4 Mt/yr non-binding offtake interest from Japan & South Korea; KEPCO collaboration · https://esdnews.com.au/western-green-energy-hub-reaches-green-ammonia-offtake-milestone/"
+  },
+  {
+    "project": "Australian Renewable Energy Hub (AREH)",
+    "producer": "InterContinental Energy (ICE)",
+    "country": "Australia",
+    "product": "e-Ammonia",
+    "capacity_kta": 9000,
+    "cod": 2030,
+    "phase": "Feasibility",
+    "notes": "TRL 7 · confidence: medium · end-use: maritime/industry · FID 2028 · Offtakers: Export to Asia (Japan/Korea) as green ammonia · https://www.pv-magazine-australia.com/2026/02/04/developer-lands-federal-backing-for-26-gw-green-hydrogen-hub-in-was-pilbara/"
+  },
+  {
+    "project": "Yuri Renewable Hydrogen to Ammonia (Phase 0/1)",
+    "producer": "ENGIE / Mitsui (with Yara Pilbara)",
+    "country": "Australia",
+    "product": "e-Ammonia",
+    "capacity_kta": 3.6,
+    "cod": 2026,
+    "phase": "Construction",
+    "notes": "TRL 8 · confidence: high · ~55 MEUR capex · end-use: industry/maritime · FID 2022 · Offtakers: Yara Pilbara Fertilisers (100% offtake of renewable H2 feedstock) · https://arena.gov.au/projects/yuri-renewable-hydrogen-to-ammonia-project/"
+  },
+  {
+    "project": "Good Earth Green Hydrogen and Ammonia (GEGHA)",
+    "producer": "Sovereign / Good Earth (Moree)",
+    "country": "Australia",
+    "product": "e-Ammonia",
+    "capacity_kta": 4.5,
+    "cod": 2027,
+    "phase": "Construction",
+    "notes": "TRL 8 · confidence: high · end-use: industry/road · FID 2025 · Offtakers: Domestic (agricultural/fertiliser) · https://reneweconomy.com.au/another-2-billion-on-table-in-second-round-of-hydrogen-headstart-program-with-new-focus-on-feedstocks/"
+  },
+  {
+    "project": "Central Queensland Hydrogen Project (CQ-H2)",
+    "producer": "Stanwell / Iwatani / Marubeni / Kansai / Keppel",
+    "country": "Australia",
+    "product": "e-Ammonia",
+    "capacity_kta": 73,
+    "cod": null,
+    "phase": "Cancelled",
+    "notes": "TRL 5 · confidence: high · end-use: maritime/industry · Offtakers: Intended Japanese market (liquid H2 + ammonia) · https://research.csiro.au/hyresource/central-queensland-hydrogen-project/"
+  },
+  {
+    "project": "Gibson Island Green Ammonia Conversion",
+    "producer": "Fortescue (FFI) / Incitec Pivot (Dyno Nobel)",
+    "country": "Australia",
+    "product": "e-Ammonia",
+    "capacity_kta": 400,
+    "cod": null,
+    "phase": "Cancelled",
+    "notes": "TRL 7 · confidence: high · end-use: industry · Offtakers: Incitec Pivot (domestic fertiliser) · https://research.csiro.au/hyresource/gibson-island-green-ammonia-project/"
+  },
+  {
+    "project": "H2biscus Green Ammonia (Sarawak)",
+    "producer": "Samsung E&A / Lotte Chemical / POSCO / Sarawak Economic Development Corp",
+    "country": "Malaysia",
+    "product": "e-Ammonia",
+    "capacity_kta": 630,
+    "cod": 2029,
+    "phase": "FEED",
+    "notes": "TRL 5 · confidence: low · end-use: industry/maritime · FID 2026 · Offtakers: Export to South Korea (POSCO / Lotte Chemical) · https://www.orrick.com/en/Insights/2025/12/APAC-Energy-Pulse-December-2025"
+  },
+  {
+    "project": "Arcadia eFuels Vordingborg (Project ENDOR / Kepler)",
+    "producer": "Arcadia eFuels",
+    "country": "Denmark",
+    "product": "e-SAF",
+    "capacity_kta": 80,
+    "cod": 2029,
+    "phase": "FEED",
+    "notes": "TRL 7 · confidence: high · end-use: aviation · FID 2027 · Offtakers: Not publicly confirmed · https://arcadiaefuels.com/arcadia-efuels-completes-the-front-end-engineering-design/"
+  },
+  {
+    "project": "Brandenburg eSAF (formerly Concrete Chemicals), PCK Schwedt refinery",
+    "producer": "ENERTRAG / ZAFFRA (Topsoe-Sasol)",
+    "country": "Germany",
+    "product": "e-SAF",
+    "capacity_kta": 30,
+    "cod": 2030,
+    "phase": "FEED",
+    "notes": "TRL 7 · confidence: high · ~500 MEUR capex · end-use: aviation · FID 2027 · Offtakers: Not disclosed · https://enertrag.com/news-and-press/press-releases/2026/concrete-chemicals-receives-350-million-funding-for-germany-s-largest-industrial-scale-e-saf-plant"
+  },
+  {
+    "project": "Norsk e-Fuel Mosjøen (Nesbruket) Alpha plant",
+    "producer": "Norsk e-Fuel",
+    "country": "Norway",
+    "product": "e-SAF",
+    "capacity_kta": 40,
+    "cod": 2029,
+    "phase": "FEED",
+    "notes": "TRL 7 · confidence: medium · end-use: aviation/road · Offtakers: Norwegian (airline, co-owner, >7,000 t/yr); Gen2 Energy green-H2 supply · https://www.norsk-e-fuel.com/projects"
+  },
+  {
+    "project": "ERA ONE (Frankfurt-Höchst)",
+    "producer": "INERATEC",
+    "country": "Germany",
+    "product": "e-SAF",
+    "capacity_kta": 2.5,
+    "cod": 2025,
+    "phase": "Operating",
+    "notes": "TRL 8 · confidence: high · ~70 MEUR capex · end-use: aviation/maritime/road · Offtakers: Not disclosed · https://www.ineratec.de/en/news/ineratec-opens-era-one-europes-largest-e-fuel-production-plant-goes-operation-frankfurt"
+  },
+  {
+    "project": "E-Fuel1 (Herøya) / P2X-Europe Scandinavia offtake",
+    "producer": "Nordic Electrofuel",
+    "country": "Norway",
+    "product": "e-SAF",
+    "capacity_kta": 8,
+    "cod": 2029,
+    "phase": "FEED",
+    "notes": "TRL 6 · confidence: high · end-use: aviation · Offtakers: P2X-Europe (Mabanaft/H&R) offtake/commercialisation term sheet · https://nordicelectrofuel.no/what-we-do/"
+  },
+  {
+    "project": "OXCCU OX2 (Oxford) / Saltend demo",
+    "producer": "OXCCU",
+    "country": "United Kingdom",
+    "product": "e-SAF",
+    "capacity_kta": 0.058,
+    "cod": 2026,
+    "phase": "Construction",
+    "notes": "TRL 7 · confidence: high · end-use: aviation · Offtakers: Not disclosed · https://www.oxccu.com/"
+  },
+  {
+    "project": "Project Starling (Workington)",
+    "producer": "Carbon Neutral Fuels",
+    "country": "United Kingdom",
+    "product": "e-SAF",
+    "capacity_kta": 25,
+    "cod": 2031,
+    "phase": "FEED",
+    "notes": "TRL 6 · confidence: high · end-use: aviation · Offtakers: Not disclosed · https://www.topsoe.com/news/topsoe-and-carbon-neutral-fuels-join-forces-to-advance-e-saf-with-soec-electrolyzer-technology"
+  },
+  {
+    "project": "eM-Lacq / E-CHO (Elyse Energy, Lacq)",
+    "producer": "Elyse Energy (Technip Energies)",
+    "country": "France",
+    "product": "e-SAF",
+    "capacity_kta": 88,
+    "cod": 2029,
+    "phase": "FEED",
+    "notes": "TRL 7 · confidence: medium · ~1000 MEUR capex · end-use: aviation · Offtakers: Not disclosed · https://elyse.energy/en/our-projects/em-lacq"
+  },
+  {
+    "project": "Green Fuels Hamburg",
+    "producer": "Uniper / Siemens Energy / Airbus / Sasol ecoFT",
+    "country": "Germany",
+    "product": "e-SAF",
+    "capacity_kta": 10,
+    "cod": null,
+    "phase": "Cancelled",
+    "notes": "TRL 5 · confidence: high · end-use: aviation · Offtakers: Emirates (interest expressed) · https://www.sasol.com/media-centre/media-releases/green-fuels-hamburg-industrial-production-sustainable-aviation-fuels-climate-neutral-aviation"
+  },
+  {
+    "project": "Infinium Project Roadrunner (Pecos, West Texas)",
+    "producer": "Infinium",
+    "country": "USA",
+    "product": "e-SAF",
+    "capacity_kta": 23,
+    "cod": 2027,
+    "phase": "Construction",
+    "notes": "TRL 8 · confidence: high · end-use: aviation/road/maritime/industry · FID 2025 · Offtakers: IAG (10-yr / 75,000t e-SAF) and American Airlines (10-yr from 2026) long-term offtake · https://www.argusmedia.com/en/news-and-insights/latest-market-news/2690011-infinium-takes-fid-on-100mw-texas-e-fuels-plant"
+  },
+  {
+    "project": "Twelve AirPlant One (Moses Lake)",
+    "producer": "Twelve",
+    "country": "USA",
+    "product": "e-SAF",
+    "capacity_kta": 0.13,
+    "cod": 2026,
+    "phase": "Operating",
+    "notes": "TRL 9 · confidence: high · end-use: aviation/industry · FID 2022 · Offtakers: Alaska Airlines (regular domestic flights on E-Jet SAF); Microsoft (book-and-claim); Shopify, IAG earlier commitments · https://www.prnewswire.com/news-releases/airplant-one-opens-in-moses-lake-americas-first-commercial-e-jet-fuel-plant-begins-operations-302796973.html"
+  },
+  {
+    "project": "HIF Acu (Port of Acu e-Fuels)",
+    "producer": "HIF Global",
+    "country": "Brazil",
+    "product": "e-SAF",
+    "capacity_kta": 700,
+    "cod": 2030,
+    "phase": "Feasibility",
+    "notes": "TRL 6 · confidence: medium · ~3700 MEUR capex · end-use: aviation/maritime/road/industry · Offtakers: Not confirmed · https://hifglobal.com/media/news-description/2024/09/24/hif-global-announces-e-fuels-project-in-brazil"
+  },
+  {
+    "project": "DG Fuels St. James Parish SAF Complex",
+    "producer": "DG Fuels",
+    "country": "USA",
+    "product": "e-SAF",
+    "capacity_kta": 600,
+    "cod": 2028,
+    "phase": "FEED",
+    "notes": "TRL 7 · confidence: low · ~7400 MEUR capex · end-use: aviation · FID 2026 · Offtakers: Delta Air Lines, Air France-KLM and others (~100% of initial output contracted) · https://dgfuels.com/2025/11/10/dg-fuels-appoints-samsung-ea-as-contractor-for-saf-project-in-st-james/"
+  },
+  {
+    "project": "SPIC Qiqihar Green Hydrogen-to-SAF Project",
+    "producer": "State Power Investment Corporation (SPIC)",
+    "country": "China",
+    "product": "e-SAF",
+    "capacity_kta": 400,
+    "cod": 2030,
+    "phase": "Feasibility",
+    "notes": "TRL 6 · confidence: medium · ~5400 MEUR capex · end-use: aviation · Offtakers: Not disclosed · https://www.theglobeandmail.com/business/industry-news/energy-and-resources/article-chinas-spic-plans-us585-billion-investment-turning-green-hydrogen-into/"
+  },
+  {
+    "project": "Shanxi International Energy Inner Mongolia e-Kerosene Plant",
+    "producer": "Shanxi International Energy Group",
+    "country": "China",
+    "product": "e-SAF",
+    "capacity_kta": 350,
+    "cod": 2029,
+    "phase": "Feasibility",
+    "notes": "TRL 6 · confidence: medium · ~1400 MEUR capex · end-use: aviation · Offtakers: Not disclosed · https://www.rechargenews.com/energy-transition/chinese-group-to-build-1-5bn-green-aviation-fuel-plant-based-on-wind-powered-hydrogen/2-1-1641572"
+  },
+  {
+    "project": "Shanghai Carbonology DAC-to-e-SAF (Ningdong)",
+    "producer": "Shanghai Carbonology",
+    "country": "China",
+    "product": "e-SAF",
+    "capacity_kta": 1,
+    "cod": 2027,
+    "phase": "Construction",
+    "notes": "TRL 6 · confidence: high · end-use: aviation · FID 2026 · Offtakers: Not disclosed · https://chinahydrogen.substack.com/p/two-milestone-developments-for-chinas"
+  },
+  {
+    "project": "Nordic Electrofuel Jubail e-SAF plant",
+    "producer": "Nordic Electrofuel",
+    "country": "Saudi Arabia",
+    "product": "e-SAF",
+    "capacity_kta": 300,
+    "cod": 2029,
+    "phase": "Feasibility",
+    "notes": "TRL 6 · confidence: medium · end-use: aviation · Offtakers: Targeting regional airlines; no binding offtake disclosed · https://www.argusmedia.com/en/news-and-insights/latest-market-news/2639730-nordic-electrofuel-expands-e-saf-plans-to-middle-east"
+  },
+  {
+    "project": "Masdar-TotalEnergies green H2-to-methanol-to-SAF, Abu Dhabi",
+    "producer": "Masdar / TotalEnergies",
+    "country": "UAE",
+    "product": "e-SAF",
+    "capacity_kta": 0,
+    "cod": null,
+    "phase": "Feasibility",
+    "notes": "TRL 6 · confidence: medium · end-use: aviation/maritime · Offtakers: Not disclosed · https://masdar.ae/en/news/newsroom/masdar-and-totalenergies-to-develop-a-commercial-green-hydrogen"
+  },
+  {
+    "project": "Phelan eFuels Saldanha Bay e-SAF facility",
+    "producer": "Phelan Green (Phelan eFuels)",
+    "country": "South Africa",
+    "product": "e-SAF",
+    "capacity_kta": 35,
+    "cod": 2028,
+    "phase": "FID",
+    "notes": "TRL 7 · confidence: high · ~2400 MEUR capex · end-use: aviation · FID 2026 · Offtakers: Targeting EU/UK e-SAF mandate export markets; no binding offtake disclosed · https://www.honeywell.com/us/en/press/2026/03/phelan-green-selects-honeywell-process-technology-for-flagship-south-african-esaf-facility"
+  },
+  {
+    "project": "HyShiFT e-kerosene project, Secunda",
+    "producer": "Sasol / Linde / ENERTRAG / HydRegen (HySHiFT Consortium)",
+    "country": "South Africa",
+    "product": "e-SAF",
+    "capacity_kta": 50,
+    "cod": 2030,
+    "phase": "FEED",
+    "notes": "TRL 7 · confidence: high · end-use: aviation · Offtakers: 10-year offtake under negotiation (H2Global-linked); reported preferred bidder · https://www.engineeringnews.co.za/print-version/hyshiftsustainable-aviation-fuel-project-south-africa-update-2024-04-19"
+  },
+  {
+    "project": "Project Lighthouse (INERATEC / COPEC PtL Chile)",
+    "producer": "INERATEC with COPEC",
+    "country": "Chile",
+    "product": "e-SAF",
+    "capacity_kta": 50,
+    "cod": null,
+    "phase": "Feasibility",
+    "notes": "TRL 6 · confidence: medium · end-use: aviation/road/industry · Offtakers: Not confirmed · https://ptx-hub.org/wp-content/uploads/2025/02/h2uppp-ppp-result-chile-ineratec-en.pdf"
+  },
+  {
+    "project": "Zero Petroleum Plant Zero.SA (Whyalla)",
+    "producer": "Zero Petroleum",
+    "country": "Australia",
+    "product": "e-SAF",
+    "capacity_kta": 8,
+    "cod": 2028,
+    "phase": "Feasibility",
+    "notes": "TRL 5 · confidence: medium · end-use: aviation/road · Offtakers: Adelaide Airport and Qantas-led aviation consortium (collaboration, not binding offtake) · https://premier.sa.gov.au/media-releases/news-archive/whyalla-set-to-take-flight-with-sustainable-aviation-fuel-project"
+  },
+  {
+    "project": "Allied Biofuels FE (Uzbekistan) - Sinopec FEED",
+    "producer": "Allied Biofuels FE LLC / Sinopec Ningbo Engineering",
+    "country": "Uzbekistan",
+    "product": "e-SAF",
+    "capacity_kta": 257,
+    "cod": 2030,
+    "phase": "FEED",
+    "notes": "TRL 6 · confidence: medium · ~5600 MEUR capex · end-use: aviation · FID 2026 · Offtakers: Local Uzbek market and export; airport operator eyeing SAF offtake · https://chinahydrogen.substack.com/p/two-milestone-developments-for-chinas"
+  },
+  {
+    "project": "SkyFuelH2 (Sweden)",
+    "producer": "Uniper (with Sasol ecoFT)",
+    "country": "Sweden",
+    "product": "e-SAF",
+    "capacity_kta": 0,
+    "cod": null,
+    "phase": "Cancelled",
+    "notes": "TRL 5 · confidence: high · end-use: aviation · https://www.spglobal.com/commodity-insights/en/news-research/latest-news/energy-transition/101124-uniper-scraps-swedish-e-saf-project-amid-challenging-market-rising-costs"
+  },
+  {
+    "project": "Sasol-Topsoe Zaffra SAF venture",
+    "producer": "Sasol / Topsoe (Zaffra JV)",
+    "country": "South Africa",
+    "product": "e-SAF",
+    "capacity_kta": 0,
+    "cod": null,
+    "phase": "Cancelled",
+    "notes": "TRL 5 · confidence: high · end-use: aviation · https://www.topsoe.com/news/sasol-and-topsoe-to-refocus-saf-partnership-as-zaffra-jv-prepare-for-wind-down"
+  },
+  {
+    "project": "Boegoebaai Green Hydrogen Development Programme",
+    "producer": "Sasol (with Northern Cape Development Agency)",
+    "country": "South Africa",
+    "product": "e-SAF",
+    "capacity_kta": 400,
+    "cod": 2030,
+    "phase": "Feasibility",
+    "notes": "TRL 6 · confidence: medium · end-use: aviation/industry · https://www.sasol.com/media-centre/media-releases/sasol-announces-lead-role-feasibility-study-boegoebaai-green-hydrogen-project"
+  },
+  {
+    "project": "Nordic Electrofuel E-fuel 1 (Herøya)",
+    "producer": "Nordic Electrofuel AS",
+    "country": "Norway",
+    "product": "Green H2 / e-Diesel",
+    "capacity_kta": 8,
+    "cod": 2027,
+    "phase": "Construction",
+    "notes": "TRL 7 · confidence: high · end-use: aviation/road/industry · FID 2023 · Offtakers: P2X-Europe (eSAF term sheet); aviation/chemical offtake · https://nordicelectrofuel.no/what-we-do/"
+  },
+  {
+    "project": "Reuze (Dunkirk)",
+    "producer": "Infinium / ENGIE (ArcelorMittal CO2)",
+    "country": "France",
+    "product": "Green H2 / e-Diesel",
+    "capacity_kta": 100,
+    "cod": 2028,
+    "phase": "FEED",
+    "notes": "TRL 7 · confidence: medium · ~500 MEUR capex · end-use: aviation/maritime/road/industry · Offtakers: Not publicly confirmed · https://www.infiniumco.com/engie"
+  },
+  {
+    "project": "INERATEC ERA ONE (Frankfurt-Höchst)",
+    "producer": "INERATEC",
+    "country": "Germany",
+    "product": "Green H2 / e-Diesel",
+    "capacity_kta": 2.5,
+    "cod": 2025,
+    "phase": "Operating",
+    "notes": "TRL 9 · confidence: high · ~70 MEUR capex · end-use: aviation/road/industry · FID 2022 · Offtakers: Multiple drop-in e-SAF/e-diesel offtake · https://www.ineratec.de/en/news/ineratec-opens-era-one-europes-largest-e-fuel-production-plant-goes-operation-frankfurt"
+  },
+  {
+    "project": "Arcadia eFuels Project ENDOR (Vordingborg)",
+    "producer": "Arcadia eFuels (Sasol, Topsoe tech)",
+    "country": "Denmark",
+    "product": "e-SAF",
+    "capacity_kta": 80,
+    "cod": 2028,
+    "phase": "FEED",
+    "notes": "TRL 7 · confidence: high · end-use: aviation/road · FID 2027 · Offtakers: Not publicly confirmed · https://global-efuels.com/news/arcadia-efuels-project-endor-chosen-for-accelerator-by-green-finance-institute/"
+  },
+  {
+    "project": "Giga PtX distributed synthetic fuel network",
+    "producer": "Rheinmetall / INERATEC / Sunfire / E.ON / Greenlyte",
+    "country": "Germany",
+    "product": "Green H2 / e-Diesel",
+    "capacity_kta": 6,
+    "cod": 2028,
+    "phase": "Concept",
+    "notes": "TRL 6 · confidence: medium · end-use: road/industry/aviation · Offtakers: NATO/defence-oriented resilient fuel supply · https://www.rheinmetall.com/en/media/news-watch/news/2025/11/2025-11-03-rheinmetall-builds-synthetic-fuel-plants-with-technology-champions"
+  },
+  {
+    "project": "Holland Hydrogen I",
+    "producer": "Shell",
+    "country": "Netherlands",
+    "product": "Green H2 / e-Diesel",
+    "capacity_kta": 22,
+    "cod": 2026,
+    "phase": "Construction",
+    "notes": "TRL 8 · confidence: high · ~750 MEUR capex · end-use: industry/road · FID 2022 · Offtakers: Shell Energy and Chemicals Park Rotterdam (refinery, mobility) · https://www.h2-view.com/story/shells-200mw-rotterdam-hydrogen-plant-connected-to-dutch-pipeline-network/2138463.article/"
+  },
+  {
+    "project": "GET H2 Nukleus (Emsland/Lingen)",
+    "producer": "RWE (with TotalEnergies, BP, Evonik, Nowega, OGE)",
+    "country": "Germany",
+    "product": "Green H2 / e-Diesel",
+    "capacity_kta": 44,
+    "cod": 2027,
+    "phase": "Construction",
+    "notes": "TRL 8 · confidence: high · end-use: industry/road · FID 2024 · Offtakers: TotalEnergies Leuna refinery (30 kt/yr, 15-yr); BP Lingen; GET H2 pipeline users · https://www.rwe.com/en/research-and-development/hydrogen-projects/hydrogen-project-get-h2/"
+  },
+  {
+    "project": "Puertollano green hydrogen plant",
+    "producer": "Iberdrola (with Fertiberia)",
+    "country": "Spain",
+    "product": "Green H2 / e-Diesel",
+    "capacity_kta": 3,
+    "cod": 2022,
+    "phase": "Operating",
+    "notes": "TRL 9 · confidence: high · ~150 MEUR capex · end-use: industry · FID 2020 · Offtakers: Fertiberia (green ammonia/fertiliser feedstock) · https://www.iberdrola.com/about-us/what-we-do/green-hydrogen/puertollano-green-hydrogen-plant"
+  },
+  {
+    "project": "Gen2 Energy Mosjøen (Nesbruket)",
+    "producer": "Gen2 Energy",
+    "country": "Norway",
+    "product": "Green H2 / e-Diesel",
+    "capacity_kta": 11,
+    "cod": 2028,
+    "phase": "FEED",
+    "notes": "TRL 8 · confidence: high · end-use: maritime/aviation · Offtakers: Norsk e-Fuel (H2 feedstock for SAF); maritime sector · https://fuelcellsworks.com/2026/01/06/green-hydrogen/gen2-energy-secures-grid-capacity-for-195mw-green-hydrogen-plant-in-norway"
+  },
+  {
+    "project": "Hydrogen Hub Agder (Fiskå)",
+    "producer": "Greenstat",
+    "country": "Norway",
+    "product": "Green H2 / e-Diesel",
+    "capacity_kta": 2.9,
+    "cod": 2026,
+    "phase": "Construction",
+    "notes": "TRL 8 · confidence: high · end-use: maritime · FID 2024 · Offtakers: Maritime sector (Kristiansand region) · https://www.offshore-energy.biz/itm-powers-electrolyzer-solution-picked-for-agder-hydrogen-project-in-norway/"
+  },
+  {
+    "project": "HYDS/GreenH Norwegian green hydrogen projects (2x20 MW)",
+    "producer": "HYDS (Luxcara / GreenH)",
+    "country": "Norway",
+    "product": "Green H2 / e-Diesel",
+    "capacity_kta": 6,
+    "cod": 2028,
+    "phase": "Construction",
+    "notes": "TRL 9 · confidence: high · end-use: maritime · FID 2025 · Offtakers: Maritime / ferry operators · https://www.h2-view.com/story/hyds-takes-fid-on-two-20mw-norwegian-green-hydrogen-projects/2134455.article/"
+  },
+  {
+    "project": "NortH2",
+    "producer": "RWE / Shell / Equinor / Gasunie / Groningen Seaports",
+    "country": "Netherlands",
+    "product": "Green H2 / e-Diesel",
+    "capacity_kta": 400,
+    "cod": 2032,
+    "phase": "Feasibility",
+    "notes": "TRL 6 · confidence: medium · end-use: industry · Offtakers: Dutch industry · https://www.rwe.com/en/research-and-development/hydrogen-projects/north2/"
+  },
+  {
+    "project": "ScottishPower Whitelee green hydrogen",
+    "producer": "ScottishPower (Iberdrola)",
+    "country": "United Kingdom",
+    "product": "Green H2 / e-Diesel",
+    "capacity_kta": 2,
+    "cod": null,
+    "phase": "Cancelled",
+    "notes": "TRL 7 · confidence: high · end-use: road/industry · Offtakers: Heavy transport, high-temperature industry (Glasgow region) · https://www.scottishpower.com/news/pages/investment_secured_for_whitelee_green_hydrogen_facility.aspx"
+  },
+  {
+    "project": "MMEX Tierra del Fuego green hydrogen (Río Grande)",
+    "producer": "MMEX Resources Corp (with Siemens Energy)",
+    "country": "Argentina",
+    "product": "Green H2 / e-Diesel",
+    "capacity_kta": 20,
+    "cod": null,
+    "phase": "Concept",
+    "notes": "TRL 4 · confidence: low · ~500 MEUR capex · end-use: industry/road · Offtakers: Not disclosed · https://hydrogen-central.com/us-mmex-resources-invests-us500m-green-hydrogen-argentina/"
+  },
+  {
+    "project": "ARCHES California Hydrogen Hub",
+    "producer": "ARCHES (Alliance for Renewable Clean Hydrogen Energy Systems)",
+    "country": "USA",
+    "product": "Green H2 / e-Diesel",
+    "capacity_kta": 0,
+    "cod": null,
+    "phase": "Cancelled",
+    "notes": "TRL 6 · confidence: high · end-use: road/industry/maritime · Offtakers: Heavy-duty transport, ports, industry (California) · https://business.ca.gov/california-launches-world-leading-hydrogen-hub/"
+  },
+  {
+    "project": "Amnah Green Hydrogen Project",
+    "producer": "Copenhagen Infrastructure Partners / Blue Power Partners / AI Khadra",
+    "country": "Oman",
+    "product": "Green H2 / e-Diesel",
+    "capacity_kta": 200,
+    "cod": 2030,
+    "phase": "Feasibility",
+    "notes": "TRL 7 · confidence: high · end-use: industry · FID 2026 · Offtakers: Export + local green steel offtake in Port Duqm · https://www.blackridgeresearch.com/blog/latest-list-of-top-largest-biggest-green-hydrogen-plants-projects-oman-middle-east"
+  },
+  {
+    "project": "Actis-Fortescue Oman Green Hydrogen",
+    "producer": "Actis / Fortescue consortium",
+    "country": "Oman",
+    "product": "Green H2 / e-Diesel",
+    "capacity_kta": 1000,
+    "cod": 2030,
+    "phase": "Feasibility",
+    "notes": "TRL 6 · confidence: low · end-use: industry · FID 2026 · Offtakers: Not disclosed · https://www.blackridgeresearch.com/blog/latest-list-of-top-largest-biggest-green-hydrogen-plants-projects-oman-middle-east"
+  },
+  {
+    "project": "NTPC Pudimadaka Green Hydrogen Hub (Phase 1)",
+    "producer": "NTPC Green Energy Ltd (JV with NREDCAP)",
+    "country": "India",
+    "product": "Green H2 / e-Diesel",
+    "capacity_kta": 548,
+    "cod": 2030,
+    "phase": "Construction",
+    "notes": "TRL 7 · confidence: medium · ~20000 MEUR capex · end-use: industry/aviation/maritime · FID 2025 · Offtakers: Open EoI to green chemical developers; derivatives incl. green methanol, urea, SAF · https://ntpc.co.in/media/press-releases/pm-lay-foundation-stone-ntpc-green-energy-limited-green-hydrogen-hub-project"
+  },
+  {
+    "project": "Reliance Green Hydrogen (SIGHT auction 90,000 MTPA)",
+    "producer": "Reliance Industries",
+    "country": "India",
+    "product": "Green H2 / e-Diesel",
+    "capacity_kta": 90,
+    "cod": 2028,
+    "phase": "Construction",
+    "notes": "TRL 8 · confidence: medium · end-use: industry/road · FID 2024 · Offtakers: Mostly export (South Korea, Japan) · https://jmkresearch.com/wp-content/uploads/2025/02/Indias-2.1bn-leap-towards-its-Green-Hydrogen-vision.pdf"
+  },
+  {
+    "project": "ACME Green Hydrogen (SIGHT auction 90,000 MTPA)",
+    "producer": "ACME Group",
+    "country": "India",
+    "product": "Green H2 / e-Diesel",
+    "capacity_kta": 90,
+    "cod": 2027,
+    "phase": "FEED",
+    "notes": "TRL 8 · confidence: medium · end-use: industry · Offtakers: Export (Korea, Japan) · https://jmkresearch.com/wp-content/uploads/2025/02/Indias-2.1bn-leap-towards-its-Green-Hydrogen-vision.pdf"
+  },
+  {
+    "project": "ENEOS/Idemitsu/Hokkaido Green Hydrogen Supply Chain",
+    "producer": "ENEOS, Idemitsu Kosan, Hokkaido Electric",
+    "country": "Japan",
+    "product": "Green H2 / e-Diesel",
+    "capacity_kta": 10,
+    "cod": null,
+    "phase": "Feasibility",
+    "notes": "TRL 5 · confidence: low · end-use: industry/road · Offtakers: Idemitsu Hokkaido refinery (captive) · https://www.spglobal.com/energy/en/news-research/latest-news/energy-transition/022024-eneos-idemitsu-hokkaido-electric-eye-japans-largest-green-hydrogen-supply-chain-by-2030"
+  },
+  {
+    "project": "Japan Carbon-Neutral e-Fuel Consortium",
+    "producer": "Idemitsu, ENEOS, Toyota, Mitsubishi Heavy Industries",
+    "country": "Japan",
+    "product": "Green H2 / e-Diesel",
+    "capacity_kta": 0,
+    "cod": 2030,
+    "phase": "Concept",
+    "notes": "TRL 4 · confidence: medium · end-use: road · Offtakers: Domestic road transport (Toyota vehicles) · https://www.spglobal.com/commodity-insights/en/news-research/latest-news/energy-transition/052724-idemitsu-eneos-toyota-mhi-eye-introducing-carbon-neutral-fuels-in-japan-by-2030"
+  },
+  {
+    "project": "Christmas Creek Renewable Hydrogen Mobility Project",
+    "producer": "Fortescue",
+    "country": "Australia",
+    "product": "Green H2 / e-Diesel",
+    "capacity_kta": 0.19,
+    "cod": 2024,
+    "phase": "Operating",
+    "notes": "TRL 9 · confidence: high · ~20 MEUR capex · end-use: road/industry · FID 2022 · Offtakers: Fortescue mining fleet (captive; H2 for mobility) · https://www.ga.gov.au/aecr2025/hydrogen"
+  },
+  {
+    "project": "Arrowsmith Hydrogen Plant (Stage 1)",
+    "producer": "Infinite Green Energy (IGE)",
+    "country": "Australia",
+    "product": "Green H2 / e-Diesel",
+    "capacity_kta": 8.4,
+    "cod": null,
+    "phase": "Cancelled",
+    "notes": "TRL 6 · confidence: high · end-use: road/industry · Offtakers: Local WA industrial/transport users (planned) · https://www.pv-magazine-australia.com/2025/04/09/green-hydrogen-player-ige-enters-administration/"
+  }
+]
