@@ -1,56 +1,57 @@
 # Work_apps
 
-## E-Fuel Producer CRM (`efuel-crm/`)
+## Low-Carbon Fuel CRM (`efuel-crm/`)
 
-A lightweight, single-file CRM / monitoring tool for following up with e-fuel & RFNBO
-producers. No server, no build step — open `efuel-crm/index.html` in any browser.
-Data is stored locally in the browser (localStorage), with JSON export/restore for backups.
+A lightweight, single-file CRM / monitoring tool for following up with low-carbon fuel
+producers — e-fuels/RFNBO and biofuels alike. No server, no build step — open
+`efuel-crm/index.html` in any browser. Data is stored locally in the browser
+(localStorage), with JSON export/restore for backups.
 
 ### Features
 
-- **Producers** — contact information (person, role, email, phone), status
-  (Active / Prospect / On hold / Dormant), products, general notes, and a
-  **responsible person** (who on your side owns the follow-up), with a
-  responsible-person filter in the producer list.
-- **Discussion log** — log every call/meeting with date and summary; the latest entry
-  shows as "last discussion" in the overview.
-- **Next steps & deadlines** — free-text next steps with a deadline per producer.
-  Overdue deadlines are flagged red, deadlines within 7 days amber.
-- **Monitoring dashboard** — KPI strip: producers tracked, overdue follow-ups,
-  follow-ups due within 7 days, RFNBO projects.
-- **Reminders** — a bell in the header (with a badge for due/late counts) opens a
-  reminder list grouped into Overdue / Due today / Due within 7 days, each with the
-  responsible person, quick "Open" and "+1 wk" postpone actions. A once-a-day toast
-  nags when something is due or late, and upcoming deadlines can be exported as an
-  `.ics` calendar file (with 09:00 alarms) for Outlook/Google Calendar.
-- **RFNBO projects** — track projects (product, capacity kt/a, electrolyzer MW,
-  COD year, phase) linked to producers.
-- **Import from RFNBO model** — paste or upload a JSON export from the RFNBO model;
-  fields are mapped automatically, a preview lets you pick which projects to import,
-  and producers named in the file are created and linked automatically.
-- **Backup** — export/restore the full dataset as JSON.
+**Producers (relationship tracking)**
+- Contact information (person, role, email, phone), country, products, notes,
+  and a **responsible person** (with autocomplete and a filter).
+- **Pipeline stages** for B2B partnership/offtake work: Identified → Contacted →
+  In dialogue → Evaluation → Term negotiation → Agreement signed, plus Paused / No fit.
+  Legacy status values (Active/Prospect/On hold/Dormant) migrate automatically.
+- **Discussion log** per producer; the latest entry shows as "last discussion", and
+  contacts silent for more than 30 days get a **stale** flag.
+- **Next step + deadline** per producer with a **✓ Done** action that logs the
+  completed step into the history and prompts for the next one.
 
-### RFNBO model import format
+**Filtering & navigation**
+- **Product filter**: family chips (All / E-fuels / Biofuels) plus a product dropdown
+  with a 12-category taxonomy (Renewable H2, e-methanol, e-ammonia, e-SAF, e-methane,
+  e-diesel, bio-methanol, bio-SAF, HVO, biomethane/bio-LNG, ethanol, biodiesel).
+  Free-text product names and linked projects are matched to categories automatically.
+  The filter is shared across the Producers and Projects tabs.
+- Stage, responsible-person and phase filters, full-text search (incl. notes and
+  discussion history), result counts, and filters that persist across reloads.
+
+**Reminders**
+- Header bell with due/late badge; reminder list grouped Overdue / Due today /
+  Due within 7 days with Open, ✓ Done, and +1 week actions; a once-a-day nudge toast;
+  and `.ics` calendar export of upcoming deadlines (09:00 alarms).
+
+**Projects**
+- Project register: product, capacity (kt/a), electrolyzer MW where relevant,
+  COD year, phase — linked to producers.
+- **Phase-count chips** (Concept … Operating) that double as filters, plus sort by
+  COD, capacity, name or producer.
+- **JSON import** (e.g. from the RFNBO model): flexible field mapping, preview with
+  per-row selection, automatic producer creation ("Identified" stage) and linking.
+  `efuel-crm/rfnbo-projects-import.json` contains a ready 136-project database
+  exported from the RFNBO Fuel Availability Model.
+
+**Data**
+- JSON backup export/restore, plus **CSV export** of the filtered producer or project
+  list for Excel.
+
+### Import format
 
 The importer accepts a single project object, an array, or `{"projects": [...]}`.
-Common field-name variants are recognized (case/spacing insensitive), e.g.:
-
-```json
-[
-  {
-    "project": "Havvind e-Methanol Phase 1",
-    "producer": "Nordlys eFuels",
-    "country": "Norway",
-    "product": "e-Methanol",
-    "capacity_kta": 80,
-    "electrolyzer_mw": 120,
-    "cod": 2028,
-    "phase": "FEED",
-    "notes": "Offshore wind PPA under negotiation"
-  }
-]
-```
-
-Recognized aliases include `name/title` for project, `company/developer/owner` for
-producer, `fuel/output` for product, `capacity/annual_capacity` for capacity,
-`electrolyser_mw/mw_el` for electrolyzer size, and `start_year/startup` for COD.
+Common field-name variants are recognized (case/spacing insensitive), e.g. `project/
+name/title`, `producer/company/developer`, `product/fuel` (codes like `emethanol` are
+prettified), `capacity_kta/capacityKtPerYear`, `electrolyzer_mw`, `cod/start_year`,
+`phase/status`, `notes`.

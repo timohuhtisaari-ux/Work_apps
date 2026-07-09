@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>E-Fuel Producer CRM</title>
+<title>Low-Carbon Fuel CRM</title>
 <style>
 :root{
   --bg:#F2F5F4; --surface:#FFFFFF; --surface2:#E9EEEC;
@@ -134,6 +134,17 @@ tbody tr.rowlink:hover td{background:var(--accent-soft)}
 .pill.prospect{background:var(--surface2);color:var(--ink2)}
 .pill.onhold{background:var(--warn-soft);color:var(--warn-ink)}
 .pill.dormant{background:var(--surface2);color:var(--ink3)}
+.pill.neg{background:var(--accent);color:var(--surface)}
+.pill.okpill{background:var(--ok-soft);color:var(--ok)}
+.famchips{display:inline-flex;background:var(--surface2);border:1px solid var(--line);border-radius:8px;padding:3px;gap:2px}
+.famchips button{font-size:12px;font-weight:700;color:var(--ink2);padding:5px 11px;border-radius:6px;white-space:nowrap}
+.famchips button.on{background:var(--surface);color:var(--accent-ink);box-shadow:0 1px 2px rgba(0,0,0,.10)}
+.resultline{font-size:12.5px;color:var(--ink3);margin:0 0 8px;font-variant-numeric:tabular-nums}
+.prodtag{display:inline-block;font-size:11px;font-weight:600;color:var(--accent-ink);background:var(--accent-soft);border-radius:5px;padding:1px 6px;margin:2px 4px 0 0;white-space:nowrap}
+.phasechips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}
+.phasechips button{font-size:12px;font-weight:600;color:var(--ink2);background:var(--surface);border:1px solid var(--line2);border-radius:20px;padding:4px 11px;font-variant-numeric:tabular-nums}
+.phasechips button.on{border-color:var(--accent);background:var(--accent-soft);color:var(--accent-ink)}
+.stale{display:inline-block;font-size:10.5px;font-weight:700;color:var(--warn-ink);background:var(--warn-soft);border-radius:5px;padding:1px 6px;margin-left:6px}
 .chip{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;padding:3px 9px;border-radius:7px;white-space:nowrap;font-variant-numeric:tabular-nums;}
 .chip.crit{background:var(--crit-soft);color:var(--crit-ink)}
 .chip.warn{background:var(--warn-soft);color:var(--warn-ink)}
@@ -233,8 +244,8 @@ aside.panel{
       </svg>
     </div>
     <div class="titleblock">
-      <div class="eyebrow">RFNBO follow-up &amp; monitoring</div>
-      <h1>E-Fuel Producer CRM</h1>
+      <div class="eyebrow">Low-carbon fuel follow-up &amp; monitoring</div>
+      <h1>Low-Carbon Fuel CRM</h1>
     </div>
     <div class="spacer"></div>
     <button class="btn small" id="remindersBtn" data-action="open-reminders" title="Follow-ups that are due or late">Reminders</button>
@@ -251,10 +262,18 @@ aside.panel{
 
   <section id="view-producers">
     <div class="toolbar">
-      <input type="search" id="q" placeholder="Search company, contact, country…" aria-label="Search producers">
-      <select id="fStatus" aria-label="Filter by status">
-        <option value="all">All statuses</option>
-        <option>Active</option><option>Prospect</option><option>On hold</option><option>Dormant</option>
+      <input type="search" id="q" placeholder="Search company, contact, country, notes…" aria-label="Search producers">
+      <div class="famchips" role="group" aria-label="Filter by fuel family">
+        <button data-action="family" data-fam="all" class="on">All</button>
+        <button data-action="family" data-fam="efuel">E-fuels</button>
+        <button data-action="family" data-fam="bio">Biofuels</button>
+      </div>
+      <select id="fProduct" aria-label="Filter by product"><option value="all">All products</option></select>
+      <select id="fStatus" aria-label="Filter by stage">
+        <option value="all">All stages</option>
+        <option>Identified</option><option>Contacted</option><option>In dialogue</option>
+        <option>Evaluation</option><option>Term negotiation</option><option>Agreement signed</option>
+        <option>Paused / No fit</option>
       </select>
       <select id="fOwner" aria-label="Filter by responsible person"><option value="all">All responsible</option></select>
       <select id="fSort" aria-label="Sort producers">
@@ -263,6 +282,7 @@ aside.panel{
         <option value="company">Sort: company A–Z</option>
       </select>
       <div class="spacer"></div>
+      <button class="btn small ghost" data-action="export-csv" data-kind="producers" title="Download the filtered list as CSV for Excel">⤓ CSV</button>
       <button class="btn primary" data-action="add-producer">+ Add producer</button>
     </div>
     <div id="producerList"></div>
@@ -271,8 +291,21 @@ aside.panel{
   <section id="view-projects" class="hidden">
     <div class="toolbar">
       <input type="search" id="pq" placeholder="Search project, producer, product…" aria-label="Search projects">
+      <div class="famchips" role="group" aria-label="Filter by fuel family">
+        <button data-action="family" data-fam="all" class="on">All</button>
+        <button data-action="family" data-fam="efuel">E-fuels</button>
+        <button data-action="family" data-fam="bio">Biofuels</button>
+      </div>
+      <select id="pProduct" aria-label="Filter by product"><option value="all">All products</option></select>
+      <select id="pSort" aria-label="Sort projects">
+        <option value="cod">Sort: COD year</option>
+        <option value="capacity">Sort: largest first</option>
+        <option value="name">Sort: project A–Z</option>
+        <option value="producer">Sort: producer A–Z</option>
+      </select>
       <div class="spacer"></div>
-      <button class="btn" data-action="open-import">⤓ Import from RFNBO model</button>
+      <button class="btn small ghost" data-action="export-csv" data-kind="projects" title="Download the filtered list as CSV for Excel">⤓ CSV</button>
+      <button class="btn" data-action="open-import">⤓ Import projects (JSON)</button>
       <button class="btn primary" data-action="project-new">+ Add project</button>
     </div>
     <div id="projectList"></div>
@@ -288,12 +321,23 @@ aside.panel{
 "use strict";
 /* ================= storage ================= */
 const LS_KEY = "efuelCRM.v1";
+function migrateDB(d){
+  // one-time move from the old flat status to pipeline stages (lossless: old value kept in p.status)
+  for(const p of d.producers){
+    if(!p.stage){
+      if(p.status === "Active") p.stage = "In dialogue";
+      else if(p.status === "On hold" || p.status === "Dormant") p.stage = "Paused / No fit";
+      else p.stage = (p.discussions && p.discussions.length) ? "Contacted" : "Identified";
+    }
+  }
+  return d;
+}
 function loadDB(){
   try{
     const raw = localStorage.getItem(LS_KEY);
     if(raw){
       const d = JSON.parse(raw);
-      if(d && Array.isArray(d.producers) && Array.isArray(d.projects)) return d;
+      if(d && Array.isArray(d.producers) && Array.isArray(d.projects)) return migrateDB(d);
     }
   }catch(e){}
   return {producers:[], projects:[]};
@@ -332,10 +376,6 @@ function deadlineChip(iso){
   if(n <= 7) return `<span class="chip warn mono"><span class="dot"></span>${date} · in ${n} d</span>`;
   return `<span class="chip ok mono">${date}</span>`;
 }
-function statusPill(s){
-  const cls = {Active:"active", Prospect:"prospect", "On hold":"onhold", Dormant:"dormant"}[s] || "prospect";
-  return `<span class="pill ${cls}">${esc(s || "Prospect")}</span>`;
-}
 function lastDiscussion(p){
   if(!p.discussions || !p.discussions.length) return null;
   return p.discussions.slice().sort((a,b) => (b.date||"").localeCompare(a.date||""))[0];
@@ -350,34 +390,70 @@ function toast(msg, isErr){
 
 /* ================= ui state ================= */
 const ui = {
-  tab: "producers", q: "", pq: "", status: "all", owner: "all", sort: "deadline",
-  panelId: null, panelEdit: false, deleteArmed: null,
-  modal: null,           // null | "import" | "import-preview" | "project" | "confirm-restore"
+  tab: "producers", q: "", pq: "", stage: "all", owner: "all", sort: "deadline",
+  family: "all", product: "all", phase: "all", psort: "cod",
+  panelId: null, panelEdit: false, deleteArmed: null, closeArmed: null,
+  modal: null,           // null | "import" | "import-preview" | "project" | "reminders" | "confirm-restore"
   importRows: null, projectId: null, projectPresetProducer: null,
   pendingRestore: null
 };
+const UI_KEY = "efuelCRM.ui";
+try{
+  const saved = JSON.parse(localStorage.getItem(UI_KEY) || "{}");
+  for(const k of ["tab","stage","owner","sort","family","product","phase","psort"])
+    if(typeof saved[k] === "string") ui[k] = saved[k];
+}catch(e){}
+function saveUI(){
+  try{
+    localStorage.setItem(UI_KEY, JSON.stringify({tab:ui.tab, stage:ui.stage, owner:ui.owner, sort:ui.sort,
+      family:ui.family, product:ui.product, phase:ui.phase, psort:ui.psort}));
+  }catch(e){}
+}
 
 /* ================= KPIs ================= */
 function renderKPIs(){
   const overdue = db.producers.filter(p => { const n = daysUntil(p.deadline); return n !== null && n < 0; }).length;
   const week    = db.producers.filter(p => { const n = daysUntil(p.deadline); return n !== null && n >= 0 && n <= 7; }).length;
   byId("kpis").innerHTML = `
-    <div class="kpi"><div class="lbl">Producers tracked</div><div class="num">${db.producers.length}</div><div class="sub">${db.producers.filter(p=>p.status==="Active").length} active relationships</div></div>
+    <div class="kpi"><div class="lbl">Producers tracked</div><div class="num">${db.producers.length}</div><div class="sub">${db.producers.filter(p=>["In dialogue","Evaluation","Term negotiation","Agreement signed"].includes(p.stage)).length} in active dialogue</div></div>
     <div class="kpi ${overdue ? "alert" : ""}" data-action="open-reminders" role="button" tabindex="0" style="cursor:pointer" title="Open reminders"><div class="lbl">Overdue follow-ups</div><div class="num">${overdue}</div><div class="sub">${overdue ? "needs attention now" : "all caught up"}</div></div>
     <div class="kpi ${week ? "watch" : ""}" data-action="open-reminders" role="button" tabindex="0" style="cursor:pointer" title="Open reminders"><div class="lbl">Due within 7 days</div><div class="num">${week}</div><div class="sub">upcoming next steps</div></div>
-    <div class="kpi"><div class="lbl">RFNBO projects</div><div class="num">${db.projects.length}</div><div class="sub">linked to producers</div></div>`;
+    <div class="kpi"><div class="lbl">Projects tracked</div><div class="num">${db.projects.length}</div><div class="sub">linked to producers</div></div>`;
 }
 
 /* ================= producers list ================= */
 function producerMatches(p, q){
   if(!q) return true;
-  const hay = [p.company, p.country, p.contactName, p.contactRole, p.email, p.phone, p.products, p.nextSteps, p.owner].join(" ").toLowerCase();
+  const hay = [p.company, p.country, p.contactName, p.contactRole, p.email, p.phone, p.products, p.nextSteps, p.owner, p.notes,
+    ...(p.discussions||[]).map(d => d.note)].join(" ").toLowerCase();
   return hay.includes(q.toLowerCase());
 }
-function sortedProducers(){
+function refreshProductControls(){
+  document.querySelectorAll(".famchips button").forEach(b => b.classList.toggle("on", b.dataset.fam === ui.family));
+  const present = new Set();
+  const idx = projectIndex();
+  db.projects.forEach(pr => canonProducts(pr.product).forEach(c => present.add(c)));
+  db.producers.forEach(p => canonProducts(p.products).forEach(c => present.add(c)));
+  const opts = PRODUCTS.filter(pd => present.has(pd.name) && (ui.family === "all" || pd.family === ui.family));
+  if(ui.product !== "all" && !opts.some(o => o.name === ui.product)) ui.product = "all";
+  const group = fam => {
+    const items = opts.filter(o => o.family === fam);
+    return items.length ? `<optgroup label="${fam === "efuel" ? "E-fuels" : "Biofuels"}">${items.map(o => `<option value="${esc(o.name)}">${esc(o.name)}</option>`).join("")}</optgroup>` : "";
+  };
+  const html = '<option value="all">All products</option>' + group("efuel") + group("bio");
+  for(const id of ["fProduct","pProduct"]){
+    const sel = byId(id);
+    if(sel.dataset.opts !== html){ sel.dataset.opts = html; sel.innerHTML = html; }
+    sel.value = ui.product;
+  }
+  return idx;
+}
+function sortedProducers(idx){
+  idx = idx || projectIndex();
   let list = db.producers.filter(p => producerMatches(p, ui.q)
-    && (ui.status === "all" || (p.status||"Prospect") === ui.status)
-    && (ui.owner === "all" || (p.owner||"") === ui.owner));
+    && (ui.stage === "all" || (p.stage||"Contacted") === ui.stage)
+    && (ui.owner === "all" || (p.owner||"") === ui.owner)
+    && productMatch(producerProducts(p, idx)));
   if(ui.sort === "company"){
     list.sort((a,b) => (a.company||"").localeCompare(b.company||""));
   } else if(ui.sort === "lastdisc"){
@@ -410,35 +486,51 @@ function refreshOwnerFilter(){
   if(ui.owner !== "all" && !owners.includes(ui.owner)) ui.owner = "all";
   sel.value = ui.owner;
 }
+function staleChip(p, ld){
+  if((p.stage === "Paused / No fit") || !ld) return "";
+  const days = -daysUntil(ld.date);
+  return days > 30 ? `<span class="stale">stale · ${days} d</span>` : "";
+}
 function renderProducers(){
+  saveUI();
   refreshOwnerFilter();
+  const idx = refreshProductControls();
+  byId("fStatus").value = ui.stage;
+  byId("fSort").value = ui.sort;
   const host = byId("producerList");
   if(!db.producers.length){
     host.innerHTML = `<div class="empty">
       <h3>No producers yet</h3>
-      <p>Track e-fuel / RFNBO producers: contacts, discussions, next steps and deadlines.</p>
+      <p>Track low-carbon fuel producers: contacts, discussions, next steps and deadlines.</p>
       <button class="btn primary" data-action="add-producer">+ Add first producer</button>
       <button class="btn" data-action="sample-data">Load sample data</button>
     </div>`;
     return;
   }
-  const list = sortedProducers();
-  if(!list.length){ host.innerHTML = `<div class="empty"><h3>No matches</h3><p>Try a different search or status filter.</p></div>`; return; }
-  host.innerHTML = `<div class="tablewrap"><table>
+  const list = sortedProducers(idx);
+  if(!list.length){ host.innerHTML = `<div class="empty"><h3>No matches</h3><p>Try a different search, or reset the product / stage / responsible filters.</p></div>`; return; }
+  const tags = p => {
+    const arr = [...producerProducts(p, idx)];
+    const shown = arr.slice(0,3).map(c => `<span class="prodtag">${esc(c)}</span>`).join("");
+    return shown + (arr.length > 3 ? `<span class="prodtag">+${arr.length-3}</span>` : "");
+  };
+  host.innerHTML = `<p class="resultline">Showing ${list.length} of ${db.producers.length} producers</p>
+  <div class="tablewrap"><table>
     <thead><tr>
-      <th>Producer</th><th>Contact</th><th>Status</th><th>Responsible</th><th>Last discussion</th><th>Next steps</th><th>Deadline</th>
+      <th>Producer</th><th>Contact</th><th>Stage</th><th>Responsible</th><th>Last discussion</th><th>Next steps</th><th>Deadline</th>
     </tr></thead>
     <tbody>${list.map(p => {
       const ld = lastDiscussion(p);
-      const nProj = db.projects.filter(x => x.producerId === p.id).length;
+      const nProj = (idx[p.id]||[]).length;
       return `<tr class="rowlink" tabindex="0" data-action="open-producer" data-id="${p.id}">
         <td><div class="cell-main">${esc(p.company)}</div>
-            <div class="cell-sub">${esc(p.country || "")}${p.products ? " · " + esc(p.products) : ""}${nProj ? ` · ${nProj} project${nProj>1?"s":""}` : ""}</div></td>
+            <div class="cell-sub">${esc(p.country || "")}${nProj ? ` · ${nProj} project${nProj>1?"s":""}` : ""}</div>
+            <div>${tags(p)}</div></td>
         <td><div>${esc(p.contactName || "—")}</div><div class="cell-sub">${esc(p.contactRole || "")}</div>
             <div class="cell-sub">${p.email ? `<a href="mailto:${esc(p.email)}">${esc(p.email)}</a>` : ""}</div></td>
-        <td>${statusPill(p.status)}</td>
+        <td>${stagePill(p.stage)}</td>
         <td>${p.owner ? esc(p.owner) : '<span class="cell-sub">—</span>'}</td>
-        <td>${ld ? `<div class="mono cell-sub" style="font-weight:700">${fmtDate(ld.date)}</div><div class="snippet">${esc(ld.note)}</div>` : '<span class="cell-sub">no discussions logged</span>'}</td>
+        <td>${ld ? `<div class="mono cell-sub" style="font-weight:700">${fmtDate(ld.date)}${staleChip(p, ld)}</div><div class="snippet">${esc(ld.note)}</div>` : '<span class="cell-sub">no discussions logged</span>'}</td>
         <td><div class="snippet">${esc(p.nextSteps || "—")}</div></td>
         <td>${deadlineChip(p.deadline)}</td>
       </tr>`;
@@ -447,40 +539,73 @@ function renderProducers(){
 
 /* ================= projects list ================= */
 function producerName(id){ const p = db.producers.find(x => x.id === id); return p ? p.company : null; }
+function projectFilterMatch(pr){
+  const q = ui.pq.toLowerCase();
+  if(q && ![pr.name, producerName(pr.producerId), pr.country, pr.product, pr.phase, pr.notes].join(" ").toLowerCase().includes(q)) return false;
+  return productMatch(canonProducts(pr.product));
+}
+function filteredProjects(applyPhase){
+  let list = db.projects.filter(projectFilterMatch);
+  if(applyPhase !== false && ui.phase !== "all") list = list.filter(pr => (pr.phase || "No phase") === ui.phase);
+  const s = ui.psort;
+  return list.slice().sort((a,b) => {
+    if(s === "name") return (a.name||"").localeCompare(b.name||"");
+    if(s === "capacity") return (Number(b.capacity)||0) - (Number(a.capacity)||0);
+    if(s === "producer") return (producerName(a.producerId)||"~").localeCompare(producerName(b.producerId)||"~");
+    return String(a.cod||"9999").localeCompare(String(b.cod||"9999")) || (a.name||"").localeCompare(b.name||"");
+  });
+}
+const PHASE_ORDER = ["Concept","Feasibility","Pre-FEED","FEED","FID","Construction","Operating","Cancelled","No phase"];
+function phaseChipsHTML(){
+  const counts = {};
+  for(const pr of filteredProjects(false)){ const ph = pr.phase || "No phase"; counts[ph] = (counts[ph]||0) + 1; }
+  const phases = Object.keys(counts).sort((a,b) => {
+    const ia = PHASE_ORDER.indexOf(a), ib = PHASE_ORDER.indexOf(b);
+    return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib) || a.localeCompare(b);
+  });
+  if(ui.phase !== "all" && !counts[ui.phase]) ui.phase = "all";
+  const total = Object.values(counts).reduce((a,b) => a+b, 0);
+  return `<div class="phasechips" role="group" aria-label="Filter by phase">
+    <button data-action="phase" data-ph="all" class="${ui.phase === "all" ? "on" : ""}">All ${total}</button>
+    ${phases.map(ph => `<button data-action="phase" data-ph="${esc(ph)}" class="${ui.phase === ph ? "on" : ""}">${esc(ph)} ${counts[ph]}</button>`).join("")}
+  </div>`;
+}
 function renderProjects(){
+  saveUI();
+  refreshProductControls();
+  byId("pSort").value = ui.psort;
   const host = byId("projectList");
   if(!db.projects.length){
     host.innerHTML = `<div class="empty">
-      <h3>No RFNBO projects yet</h3>
-      <p>Add projects manually, or import them from your RFNBO model as JSON.</p>
-      <button class="btn primary" data-action="open-import">⤓ Import from RFNBO model</button>
+      <h3>No projects yet</h3>
+      <p>Add low-carbon fuel projects manually, or import them as JSON (e.g. from the RFNBO model).</p>
+      <button class="btn primary" data-action="open-import">⤓ Import projects (JSON)</button>
       <button class="btn" data-action="project-new">+ Add project</button>
       ${db.producers.length ? "" : '<button class="btn" data-action="sample-data">Load sample data</button>'}
     </div>`;
     return;
   }
-  const q = ui.pq.toLowerCase();
-  const list = db.projects.filter(pr => {
-    if(!q) return true;
-    return [pr.name, producerName(pr.producerId), pr.country, pr.product, pr.phase, pr.notes].join(" ").toLowerCase().includes(q);
-  }).slice().sort((a,b) => (a.cod||"9999") > (b.cod||"9999") ? 1 : -1);
-  if(!list.length){ host.innerHTML = `<div class="empty"><h3>No matches</h3><p>Try a different search.</p></div>`; return; }
-  host.innerHTML = `<div class="tablewrap"><table>
+  const list = filteredProjects();
+  const chips = phaseChipsHTML();
+  if(!list.length){ host.innerHTML = chips + `<div class="empty"><h3>No matches</h3><p>Try a different search, or reset the product / phase filters.</p></div>`; return; }
+  host.innerHTML = chips + `<p class="resultline">Showing ${list.length} of ${db.projects.length} projects</p>
+  <div class="tablewrap"><table>
     <thead><tr>
-      <th>Project</th><th>Producer</th><th>Country</th><th>Product</th><th>Capacity</th><th>Electrolyzer</th><th>COD</th><th>Phase</th><th></th>
+      <th>Project</th><th>Producer</th><th>Country</th><th>Product</th><th>Capacity</th><th>COD</th><th>Phase</th><th></th>
     </tr></thead>
     <tbody>${list.map(pr => `<tr>
       <td><div class="cell-main">${esc(pr.name)}</div>${pr.notes ? `<div class="snippet cell-sub">${esc(pr.notes)}</div>` : ""}</td>
       <td>${pr.producerId ? `<button class="btn ghost small" data-action="open-producer" data-id="${pr.producerId}" style="padding:0;font-weight:650">${esc(producerName(pr.producerId) || "—")}</button>` : '<span class="cell-sub">—</span>'}</td>
       <td>${esc(pr.country || "—")}</td>
       <td>${esc(pr.product || "—")}</td>
-      <td class="mono">${pr.capacity ? esc(pr.capacity) + " kt/a" : "—"}</td>
-      <td class="mono">${pr.electrolyzerMW ? esc(pr.electrolyzerMW) + " MW" : "—"}</td>
+      <td class="mono">${pr.capacity ? esc(pr.capacity) + " kt/a" : "—"}${pr.electrolyzerMW ? `<div class="cell-sub mono">${esc(pr.electrolyzerMW)} MW el.</div>` : ""}</td>
       <td class="mono">${esc(pr.cod || "—")}</td>
       <td>${pr.phase ? `<span class="pill prospect">${esc(pr.phase)}</span>` : "—"}</td>
       <td style="white-space:nowrap">
-        <button class="iconbtn" data-action="project-edit" data-id="${pr.id}" title="Edit project" aria-label="Edit ${esc(pr.name)}">✎</button>
-        <button class="iconbtn" data-action="project-del" data-id="${pr.id}" title="Delete project" aria-label="Delete ${esc(pr.name)}">🗑</button>
+        ${ui.deleteArmed === pr.id
+          ? `<button class="btn danger small" data-action="project-del" data-id="${pr.id}">Really delete?</button>`
+          : `<button class="iconbtn" data-action="project-edit" data-id="${pr.id}" title="Edit project" aria-label="Edit ${esc(pr.name)}">✎</button>
+             <button class="iconbtn" data-action="project-del" data-id="${pr.id}" title="Delete project" aria-label="Delete ${esc(pr.name)}">🗑</button>`}
       </td>
     </tr>`).join("")}</tbody></table></div>`;
 }
@@ -499,8 +624,8 @@ function panelHTML(){
         <div class="formgrid">
           <div class="full"><label for="f_company">Company *</label><input id="f_company" value="${esc(p.company||"")}" placeholder="e.g. Nordlys eFuels"></div>
           <div><label for="f_country">Country</label><input id="f_country" value="${esc(p.country||"")}"></div>
-          <div><label for="f_status">Status</label><select id="f_status">
-            ${["Active","Prospect","On hold","Dormant"].map(s=>`<option ${((p.status||"Prospect")===s)?"selected":""}>${s}</option>`).join("")}
+          <div><label for="f_stage">Stage</label><select id="f_stage">
+            ${STAGES.map(s=>`<option ${((p.stage||"Contacted")===s)?"selected":""}>${s}</option>`).join("")}
           </select></div>
           <div><label for="f_contactName">Contact person</label><input id="f_contactName" value="${esc(p.contactName||"")}"></div>
           <div><label for="f_contactRole">Role / title</label><input id="f_contactRole" value="${esc(p.contactRole||"")}"></div>
@@ -530,7 +655,8 @@ function panelHTML(){
   <aside class="panel" role="dialog" aria-modal="true" aria-label="${esc(p.company)}">
     <div class="panel-head">
       <div><h2>${esc(p.company)}</h2>
-        <div class="cell-sub" style="margin-top:3px">${esc(p.country||"")}${p.products ? " · " + esc(p.products) : ""} &nbsp;${statusPill(p.status)}</div></div>
+        <div class="cell-sub" style="margin-top:3px">${esc(p.country||"")} &nbsp;${stagePill(p.stage)}</div>
+        <div>${[...producerProducts(p)].map(c => `<span class="prodtag">${esc(c)}</span>`).join("") || (p.products ? `<span class="prodtag">${esc(p.products)}</span>` : "")}</div></div>
       <div class="spacer"></div><button class="iconbtn" data-action="close-panel" aria-label="Close">✕</button>
     </div>
     <div class="panel-body">
@@ -548,7 +674,10 @@ function panelHTML(){
         <div class="eyebrow">Next steps &amp; deadline</div>
         <div class="nextbox ${nextCls}">
           <div style="white-space:pre-wrap">${esc(p.nextSteps || "No next steps defined.")}</div>
-          <div style="margin-top:8px">${deadlineChip(p.deadline)}</div>
+          <div style="margin-top:8px;display:flex;gap:8px;align-items:center;flex-wrap:wrap">${deadlineChip(p.deadline)}
+            ${(p.nextSteps || p.deadline) ? `<button class="btn small" data-action="mark-done" data-id="${p.id}" title="Log this step as done and write the next one">✓ Done</button>
+            ${p.deadline ? `<button class="btn small ghost" data-action="snooze" data-id="${p.id}" title="Move the deadline one week forward">+1 wk</button>` : ""}` : ""}
+          </div>
         </div>
       </div>
       <div class="sect">
@@ -568,7 +697,7 @@ function panelHTML(){
           : `<div class="cell-sub">Nothing logged yet.${ld ? "" : " The last-discussion column fills in from entries here."}</div>`}
       </div>
       <div class="sect">
-        <div class="eyebrow">RFNBO projects (${projs.length})</div>
+        <div class="eyebrow">Projects (${projs.length})</div>
         ${projs.map(pr => `<div class="projchip"><div style="flex:1"><div class="nm">${esc(pr.name)}</div>
             <div class="meta">${[pr.product, pr.capacity ? pr.capacity + " kt/a" : null, pr.electrolyzerMW ? pr.electrolyzerMW + " MW" : null, pr.cod ? "COD " + pr.cod : null, pr.phase].filter(Boolean).map(esc).join(" · ")}</div></div>
             <button class="iconbtn" data-action="project-edit" data-id="${pr.id}" title="Edit project" aria-label="Edit ${esc(pr.name)}">✎</button></div>`).join("")}
@@ -602,10 +731,74 @@ function pickField(obj, names){
   for(const n of names) if(norm[n] !== undefined && norm[n] !== null && norm[n] !== "") return norm[n];
   return undefined;
 }
-const FUEL_LABELS = {emethanol:"e-Methanol", eammonia:"e-Ammonia", esaf:"e-SAF", emethane:"e-Methane", ediesel:"e-Diesel", eh2diesel:"Green H2 / e-Diesel", h2:"RFNBO Hydrogen", greenh2:"RFNBO Hydrogen"};
+const PRODUCTS = [
+  {name:"Renewable H2",           family:"efuel"},
+  {name:"e-Methanol",             family:"efuel"},
+  {name:"e-Ammonia",              family:"efuel"},
+  {name:"e-SAF",                  family:"efuel"},
+  {name:"e-Methane",              family:"efuel"},
+  {name:"e-Diesel",               family:"efuel"},
+  {name:"Bio-methanol",           family:"bio"},
+  {name:"Bio-SAF (HEFA/AtJ)",     family:"bio"},
+  {name:"HVO / renewable diesel", family:"bio"},
+  {name:"Biomethane / bio-LNG",   family:"bio"},
+  {name:"Ethanol",                family:"bio"},
+  {name:"Biodiesel (FAME)",       family:"bio"}
+];
+const PRODUCT_FAMILY = {}; PRODUCTS.forEach(p => PRODUCT_FAMILY[p.name] = p.family);
+const PRODUCT_ALIASES = {
+  h2:"Renewable H2", hydrogen:"Renewable H2", greenh2:"Renewable H2", greenhydrogen:"Renewable H2",
+  renewableh2:"Renewable H2", rfnbohydrogen:"Renewable H2", rfnboh2:"Renewable H2", electrolytich2:"Renewable H2",
+  emethanol:"e-Methanol",
+  eammonia:"e-Ammonia", greenammonia:"e-Ammonia",
+  esaf:"e-SAF", ekerosene:"e-SAF", ptlsaf:"e-SAF", ejetfuel:"e-SAF", ptl:"e-SAF",
+  emethane:"e-Methane", elng:"e-Methane", sng:"e-Methane",
+  ediesel:"e-Diesel", egasoline:"e-Diesel", eliquids:"e-Diesel", efuels:"e-Diesel",
+  biomethanol:"Bio-methanol",
+  biosaf:"Bio-SAF (HEFA/AtJ)", hefa:"Bio-SAF (HEFA/AtJ)", atj:"Bio-SAF (HEFA/AtJ)", hefasaf:"Bio-SAF (HEFA/AtJ)",
+  hvo:"HVO / renewable diesel", renewablediesel:"HVO / renewable diesel", hdrd:"HVO / renewable diesel",
+  biomethane:"Biomethane / bio-LNG", biogas:"Biomethane / bio-LNG", biolng:"Biomethane / bio-LNG", rng:"Biomethane / bio-LNG",
+  ethanol:"Ethanol", bioethanol:"Ethanol",
+  biodiesel:"Biodiesel (FAME)", fame:"Biodiesel (FAME)"
+};
+const DISPLAY_ALIASES = {eh2diesel:"Green H2 / e-Diesel", greenh2ediesel:"Green H2 / e-Diesel"};
+const normTok = s => String(s||"").toLowerCase().replace(/[^a-z0-9]/g,"");
+function canonProduct(token){
+  const key = normTok(token);
+  if(!key) return null;
+  if(PRODUCT_ALIASES[key]) return PRODUCT_ALIASES[key];
+  for(const p of PRODUCTS) if(normTok(p.name) === key) return p.name;
+  return null;
+}
+function canonProducts(text){
+  const out = new Set();
+  String(text||"").split(/[,;\/+&·]|\band\b/i).forEach(t => { const c = canonProduct(t); if(c) out.add(c); });
+  return out;
+}
 function prettyFuel(s){
-  const key = String(s||"").toLowerCase().replace(/[^a-z0-9]/g,"");
-  return FUEL_LABELS[key] || String(s||"");
+  return DISPLAY_ALIASES[normTok(s)] || canonProduct(s) || String(s||"");
+}
+function projectIndex(){
+  const idx = {};
+  for(const pr of db.projects) if(pr.producerId) (idx[pr.producerId] = idx[pr.producerId] || []).push(pr);
+  return idx;
+}
+function producerProducts(p, idx){
+  const set = canonProducts(p.products);
+  const linked = idx ? (idx[p.id] || []) : db.projects.filter(x => x.producerId === p.id);
+  for(const pr of linked) canonProducts(pr.product).forEach(c => set.add(c));
+  return set;
+}
+function productMatch(set){
+  if(ui.product !== "all") return set.has(ui.product);
+  if(ui.family !== "all") return [...set].some(c => PRODUCT_FAMILY[c] === ui.family);
+  return true;
+}
+const STAGES = ["Identified","Contacted","In dialogue","Evaluation","Term negotiation","Agreement signed","Paused / No fit"];
+function stagePill(s){
+  const cls = {"Identified":"prospect","Contacted":"prospect","In dialogue":"active","Evaluation":"active",
+               "Term negotiation":"neg","Agreement signed":"okpill","Paused / No fit":"dormant"}[s] || "prospect";
+  return `<span class="pill ${cls}">${esc(s || "Contacted")}</span>`;
 }
 function mapModelRow(o){
   if(typeof o !== "object" || o === null || Array.isArray(o)) return null;
@@ -670,6 +863,7 @@ function reminderItem(p){
     </div>
     <div class="acts">
       <button class="btn small" data-action="open-producer" data-id="${p.id}">Open</button>
+      <button class="btn small ghost" data-action="mark-done" data-id="${p.id}" title="Log this step as done and write the next one">✓</button>
       <button class="btn small ghost" data-action="snooze" data-id="${p.id}" title="Move the deadline one week forward">+1 wk</button>
     </div>
   </div>`;
@@ -745,7 +939,7 @@ function projectFormHTML(pr, presetProducer){
     </select></div>
     <div><label for="pj_country">Country</label><input id="pj_country" value="${esc(pr ? pr.country : "")}"></div>
     <div><label for="pj_product">Product</label><input id="pj_product" value="${esc(pr ? pr.product : "")}" placeholder="e-Methanol / e-SAF / e-NH3 / H2" list="productlist">
-      <datalist id="productlist"><option>RFNBO Hydrogen</option><option>e-Methanol</option><option>e-Ammonia</option><option>e-SAF</option><option>e-Methane</option><option>e-Diesel</option></datalist></div>
+      <datalist id="productlist">${PRODUCTS.map(pd => `<option>${esc(pd.name)}</option>`).join("")}</datalist></div>
     <div><label for="pj_capacity">Capacity (kt/a)</label><input id="pj_capacity" type="number" min="0" step="any" value="${esc(pr && pr.capacity != null ? pr.capacity : "")}"></div>
     <div><label for="pj_mw">Electrolyzer (MW)</label><input id="pj_mw" type="number" min="0" step="any" value="${esc(pr && pr.electrolyzerMW != null ? pr.electrolyzerMW : "")}"></div>
     <div><label for="pj_cod">COD (year)</label><input id="pj_cod" value="${esc(pr ? pr.cod : "")}" placeholder="2028"></div>
@@ -773,14 +967,15 @@ function modalHTML(){
   if(ui.modal === "import"){
     return `<div class="scrim" data-action="close-modal"></div>
     <div class="modal" role="dialog" aria-modal="true" aria-label="Import from RFNBO model">
-      <div class="modal-head"><h2>Import projects from RFNBO model</h2>
+      <div class="modal-head"><h2>Import projects (JSON)</h2>
         <div class="spacer"></div><button class="iconbtn" data-action="close-modal" aria-label="Close">✕</button></div>
       <div class="modal-body">
         <p style="margin:0 0 10px;font-size:13.5px;color:var(--ink2)">
-          Paste a JSON export from your RFNBO model below, or upload a <span class="mono">.json</span> file.
+          Paste a JSON export below (e.g. from the RFNBO model), or upload a <span class="mono">.json</span> file.
           A single project, an array, or an object with a <span class="mono">projects</span> list all work —
-          common field names (<span class="mono">project, producer, country, product, capacity_kta, electrolyzer_mw, cod, phase</span>) are recognized automatically.</p>
-        <label for="importText">RFNBO model JSON</label>
+          common field names (<span class="mono">project, producer, country, product, capacity_kta, electrolyzer_mw, cod, phase</span>) are recognized automatically,
+          and product names are matched to the filter categories.</p>
+        <label for="importText">Project JSON</label>
         <textarea id="importText" style="min-height:180px;font-family:ui-monospace,Consolas,monospace;font-size:12.5px" placeholder='${esc(EXAMPLE_JSON)}'></textarea>
         <div style="display:flex;gap:9px;margin-top:10px;flex-wrap:wrap">
           <button class="btn small" data-action="import-upload">Upload .json file…</button>
@@ -798,7 +993,7 @@ function modalHTML(){
     const nSel = rows.filter(r => r.sel).length;
     return `<div class="scrim" data-action="close-modal"></div>
     <div class="modal" role="dialog" aria-modal="true" aria-label="Review import">
-      <div class="modal-head"><h2>Review ${rows.length} project${rows.length > 1 ? "s" : ""} from RFNBO model</h2>
+      <div class="modal-head"><h2>Review ${rows.length} project${rows.length > 1 ? "s" : ""} to import</h2>
         <div class="spacer"></div><button class="iconbtn" data-action="close-modal" aria-label="Close">✕</button></div>
       <div class="modal-body">
         <div class="tablewrap" style="box-shadow:none"><table style="min-width:720px">
@@ -816,7 +1011,7 @@ function modalHTML(){
               <td>${esc(r.phase || "—")}</td>
             </tr>`;
           }).join("")}</tbody></table></div>
-        <p class="hint">Producers named in the file that aren't in the CRM yet are created automatically (as Prospects) and linked.</p>
+        <p class="hint">Producers named in the file that aren't in the CRM yet are created automatically (at the "Identified" stage) and linked.</p>
       </div>
       <div class="modal-foot">
         <button class="btn" data-action="import-back">← Back</button>
@@ -862,7 +1057,7 @@ function saveProducerForm(){
   const company = val("f_company");
   if(!company){ toast("Company name is required", true); byId("f_company").focus(); return; }
   const data = {
-    company, country: val("f_country"), status: val("f_status"),
+    company, country: val("f_country"), stage: val("f_stage"),
     contactName: val("f_contactName"), contactRole: val("f_contactRole"),
     email: val("f_email"), phone: val("f_phone"), products: val("f_products"), owner: val("f_owner"),
     nextSteps: val("f_nextSteps"), deadline: val("f_deadline"), notes: val("f_notes")
@@ -896,9 +1091,9 @@ function runImport(){
     if(r.producer){
       let p = findProducerByName(r.producer);
       if(!p){
-        p = {id: uid(), company: r.producer.trim(), country: r.country || "", status: "Prospect",
+        p = {id: uid(), company: r.producer.trim(), country: r.country || "", stage: "Identified",
              contactName:"", contactRole:"", email:"", phone:"", products: r.product || "",
-             nextSteps:"", deadline:"", notes:"Created via RFNBO model import", discussions:[]};
+             nextSteps:"", deadline:"", notes:"Created via project JSON import", discussions:[]};
         db.producers.push(p); created++;
       }
       producerId = p.id;
@@ -914,6 +1109,58 @@ function runImport(){
   save(); render();
   toast(`Imported ${rows.length} project${rows.length === 1 ? "" : "s"}${created ? ` · created ${created} new producer${created === 1 ? "" : "s"}` : ""}`);
 }
+function csvCell(v){ return '"' + String(v ?? "").replace(/"/g,'""') + '"'; }
+function downloadBlob(blob, filename){
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+}
+function exportCSV(kind){
+  let rows;
+  if(kind === "producers"){
+    const idx = projectIndex();
+    rows = [["Company","Country","Stage","Responsible","Contact","Role","Email","Phone","Products","Last discussion","Last discussion note","Next steps","Deadline","Projects"]];
+    for(const p of sortedProducers(idx)){
+      const ld = lastDiscussion(p);
+      rows.push([p.company, p.country, p.stage, p.owner, p.contactName, p.contactRole, p.email, p.phone,
+        [...producerProducts(p, idx)].join("; ") || p.products || "",
+        ld ? ld.date : "", ld ? ld.note : "", p.nextSteps, p.deadline, (idx[p.id]||[]).map(x => x.name).join("; ")]);
+    }
+  } else {
+    rows = [["Project","Producer","Country","Product","Capacity kt/a","Electrolyzer MW","COD","Phase","Notes"]];
+    for(const pr of filteredProjects())
+      rows.push([pr.name, producerName(pr.producerId) || "", pr.country, pr.product, pr.capacity, pr.electrolyzerMW, pr.cod, pr.phase, pr.notes]);
+  }
+  const csv = "\uFEFF" + rows.map(r => r.map(csvCell).join(",")).join("\r\n");
+  downloadBlob(new Blob([csv], {type:"text/csv;charset=utf-8"}), `lowcarbon-crm-${kind}-${todayISO()}.csv`);
+  toast(`${rows.length - 1} row${rows.length === 2 ? "" : "s"} exported as CSV (respects active filters)`);
+}
+function markDone(id){
+  const p = db.producers.find(x => x.id === id); if(!p) return;
+  const note = p.nextSteps ? "✔ Done: " + p.nextSteps : "✔ Follow-up completed";
+  (p.discussions = p.discussions || []).push({id: uid(), date: todayISO(), note});
+  p.nextSteps = ""; p.deadline = "";
+  ui.panelId = p.id; ui.panelEdit = true; ui.modal = null; ui.importRows = null;
+  save(); render();
+  const el = byId("f_nextSteps"); if(el) el.focus();
+  toast("Logged as done — write the next step and deadline");
+}
+function panelDirty(){
+  if(!ui.panelEdit) return false;
+  const p = db.producers.find(x => x.id === ui.panelId) || {};
+  const fields = {company:"f_company", country:"f_country", contactName:"f_contactName", contactRole:"f_contactRole",
+    email:"f_email", phone:"f_phone", products:"f_products", owner:"f_owner", nextSteps:"f_nextSteps",
+    deadline:"f_deadline", notes:"f_notes"};
+  for(const k in fields){
+    const el = byId(fields[k]);
+    if(el && (el.value || "").trim() !== String(p[k] || "").trim()) return true;
+  }
+  const st = byId("f_stage");
+  if(st && p.id && st.value !== (p.stage || "Contacted")) return true;
+  return false;
+}
 function exportDB(){
   const blob = new Blob([JSON.stringify(db, null, 2)], {type: "application/json"});
   const a = document.createElement("a");
@@ -924,27 +1171,31 @@ function exportDB(){
   toast("Backup downloaded");
 }
 function loadSample(){
-  const P = (company,country,status,contactName,contactRole,email,phone,products,nextSteps,deadline,discussions) =>
-    ({id:uid(),company,country,status,contactName,contactRole,email,phone,products,nextSteps,deadline,notes:"",discussions:discussions.map(d=>({id:uid(),date:d[0],note:d[1]}))});
+  const P = (company,country,stage,contactName,contactRole,email,phone,products,nextSteps,deadline,discussions) =>
+    ({id:uid(),company,country,stage,contactName,contactRole,email,phone,products,nextSteps,deadline,notes:"",discussions:discussions.map(d=>({id:uid(),date:d[0],note:d[1]}))});
   const shift = (days) => { const d = new Date(); d.setDate(d.getDate()+days); return d.toISOString().slice(0,10); };
-  const p1 = P("Nordlys eFuels","Norway","Active","Ingrid Solheim","VP Commercial","ingrid.solheim@example.com","+47 900 00 000","e-Methanol",
+  const p1 = P("Nordlys eFuels","Norway","Term negotiation","Ingrid Solheim","VP Commercial","ingrid.solheim@example.com","+47 900 00 000","e-Methanol",
     "Send term sheet for offtake MoU; align on RED III RFNBO compliance documentation.", shift(-3),
     [[shift(-17),"Teams call: they target FID in Q2 next year. Interested in a 10-year offtake with indexation. Asked for our RFNBO GHG-methodology view."]]);
-  const p2 = P("Baltica PtX","Finland","Active","Jussi Rantanen","Business Development Lead","jussi.rantanen@example.com","+358 40 000 0000","e-SAF, RFNBO Hydrogen",
+  const p2 = P("Baltica PtX","Finland","Evaluation","Jussi Rantanen","Business Development Lead","jussi.rantanen@example.com","+358 40 000 0000","e-SAF, RFNBO Hydrogen",
     "Review their draft LOI and confirm site visit date.", shift(4),
     [[shift(-6),"Site pre-visit call: grid connection secured (110 kV), PPA shortlist of 3 wind parks. Want LOI signed before summer break."]]);
-  const p3 = P("HyMar Synfuels","Spain","Prospect","Lucía Ferrer","Head of Origination","lucia.ferrer@example.com","+34 600 000 000","e-Ammonia",
+  const p3 = P("HyMar Synfuels","Spain","Contacted","Lucía Ferrer","Head of Origination","lucia.ferrer@example.com","+34 600 000 000","e-Ammonia",
     "Intro meeting to qualify: volumes, timeline, certification approach.", shift(12),
     [[shift(-30),"Met at conference. Early-stage 200 kt/a e-ammonia project in Andalusia, seeking anchor offtakers."]]);
-  const p4 = P("Vireo Energy","Denmark","On hold","Mads Kjeldsen","CCO","mads.kjeldsen@example.com","+45 20 00 00 00","e-Methane",
+  const p4 = P("Vireo Energy","Denmark","Paused / No fit","Mads Kjeldsen","CCO","mads.kjeldsen@example.com","+45 20 00 00 00","e-Methane",
     "Re-engage once their electrolyzer supplier decision is made (expected Q4).", shift(60),
     [[shift(-45),"They paused commercial talks pending electrolyzer tender results and updated CAPEX."]]);
-  p1.owner = "Timo"; p2.owner = "Timo"; p3.owner = "Anna"; p4.owner = "Anna";
-  db.producers.push(p1,p2,p3,p4);
+  const p5 = P("GreenStream Renewables","Netherlands","In dialogue","Sanne de Vries","Commercial Director","sanne.devries@example.com","+31 6 0000 0000","HVO / renewable diesel, Biomethane / bio-LNG",
+    "Get their UCO feedstock certification package and volume availability for 2027.", shift(9),
+    [[shift(-11),"Call: Rotterdam HVO expansion on track, interested in a multi-year renewable diesel supply deal. Bio-LNG side still early."]]);
+  p1.owner = "Timo"; p2.owner = "Timo"; p3.owner = "Anna"; p4.owner = "Anna"; p5.owner = "Timo";
+  db.producers.push(p1,p2,p3,p4,p5);
   db.projects.push(
     {id:uid(),name:"Havvind e-Methanol Phase 1",producerId:p1.id,country:"Norway",product:"e-Methanol",capacity:80,electrolyzerMW:120,cod:"2028",phase:"FEED",notes:"Offshore wind PPA under negotiation"},
     {id:uid(),name:"Kemi e-SAF Plant",producerId:p2.id,country:"Finland",product:"e-SAF",capacity:60,electrolyzerMW:200,cod:"2029",phase:"Pre-FEED",notes:"Biogenic CO2 from pulp mill"},
-    {id:uid(),name:"Andalusia Green Ammonia",producerId:p3.id,country:"Spain",product:"e-Ammonia",capacity:200,electrolyzerMW:350,cod:"2030",phase:"Concept",notes:""}
+    {id:uid(),name:"Andalusia Green Ammonia",producerId:p3.id,country:"Spain",product:"e-Ammonia",capacity:200,electrolyzerMW:350,cod:"2030",phase:"Concept",notes:""},
+    {id:uid(),name:"Rotterdam HVO Expansion",producerId:p5.id,country:"Netherlands",product:"HVO / renewable diesel",capacity:250,electrolyzerMW:null,cod:"2027",phase:"Construction",notes:"UCO + tallow feedstock"}
   );
   save(); render();
   toast("Sample data loaded — replace it with your real pipeline");
@@ -956,9 +1207,14 @@ document.addEventListener("click", (e) => {
   const el = e.target.closest("[data-action]");
   if(!el) return;
   const a = el.dataset.action, id = el.dataset.id;
-  if(a !== "del-producer") ui.deleteArmed = null;
+  if(a !== "del-producer" && a !== "project-del") ui.deleteArmed = null;
+  if(a !== "close-panel") ui.closeArmed = null;
   switch(a){
     case "tab": ui.tab = el.dataset.tab; render(); break;
+    case "family": ui.family = el.dataset.fam; renderProducers(); renderProjects(); break;
+    case "phase": ui.phase = el.dataset.ph; renderProjects(); break;
+    case "export-csv": exportCSV(el.dataset.kind); break;
+    case "mark-done": markDone(id); break;
     case "add-producer": ui.panelId = null; ui.panelEdit = true; render(); byId("f_company") && byId("f_company").focus(); break;
     case "open-producer": ui.panelId = id; ui.panelEdit = false; ui.modal = null; ui.importRows = null; render(); break;
     case "open-reminders": ui.modal = "reminders"; render(); break;
@@ -971,7 +1227,14 @@ document.addEventListener("click", (e) => {
       break;
     }
     case "export-ics": exportICS(); break;
-    case "close-panel": ui.panelId = null; ui.panelEdit = false; render(); break;
+    case "close-panel": {
+      if(panelDirty() && ui.closeArmed !== "panel"){
+        ui.closeArmed = "panel";
+        toast("Unsaved changes — close again to discard them", true);
+        break;
+      }
+      ui.closeArmed = null; ui.panelId = null; ui.panelEdit = false; render(); break;
+    }
     case "edit-producer": ui.panelEdit = true; render(); break;
     case "cancel-edit": ui.panelEdit = false; render(); break;
     case "save-producer": saveProducerForm(); break;
@@ -1002,8 +1265,10 @@ document.addEventListener("click", (e) => {
     case "project-edit": ui.modal = "project"; ui.projectId = id; ui.projectPresetProducer = null; render(); break;
     case "project-save": saveProjectForm(); break;
     case "project-del": {
+      if(ui.deleteArmed !== id){ ui.deleteArmed = id; renderProjects(); break; }
       const pr = db.projects.find(x => x.id === id);
       db.projects = db.projects.filter(x => x.id !== id);
+      ui.deleteArmed = null;
       save(); render(); toast(`Deleted “${pr ? pr.name : "project"}”`);
       break;
     }
@@ -1026,7 +1291,7 @@ document.addEventListener("click", (e) => {
     case "export-db": exportDB(); break;
     case "restore-db": byId("restoreFile").click(); break;
     case "restore-confirm": {
-      if(ui.pendingRestore){ db = ui.pendingRestore; ui.pendingRestore = null; ui.modal = null; save(); render(); toast("Backup restored"); }
+      if(ui.pendingRestore){ db = migrateDB(ui.pendingRestore); ui.pendingRestore = null; ui.modal = null; save(); render(); toast("Backup restored"); }
       break;
     }
     case "sample-data": loadSample(); break;
@@ -1035,7 +1300,12 @@ document.addEventListener("click", (e) => {
 document.addEventListener("keydown", (e) => {
   if(e.key === "Escape"){
     if(ui.modal){ ui.modal = null; ui.importRows = null; ui.pendingRestore = null; render(); }
-    else if(ui.panelId !== null || ui.panelEdit){ ui.panelId = null; ui.panelEdit = false; render(); }
+    else if(ui.panelId !== null || ui.panelEdit){
+      if(panelDirty() && ui.closeArmed !== "panel"){
+        ui.closeArmed = "panel";
+        toast("Unsaved changes — press Esc again to discard them", true);
+      } else { ui.closeArmed = null; ui.panelId = null; ui.panelEdit = false; render(); }
+    }
   }
   if(e.key === "Enter" && e.target.matches && e.target.matches("tr.rowlink, .kpi[data-action]")){
     e.target.click();
@@ -1043,9 +1313,12 @@ document.addEventListener("keydown", (e) => {
 });
 byId("q").addEventListener("input", e => { ui.q = e.target.value.trim(); renderProducers(); });
 byId("pq").addEventListener("input", e => { ui.pq = e.target.value.trim(); renderProjects(); });
-byId("fStatus").addEventListener("change", e => { ui.status = e.target.value; renderProducers(); });
+byId("fStatus").addEventListener("change", e => { ui.stage = e.target.value; renderProducers(); });
 byId("fOwner").addEventListener("change", e => { ui.owner = e.target.value; renderProducers(); });
 byId("fSort").addEventListener("change", e => { ui.sort = e.target.value; renderProducers(); });
+byId("fProduct").addEventListener("change", e => { ui.product = e.target.value; renderProducers(); renderProjects(); });
+byId("pProduct").addEventListener("change", e => { ui.product = e.target.value; renderProducers(); renderProjects(); });
+byId("pSort").addEventListener("change", e => { ui.psort = e.target.value; renderProjects(); });
 byId("importFile").addEventListener("change", (e) => {
   const f = e.target.files[0]; e.target.value = "";
   if(!f) return;
