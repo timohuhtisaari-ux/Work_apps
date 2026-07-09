@@ -9,13 +9,20 @@ Data is stored locally in the browser (localStorage), with JSON export/restore f
 ### Features
 
 - **Producers** — contact information (person, role, email, phone), status
-  (Active / Prospect / On hold / Dormant), products, general notes.
+  (Active / Prospect / On hold / Dormant), products, general notes, and a
+  **responsible person** (who on your side owns the follow-up), with a
+  responsible-person filter in the producer list.
 - **Discussion log** — log every call/meeting with date and summary; the latest entry
   shows as "last discussion" in the overview.
 - **Next steps & deadlines** — free-text next steps with a deadline per producer.
   Overdue deadlines are flagged red, deadlines within 7 days amber.
 - **Monitoring dashboard** — KPI strip: producers tracked, overdue follow-ups,
   follow-ups due within 7 days, RFNBO projects.
+- **Reminders** — a bell in the header (with a badge for due/late counts) opens a
+  reminder list grouped into Overdue / Due today / Due within 7 days, each with the
+  responsible person, quick "Open" and "+1 wk" postpone actions. A once-a-day toast
+  nags when something is due or late, and upcoming deadlines can be exported as an
+  `.ics` calendar file (with 09:00 alarms) for Outlook/Google Calendar.
 - **RFNBO projects** — track projects (product, capacity kt/a, electrolyzer MW,
   COD year, phase) linked to producers.
 - **Import from RFNBO model** — paste or upload a JSON export from the RFNBO model;

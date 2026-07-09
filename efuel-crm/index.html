@@ -203,6 +203,14 @@ aside.panel{
 #toast.show{opacity:1}
 #toast.crit{background:var(--crit);color:#fff}
 
+.badge{display:inline-flex;align-items:center;justify-content:center;min-width:18px;height:18px;padding:0 5px;border-radius:999px;font-size:11px;font-weight:700;background:var(--surface2);color:var(--ink2);font-variant-numeric:tabular-nums;}
+.badge.crit{background:var(--crit);color:#fff}
+.badge.warn{background:var(--warn-soft);color:var(--warn-ink)}
+.remitem{display:flex;gap:12px;align-items:flex-start;background:var(--surface2);border-radius:9px;padding:11px 13px;margin-bottom:8px;}
+.remitem .who{font-weight:650;font-size:13.5px}
+.remitem .owner{font-size:11.5px;font-weight:700;color:var(--accent-ink);background:var(--accent-soft);border-radius:999px;padding:2px 8px;white-space:nowrap;}
+.remitem .task{color:var(--ink2);font-size:12.5px;margin-top:2px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;}
+.remitem .acts{display:flex;gap:6px;flex:none;padding-top:2px}
 .iconbtn{padding:6px;border-radius:7px;color:var(--ink2);line-height:0}
 .iconbtn:hover{background:var(--surface2);color:var(--ink)}
 .hidden{display:none !important}
@@ -229,6 +237,7 @@ aside.panel{
       <h1>E-Fuel Producer CRM</h1>
     </div>
     <div class="spacer"></div>
+    <button class="btn small" id="remindersBtn" data-action="open-reminders" title="Follow-ups that are due or late">Reminders</button>
     <button class="btn small" data-action="export-db" title="Download all CRM data as a JSON file">Export backup</button>
     <button class="btn small" data-action="restore-db" title="Restore CRM data from a JSON backup file">Restore backup</button>
   </header>
@@ -247,6 +256,7 @@ aside.panel{
         <option value="all">All statuses</option>
         <option>Active</option><option>Prospect</option><option>On hold</option><option>Dormant</option>
       </select>
+      <select id="fOwner" aria-label="Filter by responsible person"><option value="all">All responsible</option></select>
       <select id="fSort" aria-label="Sort producers">
         <option value="deadline">Sort: deadline first</option>
         <option value="lastdisc">Sort: longest silent first</option>
@@ -340,7 +350,7 @@ function toast(msg, isErr){
 
 /* ================= ui state ================= */
 const ui = {
-  tab: "producers", q: "", pq: "", status: "all", sort: "deadline",
+  tab: "producers", q: "", pq: "", status: "all", owner: "all", sort: "deadline",
   panelId: null, panelEdit: false, deleteArmed: null,
   modal: null,           // null | "import" | "import-preview" | "project" | "confirm-restore"
   importRows: null, projectId: null, projectPresetProducer: null,
@@ -353,19 +363,21 @@ function renderKPIs(){
   const week    = db.producers.filter(p => { const n = daysUntil(p.deadline); return n !== null && n >= 0 && n <= 7; }).length;
   byId("kpis").innerHTML = `
     <div class="kpi"><div class="lbl">Producers tracked</div><div class="num">${db.producers.length}</div><div class="sub">${db.producers.filter(p=>p.status==="Active").length} active relationships</div></div>
-    <div class="kpi ${overdue ? "alert" : ""}"><div class="lbl">Overdue follow-ups</div><div class="num">${overdue}</div><div class="sub">${overdue ? "needs attention now" : "all caught up"}</div></div>
-    <div class="kpi ${week ? "watch" : ""}"><div class="lbl">Due within 7 days</div><div class="num">${week}</div><div class="sub">upcoming next steps</div></div>
+    <div class="kpi ${overdue ? "alert" : ""}" data-action="open-reminders" role="button" tabindex="0" style="cursor:pointer" title="Open reminders"><div class="lbl">Overdue follow-ups</div><div class="num">${overdue}</div><div class="sub">${overdue ? "needs attention now" : "all caught up"}</div></div>
+    <div class="kpi ${week ? "watch" : ""}" data-action="open-reminders" role="button" tabindex="0" style="cursor:pointer" title="Open reminders"><div class="lbl">Due within 7 days</div><div class="num">${week}</div><div class="sub">upcoming next steps</div></div>
     <div class="kpi"><div class="lbl">RFNBO projects</div><div class="num">${db.projects.length}</div><div class="sub">linked to producers</div></div>`;
 }
 
 /* ================= producers list ================= */
 function producerMatches(p, q){
   if(!q) return true;
-  const hay = [p.company, p.country, p.contactName, p.contactRole, p.email, p.phone, p.products, p.nextSteps].join(" ").toLowerCase();
+  const hay = [p.company, p.country, p.contactName, p.contactRole, p.email, p.phone, p.products, p.nextSteps, p.owner].join(" ").toLowerCase();
   return hay.includes(q.toLowerCase());
 }
 function sortedProducers(){
-  let list = db.producers.filter(p => producerMatches(p, ui.q) && (ui.status === "all" || (p.status||"Prospect") === ui.status));
+  let list = db.producers.filter(p => producerMatches(p, ui.q)
+    && (ui.status === "all" || (p.status||"Prospect") === ui.status)
+    && (ui.owner === "all" || (p.owner||"") === ui.owner));
   if(ui.sort === "company"){
     list.sort((a,b) => (a.company||"").localeCompare(b.company||""));
   } else if(ui.sort === "lastdisc"){
@@ -384,7 +396,22 @@ function sortedProducers(){
   }
   return list;
 }
+function ownerList(){
+  return [...new Set(db.producers.map(p => (p.owner||"").trim()).filter(Boolean))].sort((a,b)=>a.localeCompare(b));
+}
+function refreshOwnerFilter(){
+  const sel = byId("fOwner");
+  const owners = ownerList();
+  const want = "all|" + owners.join("|");
+  if(sel.dataset.opts !== want){
+    sel.dataset.opts = want;
+    sel.innerHTML = '<option value="all">All responsible</option>' + owners.map(o => `<option value="${esc(o)}">${esc(o)}</option>`).join("");
+  }
+  if(ui.owner !== "all" && !owners.includes(ui.owner)) ui.owner = "all";
+  sel.value = ui.owner;
+}
 function renderProducers(){
+  refreshOwnerFilter();
   const host = byId("producerList");
   if(!db.producers.length){
     host.innerHTML = `<div class="empty">
@@ -399,7 +426,7 @@ function renderProducers(){
   if(!list.length){ host.innerHTML = `<div class="empty"><h3>No matches</h3><p>Try a different search or status filter.</p></div>`; return; }
   host.innerHTML = `<div class="tablewrap"><table>
     <thead><tr>
-      <th>Producer</th><th>Contact</th><th>Status</th><th>Last discussion</th><th>Next steps</th><th>Deadline</th>
+      <th>Producer</th><th>Contact</th><th>Status</th><th>Responsible</th><th>Last discussion</th><th>Next steps</th><th>Deadline</th>
     </tr></thead>
     <tbody>${list.map(p => {
       const ld = lastDiscussion(p);
@@ -410,6 +437,7 @@ function renderProducers(){
         <td><div>${esc(p.contactName || "—")}</div><div class="cell-sub">${esc(p.contactRole || "")}</div>
             <div class="cell-sub">${p.email ? `<a href="mailto:${esc(p.email)}">${esc(p.email)}</a>` : ""}</div></td>
         <td>${statusPill(p.status)}</td>
+        <td>${p.owner ? esc(p.owner) : '<span class="cell-sub">—</span>'}</td>
         <td>${ld ? `<div class="mono cell-sub" style="font-weight:700">${fmtDate(ld.date)}</div><div class="snippet">${esc(ld.note)}</div>` : '<span class="cell-sub">no discussions logged</span>'}</td>
         <td><div class="snippet">${esc(p.nextSteps || "—")}</div></td>
         <td>${deadlineChip(p.deadline)}</td>
@@ -479,6 +507,8 @@ function panelHTML(){
           <div><label for="f_email">Email</label><input id="f_email" type="email" value="${esc(p.email||"")}"></div>
           <div><label for="f_phone">Phone</label><input id="f_phone" value="${esc(p.phone||"")}"></div>
           <div class="full"><label for="f_products">Products (e-methanol, e-SAF, …)</label><input id="f_products" value="${esc(p.products||"")}"></div>
+          <div class="full"><label for="f_owner">Responsible person</label><input id="f_owner" value="${esc(p.owner||"")}" placeholder="Who follows up on this producer" list="ownerlist">
+            <datalist id="ownerlist">${ownerList().map(o=>`<option>${esc(o)}</option>`).join("")}</datalist></div>
           <div class="full"><label for="f_nextSteps">Next steps</label><textarea id="f_nextSteps">${esc(p.nextSteps||"")}</textarea></div>
           <div><label for="f_deadline">Deadline for next step</label><input id="f_deadline" type="date" value="${esc(p.deadline||"")}"></div>
           <div class="full"><label for="f_notes">General notes</label><textarea id="f_notes">${esc(p.notes||"")}</textarea></div>
@@ -510,6 +540,7 @@ function panelHTML(){
           <div class="row"><span class="k">Person</span><span>${esc(p.contactName||"—")}${p.contactRole ? `, <span style="color:var(--ink2)">${esc(p.contactRole)}</span>` : ""}</span></div>
           <div class="row"><span class="k">Email</span><span>${p.email ? `<a href="mailto:${esc(p.email)}">${esc(p.email)}</a>` : "—"}</span></div>
           <div class="row"><span class="k">Phone</span><span class="mono">${esc(p.phone||"—")}</span></div>
+          <div class="row"><span class="k">Responsible</span><span>${esc(p.owner||"—")}</span></div>
           ${p.notes ? `<div class="row"><span class="k">Notes</span><span style="white-space:pre-wrap">${esc(p.notes)}</span></div>` : ""}
         </div>
       </div>
@@ -612,6 +643,96 @@ function findProducerByName(name){
   return db.producers.find(p => (p.company||"").trim().toLowerCase() === n) || null;
 }
 
+/* ================= reminders ================= */
+function reminderBuckets(){
+  const overdue = [], today = [], week = [];
+  for(const p of db.producers){
+    const n = daysUntil(p.deadline);
+    if(n === null) continue;
+    if(n < 0) overdue.push(p);
+    else if(n === 0) today.push(p);
+    else if(n <= 7) week.push(p);
+  }
+  const byDate = (a,b) => (a.deadline||"").localeCompare(b.deadline||"");
+  overdue.sort(byDate); week.sort(byDate);
+  today.sort((a,b) => (a.company||"").localeCompare(b.company||""));
+  return {overdue, today, week};
+}
+function reminderItem(p){
+  return `<div class="remitem">
+    <div style="flex:1;min-width:0">
+      <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+        <span class="who">${esc(p.company)}</span>
+        ${p.owner ? `<span class="owner">${esc(p.owner)}</span>` : ""}
+        ${deadlineChip(p.deadline)}
+      </div>
+      <div class="task">${esc(p.nextSteps || "No next step written down — open the producer and add one.")}</div>
+    </div>
+    <div class="acts">
+      <button class="btn small" data-action="open-producer" data-id="${p.id}">Open</button>
+      <button class="btn small ghost" data-action="snooze" data-id="${p.id}" title="Move the deadline one week forward">+1 wk</button>
+    </div>
+  </div>`;
+}
+function remindersModalHTML(){
+  const {overdue, today, week} = reminderBuckets();
+  const group = (title, arr, emptyText) => `<div class="sect" style="margin-bottom:16px">
+    <div class="eyebrow">${title} (${arr.length})</div>
+    ${arr.length ? arr.map(reminderItem).join("") : `<div class="cell-sub">${emptyText}</div>`}</div>`;
+  return `<div class="scrim" data-action="close-modal"></div>
+  <div class="modal narrow" role="dialog" aria-modal="true" aria-label="Reminders">
+    <div class="modal-head"><h2>Reminders — due &amp; late follow-ups</h2>
+      <div class="spacer"></div><button class="iconbtn" data-action="close-modal" aria-label="Close">✕</button></div>
+    <div class="modal-body">
+      ${group("Overdue", overdue, "Nothing overdue — well done.")}
+      ${group("Due today", today, "Nothing due today.")}
+      ${group("Due within 7 days", week, "Nothing coming up this week.")}
+      <p class="hint">Reminders come from each producer's next-step deadline. "+1 wk" postpones the deadline; "Open" takes you to the producer to log the outcome and set the next step.</p>
+    </div>
+    <div class="modal-foot">
+      <button class="btn small" data-action="export-ics" title="Download upcoming deadlines as calendar events with a 09:00 reminder">Export deadlines to calendar (.ics)</button>
+      <div class="spacer"></div>
+      <button class="btn" data-action="close-modal">Close</button>
+    </div>
+  </div>`;
+}
+function renderRemindersBtn(){
+  const {overdue, today, week} = reminderBuckets();
+  const n = overdue.length + today.length;
+  const badge = overdue.length ? `<span class="badge crit">${n}</span>`
+              : n ? `<span class="badge warn">${n}</span>`
+              : week.length ? `<span class="badge">${week.length}</span>` : "";
+  byId("remindersBtn").innerHTML = "🔔 Reminders " + badge;
+}
+function icsEscape(s){ return String(s??"").replace(/\\/g,"\\\\").replace(/;/g,"\\;").replace(/,/g,"\\,").replace(/\r?\n/g,"\\n"); }
+function exportICS(){
+  const items = db.producers.filter(p => { const n = daysUntil(p.deadline); return n !== null && n >= 0; })
+    .sort((a,b) => a.deadline.localeCompare(b.deadline));
+  if(!items.length){ toast("No upcoming deadlines to export", true); return; }
+  const now = new Date();
+  const stamp = now.toISOString().replace(/[-:]/g,"").replace(/\.\d+Z$/,"Z");
+  const lines = ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//efuel-crm//deadlines//EN","CALSCALE:GREGORIAN"];
+  for(const p of items){
+    const d = p.deadline.replace(/-/g,"");
+    lines.push("BEGIN:VEVENT",
+      `UID:${p.id}-${d}@efuel-crm`,
+      `DTSTAMP:${stamp}`,
+      `DTSTART;VALUE=DATE:${d}`,
+      `SUMMARY:${icsEscape("Follow up: " + p.company + (p.owner ? " (" + p.owner + ")" : ""))}`,
+      `DESCRIPTION:${icsEscape((p.nextSteps || "Follow up with " + p.company) + (p.contactName ? "\nContact: " + p.contactName + (p.email ? " <" + p.email + ">" : "") : ""))}`,
+      "BEGIN:VALARM","ACTION:DISPLAY",`DESCRIPTION:${icsEscape("Follow up: " + p.company)}`,"TRIGGER:PT9H","END:VALARM",
+      "END:VEVENT");
+  }
+  lines.push("END:VCALENDAR");
+  const blob = new Blob([lines.join("\r\n")], {type: "text/calendar"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "efuel-crm-deadlines.ics";
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+  toast(`${items.length} deadline${items.length === 1 ? "" : "s"} exported — import the file into your calendar`);
+}
+
 /* ================= modals ================= */
 function projectFormHTML(pr, presetProducer){
   const producerId = pr ? pr.producerId : (presetProducer || "");
@@ -635,6 +756,7 @@ function projectFormHTML(pr, presetProducer){
 }
 function modalHTML(){
   if(!ui.modal) return "";
+  if(ui.modal === "reminders") return remindersModalHTML();
   if(ui.modal === "project"){
     const pr = ui.projectId ? db.projects.find(x => x.id === ui.projectId) : null;
     return `<div class="scrim" data-action="close-modal"></div>
@@ -725,6 +847,7 @@ function modalHTML(){
 /* ================= render root ================= */
 function render(){
   renderKPIs();
+  renderRemindersBtn();
   byId("view-producers").classList.toggle("hidden", ui.tab !== "producers");
   byId("view-projects").classList.toggle("hidden", ui.tab !== "projects");
   byId("tab-producers").classList.toggle("active", ui.tab === "producers");
@@ -741,7 +864,7 @@ function saveProducerForm(){
   const data = {
     company, country: val("f_country"), status: val("f_status"),
     contactName: val("f_contactName"), contactRole: val("f_contactRole"),
-    email: val("f_email"), phone: val("f_phone"), products: val("f_products"),
+    email: val("f_email"), phone: val("f_phone"), products: val("f_products"), owner: val("f_owner"),
     nextSteps: val("f_nextSteps"), deadline: val("f_deadline"), notes: val("f_notes")
   };
   let p = db.producers.find(x => x.id === ui.panelId);
@@ -816,6 +939,7 @@ function loadSample(){
   const p4 = P("Vireo Energy","Denmark","On hold","Mads Kjeldsen","CCO","mads.kjeldsen@example.com","+45 20 00 00 00","e-Methane",
     "Re-engage once their electrolyzer supplier decision is made (expected Q4).", shift(60),
     [[shift(-45),"They paused commercial talks pending electrolyzer tender results and updated CAPEX."]]);
+  p1.owner = "Timo"; p2.owner = "Timo"; p3.owner = "Anna"; p4.owner = "Anna";
   db.producers.push(p1,p2,p3,p4);
   db.projects.push(
     {id:uid(),name:"Havvind e-Methanol Phase 1",producerId:p1.id,country:"Norway",product:"e-Methanol",capacity:80,electrolyzerMW:120,cod:"2028",phase:"FEED",notes:"Offshore wind PPA under negotiation"},
@@ -836,7 +960,17 @@ document.addEventListener("click", (e) => {
   switch(a){
     case "tab": ui.tab = el.dataset.tab; render(); break;
     case "add-producer": ui.panelId = null; ui.panelEdit = true; render(); byId("f_company") && byId("f_company").focus(); break;
-    case "open-producer": ui.panelId = id; ui.panelEdit = false; render(); break;
+    case "open-producer": ui.panelId = id; ui.panelEdit = false; ui.modal = null; ui.importRows = null; render(); break;
+    case "open-reminders": ui.modal = "reminders"; render(); break;
+    case "snooze": {
+      const p = db.producers.find(x => x.id === id); if(!p || !p.deadline) break;
+      const base = daysUntil(p.deadline) < 0 ? new Date() : new Date(p.deadline + "T00:00:00");
+      base.setDate(base.getDate() + 7);
+      p.deadline = base.getFullYear() + "-" + String(base.getMonth()+1).padStart(2,"0") + "-" + String(base.getDate()).padStart(2,"0");
+      save(); render(); toast(`${p.company}: deadline moved to ${fmtDate(p.deadline)}`);
+      break;
+    }
+    case "export-ics": exportICS(); break;
     case "close-panel": ui.panelId = null; ui.panelEdit = false; render(); break;
     case "edit-producer": ui.panelEdit = true; render(); break;
     case "cancel-edit": ui.panelEdit = false; render(); break;
@@ -903,13 +1037,14 @@ document.addEventListener("keydown", (e) => {
     if(ui.modal){ ui.modal = null; ui.importRows = null; ui.pendingRestore = null; render(); }
     else if(ui.panelId !== null || ui.panelEdit){ ui.panelId = null; ui.panelEdit = false; render(); }
   }
-  if(e.key === "Enter" && e.target.matches && e.target.matches("tr.rowlink")){
+  if(e.key === "Enter" && e.target.matches && e.target.matches("tr.rowlink, .kpi[data-action]")){
     e.target.click();
   }
 });
 byId("q").addEventListener("input", e => { ui.q = e.target.value.trim(); renderProducers(); });
 byId("pq").addEventListener("input", e => { ui.pq = e.target.value.trim(); renderProjects(); });
 byId("fStatus").addEventListener("change", e => { ui.status = e.target.value; renderProducers(); });
+byId("fOwner").addEventListener("change", e => { ui.owner = e.target.value; renderProducers(); });
 byId("fSort").addEventListener("change", e => { ui.sort = e.target.value; renderProducers(); });
 byId("importFile").addEventListener("change", (e) => {
   const f = e.target.files[0]; e.target.value = "";
@@ -938,6 +1073,18 @@ byId("restoreFile").addEventListener("change", (e) => {
 });
 
 render();
+{ // one nudge per day if follow-ups are due or late
+  const {overdue, today} = reminderBuckets();
+  const n = overdue.length + today.length;
+  if(n){
+    let last = null;
+    try{ last = localStorage.getItem("efuelCRM.nudge"); }catch(e){}
+    if(last !== todayISO()){
+      try{ localStorage.setItem("efuelCRM.nudge", todayISO()); }catch(e){}
+      toast(`${n} follow-up${n === 1 ? " is" : "s are"} due or late — see Reminders`, overdue.length > 0);
+    }
+  }
+}
 </script>
 </body>
 </html>
