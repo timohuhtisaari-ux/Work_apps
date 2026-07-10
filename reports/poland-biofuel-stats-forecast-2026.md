@@ -137,7 +137,62 @@ Forecast mechanics worth noting:
 - Whether Poland exempts HVO from the emission fee, and when the HVO quality regulation takes full effect at retail.
 - Actual SAF supplied at Polish airports in 2025–2026 given the acknowledged implementation delay, and whether it is met with domestic (Orlen) production or imports.
 
-## 6. Key sources
+## 6. Deep dive — SAF from Annex IX Part A feedstocks & the road-mandate opt-in
+
+*Added 9 July 2026 from a second verified deep-research run (103 agents; 5 angles; top claims 3-vote verified against primary law — EUR-Lex texts of Reg. 2023/2405 and Dir. 2023/2413, and the Polish statute PDF at dziennikustaw.gov.pl).*
+
+### 6.1 What counts as SAF under ReFuelEU Aviation (Reg. (EU) 2023/2405)
+
+Under **Art. 3(7)–(8)**, SAF comprises (a) synthetic aviation fuels (RFNBOs, liquid drop-in only), (b) aviation biofuels, and (c) recycled carbon aviation fuels. Aviation biofuels span three categories — **advanced biofuels (RED Annex IX Part A)**, **Annex IX Part B biofuels (UCO/tallow)**, and other non-food/feed-crop biofuels — all subject to RED Art. 29 sustainability/GHG criteria and Art. 30 certification. **Both Part A and Part B pathways fully qualify.** Confidence: **high**.
+
+Feedstock restrictions (**Art. 4(4)–(5)**):
+
+| Rule | Effect |
+|---|---|
+| Excluded from minimum shares | Food & feed crops, intermediate crops, PFAD, other palm/soy derivatives, soap stock |
+| Carve-out | The exclusion does **not** apply to any Annex IX feedstock (Parts A **and** B) |
+| "Other" biofuels (non-Annex-IX, non-crop) | Capped at **3%** of each supplier's compliance volume per period |
+| Part B waste oils/fats | **No cap under ReFuelEU** (unlike RED III's 1.7% road-side cap) |
+
+Mandate trajectory (Annex I): **2% from 2025**, **6% from 2030** (synthetic sub-share 1.2% avg 2030–31, 0.7% yearly floor; 2.0% avg 2032–34), 20%/5% from 2035, 70%/35% from 2050. **Art. 15(1)** flexibility (2025–2034) allows compliance as a **weighted average across all Union airports**. Penalties (Art. 12(4)) are at least 2× the SAF-vs-fossil price gap, and shortfalls roll forward (Art. 12(8)). The obligation sits on **aviation fuel suppliers** (Art. 4); aircraft operators bear only the 90% anti-tankering uplift rule (Art. 5).
+
+### 6.2 Can the same SAF batch count toward ReFuelEU AND a national road mandate?
+
+**Yes, by default — EU law does not prohibit it.** The only batch-level anti-double-claiming rule in ReFuelEU is **Art. 9(1)** (recital 41), which is addressed to *aircraft operators* and *greenhouse-gas schemes* (EU ETS/CORSIA) — not to suppliers and national blending mandates. **Recital 14 expressly contemplates** Member States claiming ReFuelEU-covered fuels toward RED targets "subject to the conditions and within the limits of that Directive", and RED III Art. 27(2)(b),(e) counts aviation/maritime renewable fuels toward the transport target. Whether the same batch also serves a national supplier obligation is a **Member State design choice** — e.g. the Netherlands' draft RED III implementation *removes* aviation from its HBE scheme precisely to prevent double incentivization, confirming cross-counting is permitted unless a Member State opts out. Poland has **not** opted out: the 1.2× aviation/marine multiplier actively invites SAF into the NCW. Confidence: **high**.
+
+One nuance (RED III **recital 72**): dedicated obligations on aviation fuel suppliers should be imposed only via ReFuelEU — relevant to whether jet suppliers can themselves be NCW-obligated parties (unresolved; see 6.5).
+
+### 6.3 Multipliers under RED III — and whether they stack
+
+Amended **Art. 27(2)** of Dir. 2018/2001 lists as *distinct, non-exclusive* lettered rules: **(c) 2×** for all Annex IX biofuels/biogas and RFNBOs; (d) 4× road electricity / 1.5× rail; **(e) 1.2× for Annex IX Part A advanced fuels supplied to aviation & maritime** and **1.5× for RFNBOs** in those modes. Versus RED II, the old general 1.2× aviation/maritime multiplier (RED II Art. 27(2)(c)) is **narrowed to Annex IX-A fuels only**, and the 1.5× RFNBO multiplier is new. The text contains no exclusivity language, and secondary analyses (EWABA, ICCT) read the 1.2× as applying *in addition to* the 2× — i.e. **stacking (2 × 1.2 = 2.4×) is not textually barred, but no Commission guidance explicitly blesses the arithmetic**. Important: all Art. 27(2) multipliers apply **only under the 29% energy-share option**, not the 14.5% GHG-intensity option. Confidence: high on the text, **medium on stacking in practice**.
+
+### 6.4 Poland's mechanics — Act of 21 Feb 2025 (Dz.U. 2025 poz. 303), effective 1 Jan 2026
+
+| Provision | Rule |
+|---|---|
+| Art. 23 ust. 2 **pkt 3** | **2×** NCW counting for biocomponents from Annex IX (załącznik nr 1) feedstocks |
+| Art. 23 ust. 2 **pkt 4** | **1.2×** for biocomponents/renewable fuels/recycled-carbon fuels **in aviation and marine fuels** |
+| Art. 23 ust. 2b | Food/feed-crop biocomponents excluded from the 1.2× |
+| Art. 23 ust. 2c | Multipliers usable only toward the NCW (Art. 23 ust. 1) and the advanced sub-target (Art. 23c) |
+| Art. 23 ust. 12 | Part B cap (3.4%) computed **"after applying the multiplier in ust. 2 pkt 3"** — explicitly confirming Annex IX SAF passes through **both** multiplier provisions |
+| Art. 35a ust. 4 / 23c | Part A advanced sub-mandate 1% (2026–29) → 3.5% (2030); multiplier use toward it permitted via ust. 2c |
+
+The two multipliers sit as separate adjacent rules with **no anti-stacking provision**, and the ust. 12 sequencing corroborates the stacked reading. Confidence: **high** (verified against the statute PDF).
+
+### 6.5 Practical implications for 2026 Poland
+
+- **Annex IX Part A SAF is the premium compliance commodity**: uncapped under ReFuelEU (Art. 4(5) carve-out), uncapped domestically (escapes both the 3.4% Part B cap and 6.1% crop cap), eligible for the 1% Part A sub-mandate, and — on the plain statutory text — earns **stacked 2× + 1.2× (≈2.4×) NCW credit**. One physical m³ of Part A SAF could satisfy the ReFuelEU supplier share *and* generate ~2.4× NCW energy credit for road compliance.
+- **HEFA-SPK from Part B (UCO/tallow)** — today's dominant SAF pathway — is **uncapped under ReFuelEU but squeezed by Poland's 3.4% Part B NCW cap** (which is measured *post-2×-multiplier*, so the physical Part B space is only ~1.7% energy). Part B SAF competes with Part B road-FAME for the same capped headroom.
+- **Caveats**: no Commission or URE interpretation explicitly confirming 2.4× arithmetic stacking was found; whether jet fuel suppliers are themselves "podmiot realizujący NCW" was not directly verified (RED III recital 72 suggests dedicated national aviation-supplier obligations are reserved to ReFuelEU); the URE quarterly template's (Dz.U. 2025 poz. 1618) operational treatment of SAF/mass-balance evidence was not verified; and whether aviation fuel's inclusion in the national transport-target denominator remains an opt-in under RED III (as under RED II Art. 26–27) or becomes mandatory was left unresolved by the adversarial pass (the "mandatory" reading was refuted 1–2).
+
+### 6.6 New open questions folded into the monitoring loop
+
+- Are jet fuel suppliers NCW-obligated entities post-amendment, and how does that square with RED III recital 72?
+- How does the URE template operationalize SAF reporting, mass-balance evidence and multiplier application from 2026?
+- Will the Commission or Polish authorities confirm or bar arithmetic 2×·1.2× stacking, and how do co-processed SAF fractions count under both regimes?
+- Is aviation's inclusion in the national transport-target accounting still a Member State opt-in under RED III as transposed?
+
+## 7. Key sources
 
 **Primary / official**
 - Act of 21 February 2025 amending the Law on Biocomponents and Liquid Biofuels — ISAP, Dz.U. 2025 poz. 303: https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20250000303
@@ -150,5 +205,11 @@ Forecast mechanics worth noting:
 - USDA FAS GAIN — *EU Biofuels Annual 2024/2025* (The Hague): https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Biofuels+Annual_The+Hague_European+Union_E42024-0024.pdf and https://www.fas.usda.gov/data/european-union-biofuels-annual-4
 - European Commission — ReFuelEU Aviation: https://transport.ec.europa.eu/transport-modes/air/environment/refueleu-aviation_en
 
+**Primary — SAF / opt-in deep dive (section 6)**
+- ReFuelEU Aviation — Regulation (EU) 2023/2405: https://eur-lex.europa.eu/eli/reg/2023/2405/oj/eng (Arts. 3(7)-(9), 4(4)-(5), 5, 9(1), 12, 15, Annex I; recitals 14, 41)
+- RED III — Directive (EU) 2023/2413: https://eur-lex.europa.eu/eli/dir/2023/2413/oj/eng (Art. 25(1), Art. 27(1)-(2); recital 72)
+- Act of 21 Feb 2025, statute text: https://dziennikustaw.gov.pl/D2025000030301.pdf (Art. 23 ust. 2 pkt 3-4, ust. 2b-2c, ust. 10, ust. 12; Art. 23c; Art. 35a ust. 4; Art. 35c)
+- European Commission — ReFuelEU FAQ: https://transport.ec.europa.eu/transport-modes/air/environment/refueleu-aviation_en
+
 **Secondary (corroboration)**
-- Gramwzielone.pl, PAP Biznes, Energetyka24 (Orlen on RED III costs), Argus Media (European HVO outlook), KIB presentation (realized NCW per URE).
+- Gramwzielone.pl, PAP Biznes, Energetyka24 (Orlen on RED III costs), Argus Media (European HVO outlook), KIB presentation (realized NCW per URE), ICCT "Fuels fit for 55" brief (July 2023), IATA ReFuelEU Aviation Handbook (Sept 2024), EWABA RED III overview, T&E RED briefings, Fastmarkets (NL HBE draft, 2025).
