@@ -62,7 +62,18 @@ instruments rather than country reports (template:
   mandatory/sanctioned**, so aviation-fuel volumes are reported today via EASA's
   Sustainability Portal (aircraft operators) and the UDB on a transitional
   footing (suppliers), while FuelEU Maritime reports via **EMSA THETIS-MRV**,
-  independent of the UDB. Reflected in the ReFuelEU report's section 6.6. Each country report
+  independent of the UDB. Reflected in the ReFuelEU report's section 6.6.
+- `research/reports/red3-delegated-acts-register-2026-07-06.md` — register of the
+  **RED III delegated & implementing acts** with each act's current status, deep
+  focus on the **hydrogen / RFNBO** acts: Del. Reg. (EU) 2023/1184 (additionality
+  / temporal-geographic correlation) and 2023/1185 (RFNBO/RCF GHG methodology,
+  70 % threshold), both in force with the additionality review due by 1 Jul 2028;
+  plus the ILUC act 2019/807 (in force, under revision — a Jan-2026 Commission
+  report now adds soy to palm as high-ILUC), the co-processing act 2023/1640,
+  verification/UDB Impl. Reg. 2022/996 (+ 2024/805, 2025/196), the Annex IX
+  amendment (Del. Directive (EU) 2024/1405), the separate low-carbon-hydrogen act
+  (Del. Reg. (EU) 2025/2359, under the gas-package Directive 2024/1788), and an
+  overdue/pending watch-list (the cascading-principle act is overdue). Each country report
 covers the biofuel mandate (2026 level + legislated trajectory to 2030),
 fuel taxation, and RED II/III sustainability/certification obligations, with a
 supplier compliance checklist and a conflicts/gaps section. Every fact carries a
