@@ -26,6 +26,19 @@ The skill acts as team lead: it dispatches the researcher agents in parallel,
 runs a mandatory independent corroboration pass, and assembles per-country
 compliance reports into `research/reports/`.
 
+### Ongoing weekly monitoring
+
+Beyond the point-in-time reports, the repo runs a **weekly EU renewable &
+low-carbon fuels policy scan** (`/eu-fuels-monitor`, playbook at
+`.claude/skills/eu-fuels-monitor/SKILL.md`). It sweeps the tracked policy surface
+— RED III delegated/implementing acts (incl. the RFNBO/hydrogen acts), the
+low-carbon-fuels & hydrogen framework, FuelEU Maritime, ReFuelEU Aviation, EU ETS
+maritime/aviation and ETS2, the Union Database, certification schemes, and
+process signals (consultations, delegated-act scrutiny, infringement packages) —
+records changes in `research/monitoring/` (`watchlist.md`, `CHANGELOG.md`,
+dated `scans/`), and sends a digest. A scheduled Routine wakes a fresh session
+each week to run it; see `research/monitoring/README.md`.
+
 ### Current output (as of 2026-07-04)
 
 All **27 EU member states plus Norway, the United Kingdom and Switzerland**
