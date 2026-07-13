@@ -57,3 +57,28 @@ Confidence/label conventions per `research/METHODOLOGY.md`.
 | RED III transposition (infringements) | EC monthly infringement packages; EUR-Lex NIM (Dir 2023/2413) | New letters of formal notice / reasoned opinions / CJEU referrals | 2026-07-13 |
 | Consultations / calls for evidence | EC "Have your say" | New RES/LCF/hydrogen consultations | 2026-07-13 |
 | Delegated-act scrutiny | EP/Council registers | Objection windows on tabled DAs (esp. the 2019/807 revision) | 2026-07-13 |
+
+## G. Trade measures on biofuels / renewable fuels  `[R]` eu-biofuel-trade-measures
+
+Anti-dumping (AD), anti-subsidy/countervailing (CVD), TARIC import-surveillance,
+safeguard and anti-circumvention actions. **Statuses below are SEEDED 2026-07-13
+and PENDING VERIFICATION** — the register report and the next scan pin the exact
+regulation numbers, duty rates, and review dates from DG TRADE + the OJ. Track by
+product × origin.
+
+| Product / origin | Measure type | Status (SEEDED — verify) | Watching for | Last checked |
+|---|---|---|---|---|
+| SAF (sustainable aviation fuel) — China | TARIC prior-surveillance | Reportedly under TARIC import surveillance — VERIFY scope | Escalation to an AD/CVD investigation; surveillance renewal/expansion | 2026-07-13 |
+| Biodiesel (FAME & blends) — China | Anti-dumping | Definitive AD measures reported (2024) — VERIFY reg. no. & rates | Interim/expiry reviews; anti-circumvention; refunds | 2026-07-13 |
+| Biodiesel — Indonesia | Countervailing (+ AD history) | CVD measures in force (since 2019) — VERIFY current status | Expiry review; anti-circumvention via third countries | 2026-07-13 |
+| Biodiesel — USA | AD + CVD (historic) | Long-standing measures / expiry reviews — VERIFY | Expiry-review outcomes; measure lapse | 2026-07-13 |
+| Bioethanol — USA / other origins | Anti-dumping (historic) | VERIFY whether any measure is currently in force | New investigation; measure status | 2026-07-13 |
+| HVO / renewable diesel | AD/CVD or surveillance | VERIFY whether any dedicated measure/monitoring exists | New complaint/initiation | 2026-07-13 |
+| UCO / UCOME & waste-based feedstocks — China & others | Investigation / surveillance | VERIFY (fraud/circumvention concerns) | New initiation; surveillance; certification-fraud actions | 2026-07-13 |
+| Anti-circumvention (transhipment) | AD/CVD circumvention | VERIFY open cases (e.g. via UK/Malaysia/China) | New circumvention initiations & findings | 2026-07-13 |
+
+> Sources to sweep: DG TRADE **trade-defence investigations database** and its
+> "measures in force" list; the **Official Journal** L-series (measures) and
+> C-series (initiation notices, expiry-review notices); **TARIC** (surveillance
+> and duty codes). Corroborate with ePURE/EBB and trade-press per the
+> methodology.

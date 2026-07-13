@@ -52,6 +52,22 @@ Renewable **and** low-carbon transport/energy fuels at EU level:
    **delegated-act scrutiny** periods (Parliament/Council objection windows),
    the monthly **infringement packages** (RED III transposition), and relevant
    **State-aid** decisions.
+8. **Trade measures on biofuels / renewable fuels** — EU trade-defence and
+   import-monitoring actions on biodiesel, HVO/renewable diesel, SAF, bioethanol,
+   biomethane and feedstocks (UCO, PFAD, palm/soy):
+   - **Anti-dumping (AD)** and **anti-subsidy / countervailing (CVD)** duties —
+     new investigations (initiation notices in the OJ C-series), provisional and
+     definitive measures (Implementing Regulations), **expiry/interim reviews**,
+     and **anti-circumvention** investigations (e.g. transhipment via third
+     countries). Track by product and origin.
+   - **TARIC prior-surveillance** measures on imports (e.g. **Chinese SAF is
+     already under TARIC import surveillance** — verify scope and any move toward
+     trade-defence), and any **safeguard** actions.
+   - Registration of imports (a pre-step to retroactive duties), and the Trade
+     Defence dossier register on DG TRADE.
+   Watch DG TRADE (trade-defence investigations database), the **OJ L (measures)
+   and C (initiations/notices) series**, and TARIC. See the register
+   `research/reports/eu-biofuel-trade-measures-*.md`.
 
 ## 3. Method — detect and verify changes
 
