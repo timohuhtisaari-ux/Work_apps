@@ -61,21 +61,20 @@ Confidence/label conventions per `research/METHODOLOGY.md`.
 ## G. Trade measures on biofuels / renewable fuels  `[R]` eu-biofuel-trade-measures
 
 Anti-dumping (AD), anti-subsidy/countervailing (CVD), TARIC import-surveillance,
-safeguard and anti-circumvention actions. **Statuses below are SEEDED 2026-07-13
-and PENDING VERIFICATION** — the register report and the next scan pin the exact
-regulation numbers, duty rates, and review dates from DG TRADE + the OJ. Track by
-product × origin.
+safeguard and anti-circumvention actions. **Verified 2026-07-13** against the OJ
++ DG TRADE (see `research/reports/eu-biofuel-trade-measures-2026-07-13.md`).
+Track by product × origin.
 
-| Product / origin | Measure type | Status (SEEDED — verify) | Watching for | Last checked |
+| Product / origin | Measure type | Status (verified 2026-07-13) | Watching for | Last checked |
 |---|---|---|---|---|
-| SAF (sustainable aviation fuel) — China | TARIC prior-surveillance | Reportedly under TARIC import surveillance — VERIFY scope | Escalation to an AD/CVD investigation; surveillance renewal/expansion | 2026-07-13 |
-| Biodiesel (FAME & blends) — China | Anti-dumping | Definitive AD measures reported (2024) — VERIFY reg. no. & rates | Interim/expiry reviews; anti-circumvention; refunds | 2026-07-13 |
-| Biodiesel — Indonesia | Countervailing (+ AD history) | CVD measures in force (since 2019) — VERIFY current status | Expiry review; anti-circumvention via third countries | 2026-07-13 |
-| Biodiesel — USA | AD + CVD (historic) | Long-standing measures / expiry reviews — VERIFY | Expiry-review outcomes; measure lapse | 2026-07-13 |
-| Bioethanol — USA / other origins | Anti-dumping (historic) | VERIFY whether any measure is currently in force | New investigation; measure status | 2026-07-13 |
-| HVO / renewable diesel | AD/CVD or surveillance | VERIFY whether any dedicated measure/monitoring exists | New complaint/initiation | 2026-07-13 |
-| UCO / UCOME & waste-based feedstocks — China & others | Investigation / surveillance | VERIFY (fraud/circumvention concerns) | New initiation; surveillance; certification-fraud actions | 2026-07-13 |
-| Anti-circumvention (transhipment) | AD/CVD circumvention | VERIFY open cases (e.g. via UK/Malaysia/China) | New circumvention initiations & findings | 2026-07-13 |
+| SAF — China | **None** (statistical monitoring only) | **No duty, no investigation** — SAF is *excluded* from the China biodiesel AD (Reg (EU) 2025/261 rec. 22); only **dedicated TARIC codes** for monitoring (Reg (EU) 2025/1866). `CONFIRMED` | Any AD/CVD initiation on SAF (OJ C-series); surveillance escalation | 2026-07-13 |
+| Biodiesel (FAME + HVO in scope) — China | Anti-dumping | **In force**: definitive AD **10.0%–35.6%**, Reg (EU) 2025/261 (from 11 Feb 2025; provisional 2024/2163); AD only, ~to Feb 2030. `CONFIRMED` | Interim/expiry reviews; new-exporter reviews; refunds | 2026-07-13 |
+| Biodiesel — Indonesia | Countervailing (CVD) | **In force but under expiry review**: CVD **8.0%–18.0%**, Reg (EU) 2019/2092; expiry-review notice C/2024/7405; **WTO DS618** panel (Aug 2025) largely against EU, EU appeal 26 Sep 2025. `CONFIRMED` | Expiry-review outcome; WTO Appellate/MPIA; repeal risk | 2026-07-13 |
+| Biodiesel — USA (extended to Canada) | AD + CVD | **In force**: Reg (EU) 2021/1266 (AD) / 2021/1267 (CVD), in force 3 Aug 2021, **5-yr term expiring ~Aug 2026**; corrected by Reg (EU) 2025/1861 (SAF/HEFA refs). Braya (CA) new-exporter review ongoing (Reg 2026/1341). `CONFIRMED` (CVD per-tonne rate = GAP) | **Expiry-review initiation (~Aug 2026, OJ C-series)**; Braya outcome | 2026-07-13 |
+| Bioethanol — USA | Anti-dumping (lapsed) | **No measure in force** — repealed 14 May 2019 by Reg (EU) 2019/765. `CONFIRMED` | Any fresh complaint/initiation | 2026-07-13 |
+| HVO / renewable diesel | (within biodiesel scope) | **No stand-alone measure** — HVO captured within the China biodiesel AD scope; no separate action. `CONFIRMED` | A dedicated HVO complaint/initiation | 2026-07-13 |
+| UCO / UCOME & waste feedstocks — China & others | Monitoring / fraud-control only | **No trade-defence duty**; fraud examination **closed 18 Jul 2025**; tightened import (animal-by-product) conditions via Reg (EU) 2025/2181 (29 Oct 2025). `CONFIRMED` | New AD/CVD initiation; certification-fraud actions; surveillance | 2026-07-13 |
+| Anti-circumvention (transhipment) | AD/CVD circumvention | Indonesia→China/UK biodiesel case **terminated** (EBB withdrew, Decision (EU) 2024/1273); no measures extended. `CONFIRMED` | New circumvention initiations & findings | 2026-07-13 |
 
 > Sources to sweep: DG TRADE **trade-defence investigations database** and its
 > "measures in force" list; the **Official Journal** L-series (measures) and

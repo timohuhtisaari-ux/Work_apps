@@ -86,7 +86,15 @@ instruments rather than country reports (template:
   verification/UDB Impl. Reg. 2022/996 (+ 2024/805, 2025/196), the Annex IX
   amendment (Del. Directive (EU) 2024/1405), the separate low-carbon-hydrogen act
   (Del. Reg. (EU) 2025/2359, under the gas-package Directive 2024/1788), and an
-  overdue/pending watch-list (the cascading-principle act is overdue). Each country report
+  overdue/pending watch-list (the cascading-principle act is overdue).
+- `research/reports/eu-biofuel-trade-measures-2026-07-13.md` — verified register
+  of EU **trade-defence & import-monitoring measures** on biofuels: China
+  biodiesel anti-dumping (Reg (EU) 2025/261, 10–35.6 %), Indonesia biodiesel
+  countervailing (Reg (EU) 2019/2092, under expiry review + WTO DS618), US
+  biodiesel AD+CVD (expiring ~Aug 2026), the lapsed US bioethanol measure, and
+  the **SAF-from-China** position (no duty/no investigation — TARIC statistical
+  monitoring only, Reg (EU) 2025/1866). Tracked live in monitoring watchlist
+  section G. Each country report
 covers the biofuel mandate (2026 level + legislated trajectory to 2030),
 fuel taxation, and RED II/III sustainability/certification obligations, with a
 supplier compliance checklist and a conflicts/gaps section. Every fact carries a
