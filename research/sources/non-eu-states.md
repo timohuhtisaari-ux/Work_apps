@@ -50,12 +50,22 @@ Legend: **M** = mandates authority · **T** = tax/excise authority ·
   Swiss ETS is linked to the EU ETS (stationary + aviation) but road fuels are
   handled under the CO2 Act, not ETS2.
 - Scheme: **no blending mandate**. Two instruments run in parallel: (1) a
-  **mineral-oil-tax relief** for renewable fuels meeting ecological/social
-  criteria — this did **not** expire in 2023; the revised CO2 Act extended it to
-  **31 Dec 2030** (BAZG); and (2) a **CO2 compensation obligation** on fuel
-  importers under the **CO2 Act / CO2 Ordinance** (in force 1 Jan 2026), who must
-  offset a share of transport CO2 (≈30 % in 2026), partly via renewable fuels.
-  Verify the current 2026 figures.
+  **FULL mineral-oil-tax exemption** for qualifying renewable fuels (MinöStG
+  SR 641.61 **Art. 12b** — base tax + surtax remitted, up to ~75 Rp/L, so
+  qualifying biofuel pays ~0), granted by BAZG "im Einvernehmen mit BAFU und
+  SECO"; gated by ecological (≥40 % lifecycle GHG saving, ≤125 % environmental
+  impact, no post-1-Jan-2008 high-carbon/high-biodiversity land conversion) +
+  social (ILO / lawful land) criteria under **USG Art. 35d**, **IBTV SR
+  814.311.1** (prior BAFU approval mandatory since 1 Nov 2025) and **ETrV SR
+  641.611.21**; categorical food/feed-crop ban (palm/soy out). Mandate-less and
+  uncapped; the relief did **not** expire in 2023 — extended by the revised CO2
+  Act to a **hard sunset 31 Dec 2030**. Note: **mass-balanced (book-and-claim)
+  volumes appear NOT to get the tax exemption** (physical proof needed) —
+  PRIMARY-ONLY. (2) a **CO2 compensation obligation** on fuel importers (CO2 Act
+  SR 641.71 / CO2 Ordinance, ≈30 % of transport CO2 in 2026 → 50 % by 2030);
+  a Pronovo guarantee of origin can be assigned to only one instrument (no
+  double-count between exemption and compensation). Deep-dive:
+  `research/reports/switzerland-biofuel-tax-exemption-2026-07-13.md`.
 - **M/S:** Federal Office for the Environment (FOEN / BAFU) — bafu.admin.ch;
   Swiss Federal Office of Energy (SFOE / BFE) — bfe.admin.ch
 - **T:** Federal Office for Customs and Border Security (BAZG / OFDF) —

@@ -94,7 +94,17 @@ instruments rather than country reports (template:
   biodiesel AD+CVD (expiring ~Aug 2026), the lapsed US bioethanol measure, and
   the **SAF-from-China** position (no duty/no investigation — TARIC statistical
   monitoring only, Reg (EU) 2025/1866). Tracked live in monitoring watchlist
-  section G. Each country report
+  section G.
+- `research/reports/switzerland-biofuel-tax-exemption-2026-07-13.md` — deep-dive
+  on Switzerland's **biofuel mineral-oil-tax exemption**: a full base+surtax
+  exemption (MinöStG Art. 12b, up to ~75 Rp/L, so qualifying biofuel pays ~0),
+  mandate-less and uncapped, hard sunset **31 Dec 2030**; the ecological (≥40 %
+  GHG, ≤125 % impact, post-2008 land cut-off) + social eligibility gate, the
+  BAZG/BAFU/SECO permit + Pronovo process, the food/feed-crop ban, and the
+  catches (SAF gets no relief; mass-balanced volumes appear not to qualify;
+  single-assignment blocks double-counting with the CO2 compensation obligation).
+
+Each country report
 covers the biofuel mandate (2026 level + legislated trajectory to 2030),
 fuel taxation, and RED II/III sustainability/certification obligations, with a
 supplier compliance checklist and a conflicts/gaps section. Every fact carries a
