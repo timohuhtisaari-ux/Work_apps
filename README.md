@@ -119,6 +119,14 @@ instruments rather than country reports (template:
   *low-carbon/CI standard* class) or by research coverage; zoom presets for World
   / Europe / North America; Malta shown as a marker; light/dark, keyboard-
   accessible. Companion Obsidian note at `world-biofuel-map.md`.
+- `research/interactive/na-biofuel-map.html` — self-contained **North America
+  state/provincial drill-down map** at true admin-1 resolution (Albers equal-area
+  conic): all **51 US units (50 states + DC)** and **13 Canadian provinces/
+  territories** are individually clickable. Colour by program type — low-carbon/CI
+  standard, volumetric blend mandate, tax incentive, repealed/suspended, or
+  federal-program-only — over the federal floor (US RFS2 / Canada CFR); zoom to
+  the US or Canada. Honestly marks repealed/suspended/dormant mandates (NM B5,
+  LA, MT/HI E10, MA). Companion Obsidian note at `na-biofuel-map.md`.
 
 Each country report
 covers the biofuel mandate (2026 level + legislated trajectory to 2030),
