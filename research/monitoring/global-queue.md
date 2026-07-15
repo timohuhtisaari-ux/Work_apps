@@ -34,21 +34,22 @@ corroboration/integration) · **QUEUED** · **—** (not yet scheduled)
 | Singapore | SG | DONE |
 | South Korea | KR | DONE |
 
-## Batch 2 — next up (QUEUED for the weekly Routine)
+## Batch 2 — completed 2026-07-16, corroborated (map: 45 → 53 markets)
 
-| Country | ISO | Rationale |
+| Country | ISO | Status |
 |---|---|---|
-| India | IN | E20 ethanol programme, SAF targets — major demand centre |
-| China | CN | E10 pilots, SAF mandate from 2025/2026, biodiesel exports |
-| Japan | JP | ETBE route, SAF 10% by 2030 |
-| Australia | AU | State mandates (NSW/QLD), federal LCFS consultation |
-| Uruguay | UY | E10/B5 mandates (ANCAP) |
-| Bolivia | BO | E12 ethanol programme, B10 rollout |
-| Ecuador | EC | Ecopaís E5/E10 |
+| India | IN | DONE |
+| China | CN | DONE |
+| Japan | JP | DONE |
+| Australia | AU | DONE |
+| Mexico | MX | DONE |
+| Uruguay | UY | DONE |
+| Bolivia | BO | DONE |
+| Ecuador | EC | DONE |
 
-## Batch 3 — candidates (—)
+## Batch 3 — next up (QUEUED for the weekly Routine)
 
-Mexico, Guatemala/Costa Rica/Panama (Central America), Türkiye, South Africa,
+Guatemala/Costa Rica/Panama (Central America), Türkiye, South Africa,
 Kenya, Nigeria, Zimbabwe/Zambia (E10-E15 mandates), UAE/Saudi Arabia (SAF),
 Taiwan, New Zealand, Pakistan, Bangladesh.
 

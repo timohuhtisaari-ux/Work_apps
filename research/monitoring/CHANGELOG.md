@@ -12,7 +12,29 @@ One line per detected change, newest first. Appended by the weekly
   "under surveillance" premise.
 - 2026-07-13 — [SEED] Watchlist established from the repo's reports (30 country
   reports, FuelEU/ReFuelEU regulation reports, RED III delegated-acts register,
-  UDB status note). No change events yet — this is the baseline.
+  UDB status note). No change events yet — this is the baseline.## 2026-07-16 — Global expansion batch 2 (world map: 45 → 53 markets)
+
+- **New markets researched, corroborated and mapped** (drafts
+  `research/reports/drafts/*-headline-2026-07-16.md`, verification in
+  `batch2-corroboration-2026-07-16.md` — 17 CONFIRMED, 6 PRIMARY-ONLY, 1 CONFLICT):
+  - **India** — E20 operative (achieved 2025) + legislated SAF path (1% 2027 → 5% 2030),
+    CBG blending 1% → 5%, excise exemption for E20–E30. The regulatory frontrunner.
+  - **China** — **no national blend mandate** (2017 nationwide-E10 target abandoned Jan 2020);
+    provincial E10 in ~15 provinces, no expansion since 2019; SAF 1% pilot at 4 airports vs
+    2% announced (policy–implementation gap flagged); biodiesel export-focused.
+  - **Japan** — ETBE route: 824 ML/yr bioethanol obligation to Mar 2028; SAF supplier
+    obligation legislated Sep 2024 (10% by 2030); E10 pilot FY2028 PROPOSED.
+  - **Australia** — no federal mandate; NSW 6% ethanol / 2% biodiesel, QLD 4% / 0.5%
+    (increase to 9%/2% PROPOSED, Bill 2026); federal low-carbon-fuels support in build-out.
+  - **Mexico** — **no mandate**; Supreme Court blocked the E10 expansion — corroboration
+    **corrected the ruling date to 22 Jan 2020** (draft said 2025).
+  - **Uruguay** — E8.5 operative (Ley 19.996); **B5 biodiesel repealed 2021** (B0 since 2022).
+  - **Bolivia** — E12 operative; E21 (2026) / E25 (2027–28) legislated (dates granular-TBD).
+  - **Ecuador** — Ecopaís E10 nominal but **only 2–4% actual** (capacity bottleneck).
+- Batch 3 promoted to QUEUED for the weekly Routine: Central America, Türkiye,
+  South Africa, Kenya, Nigeria, Zimbabwe/Zambia, UAE/Saudi (SAF), Taiwan, New Zealand,
+  Pakistan, Bangladesh.
+
 ## 2026-07-15 — Global expansion batch 1 (world map: 32 → 45 markets)
 
 - **New markets researched, corroborated and mapped** (Haiku researcher agents +

@@ -15,7 +15,7 @@
 - **Geographic Exemption**: Mexico City, Guadalajara, Monterrey: 0% ethanol (E0 only)  
 - **Effective Since**: 2016  
 - **Confidence**: `CONFIRMED`  
-**Source (Tier 1)**: NOM-016-CRE-2016; Supreme Court ruling (January 2025)  
+**Source (Tier 1)**: NOM-016-CRE-2016; Supreme Court ruling (January 22, 2020)  
 **Source (Tier 2)**: Ethanol Producer Magazine, Advanced BioFuels USA, BioFuels Digest, USDA FAS Gain report  
 **Checked**: 2026-07-16
 
@@ -26,9 +26,9 @@
 
 ---
 
-## 2. Recent Regulatory Conflict: E10 Court Ruling (January 2025)
+## 2. Recent Regulatory Conflict: E10 Court Ruling (January 22, 2020)
 
-In January 2025, **Mexico's Supreme Court ruled unconstitutional** an attempted 2017 regulatory amendment by the Energy Regulatory Commission (CRE/ERC) to raise the ethanol blending cap to 10% (E10) nationwide (with exceptions for the three major urban centers).
+In January 22, 2020, **Mexico's Supreme Court ruled unconstitutional** an attempted 2017 regulatory amendment by the Energy Regulatory Commission (CRE/ERC) to raise the ethanol blending cap to 10% (E10) nationwide (with exceptions for the three major urban centers).
 
 - **CRE's 2017 Proposal**: Increase to E10 to reduce high-octane gasoline imports  
 - **Supreme Court Decision**: Invalidated the rule on **environmental grounds** — potential for higher pollution levels and increased GHG emissions; weighed these risks against economic benefits and determined the environmental harm outweighed the benefits  
@@ -99,11 +99,11 @@ In January 2025, **Mexico's Supreme Court ruled unconstitutional** an attempted 
 | Flag | Finding |
 |------|---------|
 | **Mandate Absence** | Mexico has NO national ethanol or biodiesel mandate. E5.8 is a technical maximum, not a requirement. |
-| **E10 Impasse** | Supreme Court ruled E10 unconstitutional (Jan 2025) on environmental grounds. No legal pathway to E10 appears available without new legislation. |
+| **E10 Impasse** | Supreme Court ruled E10 unconstitutional (Jan 2020) on environmental grounds. No legal pathway to E10 appears available without new legislation. |
 | **Regulatory Uncertainty** | CRE/SENER authority transfer incomplete; SENER to publish PLATEASE and PLADESHi in 2026 (may reshape biofuel policy, but timing uncertain). |
 | **Voluntary Approach** | Any expansion beyond E5.8 would require new legislation AND environmental review; political will unclear. |
 | **Biodiesel Negligible** | No domestic biodiesel industry; import-dependent, no mandate, tax credits only for specific transport uses. |
-| **Data Quality** | Court ruling (Jan 2025) confirmed; SENER/CRE intent confirmed via official statements and Hydrocarbons Law 2025; future PLATEASE contents not yet public. |
+| **Data Quality** | Court ruling (Jan 2020) confirmed; SENER/CRE intent confirmed via official statements and Hydrocarbons Law 2025; future PLATEASE contents not yet public. |
 
 ---
 
@@ -111,7 +111,7 @@ In January 2025, **Mexico's Supreme Court ruled unconstitutional** an attempted 
 
 | Tier | Source | URL | Accessed | Confidence Label |
 |------|--------|-----|----------|------------------|
-| 1 | Mexico Supreme Court ruling (Jan 2025) | Ethanol Producer Magazine citing official ruling | 2026-07-16 | CONFIRMED |
+| 1 | Mexico Supreme Court ruling (Jan 2020) | Ethanol Producer Magazine citing official ruling | 2026-07-16 | CONFIRMED |
 | 1 | NOM-016-CRE-2016 | Mexican official standards (referenced via regulatory texts) | 2026-07-16 | CONFIRMED |
 | 1 | Hydrocarbons Sector Law 2025 | Mexican Ministry of Energy (SENER) | 2026-07-16 | CONFIRMED |
 | 1 | Biofuels Law (March 2025) | SENER, CRE | 2026-07-16 | CONFIRMED |
@@ -128,10 +128,10 @@ In January 2025, **Mexico's Supreme Court ruled unconstitutional** an attempted 
 
 ## 9. Five-Line Summary
 
-Mexico **lacks a national ethanol or biodiesel mandate**; the technical ceiling remains 5.8% ethanol under NOM-016-CRE-2016 (2016), prohibited in three urban centers. The Supreme Court ruled E10 unconstitutional in January 2025, blocking a 2017 CRE attempt to raise the limit on environmental grounds. SENER (shifted authority in 2025 Hydrocarbons Law) has expressed intent to increase blending to 10–20%, but no legislation is in force; PLATEASE (2026) may signal future direction. Tax credits exist for biofuel/biodiesel use in transport, but production is negligible. No mandatory sustainability regime applies (ISCC voluntary).
+Mexico **lacks a national ethanol or biodiesel mandate**; the technical ceiling remains 5.8% ethanol under NOM-016-CRE-2016 (2016), prohibited in three urban centers. The Supreme Court ruled E10 unconstitutional in January 22, 2020, blocking a 2017 CRE attempt to raise the limit on environmental grounds. SENER (shifted authority in 2025 Hydrocarbons Law) has expressed intent to increase blending to 10–20%, but no legislation is in force; PLATEASE (2026) may signal future direction. Tax credits exist for biofuel/biodiesel use in transport, but production is negligible. No mandatory sustainability regime applies (ISCC voluntary).
 
 ---
 
 ```mapcard
-{"iso": "MX", "name": "Mexico", "eu": false, "type": "none", "st": "neutral", "short": "E5.8 cap, no mandate", "level": "E5.8 (max, not required); E0 in 3 metros", "target": "SENER aspiration 10–20% E; 45% renewables by 2030 (non-fuel-specific)", "adv": "—", "tax": "IEPS with biofuel/biodiesel use credit (2026)", "cert": "None mandatory; ISCC optional", "status": "NO national ethanol or biodiesel mandate; E10 ruled unconstitutional Jan 2025; SENER authority expanded 2025.", "flag": "PLATEASE contents TBD; future policy direction uncertain; E10 court-blocked."}
+{"iso": "MX", "name": "Mexico", "eu": false, "type": "none", "st": "neutral", "short": "E5.8 cap, no mandate", "level": "E5.8 (max, not required); E0 in 3 metros", "target": "SENER aspiration 10–20% E; 45% renewables by 2030 (non-fuel-specific)", "adv": "—", "tax": "IEPS with biofuel/biodiesel use credit (2026)", "cert": "None mandatory; ISCC optional", "status": "NO national ethanol or biodiesel mandate; E10 ruled unconstitutional Jan 2020; SENER authority expanded 2025.", "flag": "PLATEASE contents TBD; future policy direction uncertain; E10 court-blocked; corroboration corrected the Supreme Court E10 ruling date to 22 Jan 2020 (draft said 2025)"}
 ```

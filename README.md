@@ -112,12 +112,12 @@ instruments rather than country reports (template:
   Also published as a shareable Artifact.
 - `research/interactive/world-biofuel-map.html` — self-contained **interactive
   world MASTER map** (real Miller-projected borders of all 176 countries)
-  covering **45 researched markets**: the EU-27; Norway, the UK, Switzerland;
+  covering **53 researched markets**: the EU-27; Norway, the UK, Switzerland;
   the **United States** and **Canada** — whose country layer **drills down to
   real admin-1 state/province borders at the N. America zoom** (all 64 units
-  clickable); and, added by the global research team on 2026-07-15,
+  clickable); and, added by the global research team (batches 1–2, 2026-07-15/16),
   **South America** (BR incl. RenovaBio, AR, PY, CL, PE, CO) and **Asia**
-  (ID, MY, PH, TH, VN, SG, KR). Non-researched countries render in muted grey
+  (ID, MY, PH, TH, VN, SG, KR), plus **India, China, Japan, Australia, Mexico, Uruguay, Bolivia and Ecuador**. Non-researched countries render in muted grey
   (no unverified guesses). Colour by obligation design (incl. *low-carbon/CI
   standard* and *no-mandate* classes) or research coverage; zoom presets World /
   Europe / N. America / S. America / SE Asia; Malta and Singapore as markers;
