@@ -111,14 +111,19 @@ instruments rather than country reports (template:
   colour by RED III status or obligation design; light/dark, keyboard-accessible.
   Also published as a shareable Artifact.
 - `research/interactive/world-biofuel-map.html` — self-contained **interactive
-  world map** (real Miller-projected borders of all 176 countries) covering the
-  **32 researched markets**: the EU-27 plus Norway, the UK, Switzerland, the
-  **United States** (federal RFS2 + CA/OR/WA/NM state LCFS) and **Canada**
-  (federal CFR SOR/2022-140 + BC/AB/SK/MB/ON/QC). Non-researched countries render
-  in muted grey (no unverified guesses). Colour by obligation design (adds a
-  *low-carbon/CI standard* class) or by research coverage; zoom presets for World
-  / Europe / North America; Malta shown as a marker; light/dark, keyboard-
-  accessible. Companion Obsidian note at `world-biofuel-map.md`.
+  world MASTER map** (real Miller-projected borders of all 176 countries)
+  covering **45 researched markets**: the EU-27; Norway, the UK, Switzerland;
+  the **United States** and **Canada** — whose country layer **drills down to
+  real admin-1 state/province borders at the N. America zoom** (all 64 units
+  clickable); and, added by the global research team on 2026-07-15,
+  **South America** (BR incl. RenovaBio, AR, PY, CL, PE, CO) and **Asia**
+  (ID, MY, PH, TH, VN, SG, KR). Non-researched countries render in muted grey
+  (no unverified guesses). Colour by obligation design (incl. *low-carbon/CI
+  standard* and *no-mandate* classes) or research coverage; zoom presets World /
+  Europe / N. America / S. America / SE Asia; Malta and Singapore as markers;
+  light/dark, keyboard-accessible. Companion Obsidian note at
+  `world-biofuel-map.md`. Extended weekly by the `/global-fuels-research`
+  Routine (queue: `research/monitoring/global-queue.md`).
 - `research/interactive/na-biofuel-map.html` — self-contained **North America
   state/provincial drill-down map** at true admin-1 resolution (Albers equal-area
   conic): all **51 US units (50 states + DC)** and **13 Canadian provinces/

@@ -2,21 +2,21 @@
 title: World Biofuel & Low-Carbon Fuel Regulation Map
 tags: [biofuel, regulation, RED-III, LCFS, map, research]
 created: 2026-07-15
-markets: 32
+markets: 45
 ---
 
 # World Biofuel & Low-Carbon Fuel Regulation Map
 
-> [!info] Interactive map
-> The interactive world map lives in **`world-biofuel-map.html`** (keep it in the same folder as this note). Open it in a browser, or use the Obsidian **HTML Reader** / **Custom Frames** community plugin to view it inside the vault. Click any highlighted country for its full regulation card; colour by obligation design or research coverage; zoom to Europe or North America.
+> [!info] Interactive master map
+> The interactive world map lives in **`world-biofuel-map.html`** (keep it in the same folder as this note). Open it in a browser, or use the Obsidian **HTML Reader** / **Custom Frames** community plugin. Click any highlighted country for its regulation card. **At the N. America zoom the map drills down to real state / province borders** — every US state and Canadian province/territory is individually clickable. Region zooms: World · Europe · N. America · S. America · SE Asia.
 
-**Coverage — 32 markets, all researched and corroborated:** the **EU-27** (full RED III compliance reports) plus **Norway, the United Kingdom, Switzerland, the United States and Canada** (non-EU, described on their own terms). Every other country renders in muted grey as *not yet researched* — no unverified guesses.
+**Coverage — 45 markets researched:** the **EU-27** (full RED III compliance reports), **Norway, UK, Switzerland**, **USA & Canada** (with state/province drill-down), and — added 2026-07-15 by the global research team — **South America** (Brazil, Argentina, Paraguay, Chile, Peru, Colombia) and **Asia** (Indonesia, Malaysia, Philippines, Thailand, Vietnam, Singapore, South Korea). Every other country renders in muted grey as *not yet researched* — no unverified guesses. The team extends coverage weekly and monitors mapped markets for changes.
 
 ## Reading the headline
 
-- **"2026 headline obligation" is a demand signal** — the mandated biofuel/renewable share or carbon-intensity target driving demand, **not** measured consumption.
-- Obligation designs (**GHG-reduction · energy-share · volume-blending · tax-incentive · CO₂-compensation · low-carbon/CI standard**) are **not directly comparable by headline number**.
-- **Non-EU markets** (NO, GB, CH, US, CA): RED III and EU ETS2 do **not** apply. In the EU-27, EU ETS2 for road fuels starts **1 Jan 2028** (Dir. (EU) 2023/959); the Union Database is operational (15 Jan 2024) but not yet mandatory.
+- **"2026 headline obligation" is a demand signal** — the mandated share or carbon-intensity target driving demand, **not** measured consumption.
+- Obligation designs (**GHG-reduction · energy-share · volume-blending · tax-incentive · CO₂-compensation · low-carbon/CI standard · no-mandate**) are **not directly comparable by headline number**.
+- **Non-EU markets**: RED III and EU ETS2 do **not** apply — each regime is described on its own terms. In the EU-27, ETS2 for road fuels starts **1 Jan 2028**; the Union Database is operational but not yet mandatory.
 
 ## EU-27
 
@@ -54,11 +54,24 @@ markets: 32
 
 | Country | ISO | Design | 2026 headline obligation | 2030 target | Fuel-tax relief |
 |---|---|---|---|---|---|
+| Argentina | `AR` | Volume-blending | E12 ethanol and B7.5 biodiesel mandatory blending; Ley 27.640/2021 (no step-up legislated). | Law expires 31 Dec 2030 (no forward mandate); aspirational government goals (E15 by 2026, E20/B20 by 2030) NOT legislated; Senate Bill E18/B18 PROPOSED. | No |
+| Brazil | `BR` | Hybrid (dual) | E32 ethanol (temporary, 180-day renewable) and B15 biodiesel mandatory; RenovaBio credit scheme requires 10.1% CO2 offset in 2026. | B20 by March 2030 (1% annual step-up); E35 legally permissible; RenovaBio offset escalates to 11.8% by 2028. | No |
 | Canada | `CA` | Low-carbon / CI | Federal Clean Fuel Regulations (SOR/2022-140) — carbon-intensity-reduction standard on gasoline/diesel suppliers; ~77 gCO₂e/MJ limit in 2026 (2016 baseline) | −14 gCO₂e/MJ by 2030 (72 gCO₂e/MJ limit). Provinces: BC −30% CI, Ontario gasoline 15%, Québec gasoline 15% / diesel 10% by 2030 | — |
+| Chile | `CL` | No mandate / voluntary | No mandatory blending quota; voluntary E2/E5 ethanol only. | SAF 2050 Roadmap: 50% of aviation fuel by 2050 (aspirational, not binding). | No |
+| Colombia | `CO` | Volume-blending | Mandate: 10% ethanol in gasoline (April 2021), 13% biodiesel in diesel (July 2024). | No legislated increase post-2026; pricing methodology reform announced (October 2025, pending finalization). | No |
+| Indonesia | `ID` | Volume-blending | B50 biodiesel (50%) and E5 ethanol (5% regional) effective July 1, 2026. | No formal target beyond July 2026; potential B50+ and E5 nationwide expansion under review. | No |
+| Malaysia | `MY` | Volume-blending | B15 biodiesel (15%) for transport, B7 (7%) for industrial, effective June 1, 2026. | B20 phased rollout 2027–2028 (proposed); B30 for heavy transport by 2030 (announced). | No |
 | Norway | `NO` | Volume-blending | Road 20 vol% (adv ≥13.5%); maritime 7%; other 11%; aviation 2% | Road 21% (2027); maritime 8%; other 12% | No |
+| Paraguay | `PY` | Volume-blending | E30 ethanol mandatory minimum (since 17 Mar 2025); B8–B10 biodiesel operational range (MIC discretion within 5–20% legal band, since June 2026). | No pre-legislated 2030 step-up; Ley 7.635 permits B5–B20 range (MIC may increase by resolution); E30 is current terminal mandate. | No |
+| Peru | `PE` | Volume-blending | Mandate: 7.8% ethanol in gasoline, 5% biodiesel in diesel (since 2010–2011). | No legislated increase; mandate expected to remain at E7.8 & B5 through 2030. | No |
+| Philippines | `PH` | Volume-blending | E10 ethanol (10%) and B3 biodiesel (3% CME) mandated; B4 and B5 suspended. | No formal legislated target; B5 proposed but suspended; E20 voluntary (approved June 2024). | No |
+| Singapore | `SG` | Volume-blending | 1% SAF uplift in jet fuel from 1 Jan 2027 (delayed from Oct 2026); levy collection on tickets from 1 Oct 2026; no road-fuel blending mandate | 3–5% SAF by 2030 (aspiration, not legislated; contingent on global SAF availability) | No |
+| South Korea | `KR` | Volume-blending | B4 (4% biodiesel) mandatory in all automotive diesel since Jan 1, 2024; escalating to B5 (5%) by 2030 | B5 (5% biodiesel) by 2030; no post-2030 legislated target | No |
 | Switzerland | `CH` | CO₂-compensation | No blending mandate — CO₂ compensation obligation: offset 30% of transport CO₂ (≥12% domestic); aviation SAF 2% | Compensation → 35% (2027) … 50% (2030) | Yes |
+| Thailand | `TH` | Volume-blending | E20 (20% ethanol) gasoline, B7 (7% biodiesel) diesel, 1% SAF in jet fuel from 2026 | SAF 8% by 2036; no formal 2030 road-fuel target | No |
 | United Kingdom | `GB` | Volume-blending | RTFO 12.5% of fuel by volume + separate SAF Mandate 3.60% of jet fuel | RTFO → 14.6% (2032); SAF → 10% (2030), PtL from 2028 | No |
 | United States | `US` | Volume-blending | Federal RFS2 (EPA) — 2026 RVO 26.81 bn RINs (advanced 11.10, biomass-based diesel 9.07, cellulosic 1.36); a national volume mandate via RINs, no federal blend % | RFS set two years out (2027 total 27.02 bn RINs). State LCFS: CA −30% CI by 2030, OR −20%, WA −45% by 2038, NM −20% by 2030 | Yes |
+| Vietnam | `VN` | Volume-blending | E10 (10% ethanol) mandatory nationwide from June 1, 2026; E5 phased out by Dec 31, 2030 | No escalation target post-2026 found; 25–30% national renewable energy by 2030 (all sectors, non-specific to road fuels) | No |
 
 ## Data flags (provisional items)
 
@@ -80,14 +93,26 @@ markets: 32
 - **Cyprus (CY):** 7.3% PRIMARY-ONLY (single source); Annex IX-B cap exempt
 - **United States (US):** Several cited 'state mandates' (NM B5, LA, MT/HI E10, MA advanced) are repealed / suspended / dormant; CARB LCFS host returned HTTP 403 (figures Tier-2 corroborated)
 - **Canada (CA):** Québec 2026 interim step UNCORROBORATED (LégisQuébec 403); ECCC targeted amendments are PROPOSED, not adopted
+- **Argentina (AR):** Aspirational targets not legislated (reality gap E12 vs. goal E15); Senate Bill status unclear; post-2030 trajectory GAP; tax exemption enforcement timeline unclear.
+- **Brazil (BR):** E32 temporary status (CNPE Jan 2027 decision TBD); B16 timing not yet confirmed; Lei 14.993 full text (Planalto 503 error); tax exemption legal instruments not verified.
+- **Chile (CL):** No mandate obligation; tax incentive status unresolved; SAF targets are aspirational.
+- **Colombia (CO):** Sustainability certification scheme undocumented; non-compliance penalties not detailed; ethanol tariff review opportunity March 2026.
+- **Indonesia (ID):** Domestic ethanol capacity gap (26,000 kL/yr vs. 1–1.2 million kL/yr needed); no formal 2027+ trajectory published.
+- **South Korea (KR):** 2025–2026 actual data: GAP; post-2030 trajectory: GAP; 2026 tax status: GAP; SAF 2027+ pending
+- **Malaysia (MY):** B20 and B30 dates are proposed, not legislated; no formal national certification scheme; 300,000 t.p.a. palm demand increase not independently verified.
+- **Peru (PE):** Sustainability scheme pending; non-compliance penalties undocumented; no tax incentives.
+- **Philippines (PH):** B4/B5 suspension status ambiguous (no reversal decree found); no formal 2030 target; domestic ethanol supply insufficient.
+- **Paraguay (PY):** No 2030 biodiesel target legislated (GAP); MIC discretion timing unclear; Decreto 3.241 & Ley 7.635 full text not verified (news summaries only); ethanol source enforcement not detailed.
+- **Singapore (SG):** Uplift date corrected by corroboration (Jan 2027, not Oct 2026); 2030 3-5% target non-legislated; SAF certification scheme GAP
+- **Thailand (TH):** Road-fuel post-2026 trajectory and sustainability cert regime: GAP
+- **Vietnam (VN):** Post-2026 road-fuel trajectory: GAP; sustainability certification: GAP; diesel/SAF: not found
 
 ## Sources
 
-Every value traces to the verified reports in this research set:
+- **EU-27:** `research/reports/<ISO2>-country-report-2026-07-04.md` + `eu-comparison-2026-07-04.md`.
+- **Norway / UK / Switzerland:** same series + `research/sources/non-eu-states.md`.
+- **United States / Canada (incl. state & province cards):** `us-lcfs`, `us-blend-mandates`, `canada-biofuel` headline drafts (2026-07-13).
+- **South America & Asia batch 1:** `research/reports/drafts/<iso2>-headline-2026-07-15.md` + `batch1-corroboration-2026-07-15.md`.
+- **Expansion queue & monitoring:** `research/monitoring/global-queue.md`, weekly `/global-fuels-research` Routine.
 
-- **EU-27:** `research/reports/<ISO2>-country-report-2026-07-04.md` and `eu-comparison-2026-07-04.md`.
-- **Norway / UK / Switzerland:** the same country-report set + `research/sources/non-eu-states.md`; Switzerland tax deep-dive `switzerland-biofuel-tax-exemption-2026-07-13.md`.
-- **United States:** `us-lcfs-headline-2026-07-13.md` (federal RFS2 + CA/OR/WA/NM LCFS) and `us-blend-mandates-headline-2026-07-13.md` (state blend mandates + tax credits).
-- **Canada:** `canada-biofuel-headline-2026-07-13.md` (federal CFR SOR/2022-140 + BC/AB/SK/MB/ON/QC).
-
-Basemap © Natural Earth (public domain), Miller cylindrical projection. Confidence labels (`CONFIRMED` / `PRIMARY-ONLY` / `UNCORROBORATED` / `CONFLICT` / `GAP` / `PROPOSED`) follow `research/METHODOLOGY.md`.
+Basemap © Natural Earth (public domain): Miller cylindrical (world) + admin-1 states/provinces layer. Confidence labels (`CONFIRMED` / `PRIMARY-ONLY` / `UNCORROBORATED` / `CONFLICT` / `GAP` / `PROPOSED`) per `research/METHODOLOGY.md`.
