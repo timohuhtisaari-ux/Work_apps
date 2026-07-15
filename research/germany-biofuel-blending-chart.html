@@ -1,0 +1,216 @@
+<title>Germany Biofuel Blending — Monthly, 2025–2026</title>
+<style>
+  .viz-root{
+    color-scheme:light;
+    --surface-1:#fcfcfb; --page:#f9f9f7;
+    --text-primary:#0b0b0b; --text-secondary:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --baseline:#c3c2b7; --border:rgba(11,11,11,.10);
+    --s1:#2a78d6; --s2:#008300; --s3:#e87ba4; --s4:#eda100; --s5:#1baf7a; --s6:#eb6834;
+    font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+    background:var(--page); color:var(--text-primary);
+    max-width:1000px; margin:0 auto; padding:24px 20px 40px;
+  }
+  @media (prefers-color-scheme:dark){:root:where(:not([data-theme="light"])) .viz-root{
+    color-scheme:dark;
+    --surface-1:#1a1a19; --page:#0d0d0d;
+    --text-primary:#fff; --text-secondary:#c3c2b7; --muted:#898781;
+    --grid:#2c2c2a; --baseline:#383835; --border:rgba(255,255,255,.10);
+    --s1:#3987e5; --s2:#008300; --s3:#d55181; --s4:#c98500; --s5:#199e70; --s6:#d95926;
+  }}
+  :root[data-theme="dark"] .viz-root{
+    color-scheme:dark;
+    --surface-1:#1a1a19; --page:#0d0d0d;
+    --text-primary:#fff; --text-secondary:#c3c2b7; --muted:#898781;
+    --grid:#2c2c2a; --baseline:#383835; --border:rgba(255,255,255,.10);
+    --s1:#3987e5; --s2:#008300; --s3:#d55181; --s4:#c98500; --s5:#199e70; --s6:#d95926;
+  }
+  .viz-root h1{font-size:20px;margin:0 0 4px;font-weight:650;letter-spacing:-.01em}
+  .viz-root .sub{font-size:13px;color:var(--text-secondary);margin:0 0 2px}
+  .viz-root .src{font-size:11.5px;color:var(--muted);margin:0 0 16px}
+  .card{background:var(--surface-1);border:1px solid var(--border);border-radius:12px;padding:16px 16px 8px}
+  .legend{display:flex;flex-wrap:wrap;gap:6px 16px;margin:0 0 10px;font-size:12.5px;color:var(--text-secondary)}
+  .legend span{display:inline-flex;align-items:center;gap:6px}
+  .legend i{width:11px;height:11px;border-radius:3px;display:inline-block}
+  .controls{display:flex;gap:8px;margin:2px 0 12px}
+  .controls button{font:inherit;font-size:12.5px;padding:5px 12px;border-radius:999px;border:1px solid var(--border);
+    background:transparent;color:var(--text-secondary);cursor:pointer}
+  .controls button[aria-pressed="true"]{background:var(--text-primary);color:var(--surface-1);border-color:var(--text-primary)}
+  svg{width:100%;height:auto;display:block;overflow:visible}
+  .gl{stroke:var(--grid);stroke-width:1}
+  .axl{fill:var(--muted);font-size:11px}
+  .axl.tab{font-variant-numeric:tabular-nums}
+  .xl{fill:var(--text-secondary);font-size:11px;text-anchor:middle}
+  .yr{fill:var(--muted);font-size:11px;text-anchor:middle;letter-spacing:.02em}
+  .seg{stroke:var(--surface-1);stroke-width:2;transition:opacity .12s}
+  .seg:hover{opacity:.82}
+  .tip{position:fixed;pointer-events:none;z-index:10;background:var(--surface-1);color:var(--text-primary);
+    border:1px solid var(--border);border-radius:9px;padding:9px 11px;font-size:12px;
+    box-shadow:0 6px 22px rgba(0,0,0,.16);opacity:0;transition:opacity .1s;min-width:190px}
+  .tip h4{margin:0 0 6px;font-size:12.5px;font-weight:650}
+  .tip table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+  .tip td{padding:1px 0}
+  .tip td:last-child{text-align:right;padding-left:14px;color:var(--text-secondary)}
+  .tip i{width:9px;height:9px;border-radius:2px;display:inline-block;margin-right:6px}
+  .tip .tot{border-top:1px solid var(--border);font-weight:650}
+  .tip .tot td{padding-top:4px}
+  table.data{border-collapse:collapse;width:100%;font-size:12px;font-variant-numeric:tabular-nums;margin:4px 0 10px}
+  table.data th,table.data td{padding:5px 8px;text-align:right;border-bottom:1px solid var(--grid)}
+  table.data th:first-child,table.data td:first-child{text-align:left}
+  table.data thead th{color:var(--text-secondary);font-weight:600;border-bottom:1px solid var(--baseline)}
+  table.data tr.fy td{font-weight:650;border-top:1px solid var(--baseline);border-bottom:1px solid var(--baseline)}
+  .hidden{display:none}
+  .note{font-size:11.5px;color:var(--muted);margin:8px 2px 0;line-height:1.5}
+</style>
+
+<div class="viz-root">
+  <h1>Germany — monthly biofuel blending volumes</h1>
+  <p class="sub">Tonnes blended into mineral-oil fuels, by biocomponent. Liquid blends only — neat fuels (HVO100, B100, E85) excluded.</p>
+  <p class="src">Source: BAFA, Amtliche Mineralöldaten (Table 9), Jan 2025 – Apr 2026 · latest edition published 2 Jul 2026 (~2-month lag)</p>
+
+  <div class="controls">
+    <button id="btnChart" aria-pressed="true">Chart</button>
+    <button id="btnTable" aria-pressed="false">Table</button>
+  </div>
+
+  <div class="card" id="chartCard">
+    <div class="legend" id="legend"></div>
+    <svg id="svg" viewBox="0 0 960 500" role="img" aria-label="Stacked bar chart of monthly biofuel blending volumes in Germany by type, 2025 to 2026"></svg>
+  </div>
+
+  <div id="tableCard" class="hidden"></div>
+
+  <p class="note">FAME = biodiesel · HVO = hydrotreated vegetable oil (blended, not HVO100) · BTL/other = biomass-to-liquid &amp; other bio-additives · ETBE-ethanol = bioethanol bound in ETBE · Biokerosin = SAF (reported from 2026). BAFA does not report gaseous fuels (biomethane, Bio-LNG/CNG).</p>
+
+  <div class="tip" id="tip"></div>
+</div>
+
+<script>
+const CATS = [
+  {key:"fame",  label:"FAME (biodiesel)",  v:"--s1"},
+  {key:"hvo",   label:"HVO (blended)",     v:"--s2"},
+  {key:"btl",   label:"BTL / other",       v:"--s3"},
+  {key:"eth",   label:"Bioethanol",        v:"--s4"},
+  {key:"etbe",  label:"Ethanol in ETBE",   v:"--s5"},
+  {key:"bk",    label:"Biokerosin (SAF)",  v:"--s6"},
+];
+// month, year, fame, hvo, btl, eth, etbe, bk
+const DATA = [
+  ["Jan",2025,172480,8709,227,86022,8204,0],
+  ["Feb",2025,198902,15825,141,116865,5605,0],
+  ["Mar",2025,185345,24315,180,93510,7641,0],
+  ["Apr",2025,182929,9515,259,86303,6479,0],
+  ["May",2025,183155,6486,450,98993,5586,0],
+  ["Jun",2025,180222,13680,359,95391,6069,0],
+  ["Jul",2025,183771,9711,367,101681,6946,0],
+  ["Aug",2025,169781,9140,99,86905,8614,0],
+  ["Sep",2025,180980,4877,375,108894,9160,0],
+  ["Oct",2025,190147,5183,347,117616,6763,0],
+  ["Nov",2025,184750,3644,608,110470,6080,0],
+  ["Dec",2025,182230,7838,146,119355,7150,0],
+  ["Jan",2026,145333,27596,92,80921,6087,0],
+  ["Feb",2026,154712,48256,347,81880,7434,0],
+  ["Mar",2026,167796,58084,149,87432,9622,0],
+  ["Apr",2026,189800,77692,41,98349,7965,3197],
+].map(r=>({month:r[0],year:r[1],fame:r[2],hvo:r[3],btl:r[4],eth:r[5],etbe:r[6],bk:r[7],
+           total:r[2]+r[3]+r[4]+r[5]+r[6]+r[7]}));
+
+const fmt = n => n.toLocaleString("en-US");
+const cssv = v => getComputedStyle(document.querySelector(".viz-root")).getPropertyValue(v).trim();
+
+// ---- legend ----
+document.getElementById("legend").innerHTML = CATS.map(c=>
+  `<span><i style="background:var(${c.v})"></i>${c.label}</span>`).join("");
+
+// ---- chart geometry ----
+const W=960,H=500, mL=58,mR=14,mT=20,mB=66;
+const plotW=W-mL-mR, plotH=H-mT-mB, yMax=400000;
+const y = v => mT + plotH*(1 - v/yMax);
+const svg = document.getElementById("svg");
+const NS="http://www.w3.org/2000/svg";
+const el=(n,a)=>{const e=document.createElementNS(NS,n);for(const k in a)e.setAttribute(k,a[k]);return e;};
+
+function draw(){
+  svg.innerHTML="";
+  // gridlines + y labels
+  for(let g=0; g<=400000; g+=100000){
+    svg.appendChild(el("line",{class:"gl",x1:mL,x2:mL+plotW,y1:y(g),y2:y(g)}));
+    const t=el("text",{class:"axl tab",x:mL-9,y:y(g)+3.5,"text-anchor":"end"});
+    t.textContent = g===0?"0":(g/1000)+"k"; svg.appendChild(t);
+  }
+  const t0=el("text",{class:"axl",x:mL-9,y:mT-8,"text-anchor":"end"}); t0.textContent="tonnes"; svg.appendChild(t0);
+
+  const slot=plotW/DATA.length, bw=Math.min(36, slot*0.66);
+  DATA.forEach((d,i)=>{
+    const x=mL+slot*i+(slot-bw)/2;
+    let acc=0;
+    const segs=CATS.filter(c=>d[c.key]>0);
+    segs.forEach((c,si)=>{
+      const val=d[c.key];
+      const yTop=y(acc+val), yBot=y(acc), h=Math.max(0,yBot-yTop);
+      const top = si===segs.length-1;   // round the crown of the bar
+      const r = top?4:0;
+      const rect=el("rect",{class:"seg",x:x,y:yTop,width:bw,height:h,fill:`var(${c.v})`,rx:r,ry:r});
+      rect.addEventListener("mousemove",e=>showTip(e,d,c.key));
+      rect.addEventListener("mouseleave",hideTip);
+      svg.appendChild(rect);
+      acc+=val;
+    });
+    // x label
+    const xl=el("text",{class:"xl",x:x+bw/2,y:H-mB+18}); xl.textContent=d.month; svg.appendChild(xl);
+  });
+  // baseline
+  svg.appendChild(el("line",{x1:mL,x2:mL+plotW,y1:y(0),y2:y(0),stroke:cssv("--baseline"),"stroke-width":1}));
+  // year brackets
+  yearLabel(0,11,"2025"); yearLabel(12,15,"2026");
+}
+function yearLabel(a,b,txt){
+  const slot=plotW/DATA.length;
+  const x1=mL+slot*a+2, x2=mL+slot*(b+1)-2, xc=(x1+x2)/2, yb=H-mB+38;
+  svg.appendChild(el("line",{x1,x2:x1,y1:yb-6,y2:yb,stroke:cssv("--grid"),"stroke-width":1}));
+  svg.appendChild(el("line",{x1:x2,x2,y1:yb-6,y2:yb,stroke:cssv("--grid"),"stroke-width":1}));
+  svg.appendChild(el("line",{x1,x2,y1:yb,y2:yb,stroke:cssv("--grid"),"stroke-width":1}));
+  const t=el("text",{class:"yr",x:xc,y:yb+13}); t.textContent=txt; svg.appendChild(t);
+}
+
+// ---- tooltip ----
+const tip=document.getElementById("tip");
+function showTip(e,d,hi){
+  const rows=CATS.map(c=>{
+    const on=c.key===hi?'style="font-weight:650"':'';
+    return `<tr ${on}><td><i style="background:var(${c.v})"></i>${c.label}</td><td>${fmt(d[c.key])}</td></tr>`;
+  }).join("");
+  tip.innerHTML=`<h4>${d.month} ${d.year}</h4><table>${rows}
+    <tr class="tot"><td>Total blended</td><td>${fmt(d.total)}</td></tr></table>`;
+  tip.style.opacity=1;
+  const pad=14, w=tip.offsetWidth, h=tip.offsetHeight;
+  let x=e.clientX+pad, yv=e.clientY+pad;
+  if(x+w>innerWidth-8) x=e.clientX-w-pad;
+  if(yv+h>innerHeight-8) yv=e.clientY-h-pad;
+  tip.style.left=x+"px"; tip.style.top=yv+"px";
+}
+function hideTip(){tip.style.opacity=0;}
+
+// ---- table view ----
+function buildTable(){
+  const fy={fame:2194692,hvo:118923,btl:3558,eth:1222005,etbe:84298,bk:0};
+  fy.total=fy.fame+fy.hvo+fy.btl+fy.eth+fy.etbe+fy.bk;
+  const head=`<tr><th>Month</th>${CATS.map(c=>`<th>${c.label.split(" ")[0]}</th>`).join("")}<th>Total</th></tr>`;
+  const row=d=>`<tr><td>${d.month} ${d.year}</td>${CATS.map(c=>`<td>${d[c.key]?fmt(d[c.key]):"–"}</td>`).join("")}<td>${fmt(d.total)}</td></tr>`;
+  const y25=DATA.filter(d=>d.year===2025).map(row).join("");
+  const fyRow=`<tr class="fy"><td>FY 2025</td>${CATS.map(c=>`<td>${fmt(fy[c.key])}</td>`).join("")}<td>${fmt(fy.total)}</td></tr>`;
+  const y26=DATA.filter(d=>d.year===2026).map(row).join("");
+  document.getElementById("tableCard").innerHTML=
+    `<table class="data"><thead>${head}</thead><tbody>${y25}${fyRow}${y26}</tbody></table>
+     <p class="note">All figures in tonnes. FY 2025 = full-year cumulative. “–” = not reported that month.</p>`;
+}
+
+// ---- toggle ----
+const bC=document.getElementById("btnChart"), bT=document.getElementById("btnTable");
+const cCard=document.getElementById("chartCard"), tCard=document.getElementById("tableCard");
+bC.onclick=()=>{bC.setAttribute("aria-pressed","true");bT.setAttribute("aria-pressed","false");cCard.classList.remove("hidden");tCard.classList.add("hidden");};
+bT.onclick=()=>{bT.setAttribute("aria-pressed","true");bC.setAttribute("aria-pressed","false");tCard.classList.remove("hidden");cCard.classList.add("hidden");};
+
+draw(); buildTable();
+new MutationObserver(draw).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
+matchMedia("(prefers-color-scheme:dark)").addEventListener("change",draw);
+</script>
