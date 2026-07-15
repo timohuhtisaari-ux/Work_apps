@@ -1,0 +1,514 @@
+<style>
+  /* ===== Tokens ===== */
+  .biofuel-app {
+    --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --font-mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+
+    /* neutrals with a faint green bias (the subject: biofuels / energy) */
+    --plane:       #eef1ea;
+    --surface:     #fbfcf9;
+    --surface-2:   #f4f6f1;
+    --ink:         #151b16;
+    --ink-2:       #55605a;
+    --muted:       #8a938c;
+    --hairline:    #e2e6dd;
+    --accent:      #256b4f;
+    --accent-ink:  #ffffff;
+
+    /* obligation-type categorical (validated dataviz slots, light) */
+    --c-energy:  #2a78d6;
+    --c-ghg:     #008300;
+    --c-volume:  #eb6834;
+    --c-tax:     #4a3aa7;
+    --c-hybrid:  #1baf7a;
+    --c-co2:     #eda100;
+
+    /* RED III status (fixed status palette) */
+    --s-good:     #0ca30c;
+    --s-warning:  #fab219;
+    --s-serious:  #ec835a;
+    --s-critical: #d03b3b;
+    --s-neutral:  #8a938c;
+
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) .biofuel-app {
+      --plane:     #0d0f0d;
+      --surface:   #171c18;
+      --surface-2: #12160f;
+      --ink:       #f1f4ef;
+      --ink-2:     #b6c0b8;
+      --muted:     #8a938c;
+      --hairline:  #2a312b;
+      --accent:    #6cc79a;
+      --accent-ink:#0d130f;
+      --c-energy:  #3987e5;
+      --c-ghg:     #1fa11f;
+      --c-volume:  #d95926;
+      --c-tax:     #9085e9;
+      --c-hybrid:  #199e70;
+      --c-co2:     #c98500;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] .biofuel-app {
+    --plane:     #0d0f0d;
+    --surface:   #171c18;
+    --surface-2: #12160f;
+    --ink:       #f1f4ef;
+    --ink-2:     #b6c0b8;
+    --muted:     #8a938c;
+    --hairline:  #2a312b;
+    --accent:    #6cc79a;
+    --accent-ink:#0d130f;
+    --c-energy:  #3987e5;
+    --c-ghg:     #1fa11f;
+    --c-volume:  #d95926;
+    --c-tax:     #9085e9;
+    --c-hybrid:  #199e70;
+    --c-co2:     #c98500;
+    color-scheme: dark;
+  }
+
+  /* ===== Base ===== */
+  .biofuel-app * { box-sizing: border-box; }
+  .biofuel-app {
+    font-family: var(--font-sans);
+    background: var(--plane);
+    color: var(--ink);
+    line-height: 1.5;
+    padding: clamp(14px, 3vw, 34px);
+    max-width: 1280px;
+    margin: 0 auto;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .bf-header { margin-bottom: 20px; }
+  .bf-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 8px;
+  }
+  .bf-title {
+    font-size: clamp(24px, 4vw, 38px);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    font-weight: 680;
+    margin: 0 0 8px;
+    text-wrap: balance;
+  }
+  .bf-sub {
+    color: var(--ink-2);
+    font-size: 15px;
+    max-width: 66ch;
+    margin: 0;
+  }
+  .bf-sub b { color: var(--ink); font-weight: 600; }
+
+  /* ===== Controls ===== */
+  .bf-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 20px;
+    margin: 20px 0 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .bf-toggle-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .bf-seg { display: inline-flex; background: var(--surface-2); border: 1px solid var(--hairline); border-radius: 9px; padding: 3px; gap: 2px; }
+  .bf-seg button {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 550;
+    color: var(--ink-2);
+    background: transparent;
+    border: 0;
+    padding: 7px 14px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background .16s ease, color .16s ease;
+  }
+  .bf-seg button:hover { color: var(--ink); }
+  .bf-seg button[aria-pressed="true"] { background: var(--surface); color: var(--ink); box-shadow: 0 1px 2px rgba(0,0,0,.12); }
+  .bf-seg button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .bf-legend { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-left: auto; }
+  .bf-legend-item { display: inline-flex; align-items: center; gap: 7px; font-size: 12.5px; color: var(--ink-2); }
+  .bf-swatch { width: 13px; height: 13px; border-radius: 3px; flex: none; box-shadow: inset 0 0 0 1px rgba(0,0,0,.12); }
+
+  /* ===== Layout ===== */
+  .bf-main { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.95fr); gap: clamp(16px, 2.4vw, 30px); align-items: start; }
+  @media (max-width: 820px) { .bf-main { grid-template-columns: 1fr; } }
+
+  /* ===== Map ===== */
+  .bf-mapwrap { background: var(--surface); border: 1px solid var(--hairline); border-radius: 14px; padding: clamp(12px, 2vw, 20px); overflow-x: auto; }
+  .bf-map {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 7px;
+    min-width: 430px;
+  }
+  .bf-tile {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    border: 0;
+    border-radius: 9px;
+    cursor: pointer;
+    padding: 7px 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    font-family: var(--font-mono);
+    color: var(--tile-ink, #fff);
+    background: var(--tile-bg, #999);
+    transition: transform .14s ease, box-shadow .14s ease, outline-color .14s ease;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
+  .bf-tile:hover { transform: translateY(-3px); box-shadow: 0 6px 16px rgba(0,0,0,.20); z-index: 3; }
+  .bf-tile:focus-visible { outline-color: var(--ink); z-index: 3; }
+  .bf-tile[aria-pressed="true"] { box-shadow: 0 0 0 2.5px var(--surface), 0 0 0 5px var(--ink); z-index: 4; }
+  .bf-iso { font-size: clamp(13px, 2.3vw, 18px); font-weight: 700; letter-spacing: 0.02em; }
+  .bf-tileval { font-size: clamp(8.5px, 1.5vw, 11px); font-weight: 500; opacity: .92; line-height: 1.15; font-variant-numeric: tabular-nums; }
+  .bf-nonflag { position: absolute; top: 6px; right: 7px; font-size: 9px; font-weight: 700; opacity: .8; letter-spacing: .04em; }
+  .bf-dot { position: absolute; top: 7px; right: 7px; width: 7px; height: 7px; border-radius: 50%; background: currentColor; opacity: .0; }
+  .bf-tile[data-flag="1"] .bf-dot { opacity: .85; }
+
+  .bf-maphint { margin-top: 12px; font-size: 12px; color: var(--muted); font-family: var(--font-mono); }
+
+  /* ===== Panel ===== */
+  .bf-panel { background: var(--surface); border: 1px solid var(--hairline); border-radius: 14px; padding: clamp(16px, 2vw, 22px); position: sticky; top: 16px; }
+  .bf-panel-kicker { font-family: var(--font-mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0 0 4px; }
+  .bf-country { font-size: 22px; font-weight: 660; letter-spacing: -0.01em; margin: 0 0 2px; display: flex; align-items: baseline; gap: 9px; }
+  .bf-country .bf-code { font-family: var(--font-mono); font-size: 13px; color: var(--muted); font-weight: 600; }
+  .bf-tag { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 20px; margin-top: 6px; }
+  .bf-tag .bf-swatch { width: 10px; height: 10px; }
+
+  .bf-hero { margin: 18px 0; padding: 15px 16px; background: var(--surface-2); border: 1px solid var(--hairline); border-radius: 11px; }
+  .bf-hero-label { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .09em; text-transform: uppercase; color: var(--muted); margin: 0 0 5px; }
+  .bf-hero-val { font-size: clamp(19px, 3.4vw, 26px); font-weight: 680; line-height: 1.12; letter-spacing: -0.01em; font-variant-numeric: tabular-nums; text-wrap: balance; }
+  .bf-hero-note { font-size: 11.5px; color: var(--muted); margin-top: 6px; }
+
+  .bf-rows { display: flex; flex-direction: column; gap: 0; margin: 4px 0 0; }
+  .bf-row { display: grid; grid-template-columns: 122px 1fr; gap: 12px; padding: 10px 0; border-top: 1px solid var(--hairline); font-size: 13.5px; }
+  .bf-row:first-child { border-top: 0; }
+  .bf-row dt { color: var(--muted); font-family: var(--font-mono); font-size: 11px; letter-spacing: .04em; text-transform: uppercase; padding-top: 2px; }
+  .bf-row dd { margin: 0; color: var(--ink); }
+  .bf-row dd.pos { color: var(--c-ghg); }
+  .bf-row dd b { font-weight: 620; }
+
+  .bf-flag { margin-top: 16px; padding: 11px 13px; border-radius: 10px; background: color-mix(in srgb, var(--s-warning) 14%, var(--surface)); border: 1px solid color-mix(in srgb, var(--s-warning) 40%, var(--hairline)); font-size: 12.5px; color: var(--ink); display: flex; gap: 9px; }
+  .bf-flag svg { flex: none; margin-top: 1px; color: color-mix(in srgb, var(--s-serious) 70%, var(--ink)); }
+  .bf-flag b { font-weight: 620; }
+
+  /* Overview (default panel state) */
+  .bf-ov-title { font-size: 16px; font-weight: 620; margin: 20px 0 8px; }
+  .bf-ov-title:first-of-type { margin-top: 6px; }
+  .bf-barrow { display: grid; grid-template-columns: 128px 1fr 34px; align-items: center; gap: 10px; padding: 5px 0; font-size: 13px; }
+  .bf-barrow .bf-bl { color: var(--ink-2); display: inline-flex; align-items: center; gap: 7px; }
+  .bf-bartrack { height: 8px; background: var(--surface-2); border-radius: 5px; overflow: hidden; }
+  .bf-barfill { height: 100%; border-radius: 5px; }
+  .bf-barnum { font-family: var(--font-mono); font-size: 12px; color: var(--ink-2); text-align: right; font-variant-numeric: tabular-nums; }
+
+  /* ===== Footer ===== */
+  .bf-foot { margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--hairline); font-size: 12px; color: var(--muted); display: flex; flex-direction: column; gap: 7px; }
+  .bf-foot b { color: var(--ink-2); font-weight: 600; }
+  .bf-foot code { font-family: var(--font-mono); font-size: 11px; background: var(--surface-2); padding: 1px 5px; border-radius: 4px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .biofuel-app * { transition: none !important; }
+    .bf-tile:hover { transform: none; }
+  }
+</style>
+
+<div class="biofuel-app" id="biofuelApp">
+  <header class="bf-header">
+    <p class="bf-eyebrow">Renewable-fuels policy · as of 2026-07-13</p>
+    <h1 class="bf-title">European Biofuel Regulation Map</h1>
+    <p class="bf-sub">Click any country to read its headline biofuel mandate, tax treatment, certification regime and RED III status. Colour the map by <b>RED III transposition status</b> or by <b>obligation design</b>. Covers the EU-27 plus Norway, the UK and Switzerland (non-EU, shown neutral).</p>
+  </header>
+
+  <div class="bf-controls">
+    <span class="bf-toggle-label">Colour by</span>
+    <div class="bf-seg" role="group" aria-label="Colour the map by">
+      <button type="button" data-mode="status" aria-pressed="true">RED III status</button>
+      <button type="button" data-mode="type" aria-pressed="false">Obligation type</button>
+    </div>
+    <div class="bf-legend" id="bfLegend" aria-live="polite"></div>
+  </div>
+
+  <div class="bf-main">
+    <section aria-label="Map of Europe" class="bf-mapcol">
+      <div class="bf-mapwrap">
+        <div class="bf-map" id="bfMap" role="grid" aria-label="Tile map of European countries"></div>
+      </div>
+      <p class="bf-maphint">Tiles are placed geographically (a cartogram, not to scale). ● marks a country whose headline figure carries a data-quality flag.</p>
+    </section>
+
+    <aside class="bf-panel" id="bfPanel" aria-live="polite"></aside>
+  </div>
+
+  <footer class="bf-foot">
+    <span><b>“2026 obligation” is the headline demand signal</b> — the mandated biofuel/renewable share driving demand, <b>not</b> measured consumption volume (a separate dataset). Obligation designs (GHG-reduction vs energy-share vs volume-blending vs tax-incentive) are <b>not directly comparable by headline %</b>.</span>
+    <span><b>Cross-cutting:</b> EU ETS2 for road fuels starts 1 Jan 2028 (Dir. (EU) 2023/959); the Union Database is operational (15 Jan 2024) but not yet mandatory. The RED food/feed-crop cap is 7 %; the Annex IX-B cap is 1.7 % (Cyprus & Malta exempt).</span>
+    <span>Every value traces to the verified country reports in <code>research/reports/&lt;ISO2&gt;-country-report-2026-07-04.md</code> and <code>eu-comparison-2026-07-04.md</code>. Flagged cells (●) are <code>CONFLICT</code>/<code>UNCORROBORATED</code>/<code>GAP</code> — treat as provisional.</span>
+  </footer>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  // ---- Category metadata ----
+  var TYPES = {
+    ghg:    { label: "GHG-reduction",  varc: "--c-ghg" },
+    energy: { label: "Energy-share",   varc: "--c-energy" },
+    volume: { label: "Volume-blending",varc: "--c-volume" },
+    tax:    { label: "Tax-incentive",  varc: "--c-tax" },
+    hybrid: { label: "Hybrid (dual)",  varc: "--c-hybrid" },
+    co2:    { label: "CO₂-compensation",varc: "--c-co2" }
+  };
+  var STATUS = {
+    good:     { label: "Transposed",           varc: "--s-good" },
+    warning:  { label: "Formal notice / partial", varc: "--s-warning" },
+    serious:  { label: "Reasoned opinion",     varc: "--s-serious" },
+    critical: { label: "Referred to CJEU",     varc: "--s-critical" },
+    neutral:  { label: "Non-EU",               varc: "--s-neutral" }
+  };
+
+  // ---- Data (from the verified country reports / eu-comparison) ----
+  // r/c = cartogram grid position (row, col), 0-indexed.
+  var D = [
+    {iso:"NO",name:"Norway",r:0,c:3,eu:false,type:"volume",st:"neutral",short:"road 20%",
+      level:"Road 20 vol% (adv ≥13.5%); maritime 7%; other 11%; aviation 2%",target:"Road 21% (2027); maritime 8%; other 12%",adv:"≥1% advanced-only",tax:"No — full veibruksavgift on liquid biofuel (biogenic share escapes CO₂-avgift)",cert:"EU voluntary schemes; annual report to Miljødirektoratet; not in EU UDB",status:"EEA — sets its omsetningskrav autonomously; RED III not EU-binding"},
+    {iso:"SE",name:"Sweden",r:0,c:4,eu:true,type:"ghg",st:"good",short:"10% / 10%",
+      level:"Reduktionsplikt: petrol 10% / diesel 10% GHG-intensity cut",target:"10% (step-ups repealed — held flat to 2030)",adv:"None inside the obligation",tax:"Yes — full energy+CO₂ deduction for pure/high blends & biogas outside the obligation",cert:"EU schemes + control system (hållbarhetsbesked); Energimyndigheten",status:"Transposed late (SFS 2025:576); open letter of formal notice 24 Jul 2025"},
+    {iso:"FI",name:"Finland",r:0,c:5,eu:true,type:"energy",st:"good",short:"19.5%",
+      level:"Distribution obligation 19.5% (energy) — 2nd-highest in the EU",target:"34% (energy) by 2030",adv:"4.0 pp → 10.0 pp (+ RFNBO min. from 2028)",tax:"Yes — structural CO₂-tax discount: R-fuels ½, T-fuels zero (all volumes)",cert:"National kestävyysjärjestelmä (Energiavirasto) OR EU schemes",status:"Transposed (841/2024 + 500/2025); open formal notice 24 Jul 2025"},
+    {iso:"IE",name:"Ireland",r:1,c:0,eu:true,type:"energy",st:"good",short:"32%",
+      level:"RTFO 32% by energy content — the EU's highest 2026 headline",target:"Rolls forward via annual S.I. (not isolated)",adv:"5% (advanced + RFNBO, 2026)",tax:"Yes — partial MOT relief: biofuel pays only the non-carbon component",cert:"EU schemes (NORA-recognised); RTFO Green/Orange/Red certificates",status:"Transposed (S.I. 664/2025, eff. 1 Jan 2026; not in CJEU referral)"},
+    {iso:"GB",name:"United Kingdom",r:1,c:1,eu:false,type:"energy",st:"neutral",short:"RTFO 12.5%",flag:"RTFO GHG-saving threshold unresolved (50/60% vs 55–65%)",
+      level:"RTFO 12.5% of fuel by volume + separate SAF Mandate 3.60% of jet fuel",target:"RTFO → 14.6% (2032); SAF → 10% (2030), PtL from 2028",adv:"Development-fuel sub-target; crop cap 3%",tax:"No — biofuel duty differential abolished 2010",cert:"DfT-approved scheme list; RTFO Operating System (ROS); road not in UK ETS",status:"Post-Brexit — independent RTFO/SAF regime, not RED III"},
+    {iso:"DK",name:"Denmark",r:1,c:3,eu:true,type:"ghg",st:"good",short:"≥5.2%",
+      level:"CO₂e displacement requirement ≥5.2% (2025–2027)",target:"≥7% by 2030",adv:"Combined adv.+RFNBO ≥5.1% 2030 (CONFLICT vs directive 5.5%)",tax:"Yes — bio share exempt from CO₂-afgift (no high-blend reduced rate)",cert:"EU schemes + Håndbog HB 2025.1 (no national scheme); Energistyrelsen",status:"Transposed on time — the ONLY MS to notify full transposition by 21 May 2025"},
+    {iso:"EE",name:"Estonia",r:1,c:5,eu:true,type:"energy",st:"warning",short:"≥7.5%",flag:"2027–2030 trajectory not located (GAP)",
+      level:"Energy-share ≥7.5% (half-year weighted average)",target:"Gap — 2027–2030 step-ups not located",adv:"≥0.5% (2026); trajectory gap",tax:"No — biofuel taxed at fossil-equivalent rate",cert:"EU schemes (no national scheme); Environmental Board (Keskkonnaamet)",status:"NOT fully transposed — letter of formal notice 24 Jul 2025"},
+    {iso:"NL",name:"Netherlands",r:2,c:2,eu:true,type:"ghg",st:"good",short:"land 14.4%",
+      level:"GHG-based ERE units per sector — land 14.4% (binnenvaart 2.5%, zeevaart 2.9%)",target:"Land 28.4% (binnenvaart 14.5%, zeevaart 8.2%) by 2030",adv:"Land 3.1% → 8.8% (+ small RFNBO minima)",tax:"No — only the generic art. 71h energy-content refund",cert:"EU schemes; NEa Register Energie voor Vervoer (REV)",status:"Transposed (Wet 1 Apr 2026, in force 20 Jun 2026, retro. to 1 Jan 2026)"},
+    {iso:"DE",name:"Germany",r:2,c:3,eu:true,type:"ghg",st:"good",short:"12%",
+      level:"GHG-reduction quota (THG-Quote) 12%",target:"26.5% GHG by 2030 — among the steepest EU trajectories",adv:"2% → 3.5% (RFNBO min. 0.1% → 1.5%)",tax:"No — biofuel excise relief repealed 2018",cert:"EU schemes (no national scheme) + Nabisy (BLE)",status:"Transposed late (BGBl. 2026 I Nr. 163, in force 6/7 Jun 2026)"},
+    {iso:"PL",name:"Poland",r:2,c:4,eu:true,type:"energy",st:"warning",short:"NCW 10%",flag:"RED III NOT transposed — RED II only; draft UC106",
+      level:"National Indicative Target (NCW) 10% (≈8.5% effective after 0.85 coefficient)",target:"14.9% (statutory) by 2030",adv:"2% (2027 step; 2026 gap) → 3.5%",tax:"No — biocomponents taxed at the diesel rate",cert:"National KZR INiG scheme (EU-recognised) + EU schemes; KOWR",status:"NOT transposed — RED II only adopted; open formal notice 24 Jul 2025"},
+    {iso:"LV",name:"Latvia",r:2,c:5,eu:true,type:"hybrid",st:"good",short:"≥9.5 vol%",
+      level:"Combined: GHG target + adv./RFNBO ≥1% + petrol-95 ≥9.5 vol%, diesel ≥6.5 vol%",target:"GHG −16%; adv.+RFNBO ≥5.5% (≥1 pp RFNBO)",adv:"≥1% → ≥5.5%",tax:"Yes — high blends only (E85 360, B100/HVO100 330 €/1000 L)",cert:"EU schemes; State Environmental Service (VVD)",status:"Transport transposed (Transport Energy Law, 1 Jan 2026); on formal-notice list (permitting)"},
+    {iso:"FR",name:"France",r:3,c:0,eu:true,type:"tax",st:"serious",short:"10.5/9.4%",
+      level:"TIRUERT incentive tax — petrol pool 10.5% / diesel pool 9.4% renewable energy (tax=0 if met, else 140 €/hL)",target:"IRICC replaces TIRUERT from 2027 (numeric path in décrets — PROPOSED)",adv:"De-facto minima 1.8% petrol / 0.7% diesel (2026)",tax:"Yes — E85 17.894, B100 12.905, ED95 12.119 €/MWh (HVO100 none)",cert:"EU schemes + CarbuRe (DGEC)",status:"NOT fully transposed — reasoned opinion 11 Dec 2025 (INFR(2025)0220)"},
+    {iso:"BE",name:"Belgium",r:3,c:1,eu:true,type:"energy",st:"good",short:"12.2%",
+      level:"Energy-share obligation 12.2% (energy value)",target:"13.9% by 2030",adv:"1.1% → 4.2%",tax:"No — mandate-only",cert:"EU schemes + \"Biofuel database\" (déclaration de conformité)",status:"Transposed (federal transport RDs notified)"},
+    {iso:"LU",name:"Luxembourg",r:3,c:2,eu:true,type:"volume",st:"warning",short:"~8.8%",flag:"2026 coverage rate, advanced sub-quota & penalty are a GAP",
+      level:"Energy-content coverage rate — 2025 = 8.8% (2026 value not obtained)",target:"~10% (policy target)",adv:"1.1% (2025); 2026 gap",tax:"Yes — HVO100 CO₂-tax exemption (total 320.00 €/1000 L)",cert:"EU schemes; biofuels register (Admin. de l'environnement)",status:"NOT in force for transport — modifying RGD before Conseil d'État (PROPOSED)"},
+    {iso:"CZ",name:"Czechia",r:3,c:3,eu:true,type:"ghg",st:"good",short:"≈6.25%",flag:"2026 GHG figure rests on a single Tier-2 source",
+      level:"GHG-reduction obligation ≈6.25% (Air Protection Act)",target:"GHG −11% by 2030",adv:"Phased from 2026 → ≥5.5%",tax:"Yes — reduced excise for B100 / SMN30 (state-aid; 2026 values unverified)",cert:"EU schemes (no national scheme); MoE CZ registers certification bodies",status:"Transposed (Act 42/2025; biofuel provisions from 1 Jan 2026)"},
+    {iso:"SK",name:"Slovakia",r:3,c:4,eu:true,type:"volume",st:"good",short:"9.5%",
+      level:"Reference value 9.5% (energy content)",target:"11.4% by 2030",adv:"0.75% (flat 2025–2030)",tax:"Biogas/biomethane reduced (141 vs 182 €/1000 kg); no liquid-biofuel relief",cert:"EU schemes (no national scheme); SK BIO (SHMÚ)",status:"Transposed late (Act 309/2009 amdt + Decree 31/2026); on formal-notice list"},
+    {iso:"CH",name:"Switzerland",r:4,c:2,eu:false,type:"co2",st:"neutral",short:"CO₂ 30%",flag:"Obligation-trigger threshold & shortfall penalty are a GAP",
+      level:"No blending mandate — CO₂ compensation obligation: offset 30% of transport CO₂ (≥12% domestic); aviation SAF 2%",target:"Compensation → 35% (2027) … 50% (2030)",adv:"—",tax:"Yes — FULL mineral-oil-tax exemption for qualifying biofuels (up to ~75 Rp/L) to 31 Dec 2030",cert:"IBTV proof (BAFU) + Pronovo guarantees of origin; not in EU UDB",status:"Bilateral / autonomous — no RED III or ETS2 obligation"},
+    {iso:"AT",name:"Austria",r:4,c:3,eu:true,type:"hybrid",st:"serious",short:"GHG −8%*",flag:"KVO values UNCORROBORATED (RIS down); 2026 GHG 8% vs 7.5% CONFLICT",
+      level:"Dual: GHG −8% (draft) + energy substitution 5.75% (petrol 3.4% / diesel 6.3%)",target:"GHG −13% by 2030",adv:"~1% → 5.5% combined (RED III pending)",tax:"No dedicated high-blend relief (two-tier MÖSt embeds a de-facto bio credit)",cert:"elNa register (Umweltbundesamt) + EU schemes + national AACS",status:"NOT transposed for transport; KVO Novelle only in consultation"},
+    {iso:"HU",name:"Hungary",r:4,c:4,eu:true,type:"energy",st:"serious",short:"9.1%",flag:"Annex IX-B 4% cap & penalty rate UNCORROBORATED",
+      level:"Energy-share 9.1% (petrol 6.1% bioethanol; diesel 9.6%, HVO ≥0.4%)",target:"RES-T 25% (PRIMARY-ONLY)",adv:"1% → 5.5%",tax:"No",cert:"National BÜHG/BIONYOM (NÉBIH) + EU schemes",status:"Transposed in national law but escalated to reasoned opinion Dec 2025"},
+    {iso:"RO",name:"Romania",r:4,c:5,eu:true,type:"volume",st:"warning",short:"≥8% v/v",flag:"Advanced sub-target UNCORROBORATED; OUG 19/2026 temp petrol cut to 2%",
+      level:"Volume blending — petrol ≥8% (temp min 2% under OUG 19/2026) / diesel ≥6.5%",target:"RED III 14.5% GHG / 29% RES-T not legislated",adv:"0.2/1/3.5% (RED II floor, UNCORROB.)",tax:"No",cert:"EU schemes + national scheme; lifecycle traceability bulletin; Min. of Energy",status:"NOT transposed — letter-of-formal-notice stage only"},
+    {iso:"PT",name:"Portugal",r:5,c:0,eu:true,type:"energy",st:"critical",short:"13%",
+      level:"Incorporation obligation 13% (TdB/TdC certificates)",target:"16% by 2030",adv:"Parte-A 2.0% → 10%",tax:"Yes — total ISP exemption for certified advanced biofuels & renewable gases",cert:"EU schemes; ENSE (TdB/TdC), ECS/LNEG, BUE",status:"NOT transposed — referred to CJEU 29 Apr 2026, financial sanctions requested"},
+    {iso:"ES",name:"Spain",r:5,c:1,eu:true,type:"energy",st:"serious",short:"14%",flag:"Temporary excise cuts below ETD minima (Jul–Sep 2026)",
+      level:"SICBIOS certificates — 14% (raised from 12% by RD 5/2026)",target:"14% rolls forward (GHG-model draft PROPOSED)",adv:"1.2% → 3.5%",tax:"No — bioethanol/biodiesel track the petrol/diesel epigraphs",cert:"EU schemes + SNVS; SICBIOS / MITECO-DGPEM",status:"NOT transposed — reasoned opinions Feb & Dec 2025"},
+    {iso:"IT",name:"Italy",r:5,c:2,eu:true,type:"energy",st:"good",short:"12.60%",
+      level:"CIC certificates — 12.60% (7.10 traditional + 5.50 advanced)",target:"16.00% by 2030",adv:"5.50% → 8.00%",tax:"Yes — HVO100 reduced 617.40 €/1000 L (5 yrs)",cert:"National SNC (DM 7 ago 2024, Accredia) + EU schemes; BIOCAR/GSE",status:"Transposed late (D.Lgs. 5/2026, in force 4 Feb 2026)"},
+    {iso:"SI",name:"Slovenia",r:5,c:3,eu:true,type:"energy",st:"good",short:"13.8%",flag:"2026→2030 trajectory PRIMARY-ONLY; ZSROVE-1 penalty GAP",
+      level:"Energy-share 13.8%",target:"20.8% by 2030",adv:"0.2/1 (2025) / 3.5%",tax:"No",cert:"EU schemes; spremno potrdilo; monitoring contractors; MOPE",status:"Transposed late (ZSROVE-1, Ur. l. RS 112/2025, 29 Dec 2025); not escalated"},
+    {iso:"HR",name:"Croatia",r:5,c:4,eu:true,type:"energy",st:"warning",short:"8.8–10.3%",flag:"2026 overall goal unresolved CONFLICT (8.8/9.5/10.3%)",
+      level:"Energy-share placing obligation 8.8–10.3% (unresolved)",target:"NECP transport RES ~24.6%",adv:"1% (2025) → 3.5%",tax:"No",cert:"EU schemes + Pravilnik; Ministry verifies, HROTE fee admin",status:"NOT transposed — letter of formal notice (Sept 2024)"},
+    {iso:"BG",name:"Bulgaria",r:5,c:5,eu:true,type:"volume",st:"warning",short:"9% / 6%",flag:"Petrol 9% effective-date CONFLICT (2019 vs 2025)",
+      level:"Volume blending — petrol 9% bioethanol / diesel 6% biodiesel (incl. 1% advanced)",target:"14% RES-T (RED II floor)",adv:"Overall 1.0% (2025) → 3.5%",tax:"No",cert:"National sustainability ordinance + EU schemes (MOEW)",status:"Partial (28 measures incl. new ZEVI 10 Jun 2025); Feb-2025 reasoned opinion on permitting"},
+    {iso:"MT",name:"Malta",r:6,c:3,eu:true,type:"volume",st:"critical",short:"GAP",flag:"2026 substitution % GAP; post-repeal sustainability instrument not located; IX-B exempt",
+      level:"Substitution obligation — 2026 % NOT established (GAP)",target:"14% RES-T; ≥3.5% advanced",adv:"≥3.5% by 2030 (no yearly national values)",tax:"No",cert:"EU schemes; REWS authorisation; post-repeal sustainability instrument not located",status:"NOT transposed — referred to CJEU 29 Apr 2026, financial sanctions requested"},
+    {iso:"EL",name:"Greece",r:6,c:4,eu:true,type:"volume",st:"critical",short:"3.3% / B7",flag:"GHG 8%-2026 step & per-GJ penalty UNCORROBORATED",
+      level:"Volume blending — petrol 3.3% v/v bioethanol / diesel B7 (up to 7% FAME); static",target:"Static — RED III 29%/14.5% not enacted",adv:"No national quota (UNCORROB.)",tax:"No",cert:"EU schemes; national-scheme concept (L.5106/2024); YPEN",status:"NOT transposed — referred to CJEU 29 Apr 2026, financial sanctions requested"},
+    {iso:"CY",name:"Cyprus",r:6,c:6,eu:true,type:"volume",st:"critical",short:"7.3%",flag:"7.3% PRIMARY-ONLY (single source); Annex IX-B cap exempt",
+      level:"Blending obligation 7.3% energy content (single source)",target:"14% RES-T",adv:"1% (2025) → 3.5% (5.5% combined)",tax:"No",cert:"National certification system OR EU schemes (MECI)",status:"Most-advanced RED III case — additional reasoned opinion 4 Jun 2026; only MS escalated in June 2026"}
+  ];
+
+  var app = document.getElementById("biofuelApp");
+  var mapEl = document.getElementById("bfMap");
+  var panelEl = document.getElementById("bfPanel");
+  var legendEl = document.getElementById("bfLegend");
+  var mode = "status";
+  var selected = null;
+
+  function cssVar(name) {
+    return getComputedStyle(app).getPropertyValue(name).trim() || "#888888";
+  }
+  // relative luminance → pick legible text ink for a fill
+  function inkOn(hex) {
+    hex = hex.replace("#", "");
+    if (hex.length === 3) hex = hex.split("").map(function (x){return x+x;}).join("");
+    var r = parseInt(hex.slice(0,2),16)/255, g = parseInt(hex.slice(2,4),16)/255, b = parseInt(hex.slice(4,6),16)/255;
+    function lin(u){ return u <= 0.03928 ? u/12.92 : Math.pow((u+0.055)/1.055, 2.4); }
+    var L = 0.2126*lin(r) + 0.7152*lin(g) + 0.0722*lin(b);
+    return L > 0.48 ? "#141a16" : "#ffffff";
+  }
+  function colorFor(d) {
+    var key = mode === "status" ? d.st : d.type;
+    var meta = mode === "status" ? STATUS[key] : TYPES[key];
+    return cssVar(meta.varc);
+  }
+
+  function paintTiles() {
+    Array.prototype.forEach.call(mapEl.children, function (btn) {
+      var d = D[+btn.dataset.i];
+      var fill = colorFor(d);
+      btn.style.setProperty("--tile-bg", fill);
+      btn.style.setProperty("--tile-ink", inkOn(fill));
+    });
+  }
+
+  function buildLegend() {
+    var set = mode === "status" ? STATUS : TYPES;
+    legendEl.innerHTML = "";
+    Object.keys(set).forEach(function (k) {
+      var item = document.createElement("span");
+      item.className = "bf-legend-item";
+      var sw = document.createElement("span");
+      sw.className = "bf-swatch";
+      sw.style.background = cssVar(set[k].varc);
+      item.appendChild(sw);
+      item.appendChild(document.createTextNode(set[k].label));
+      legendEl.appendChild(item);
+    });
+  }
+
+  function esc(s){ return String(s).replace(/[&<>"]/g, function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c];}); }
+
+  function overviewHTML() {
+    // compute counts
+    var euc = D.filter(function(d){return d.eu;});
+    function countBy(arr, key, order) {
+      var m = {}; arr.forEach(function(d){ m[d[key]] = (m[d[key]]||0)+1; });
+      return order.filter(function(k){return m[k];}).map(function(k){return {k:k, n:m[k]};});
+    }
+    var typeCounts = countBy(euc, "type", ["energy","volume","ghg","hybrid","tax"]);
+    var stCounts = countBy(euc, "st", ["good","warning","serious","critical"]);
+    var maxT = Math.max.apply(null, typeCounts.map(function(x){return x.n;}));
+    var maxS = Math.max.apply(null, stCounts.map(function(x){return x.n;}));
+
+    function bars(counts, set, max) {
+      return counts.map(function(x){
+        var col = cssVar(set[x.k].varc);
+        return '<div class="bf-barrow"><span class="bf-bl"><span class="bf-swatch" style="background:'+col+'"></span>'+esc(set[x.k].label)+'</span>'
+             + '<span class="bf-bartrack"><span class="bf-barfill" style="width:'+(x.n/max*100)+'%;background:'+col+'"></span></span>'
+             + '<span class="bf-barnum">'+x.n+'</span></div>';
+      }).join("");
+    }
+
+    return ''
+      + '<p class="bf-panel-kicker">Overview · EU-27</p>'
+      + '<div class="bf-country" style="margin-bottom:14px">Select a country</div>'
+      + '<p style="margin:0 0 4px;color:var(--ink-2);font-size:13.5px">Click any tile to read its full regulation card. The map colours by the control above.</p>'
+      + '<h3 class="bf-ov-title">Obligation design</h3>'
+      + bars(typeCounts, TYPES, maxT)
+      + '<h3 class="bf-ov-title">RED III transposition status</h3>'
+      + bars(stCounts, STATUS, maxS)
+      + '<div class="bf-flag" style="margin-top:18px"><svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1.4 15 14H1L8 1.4Zm0 3.2L3.5 12.6h9L8 4.6ZM7.3 7h1.4v2.6H7.3V7Zm0 3.4h1.4v1.3H7.3v-1.3Z"/></svg>'
+      + '<span><b>3 countries</b> (Portugal, Greece, Malta) have been referred to the CJEU for RED III non-transposition; <b>Cyprus</b> carries the most-advanced live infringement. Only <b>Denmark</b> transposed on time.</span></div>';
+  }
+
+  function countryHTML(d) {
+    var typeMeta = TYPES[d.type], stMeta = STATUS[d.st];
+    var typeCol = cssVar(typeMeta.varc), stCol = cssVar(stMeta.varc);
+    var relief = /^Yes/i.test(d.tax);
+    var flag = d.flag ? ('<div class="bf-flag"><svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1.4 15 14H1L8 1.4Zm0 3.2L3.5 12.6h9L8 4.6ZM7.3 7h1.4v2.6H7.3V7Zm0 3.4h1.4v1.3H7.3v-1.3Z"/></svg><span><b>Data flag:</b> '+esc(d.flag)+'</span></div>') : '';
+    var euLabel = d.eu ? "EU member state" : "Non-EU";
+    return ''
+      + '<p class="bf-panel-kicker">'+euLabel+'</p>'
+      + '<div class="bf-country">'+esc(d.name)+' <span class="bf-code">'+esc(d.iso)+'</span></div>'
+      + '<span class="bf-tag" style="background:color-mix(in srgb,'+typeCol+' 16%, var(--surface));color:var(--ink)"><span class="bf-swatch" style="background:'+typeCol+'"></span>'+esc(typeMeta.label)+'</span>'
+      + '<div class="bf-hero">'
+        + '<p class="bf-hero-label">2026 obligation — headline demand signal</p>'
+        + '<div class="bf-hero-val">'+esc(d.level)+'</div>'
+        + '<p class="bf-hero-note">The mandated share driving biofuel demand — not measured consumption.</p>'
+      + '</div>'
+      + '<dl class="bf-rows">'
+        + '<div class="bf-row"><dt>2030 target</dt><dd>'+esc(d.target)+'</dd></div>'
+        + '<div class="bf-row"><dt>Advanced</dt><dd>'+esc(d.adv)+'</dd></div>'
+        + '<div class="bf-row"><dt>Biofuel tax</dt><dd class="'+(relief?'pos':'')+'">'+esc(d.tax)+'</dd></div>'
+        + '<div class="bf-row"><dt>Certification</dt><dd>'+esc(d.cert)+'</dd></div>'
+        + '<div class="bf-row"><dt>RED III</dt><dd><b style="color:'+stCol+'">'+esc(stMeta.label)+(d.eu?'':' (n/a)')+'.</b> '+esc(d.status)+'</dd></div>'
+      + '</dl>'
+      + flag;
+  }
+
+  function renderPanel() {
+    panelEl.innerHTML = selected ? countryHTML(selected) : overviewHTML();
+  }
+
+  function select(d, btn) {
+    selected = d;
+    Array.prototype.forEach.call(mapEl.children, function (b) { b.setAttribute("aria-pressed", b === btn ? "true" : "false"); });
+    renderPanel();
+  }
+
+  // build tiles
+  D.forEach(function (d, i) {
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "bf-tile";
+    btn.dataset.i = i;
+    btn.dataset.flag = d.flag ? "1" : "0";
+    btn.style.gridColumnStart = d.c + 1;
+    btn.style.gridRowStart = d.r + 1;
+    btn.setAttribute("aria-pressed", "false");
+    btn.setAttribute("aria-label", d.name + " — " + d.short);
+    btn.innerHTML = '<span class="bf-dot" aria-hidden="true"></span>'
+      + (d.eu ? '' : '<span class="bf-nonflag" aria-hidden="true">◇</span>')
+      + '<span class="bf-iso">'+esc(d.iso)+'</span>'
+      + '<span class="bf-tileval">'+esc(d.short)+'</span>';
+    btn.addEventListener("click", function () { select(d, btn); });
+    mapEl.appendChild(btn);
+  });
+
+  // mode toggle
+  Array.prototype.forEach.call(app.querySelectorAll(".bf-seg button"), function (b) {
+    b.addEventListener("click", function () {
+      mode = b.dataset.mode;
+      app.querySelectorAll(".bf-seg button").forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      paintTiles(); buildLegend();
+      if (!selected) renderPanel(); // overview swatches follow the mode
+    });
+  });
+
+  // react to theme changes (recompute css-var colours)
+  var mo = new MutationObserver(function () { paintTiles(); buildLegend(); if (!selected) renderPanel(); });
+  mo.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  if (window.matchMedia) {
+    try { window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function () { paintTiles(); buildLegend(); if (!selected) renderPanel(); }); } catch (e) {}
+  }
+
+  paintTiles();
+  buildLegend();
+  renderPanel();
+})();
+</script>
