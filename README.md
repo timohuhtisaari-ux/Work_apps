@@ -110,6 +110,15 @@ instruments rather than country reports (template:
   2030 target, tax treatment, certification, RED III status + data flags);
   colour by RED III status or obligation design; light/dark, keyboard-accessible.
   Also published as a shareable Artifact.
+- `research/interactive/world-biofuel-map.html` — self-contained **interactive
+  world map** (real Miller-projected borders of all 176 countries) covering the
+  **32 researched markets**: the EU-27 plus Norway, the UK, Switzerland, the
+  **United States** (federal RFS2 + CA/OR/WA/NM state LCFS) and **Canada**
+  (federal CFR SOR/2022-140 + BC/AB/SK/MB/ON/QC). Non-researched countries render
+  in muted grey (no unverified guesses). Colour by obligation design (adds a
+  *low-carbon/CI standard* class) or by research coverage; zoom presets for World
+  / Europe / North America; Malta shown as a marker; light/dark, keyboard-
+  accessible. Companion Obsidian note at `world-biofuel-map.md`.
 
 Each country report
 covers the biofuel mandate (2026 level + legislated trajectory to 2030),
