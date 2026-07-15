@@ -2,6 +2,77 @@
 
 *Prepared: 8 July 2026. Method: multi-agent deep-research run — 5 parallel search angles, 21 sources fetched, 99 claims extracted, top 25 claims adversarially verified by 3-vote panels (25 confirmed, 0 refuted). Confidence levels are noted per section.*
 
+*Last monitored: 15 July 2026 (see section 0 — Monitoring updates).*
+
+---
+
+## 0. Monitoring updates — 15 July 2026
+
+*Scheduled monitoring run (5 parallel research agents). This run found substantial new material: the first **official full-year 2025 actuals**, the first **Q1 2026 compliance-mix data**, Poland's **completed ReFuelEU implementation**, the **Orlen Płock HVO startup**, and resolutions to several section-6 legal open questions. Sections 2, 3 and 6 below retain the original pre-2025-data analysis; the figures here supersede them where they conflict.*
+
+### 0.1 Official full-year 2025 actuals (NEW — highest confidence)
+
+**URE — "Sprawozdanie z działalności Prezesa URE w 2025 r." (April 2026), Table 62** — first official 2025 NCW realization:
+
+| Metric (2025) | Official figure | Source |
+|---|---|---|
+| NCW realized (incl. double-counting, excl. substitute-fee portion) | **6.90%** | URE 2025 report |
+| Bioethanol used for NCW | **546,443 t** | URE Table 62 |
+| FAME (methyl ester) used for NCW | **1,507,713 t** | URE Table 62 |
+| Liquid biohydrocarbons incl. HVO used for NCW | **12,662 t** | URE Table 62 |
+| B100 standalone fuel | 378,868 t | URE Table 62 |
+| HVO100 standalone fuel | 3,552 t | URE Table 62 |
+| Fuel base: gasoline / diesel | 6,076,911 t / 18,432,290 t | URE Table 62 |
+| Obligated (NCW) entities at end-2025 | 17 | URE |
+
+Blending minimums in 2025 were unchanged from 2024 (5.2% diesel, 5.3% RON95, 3.2% RON98; reduction coefficient 0.85; substitute fee 0.014 zł/MJ, usable only after 85% "traditional" realization). Note the realized **6.90%** is the physical/credited outcome; the 9.2% headline is the nominal target met partly via double-counting and the substitute fee.
+
+**POPiHN — "Przemysł i Handel Naftowy 2025" annual report (April 2026)** — major-operator estimates:
+
+| Metric (2025) | Figure | vs 2024 |
+|---|---|---|
+| NCW level | 9.2% | 9.1% (2024) |
+| Ethanol + ethers blended into gasoline | ~446 thousand m³ | ~519 thousand m³ (2024)* |
+| FAME blended into diesel | ~1,256 thousand m³ | >1,300 thousand m³ (2024) |
+| B100 domestic / exported | ~224 / ~97 thousand m³ | ~209 / ~100 (2024) |
+| **Jet fuel consumption** | **1,817 thousand m³ (+25.5% y/y)** | 1,448 (2024) |
+| Gasoline / diesel / total liquid fuels | 8,620 / 23,025 / 39,460 thousand m³ | — |
+
+\*The 2024 vs 2025 ethanol figures are not strictly comparable (scope/metric differences); URE's mass-based 546,443 t is the higher-confidence official number.
+
+**KOWR — full-year 2025 producer output** (article 23 March 2026): FAME 974,924 t; bioethanol 445,511 t; liquid biohydrocarbons just 3,385 t. FAME feedstock 92% vegetable oils / 3% UCO; bioethanol 73% corn (100% domestic).
+
+### 0.2 First 2026 compliance-mix data — KOWR Q1 2026 (NEW)
+
+KOWR published Q1 2026 producer/import tables on 26 June 2026. The Q1 mix was **still ~95% conventional crop-based**:
+- **FAME**: disposals 239,604 t, of which only **4.0% (9,670 t) double-counting-eligible**; UCO feedstock actually *fell* q/q (7,968 t in Q4 2025 → 6,022 t in Q1 2026) — no Q1 surge in UCO-FAME despite the higher 10% mandate.
+- **Bioethanol**: disposals 108,891 t, of which **8.1% (8,784 t) double-counting-eligible** (up from ~3.4% in Q4 2025).
+- **HVO**: total entering the system ≈ **9.6 kt** (all intra-EU acquisitions, all *non*-double-counted; i.e. crop-HVO), vs ~330 kt of FAME — still marginal. Domestic HVO production negligible (the Płock unit started only in late May, after Q1).
+- **Compliance levers**: obligated parties (Orlen, Anwim/Moya) publicly flag using the **substitute fee (opłata zastępcza), permitted for max 12% of the NCW obligation in 2026**, plus the 1% advanced sub-mandate. No sign yet that the B7/E10 blend walls are being breached. No URE aggregate data on multiplier usage (incl. 4× EV electricity) published yet.
+
+### 0.3 HVO developments (NEW)
+
+- **Orlen launched the Płock HVO unit on 27 May 2026**: ~300,000 t/yr, >PLN 800m capex, feedstocks rapeseed oil + UCO (domestically sourced), GHG reduction ≥65%. **Runs in road-diesel mode — the press release makes no mention of SAF.** Group biofuel capacity rises to ~700 kt/yr (target 1.1 Mt by 2030); two Płock diesel HDS units also upgraded for vegetable-oil co-processing (+100 kt/yr).
+- **HVO100 is still not sold at Polish retail.** Only AVIA (Unimot) sells it (~5 stations); Orlen sells HVO100 in Germany/Austria/Czechia and launched a Bratislava pilot (30 June 2026) but gives no date for Poland — drawing press criticism (rp.pl, chip.pl, early July 2026) that Płock-made HVO is exported, not sold domestically.
+- **The emission-fee (opłata emisyjna) exemption POPiHN advocated in 2024 has gone quiet** — not repeated in the April 2026 report, no draft legislation. The HVO quality regulation (EN 15940 specs) entered force April 2025 as planned.
+
+### 0.4 SAF / ReFuelEU — Poland closed the implementation gap (NEW)
+
+- **Poland enacted its ReFuelEU implementation**: amendment to the Aviation Law (Prawo lotnicze) signed 30 April 2026 (**Dz.U. 2026 poz. 607**, published 6 May 2026). It designates the **President of ULC** (Civil Aviation Authority) as supervisor for aircraft operators and airports and the **President of URE** for aviation fuel suppliers; **penalty provisions apply from 1 January 2027** (first fines in 2027 for 2025/2026 behaviour). This is a **dual-track regime**: SAF-blending enforcement sits with ULC under ReFuelEU, structurally *separate* from the URE/NCW road track.
+- **8 Polish airports** meet the "Union airport" threshold (ULC, April 2026). **Still no official Polish SAF volume** — the first authoritative figure comes with EASA's next Annual Technical Report (**due September 2026**). EASA's first report (Oct 2025, covering 2024) put EU-wide SAF at 0.6% (193 kt); Poland was not among the leading five Member States.
+- **Orlen meets its 2% obligation with imported SAF** (own-production target ~70 kt/yr only by ~2030); the new Płock HVO unit does **not** produce SAF initially. Our derived 2026 estimate (~31–34 thousand m³ SAF for Poland) remains uncontradicted by any published figure.
+
+### 0.5 RED III transposition — draft UC106 (NEW, in progress)
+
+Draft act **UC106** (amending the biocomponents act + the RES act) went to public consultation 13 January 2026. Poland chose the **29% RES-in-transport option** (not the 14.5% GHG-intensity option), with a back-loaded NCW path — press reports **10% (2026) → 11% (2027) → ~13–15% (2028–29) → 29% (2030)** — the crop cap nudged to 6.2% (one unverified source suggests 7% from 2026), and **aviation & marine fuels folded into the NCW base**. As of mid-July 2026 it remains **pre-Council-of-Ministers**; planned entry into force **1 January 2027**. Poland received an EU letter of formal notice (July 2025) for missing the 21 May 2025 RED III deadline but faced no escalation in the Commission's April 2026 package. *This supersedes the "14.9% from 2030" figure in section 1 if UC106 is enacted as drafted (29% by 2030).*
+
+### 0.6 Section-6 legal open questions — now resolved (NEW)
+
+- **Are jet-fuel-only suppliers NCW-obligated? No.** The obligated-entity definition (art. 2 ust. 1 pkt 25) covers only *paliwa ciekłe* (road/rail motor fuels) and liquid biofuels. Aviation fuel is a **compliance/accounting channel** for already-obligated road-fuel entities (NCW definition pkt 24), **not an obligation trigger** — consistent with RED III recital 72. A pure jet supplier's SAF obligation sits under the separate ULC/ReFuelEU track (Dz.U. 2026 poz. 607).
+- **2.4× stacking (2× Annex IX × 1.2× aviation): still no regulator guidance either way.** The statute (art. 23 ust. 2 pkt 3 and pkt 4) contains no exclusivity language between the two multipliers and only one carve-out (ust. 2b: no 1.2× for food/feed-crop components); the parallel-applicability reading stands on the text alone. No URE/Ministry/Commission interpretation confirming or barring the arithmetic was found.
+- **URE quarterly template (Dz.U. 2025 poz. 1618) has NO SAF/aviation rows and no multiplier columns.** SAF accounting will evidently ride on the **annual** NCW report (art. 30b ust. 1) and URE proceedings, not quarterly filings. The template does add dedicated rows for co-processed ("współuwodornienie") biohydrocarbons on the road side.
+- **Co-processing / RED III aviation opt-in**: no new EU guidance (Del. Reg. 2023/1640 unchanged; Commission ReFuelEU FAQ C/2025/1368 gives no co-processing methodology). Domestically the opt-in question is moot — Poland hard-wired aviation/marine into NCW accounting from 1 Jan 2026.
+
 ---
 
 ## 1. The Polish blending mandate — National Indicative Target (NCW)
@@ -211,5 +282,14 @@ The two multipliers sit as separate adjacent rules with **no anti-stacking provi
 - Act of 21 Feb 2025, statute text: https://dziennikustaw.gov.pl/D2025000030301.pdf (Art. 23 ust. 2 pkt 3-4, ust. 2b-2c, ust. 10, ust. 12; Art. 23c; Art. 35a ust. 4; Art. 35c)
 - European Commission — ReFuelEU FAQ: https://transport.ec.europa.eu/transport-modes/air/environment/refueleu-aviation_en
 
+**Primary — 15 July 2026 monitoring update (section 0)**
+- URE — Sprawozdanie z działalności Prezesa URE w 2025 r. (April 2026, Table 62 — official 2025 NCW realization): https://bip.ure.gov.pl/download/3/20723/SprawozdaniezdzialalnosciPrezesaUREw2025r.pdf
+- POPiHN — Raport roczny "Przemysł i Handel Naftowy 2025": https://popihn.pl/wp-content/uploads/2026/04/RAPORT-ZA-ROK-2025.pdf
+- KOWR — full-year 2025 summary ("2,3 mln ton surowców"): https://www.gov.pl/web/kowr/23-mln-ton-surowcow-do-produkcji-biokomponentow ; Q1 2026 production/import tables (26 June 2026): https://www.gov.pl/web/kowr/dane-dotyczace-rynku-biokomponentow
+- Act of 13 March 2026 amending the Aviation Law (ReFuelEU implementation), Dz.U. 2026 poz. 607: https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU20260000607/O/D20260607.pdf
+- Orlen — Płock HVO plant launch (27 May 2026): https://www.orlen.pl/en/about-the-company/media/press-releases/current/2026/May-2026/orlen-launches-hvo-plant-to-produce-300-thousand-tonnes-of-biofuels-annually-from-domestic-feedstocks
+- EASA — ReFuelEU Aviation Annual Technical Report 2025 (covering 2024): https://www.easa.europa.eu/en/document-library/general-publications/refueleu-aviation-annual-technical-report-2025
+- RED III transposition draft UC106 (RCL): https://legislacja.rcl.gov.pl/projekt/12406050
+
 **Secondary (corroboration)**
-- Gramwzielone.pl, PAP Biznes, Energetyka24 (Orlen on RED III costs), Argus Media (European HVO outlook), KIB presentation (realized NCW per URE), ICCT "Fuels fit for 55" brief (July 2023), IATA ReFuelEU Aviation Handbook (Sept 2024), EWABA RED III overview, T&E RED briefings, Fastmarkets (NL HBE draft, 2025).
+- Gramwzielone.pl, PAP Biznes, Energetyka24 (Orlen on RED III costs), Argus Media (European HVO outlook), KIB presentation (realized NCW per URE), ICCT "Fuels fit for 55" brief (July 2023), IATA ReFuelEU Aviation Handbook (Sept 2024), EWABA RED III overview, T&E RED briefings, Fastmarkets (NL HBE draft, 2025), Parkiet (Feb/Jul 2026 obligated-party compliance survey), wnp.pl / prawo.pl (ReFuelEU implementation act), SK&S / CWW / PARP (UC106 analysis), rp.pl / chip.pl (Polish HVO100 retail criticism, July 2026).
