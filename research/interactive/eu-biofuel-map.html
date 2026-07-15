@@ -1,237 +1,98 @@
 <style>
-  /* ===== Tokens ===== */
   .biofuel-app {
     --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     --font-mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
-
-    /* neutrals with a faint green bias (the subject: biofuels / energy) */
-    --plane:       #eef1ea;
-    --surface:     #fbfcf9;
-    --surface-2:   #f4f6f1;
-    --ink:         #151b16;
-    --ink-2:       #55605a;
-    --muted:       #8a938c;
-    --hairline:    #e2e6dd;
-    --accent:      #256b4f;
-    --accent-ink:  #ffffff;
-
-    /* obligation-type categorical (validated dataviz slots, light) */
-    --c-energy:  #2a78d6;
-    --c-ghg:     #008300;
-    --c-volume:  #eb6834;
-    --c-tax:     #4a3aa7;
-    --c-hybrid:  #1baf7a;
-    --c-co2:     #eda100;
-
-    /* RED III status (fixed status palette) */
-    --s-good:     #0ca30c;
-    --s-warning:  #fab219;
-    --s-serious:  #ec835a;
-    --s-critical: #d03b3b;
-    --s-neutral:  #8a938c;
-
+    --plane: #eef1ea; --surface: #fbfcf9; --surface-2: #f4f6f1;
+    --ink: #151b16; --ink-2: #55605a; --muted: #8a938c; --hairline: #e2e6dd;
+    --accent: #256b4f; --accent-ink: #ffffff;
+    --sea: #dbe6ea; --land-muted: #e6ebe1; --coast: #fbfcf9;
+    --c-energy:#2a78d6; --c-ghg:#008300; --c-volume:#eb6834; --c-tax:#4a3aa7; --c-hybrid:#1baf7a; --c-co2:#eda100;
+    --s-good:#0ca30c; --s-warning:#fab219; --s-serious:#ec835a; --s-critical:#d03b3b; --s-neutral:#8a938c;
     color-scheme: light;
   }
-  @media (prefers-color-scheme: dark) {
-    :root:where(:not([data-theme="light"])) .biofuel-app {
-      --plane:     #0d0f0d;
-      --surface:   #171c18;
-      --surface-2: #12160f;
-      --ink:       #f1f4ef;
-      --ink-2:     #b6c0b8;
-      --muted:     #8a938c;
-      --hairline:  #2a312b;
-      --accent:    #6cc79a;
-      --accent-ink:#0d130f;
-      --c-energy:  #3987e5;
-      --c-ghg:     #1fa11f;
-      --c-volume:  #d95926;
-      --c-tax:     #9085e9;
-      --c-hybrid:  #199e70;
-      --c-co2:     #c98500;
-      color-scheme: dark;
-    }
-  }
+  @media (prefers-color-scheme: dark) { :root:where(:not([data-theme="light"])) .biofuel-app {
+    --plane:#0d0f0d; --surface:#171c18; --surface-2:#12160f; --ink:#f1f4ef; --ink-2:#b6c0b8; --muted:#8a938c; --hairline:#2a312b;
+    --accent:#6cc79a; --accent-ink:#0d130f; --sea:#0c1417; --land-muted:#232a24; --coast:#171c18;
+    --c-energy:#3987e5; --c-ghg:#1fa11f; --c-volume:#d95926; --c-tax:#9085e9; --c-hybrid:#199e70; --c-co2:#c98500;
+    color-scheme: dark;
+  } }
   :root[data-theme="dark"] .biofuel-app {
-    --plane:     #0d0f0d;
-    --surface:   #171c18;
-    --surface-2: #12160f;
-    --ink:       #f1f4ef;
-    --ink-2:     #b6c0b8;
-    --muted:     #8a938c;
-    --hairline:  #2a312b;
-    --accent:    #6cc79a;
-    --accent-ink:#0d130f;
-    --c-energy:  #3987e5;
-    --c-ghg:     #1fa11f;
-    --c-volume:  #d95926;
-    --c-tax:     #9085e9;
-    --c-hybrid:  #199e70;
-    --c-co2:     #c98500;
+    --plane:#0d0f0d; --surface:#171c18; --surface-2:#12160f; --ink:#f1f4ef; --ink-2:#b6c0b8; --muted:#8a938c; --hairline:#2a312b;
+    --accent:#6cc79a; --accent-ink:#0d130f; --sea:#0c1417; --land-muted:#232a24; --coast:#171c18;
+    --c-energy:#3987e5; --c-ghg:#1fa11f; --c-volume:#d95926; --c-tax:#9085e9; --c-hybrid:#199e70; --c-co2:#c98500;
     color-scheme: dark;
   }
 
-  /* ===== Base ===== */
   .biofuel-app * { box-sizing: border-box; }
-  .biofuel-app {
-    font-family: var(--font-sans);
-    background: var(--plane);
-    color: var(--ink);
-    line-height: 1.5;
-    padding: clamp(14px, 3vw, 34px);
-    max-width: 1280px;
-    margin: 0 auto;
-    -webkit-font-smoothing: antialiased;
-  }
+  .biofuel-app { font-family: var(--font-sans); background: var(--plane); color: var(--ink); line-height: 1.5; padding: clamp(14px,3vw,34px); max-width: 1280px; margin: 0 auto; -webkit-font-smoothing: antialiased; }
 
   .bf-header { margin-bottom: 20px; }
-  .bf-eyebrow {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin: 0 0 8px;
-  }
-  .bf-title {
-    font-size: clamp(24px, 4vw, 38px);
-    line-height: 1.08;
-    letter-spacing: -0.02em;
-    font-weight: 680;
-    margin: 0 0 8px;
-    text-wrap: balance;
-  }
-  .bf-sub {
-    color: var(--ink-2);
-    font-size: 15px;
-    max-width: 66ch;
-    margin: 0;
-  }
-  .bf-sub b { color: var(--ink); font-weight: 600; }
+  .bf-eyebrow { font-family: var(--font-mono); font-size: 11px; letter-spacing:.14em; text-transform:uppercase; color: var(--accent); margin:0 0 8px; }
+  .bf-title { font-size: clamp(24px,4vw,38px); line-height:1.08; letter-spacing:-.02em; font-weight:680; margin:0 0 8px; text-wrap:balance; }
+  .bf-sub { color: var(--ink-2); font-size:15px; max-width:66ch; margin:0; }
+  .bf-sub b { color: var(--ink); font-weight:600; }
 
-  /* ===== Controls ===== */
-  .bf-controls {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 12px 20px;
-    margin: 20px 0 16px;
-    padding-bottom: 16px;
-    border-bottom: 1px solid var(--hairline);
-  }
-  .bf-toggle-label {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-  .bf-seg { display: inline-flex; background: var(--surface-2); border: 1px solid var(--hairline); border-radius: 9px; padding: 3px; gap: 2px; }
-  .bf-seg button {
-    font-family: var(--font-sans);
-    font-size: 13px;
-    font-weight: 550;
-    color: var(--ink-2);
-    background: transparent;
-    border: 0;
-    padding: 7px 14px;
-    border-radius: 7px;
-    cursor: pointer;
-    transition: background .16s ease, color .16s ease;
-  }
-  .bf-seg button:hover { color: var(--ink); }
-  .bf-seg button[aria-pressed="true"] { background: var(--surface); color: var(--ink); box-shadow: 0 1px 2px rgba(0,0,0,.12); }
-  .bf-seg button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .bf-controls { display:flex; flex-wrap:wrap; align-items:center; gap:12px 20px; margin:20px 0 16px; padding-bottom:16px; border-bottom:1px solid var(--hairline); }
+  .bf-toggle-label { font-family:var(--font-mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
+  .bf-seg { display:inline-flex; background:var(--surface-2); border:1px solid var(--hairline); border-radius:9px; padding:3px; gap:2px; }
+  .bf-seg button { font-family:var(--font-sans); font-size:13px; font-weight:550; color:var(--ink-2); background:transparent; border:0; padding:7px 14px; border-radius:7px; cursor:pointer; transition:background .16s,color .16s; }
+  .bf-seg button:hover { color:var(--ink); }
+  .bf-seg button[aria-pressed="true"] { background:var(--surface); color:var(--ink); box-shadow:0 1px 2px rgba(0,0,0,.12); }
+  .bf-seg button:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+  .bf-legend { display:flex; flex-wrap:wrap; gap:6px 14px; margin-left:auto; }
+  .bf-legend-item { display:inline-flex; align-items:center; gap:7px; font-size:12.5px; color:var(--ink-2); }
+  .bf-swatch { width:13px; height:13px; border-radius:3px; flex:none; box-shadow:inset 0 0 0 1px rgba(0,0,0,.12); }
 
-  .bf-legend { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-left: auto; }
-  .bf-legend-item { display: inline-flex; align-items: center; gap: 7px; font-size: 12.5px; color: var(--ink-2); }
-  .bf-swatch { width: 13px; height: 13px; border-radius: 3px; flex: none; box-shadow: inset 0 0 0 1px rgba(0,0,0,.12); }
+  .bf-main { display:grid; grid-template-columns:minmax(0,1.4fr) minmax(280px,0.9fr); gap:clamp(16px,2.4vw,30px); align-items:start; }
+  @media (max-width:860px){ .bf-main{ grid-template-columns:1fr; } }
 
-  /* ===== Layout ===== */
-  .bf-main { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.95fr); gap: clamp(16px, 2.4vw, 30px); align-items: start; }
-  @media (max-width: 820px) { .bf-main { grid-template-columns: 1fr; } }
+  .bf-geowrap { background:var(--sea); border:1px solid var(--hairline); border-radius:14px; padding:clamp(6px,1.4vw,14px); position:relative; overflow:hidden; }
+  .bf-geomap { width:100%; height:auto; display:block; max-height:80vh; }
+  .bf-geomap path { stroke:var(--coast); stroke-width:0.7; stroke-linejoin:round; vector-effect:non-scaling-stroke; }
+  .bf-ctx { fill:var(--land-muted); pointer-events:none; }
+  .bf-cty { cursor:pointer; transition:fill .15s ease, filter .12s ease; }
+  .bf-cty:hover { filter:brightness(1.09) saturate(1.05); }
+  .bf-cty.sel { stroke:var(--ink); stroke-width:2; }
+  .bf-marker { cursor:pointer; stroke:var(--coast); stroke-width:1; }
+  .bf-marker.sel { stroke:var(--ink); stroke-width:2; }
+  .bf-lbl { font-family:var(--font-mono); font-weight:700; paint-order:stroke; stroke-linejoin:round; pointer-events:none; letter-spacing:.02em; }
+  .bf-tooltip { position:absolute; pointer-events:none; z-index:6; background:var(--ink); color:var(--plane); font-size:12px; padding:5px 9px; border-radius:7px; font-family:var(--font-mono); white-space:nowrap; transform:translate(-50%,-142%); opacity:0; transition:opacity .1s; box-shadow:0 4px 14px rgba(0,0,0,.32); max-width:220px; }
+  .bf-tooltip b { font-weight:700; }
+  .bf-maphint { margin-top:12px; font-size:12px; color:var(--muted); font-family:var(--font-mono); }
 
-  /* ===== Map ===== */
-  .bf-mapwrap { background: var(--surface); border: 1px solid var(--hairline); border-radius: 14px; padding: clamp(12px, 2vw, 20px); overflow-x: auto; }
-  .bf-map {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-auto-rows: 1fr;
-    gap: 7px;
-    min-width: 430px;
-  }
-  .bf-tile {
-    position: relative;
-    aspect-ratio: 1 / 1;
-    border: 0;
-    border-radius: 9px;
-    cursor: pointer;
-    padding: 7px 6px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: left;
-    font-family: var(--font-mono);
-    color: var(--tile-ink, #fff);
-    background: var(--tile-bg, #999);
-    transition: transform .14s ease, box-shadow .14s ease, outline-color .14s ease;
-    outline: 2px solid transparent;
-    outline-offset: 2px;
-  }
-  .bf-tile:hover { transform: translateY(-3px); box-shadow: 0 6px 16px rgba(0,0,0,.20); z-index: 3; }
-  .bf-tile:focus-visible { outline-color: var(--ink); z-index: 3; }
-  .bf-tile[aria-pressed="true"] { box-shadow: 0 0 0 2.5px var(--surface), 0 0 0 5px var(--ink); z-index: 4; }
-  .bf-iso { font-size: clamp(13px, 2.3vw, 18px); font-weight: 700; letter-spacing: 0.02em; }
-  .bf-tileval { font-size: clamp(8.5px, 1.5vw, 11px); font-weight: 500; opacity: .92; line-height: 1.15; font-variant-numeric: tabular-nums; }
-  .bf-nonflag { position: absolute; top: 6px; right: 7px; font-size: 9px; font-weight: 700; opacity: .8; letter-spacing: .04em; }
-  .bf-dot { position: absolute; top: 7px; right: 7px; width: 7px; height: 7px; border-radius: 50%; background: currentColor; opacity: .0; }
-  .bf-tile[data-flag="1"] .bf-dot { opacity: .85; }
+  .bf-panel { background:var(--surface); border:1px solid var(--hairline); border-radius:14px; padding:clamp(16px,2vw,22px); position:sticky; top:16px; }
+  .bf-panel-kicker { font-family:var(--font-mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin:0 0 4px; }
+  .bf-country { font-size:22px; font-weight:660; letter-spacing:-.01em; margin:0 0 2px; display:flex; align-items:baseline; gap:9px; }
+  .bf-country .bf-code { font-family:var(--font-mono); font-size:13px; color:var(--muted); font-weight:600; }
+  .bf-tag { display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:600; padding:3px 9px; border-radius:20px; margin-top:6px; }
+  .bf-tag .bf-swatch { width:10px; height:10px; }
+  .bf-hero { margin:18px 0; padding:15px 16px; background:var(--surface-2); border:1px solid var(--hairline); border-radius:11px; }
+  .bf-hero-label { font-family:var(--font-mono); font-size:10.5px; letter-spacing:.09em; text-transform:uppercase; color:var(--muted); margin:0 0 5px; }
+  .bf-hero-val { font-size:clamp(19px,3.4vw,26px); font-weight:680; line-height:1.12; letter-spacing:-.01em; font-variant-numeric:tabular-nums; text-wrap:balance; }
+  .bf-hero-note { font-size:11.5px; color:var(--muted); margin-top:6px; }
+  .bf-rows { display:flex; flex-direction:column; gap:0; margin:4px 0 0; }
+  .bf-row { display:grid; grid-template-columns:122px 1fr; gap:12px; padding:10px 0; border-top:1px solid var(--hairline); font-size:13.5px; }
+  .bf-row:first-child { border-top:0; }
+  .bf-row dt { color:var(--muted); font-family:var(--font-mono); font-size:11px; letter-spacing:.04em; text-transform:uppercase; padding-top:2px; }
+  .bf-row dd { margin:0; color:var(--ink); }
+  .bf-row dd.pos { color:var(--c-ghg); }
+  .bf-row dd b { font-weight:620; }
+  .bf-flag { margin-top:16px; padding:11px 13px; border-radius:10px; background:color-mix(in srgb,var(--s-warning) 14%,var(--surface)); border:1px solid color-mix(in srgb,var(--s-warning) 40%,var(--hairline)); font-size:12.5px; color:var(--ink); display:flex; gap:9px; }
+  .bf-flag svg { flex:none; margin-top:1px; color:color-mix(in srgb,var(--s-serious) 70%,var(--ink)); }
+  .bf-flag b { font-weight:620; }
+  .bf-ov-title { font-size:16px; font-weight:620; margin:20px 0 8px; }
+  .bf-ov-title:first-of-type { margin-top:6px; }
+  .bf-barrow { display:grid; grid-template-columns:128px 1fr 34px; align-items:center; gap:10px; padding:5px 0; font-size:13px; }
+  .bf-barrow .bf-bl { color:var(--ink-2); display:inline-flex; align-items:center; gap:7px; }
+  .bf-bartrack { height:8px; background:var(--surface-2); border-radius:5px; overflow:hidden; }
+  .bf-barfill { height:100%; border-radius:5px; }
+  .bf-barnum { font-family:var(--font-mono); font-size:12px; color:var(--ink-2); text-align:right; font-variant-numeric:tabular-nums; }
 
-  .bf-maphint { margin-top: 12px; font-size: 12px; color: var(--muted); font-family: var(--font-mono); }
+  .bf-foot { margin-top:22px; padding-top:16px; border-top:1px solid var(--hairline); font-size:12px; color:var(--muted); display:flex; flex-direction:column; gap:7px; }
+  .bf-foot b { color:var(--ink-2); font-weight:600; }
+  .bf-foot code { font-family:var(--font-mono); font-size:11px; background:var(--surface-2); padding:1px 5px; border-radius:4px; }
 
-  /* ===== Panel ===== */
-  .bf-panel { background: var(--surface); border: 1px solid var(--hairline); border-radius: 14px; padding: clamp(16px, 2vw, 22px); position: sticky; top: 16px; }
-  .bf-panel-kicker { font-family: var(--font-mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0 0 4px; }
-  .bf-country { font-size: 22px; font-weight: 660; letter-spacing: -0.01em; margin: 0 0 2px; display: flex; align-items: baseline; gap: 9px; }
-  .bf-country .bf-code { font-family: var(--font-mono); font-size: 13px; color: var(--muted); font-weight: 600; }
-  .bf-tag { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 20px; margin-top: 6px; }
-  .bf-tag .bf-swatch { width: 10px; height: 10px; }
-
-  .bf-hero { margin: 18px 0; padding: 15px 16px; background: var(--surface-2); border: 1px solid var(--hairline); border-radius: 11px; }
-  .bf-hero-label { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .09em; text-transform: uppercase; color: var(--muted); margin: 0 0 5px; }
-  .bf-hero-val { font-size: clamp(19px, 3.4vw, 26px); font-weight: 680; line-height: 1.12; letter-spacing: -0.01em; font-variant-numeric: tabular-nums; text-wrap: balance; }
-  .bf-hero-note { font-size: 11.5px; color: var(--muted); margin-top: 6px; }
-
-  .bf-rows { display: flex; flex-direction: column; gap: 0; margin: 4px 0 0; }
-  .bf-row { display: grid; grid-template-columns: 122px 1fr; gap: 12px; padding: 10px 0; border-top: 1px solid var(--hairline); font-size: 13.5px; }
-  .bf-row:first-child { border-top: 0; }
-  .bf-row dt { color: var(--muted); font-family: var(--font-mono); font-size: 11px; letter-spacing: .04em; text-transform: uppercase; padding-top: 2px; }
-  .bf-row dd { margin: 0; color: var(--ink); }
-  .bf-row dd.pos { color: var(--c-ghg); }
-  .bf-row dd b { font-weight: 620; }
-
-  .bf-flag { margin-top: 16px; padding: 11px 13px; border-radius: 10px; background: color-mix(in srgb, var(--s-warning) 14%, var(--surface)); border: 1px solid color-mix(in srgb, var(--s-warning) 40%, var(--hairline)); font-size: 12.5px; color: var(--ink); display: flex; gap: 9px; }
-  .bf-flag svg { flex: none; margin-top: 1px; color: color-mix(in srgb, var(--s-serious) 70%, var(--ink)); }
-  .bf-flag b { font-weight: 620; }
-
-  /* Overview (default panel state) */
-  .bf-ov-title { font-size: 16px; font-weight: 620; margin: 20px 0 8px; }
-  .bf-ov-title:first-of-type { margin-top: 6px; }
-  .bf-barrow { display: grid; grid-template-columns: 128px 1fr 34px; align-items: center; gap: 10px; padding: 5px 0; font-size: 13px; }
-  .bf-barrow .bf-bl { color: var(--ink-2); display: inline-flex; align-items: center; gap: 7px; }
-  .bf-bartrack { height: 8px; background: var(--surface-2); border-radius: 5px; overflow: hidden; }
-  .bf-barfill { height: 100%; border-radius: 5px; }
-  .bf-barnum { font-family: var(--font-mono); font-size: 12px; color: var(--ink-2); text-align: right; font-variant-numeric: tabular-nums; }
-
-  /* ===== Footer ===== */
-  .bf-foot { margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--hairline); font-size: 12px; color: var(--muted); display: flex; flex-direction: column; gap: 7px; }
-  .bf-foot b { color: var(--ink-2); font-weight: 600; }
-  .bf-foot code { font-family: var(--font-mono); font-size: 11px; background: var(--surface-2); padding: 1px 5px; border-radius: 4px; }
-
-  @media (prefers-reduced-motion: reduce) {
-    .biofuel-app * { transition: none !important; }
-    .bf-tile:hover { transform: none; }
-  }
+  @media (prefers-reduced-motion: reduce){ .biofuel-app *{ transition:none !important; } }
 </style>
 
 <div class="biofuel-app" id="biofuelApp">
@@ -252,45 +113,38 @@
 
   <div class="bf-main">
     <section aria-label="Map of Europe" class="bf-mapcol">
-      <div class="bf-mapwrap">
-        <div class="bf-map" id="bfMap" role="grid" aria-label="Tile map of European countries"></div>
+      <div class="bf-geowrap" id="bfGeoWrap">
+        <svg class="bf-geomap" id="bfMap" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Map of European biofuel regulation"></svg>
+        <div class="bf-tooltip" id="bfTip" role="status" aria-hidden="true"></div>
       </div>
-      <p class="bf-maphint">Tiles are placed geographically (a cartogram, not to scale). ● marks a country whose headline figure carries a data-quality flag.</p>
+      <p class="bf-maphint">Real geographic borders (LAEA projection). Countries in grey are outside the dataset. Malta (MT) is shown as a marker. Tap a country to inspect it.</p>
     </section>
-
     <aside class="bf-panel" id="bfPanel" aria-live="polite"></aside>
   </div>
 
   <footer class="bf-foot">
     <span><b>“2026 obligation” is the headline demand signal</b> — the mandated biofuel/renewable share driving demand, <b>not</b> measured consumption volume (a separate dataset). Obligation designs (GHG-reduction vs energy-share vs volume-blending vs tax-incentive) are <b>not directly comparable by headline %</b>.</span>
-    <span><b>Cross-cutting:</b> EU ETS2 for road fuels starts 1 Jan 2028 (Dir. (EU) 2023/959); the Union Database is operational (15 Jan 2024) but not yet mandatory. The RED food/feed-crop cap is 7 %; the Annex IX-B cap is 1.7 % (Cyprus & Malta exempt).</span>
-    <span>Every value traces to the verified country reports in <code>research/reports/&lt;ISO2&gt;-country-report-2026-07-04.md</code> and <code>eu-comparison-2026-07-04.md</code>. Flagged cells (●) are <code>CONFLICT</code>/<code>UNCORROBORATED</code>/<code>GAP</code> — treat as provisional.</span>
+    <span><b>Cross-cutting:</b> EU ETS2 for road fuels starts 1 Jan 2028 (Dir. (EU) 2023/959); the Union Database is operational (15 Jan 2024) but not yet mandatory. The RED food/feed-crop cap is 7 %; the Annex IX-B cap is 1.7 % (Cyprus &amp; Malta exempt).</span>
+    <span>Every value traces to the verified country reports in <code>research/reports/&lt;ISO2&gt;-country-report-2026-07-04.md</code> and <code>eu-comparison-2026-07-04.md</code>. Flagged cells (● in card) are <code>CONFLICT</code>/<code>UNCORROBORATED</code>/<code>GAP</code> — treat as provisional. Basemap © Natural Earth (public domain).</span>
   </footer>
 </div>
 
 <script>
 (function () {
   "use strict";
+  var GEO = {"w": 1000.0, "h": 1040.4, "targets": {"LU": "M382.3,609.7 385.2,616.4 382.9,628.5 377.6,628.6 373.8,625.7 377.5,610.2 382.3,609.7Z", "IE": "M195.6,465.8 192.6,485.9 173.3,506.6 139.3,513.5 117.4,501.7 139.9,478.1 140.9,448.0 169.0,434.0 184.6,425.1 183.2,440.6 175.5,454.1 185.3,456.6 195.6,465.8Z", "LT": "M722.7,446.0 726.4,458.2 714.9,469.3 713.8,485.6 697.7,498.8 681.9,500.8 676.8,492.7 668.1,490.8 665.9,483.8 666.7,476.0 659.1,472.4 641.8,469.3 636.0,446.1 652.9,435.6 679.1,434.1 693.8,429.2 696.9,434.6 705.4,435.1 722.7,446.0Z", "NL": "M406.9,517.4 409.1,527.2 402.3,552.4 397.0,562.5 386.6,561.4 386.3,591.0 377.4,583.4 367.8,569.8 350.9,573.5 338.5,569.5 348.5,563.1 369.0,524.1 393.2,515.1 406.9,517.4Z", "SE": "M482.1,371.3 489.1,355.4 501.5,336.5 506.8,303.7 498.6,289.3 499.0,252.1 507.8,226.1 520.0,226.8 524.4,215.7 520.0,206.1 538.0,166.8 548.4,135.6 554.8,115.6 565.0,115.2 566.8,99.5 586.7,102.6 586.5,84.2 592.6,82.5 607.8,94.6 626.7,111.3 633.5,153.8 638.9,164.0 620.3,174.4 611.3,195.0 615.1,211.8 597.9,236.0 575.1,261.8 567.6,301.6 578.3,320.9 592.6,335.6 581.5,368.0 566.7,375.2 562.8,422.5 554.9,449.1 535.8,446.8 527.0,469.1 508.5,470.2 503.9,443.6 491.9,411.4 482.1,371.3Z", "HU": "M675.9,657.1 687.1,663.5 689.3,670.9 678.4,678.0 671.4,698.0 661.6,718.1 646.5,724.8 634.3,724.5 619.9,732.9 612.8,737.6 596.4,733.1 581.3,721.7 575.0,718.4 571.0,709.1 567.7,708.9 573.5,690.6 569.7,684.7 580.3,684.2 581.3,672.7 591.1,679.4 598.3,682.2 613.9,677.8 615.0,672.1 622.5,670.7 631.2,665.7 633.4,667.3 641.8,663.1 645.7,656.1 651.6,653.9 672.3,660.4 675.9,657.1Z", "EE": "M723.9,335.2 727.0,339.6 720.2,357.5 729.7,382.4 725.1,392.3 712.8,394.5 698.3,386.4 691.3,384.1 679.4,390.9 678.6,374.2 673.8,378.5 663.1,369.9 659.7,354.1 676.5,343.8 693.5,336.9 709.6,338.8 723.9,335.2Z", "IT": "M457.0,706.7 468.5,711.2 470.9,705.9 490.0,701.7 494.0,711.5 521.6,719.2 519.4,733.0 524.1,744.9 508.5,740.7 492.3,750.4 493.1,764.4 490.5,772.3 496.8,786.7 515.7,801.1 526.0,824.3 549.4,846.7 565.7,846.2 571.0,852.2 565.3,858.0 584.5,867.5 600.5,875.3 619.5,888.9 622.1,894.0 618.5,904.2 605.9,891.8 587.0,888.0 578.6,906.4 594.6,916.2 592.5,930.9 583.4,932.9 572.3,957.1 563.0,959.6 562.9,951.0 567.1,935.9 571.7,929.8 562.9,913.9 555.9,899.9 546.9,896.6 540.5,884.6 526.6,879.6 517.5,868.3 501.7,866.3 485.4,853.4 466.8,834.6 453.3,817.9 448.3,789.8 438.4,786.0 422.5,775.8 413.0,778.9 400.4,791.0 391.8,792.3 395.1,780.4 384.5,775.8 381.3,753.7 389.0,745.8 384.1,734.8 385.6,727.0 393.5,733.7 403.0,733.2 414.7,724.6 417.8,729.3 427.1,729.1 432.0,718.0 446.2,722.4 454.9,718.1 457.0,706.7ZM542.3,953.3 559.2,950.7 551.5,972.7 554.9,981.3 550.4,995.7 532.9,985.4 521.4,982.4 490.2,967.9 493.5,953.6 519.6,956.4 542.3,953.3ZM412.5,872.5 423.7,864.5 435.4,885.1 430.4,921.9 420.6,919.5 411.1,928.2 403.3,920.2 404.7,886.5 400.9,870.2 412.5,872.5Z", "FI": "M672.2,71.2 675.3,90.6 695.6,105.1 690.9,127.8 711.5,155.8 709.7,180.9 725.4,198.7 725.1,217.6 748.2,231.8 747.2,246.8 739.4,265.4 719.1,306.7 694.9,313.5 672.4,327.6 650.5,336.6 640.5,322.4 626.1,314.8 626.0,287.0 616.9,262.5 621.2,245.6 630.4,226.9 653.5,193.0 660.4,186.0 657.1,174.5 638.9,164.0 633.5,153.8 626.7,111.3 607.8,94.6 592.6,82.5 597.8,74.6 610.8,87.9 623.9,84.8 635.9,89.8 643.2,76.1 644.1,55.2 657.0,43.1 671.7,51.3 672.2,71.2Z", "ES": "M47.4,914.9 47.9,905.4 58.4,897.5 63.2,890.9 57.9,880.8 68.4,864.6 64.3,845.9 73.8,846.3 78.0,833.6 82.4,830.6 88.1,809.4 99.4,804.7 97.3,789.5 85.8,785.1 81.5,787.6 69.6,784.0 68.3,769.2 59.1,770.7 49.9,775.2 56.5,756.3 52.0,742.0 85.2,731.2 107.6,743.1 134.0,750.3 153.9,760.4 170.6,763.0 202.5,771.2 208.4,783.7 243.4,803.6 251.8,799.0 272.8,815.5 297.1,815.6 296.0,831.9 273.7,847.3 246.0,848.7 242.6,857.7 227.0,870.6 215.0,891.5 220.7,908.9 206.1,918.8 198.2,935.8 180.6,938.0 161.1,955.8 132.9,949.9 112.0,944.4 96.1,950.6 85.3,958.7 75.0,953.6 69.0,942.2 66.5,924.9 47.4,914.9Z", "FR": "M382.9,628.5 390.7,636.8 416.7,644.3 405.8,662.7 401.7,682.4 396.0,686.8 387.7,683.4 387.6,690.5 372.1,704.8 370.5,717.4 380.2,714.0 385.6,727.0 384.1,734.8 389.0,745.8 381.3,753.7 384.5,775.8 395.1,780.4 391.8,792.3 371.9,806.3 332.5,794.2 301.8,799.2 297.1,815.6 272.8,815.5 251.8,799.0 243.4,803.6 208.4,783.7 202.5,771.2 216.1,756.9 230.7,702.7 217.2,669.5 206.6,652.5 181.2,635.0 184.4,614.6 209.0,614.4 237.7,628.4 238.7,596.0 253.0,611.4 298.4,597.8 307.7,576.0 323.8,572.9 324.8,583.0 332.8,584.7 339.4,597.1 350.1,612.0 359.6,611.0 373.8,625.7 377.6,628.6 382.9,628.5ZM416.4,824.2 430.4,814.4 432.6,838.6 424.4,859.8 415.1,853.4 411.6,834.3 416.4,824.2Z", "BE": "M386.3,591.0 382.3,609.7 377.5,610.2 373.8,625.7 359.6,611.0 350.1,612.0 339.4,597.1 332.8,584.7 324.8,583.0 323.8,572.9 338.5,569.5 350.9,573.5 367.8,569.8 377.4,583.4 386.3,591.0Z", "CY": "M955.9,984.4 960.4,984.8 966.0,980.9 970.4,980.0 972.4,981.3 973.4,983.9 974.3,982.6 977.8,982.3 981.6,979.1 984.3,979.4 985.4,981.4 964.8,998.5 953.0,997.7 945.4,988.0 955.9,984.4Z", "RO": "M804.4,721.0 814.0,724.4 822.2,718.1 831.9,720.9 833.8,727.9 825.5,735.9 819.1,734.5 819.8,769.0 807.6,768.3 791.4,760.9 769.0,771.4 760.1,780.1 730.3,782.9 714.3,780.6 706.7,783.6 699.7,772.8 695.5,768.4 699.6,763.2 694.3,760.2 688.7,767.2 676.3,760.3 673.6,748.9 661.0,743.5 658.1,734.8 646.5,724.8 661.6,718.1 671.4,698.0 678.4,678.0 689.3,670.9 696.6,663.9 708.5,665.5 720.5,664.0 730.1,669.5 735.9,664.3 749.2,659.5 752.7,652.2 760.5,650.8 766.6,652.6 773.7,659.7 781.8,670.3 795.6,684.8 798.5,696.8 798.6,709.0 804.4,721.0Z", "CZ": "M543.3,589.8 551.9,598.8 565.2,600.8 564.3,608.6 574.3,614.1 576.7,606.7 589.1,609.3 591.2,618.0 604.7,619.0 613.9,632.3 608.5,632.7 606.0,637.9 601.8,639.4 601.0,645.8 597.5,647.3 597.2,650.0 591.0,653.2 582.8,653.1 580.4,659.4 571.7,654.4 563.0,656.1 548.5,647.9 542.0,650.1 531.6,661.7 517.9,652.6 507.6,640.4 498.4,633.5 496.7,621.7 493.7,613.2 506.9,607.3 513.6,600.4 526.4,595.0 530.8,589.6 535.5,592.9 543.3,589.8Z", "BG": "M699.7,772.8 706.7,783.6 714.3,780.6 730.3,782.9 760.1,780.1 769.0,771.4 791.4,760.9 807.6,768.3 819.8,769.0 811.5,782.4 807.6,803.6 816.9,818.1 798.6,817.7 778.9,830.0 780.8,843.8 762.2,849.4 746.1,841.9 730.3,851.7 714.6,852.9 711.1,834.6 699.7,826.9 702.8,822.6 700.2,819.5 702.7,810.2 709.5,800.6 698.3,789.7 695.4,779.7 699.7,772.8Z", "GR": "M809.0,1009.9 807.2,1018.6 774.4,1025.9 774.1,1021.3 745.4,1019.6 748.4,1007.3 762.0,1015.0 779.6,1010.9 796.9,1010.3 797.0,1015.2 809.0,1009.9ZM714.6,852.9 730.3,851.7 746.1,841.9 762.2,849.4 780.8,843.8 778.9,830.0 790.1,835.7 786.3,854.1 781.8,858.0 768.9,859.2 757.5,858.2 732.8,869.0 749.5,882.7 739.1,888.6 727.2,890.2 714.3,877.2 711.0,883.8 717.5,899.9 729.8,911.6 722.2,918.7 735.9,930.0 747.6,936.6 749.8,952.3 728.5,947.5 736.6,960.9 722.7,965.5 733.8,988.9 718.8,991.1 699.1,980.9 688.8,959.5 683.3,941.4 673.7,929.4 661.2,914.4 659.2,906.6 668.2,892.2 668.7,883.1 675.3,878.4 675.1,871.1 688.8,867.2 696.3,860.3 707.7,859.6 710.7,854.3 714.6,852.9Z", "CH": "M441.8,688.1 442.2,693.1 438.9,699.8 447.2,705.5 457.0,706.7 454.9,718.1 446.2,722.4 432.0,718.0 427.1,729.1 417.8,729.3 414.7,724.6 403.0,733.2 393.5,733.7 385.6,727.0 380.2,714.0 370.5,717.4 372.1,704.8 387.6,690.5 387.7,683.4 396.0,686.8 401.7,682.4 417.7,684.0 422.0,678.2 441.8,688.1Z", "LV": "M725.1,392.3 733.5,397.3 737.5,410.5 745.7,425.8 731.3,439.6 722.7,446.0 705.4,435.1 696.9,434.6 693.8,429.2 679.1,434.1 652.9,435.6 636.0,446.1 634.4,425.0 640.0,406.7 653.0,395.5 667.7,414.9 679.8,412.6 679.4,390.9 691.3,384.1 698.3,386.4 712.8,394.5 725.1,392.3Z", "NO": "M693.2,52.1 679.6,67.0 672.2,71.2 671.7,51.3 657.0,43.1 644.1,55.2 643.2,76.1 635.9,89.8 623.9,84.8 610.8,87.9 597.8,74.6 592.6,82.5 586.5,84.2 586.7,102.6 566.8,99.5 565.0,115.2 554.8,115.6 548.4,135.6 538.0,166.8 520.0,206.1 524.4,215.7 520.0,226.8 507.8,226.1 499.0,252.1 498.6,289.3 506.8,303.7 501.5,336.5 489.1,355.4 482.1,371.3 473.2,353.7 442.4,384.2 422.1,389.0 403.4,372.6 402.0,342.0 406.3,277.3 420.6,260.8 456.7,240.7 483.1,213.5 506.4,175.4 533.5,121.8 550.6,100.4 576.2,64.1 596.2,50.0 612.1,49.6 622.6,24.8 639.5,23.2 654.5,14.6 688.0,27.6 678.1,37.8 693.2,52.1Z", "PT": "M49.9,775.2 59.1,770.7 68.3,769.2 69.6,784.0 81.5,787.6 85.8,785.1 97.3,789.5 99.4,804.7 88.1,809.4 82.4,830.6 78.0,833.6 73.8,846.3 64.3,845.9 68.4,864.6 57.9,880.8 63.2,890.9 58.4,897.5 47.9,905.4 47.4,914.9 36.8,919.3 26.5,912.1 14.6,911.7 23.6,891.5 26.1,874.3 17.4,868.8 15.3,856.9 22.0,839.8 33.1,832.6 37.7,822.2 46.6,807.3 49.4,795.7 48.1,784.7 49.9,775.2Z", "PL": "M681.9,500.8 684.3,513.0 690.3,523.0 691.7,534.1 682.4,541.2 689.3,553.5 691.3,565.8 703.3,589.0 702.5,597.1 694.1,601.5 680.6,626.7 686.7,638.8 682.6,637.6 664.1,628.7 651.4,634.0 642.5,631.9 632.2,638.8 622.3,629.6 615.1,633.9 613.9,632.3 604.7,619.0 591.2,618.0 589.1,609.3 576.7,606.7 574.3,614.1 564.3,608.6 565.2,600.8 551.9,598.8 543.3,589.8 535.9,572.0 537.2,562.2 532.8,547.2 526.6,537.3 531.3,529.7 527.4,515.5 538.6,507.1 563.9,493.6 584.0,483.2 600.4,487.1 602.1,493.8 617.9,493.0 638.2,494.4 668.1,490.8 676.8,492.7 681.9,500.8Z", "AT": "M581.3,672.7 580.3,684.2 569.7,684.7 573.5,690.6 567.7,708.9 564.2,713.7 547.3,714.8 537.6,721.2 521.6,719.2 494.0,711.5 490.0,701.7 470.9,705.9 468.5,711.2 457.0,706.7 447.2,705.5 438.9,699.8 442.2,693.1 441.8,688.1 447.5,686.9 456.8,695.2 459.8,687.9 476.5,689.8 490.2,685.2 499.2,686.2 505.1,692.1 506.9,687.3 504.5,669.0 511.2,665.5 517.9,652.6 531.6,661.7 542.0,650.1 548.5,647.9 563.0,656.1 571.7,654.4 580.4,659.4 579.0,663.0 581.3,672.7Z", "DE": "M527.4,515.5 531.3,529.7 526.6,537.3 532.8,547.2 537.2,562.2 535.9,572.0 543.3,589.8 535.5,592.9 530.8,589.6 526.4,595.0 513.6,600.4 506.9,607.3 493.7,613.2 496.7,621.7 498.4,633.5 507.6,640.4 517.9,652.6 511.2,665.5 504.5,669.0 506.9,687.3 505.1,692.1 499.2,686.2 490.2,685.2 476.5,689.8 459.8,687.9 456.8,695.2 447.5,686.9 441.8,688.1 422.0,678.2 417.7,684.0 401.7,682.4 405.8,662.7 416.7,644.3 390.7,636.8 382.9,628.5 385.2,616.4 382.3,609.7 386.3,591.0 386.6,561.4 397.0,562.5 402.3,552.4 409.1,527.2 406.9,517.4 410.7,511.8 424.7,511.5 427.3,517.9 439.6,505.0 436.6,494.2 437.1,478.2 449.0,482.8 459.6,479.1 459.2,490.0 475.4,497.4 474.8,507.3 491.8,502.6 501.2,495.2 519.5,506.5 527.4,515.5Z", "SI": "M521.6,719.2 537.6,721.2 547.3,714.8 564.2,713.7 567.7,708.9 571.0,709.1 575.0,718.4 559.8,726.3 558.2,737.7 551.4,740.7 551.6,748.6 543.8,748.2 537.1,743.6 533.5,748.4 519.7,747.5 524.1,744.9 519.4,733.0 521.6,719.2Z", "SK": "M682.6,637.6 678.3,645.4 675.9,657.1 672.3,660.4 651.6,653.9 645.7,656.1 641.8,663.1 633.4,667.3 631.2,665.7 622.5,670.7 615.0,672.1 613.9,677.8 598.3,682.2 591.1,679.4 581.3,672.7 579.0,663.0 580.4,659.4 582.8,653.1 591.0,653.2 597.2,650.0 597.5,647.3 601.0,645.8 601.8,639.4 606.0,637.9 608.5,632.7 613.9,632.3 615.1,633.9 622.3,629.6 632.2,638.8 642.5,631.9 651.4,634.0 664.1,628.7 682.6,637.6Z", "DK": "M459.6,479.1 449.0,482.8 437.1,478.2 431.9,462.1 433.8,433.5 437.0,426.1 442.1,418.1 455.6,417.3 461.4,409.9 474.0,402.6 472.8,417.0 467.8,425.9 469.2,433.9 477.4,438.5 473.1,448.9 468.6,445.7 456.1,465.2 459.6,479.1ZM499.8,449.0 504.5,463.2 494.4,485.7 478.1,469.3 476.4,457.5 499.8,449.0Z", "GB": "M195.6,465.8 185.3,456.6 175.5,454.1 183.2,440.6 184.6,425.1 197.7,427.9 209.4,449.5 195.6,465.8ZM241.9,491.7 248.2,476.3 241.7,456.8 241.6,456.4 223.9,446.6 222.2,438.2 231.2,427.6 228.2,418.7 216.4,429.3 223.0,402.9 219.6,386.9 233.2,360.4 250.6,341.5 261.3,346.7 278.9,348.8 255.9,374.4 271.7,374.4 287.6,378.3 278.4,399.8 258.9,421.1 274.2,426.6 274.8,429.8 281.4,465.4 291.4,472.1 295.0,505.5 297.6,517.3 316.9,526.3 311.8,543.7 301.6,550.3 306.0,565.8 287.8,577.6 264.6,572.7 233.4,573.9 226.5,566.6 212.1,576.6 196.8,569.4 181.9,576.6 174.1,568.6 206.8,546.7 223.5,544.6 198.2,533.2 196.3,521.1 215.9,517.3 210.8,500.1 218.6,483.1 241.9,491.7Z", "HR": "M575.0,718.4 581.3,721.7 596.4,733.1 612.8,737.6 619.9,732.9 625.3,743.4 632.2,751.0 625.2,762.1 615.8,756.4 602.1,757.6 584.9,753.7 575.6,754.7 571.5,760.7 564.2,754.4 560.3,766.2 570.4,779.0 575.1,787.6 584.8,797.7 592.8,803.6 601.1,814.9 619.9,824.5 617.8,829.4 597.9,820.1 585.5,810.5 566.5,802.8 549.1,782.6 553.1,780.4 543.8,768.7 543.3,759.2 530.5,754.9 524.4,767.0 518.5,757.6 519.0,747.9 519.7,747.5 533.5,748.4 537.1,743.6 543.8,748.2 551.6,748.6 551.4,740.7 558.2,737.7 559.8,726.3 575.0,718.4Z"}, "context": {"BY": "M745.7,425.8 763.3,429.3 767.0,435.7 774.4,430.6 791.0,433.6 795.6,446.1 794.0,454.3 808.3,469.9 816.1,473.3 816.4,478.4 828.5,480.5 835.0,486.5 830.3,494.1 816.9,496.5 814.4,499.9 820.5,508.0 829.0,524.6 815.0,529.7 811.2,536.9 813.3,551.1 805.9,550.0 790.8,554.7 785.0,549.2 779.6,555.3 772.3,552.6 758.8,554.6 738.5,551.4 720.9,552.1 707.7,554.7 699.4,563.6 691.3,565.8 689.3,553.5 682.4,541.2 691.7,534.1 690.3,523.0 684.3,513.0 681.9,500.8 697.7,498.8 713.8,485.6 714.9,469.3 726.4,458.2 722.7,446.0 731.3,439.6 745.7,425.8Z", "ME": "M651.3,824.0 645.9,826.9 644.2,821.8 636.1,836.2 638.1,845.0 633.6,843.1 627.2,834.4 617.8,829.4 619.9,824.5 622.0,809.0 628.3,802.0 631.9,799.2 637.7,803.6 640.9,807.3 647.8,809.7 656.1,814.9 654.7,817.5 651.3,824.0Z", "RS": "M619.9,732.9 634.3,724.5 646.5,724.8 658.1,734.8 661.0,743.5 673.6,748.9 676.3,760.3 688.7,767.2 694.3,760.2 699.6,763.2 695.5,768.4 699.7,772.8 695.4,779.7 698.3,789.7 709.5,800.6 702.7,810.2 700.2,819.5 702.8,822.6 699.7,826.9 690.2,828.4 683.3,830.8 682.4,828.8 684.6,825.2 686.2,818.1 683.4,818.6 678.9,813.8 675.3,812.8 672.3,808.6 668.3,807.3 665.0,803.6 661.5,805.5 659.4,815.0 654.7,817.5 656.1,814.9 647.8,809.7 640.9,807.3 637.7,803.6 631.9,799.2 636.6,797.6 638.7,784.2 628.2,774.1 632.4,761.5 625.2,762.1 632.2,751.0 625.3,743.4 619.9,732.9Z", "BA": "M619.9,824.5 601.1,814.9 592.8,803.6 584.8,797.7 575.1,787.6 570.4,779.0 560.3,766.2 564.2,754.4 571.5,760.7 575.6,754.7 584.9,753.7 602.1,757.6 615.8,756.4 625.2,762.1 632.4,761.5 628.2,774.1 638.7,784.2 636.6,797.6 631.9,799.2 628.3,802.0 622.0,809.0 619.9,824.5Z", "MK": "M699.7,826.9 711.1,834.6 714.6,852.9 710.7,854.3 707.7,859.6 696.3,860.3 688.8,867.2 675.1,871.1 665.7,865.0 661.8,853.3 663.7,843.6 666.3,843.6 666.9,837.8 678.8,832.3 683.3,830.8 690.2,828.4 699.7,826.9Z", "TR": "M1199.5,841.9 1191.2,850.6 1181.6,846.9 1156.2,853.5 1148.8,861.1 1126.4,874.5 1114.9,878.3 1093.7,897.2 1076.1,903.3 1063.2,902.0 1041.7,917.2 1033.2,914.1 1036.0,929.6 1031.7,937.3 1027.4,945.0 1016.2,935.1 1021.8,922.5 1009.2,928.7 989.4,927.7 978.1,947.5 945.2,959.2 924.2,948.9 900.1,953.4 897.2,965.9 882.4,972.5 858.2,962.2 834.0,967.3 816.5,942.2 798.1,929.5 805.5,906.3 789.8,895.3 809.4,864.8 841.7,857.6 846.6,834.8 886.7,829.8 907.5,806.1 929.3,792.2 962.3,782.3 1002.7,790.8 1034.6,791.7 1056.6,779.5 1074.4,775.7 1092.9,752.9 1113.2,743.4 1136.8,748.6 1143.6,756.5 1146.5,770.2 1163.7,770.4 1174.4,774.7 1163.7,788.1 1181.4,815.7 1180.4,825.6 1199.5,841.9ZM778.9,830.0 798.6,817.7 816.9,818.1 821.2,828.3 840.9,833.7 838.4,841.2 813.8,847.5 806.3,857.6 791.0,875.6 782.4,863.7 781.8,858.0 786.3,854.1 790.1,835.7 778.9,830.0Z", "AL": "M675.1,871.1 675.3,878.4 668.7,883.1 668.2,892.2 659.2,906.6 655.3,905.0 654.4,898.9 641.8,890.4 639.1,877.2 639.6,858.1 641.9,849.1 638.1,845.0 636.1,836.2 644.2,821.8 645.9,826.9 651.3,824.0 656.3,831.2 661.4,833.6 663.7,843.6 661.8,853.3 665.7,865.0 675.1,871.1Z", "UA": "M829.0,524.6 835.5,524.0 838.1,516.8 843.4,516.8 859.8,509.5 874.8,521.9 872.1,528.6 875.9,536.6 889.7,534.0 899.2,543.9 900.4,549.4 924.8,552.1 936.5,543.6 951.1,552.6 960.9,548.9 988.9,548.4 992.0,556.1 990.0,572.7 999.1,586.0 999.5,596.0 983.1,604.1 976.5,614.8 979.8,626.9 966.1,634.0 956.7,646.7 940.0,653.5 927.0,668.4 932.0,682.7 928.9,682.7 925.0,678.0 918.7,678.7 903.8,676.5 900.6,684.6 897.3,682.4 866.4,683.0 862.7,673.0 846.2,680.5 842.5,697.3 831.9,720.9 822.2,718.1 814.0,724.4 804.4,721.0 808.7,717.0 810.3,706.8 813.8,697.0 811.4,692.3 815.0,689.3 817.5,692.7 828.9,691.2 833.5,688.0 829.4,686.0 829.8,681.6 821.8,676.0 816.8,665.0 809.1,661.9 808.5,652.3 798.8,646.6 791.0,647.1 775.9,641.0 764.2,646.0 760.5,650.8 752.7,652.2 749.2,659.5 735.9,664.3 730.1,669.5 720.5,664.0 708.5,665.5 696.6,663.9 689.3,670.9 687.1,663.5 675.9,657.1 678.3,645.4 682.6,637.6 686.7,638.8 680.6,626.7 694.1,601.5 702.5,597.1 703.3,589.0 691.3,565.8 699.4,563.6 707.7,554.7 720.9,552.1 738.5,551.4 758.8,554.6 772.3,552.6 779.6,555.3 785.0,549.2 790.8,554.7 805.9,550.0 813.3,551.1 811.2,536.9 815.0,529.7 829.0,524.6Z", "IS": "M213.4,94.0 203.1,109.5 206.9,132.2 183.6,145.6 143.2,147.9 131.2,147.6 118.9,136.3 94.0,111.6 110.8,107.0 96.3,81.8 116.9,88.0 121.0,80.6 104.1,62.4 120.9,51.0 137.6,56.2 142.6,81.4 165.5,76.3 174.1,89.8 197.6,84.5 213.4,94.0Z", "MD": "M760.5,650.8 764.2,646.0 775.9,641.0 791.0,647.1 798.8,646.6 808.5,652.3 809.1,661.9 816.8,665.0 821.8,676.0 829.8,681.6 829.4,686.0 833.5,688.0 828.9,691.2 817.5,692.7 815.0,689.3 811.4,692.3 813.8,697.0 810.3,706.8 808.7,717.0 804.4,721.0 798.6,709.0 798.5,696.8 795.6,684.8 781.8,670.3 773.7,659.7 766.6,652.6 760.5,650.8Z", "XK": "M663.7,843.6 661.4,833.6 656.3,831.2 651.3,824.0 654.7,817.5 659.4,815.0 661.5,805.5 665.0,803.6 668.3,807.3 672.3,808.6 675.3,812.8 678.9,813.8 683.4,818.6 686.2,818.1 684.6,825.2 682.4,828.8 683.3,830.8 678.8,832.3 666.9,837.8 666.3,843.6 663.7,843.6Z"}, "markers": {"MT": [535.7, 1015.9]}};
 
-  // ---- Category metadata ----
   var TYPES = {
-    ghg:    { label: "GHG-reduction",  varc: "--c-ghg" },
-    energy: { label: "Energy-share",   varc: "--c-energy" },
-    volume: { label: "Volume-blending",varc: "--c-volume" },
-    tax:    { label: "Tax-incentive",  varc: "--c-tax" },
-    hybrid: { label: "Hybrid (dual)",  varc: "--c-hybrid" },
-    co2:    { label: "CO₂-compensation",varc: "--c-co2" }
+    ghg:{label:"GHG-reduction",varc:"--c-ghg"}, energy:{label:"Energy-share",varc:"--c-energy"},
+    volume:{label:"Volume-blending",varc:"--c-volume"}, tax:{label:"Tax-incentive",varc:"--c-tax"},
+    hybrid:{label:"Hybrid (dual)",varc:"--c-hybrid"}, co2:{label:"CO₂-compensation",varc:"--c-co2"}
   };
   var STATUS = {
-    good:     { label: "Transposed",           varc: "--s-good" },
-    warning:  { label: "Formal notice / partial", varc: "--s-warning" },
-    serious:  { label: "Reasoned opinion",     varc: "--s-serious" },
-    critical: { label: "Referred to CJEU",     varc: "--s-critical" },
-    neutral:  { label: "Non-EU",               varc: "--s-neutral" }
+    good:{label:"Transposed",varc:"--s-good"}, warning:{label:"Formal notice / partial",varc:"--s-warning"},
+    serious:{label:"Reasoned opinion",varc:"--s-serious"}, critical:{label:"Referred to CJEU",varc:"--s-critical"},
+    neutral:{label:"Non-EU",varc:"--s-neutral"}
   };
 
-  // ---- Data (from the verified country reports / eu-comparison) ----
-  // r/c = cartogram grid position (row, col), 0-indexed.
   var D = [
     {iso:"NO",name:"Norway",r:0,c:3,eu:false,type:"volume",st:"neutral",short:"road 20%",
       level:"Road 20 vol% (adv ≥13.5%); maritime 7%; other 11%; aviation 2%",target:"Road 21% (2027); maritime 8%; other 12%",adv:"≥1% advanced-only",tax:"No — full veibruksavgift on liquid biofuel (biogenic share escapes CO₂-avgift)",cert:"EU voluntary schemes; annual report to Miljødirektoratet; not in EU UDB",status:"EEA — sets its omsetningskrav autonomously; RED III not EU-binding"},
@@ -314,6 +168,8 @@
       level:"National Indicative Target (NCW) 10% (≈8.5% effective after 0.85 coefficient)",target:"14.9% (statutory) by 2030",adv:"2% (2027 step; 2026 gap) → 3.5%",tax:"No — biocomponents taxed at the diesel rate",cert:"National KZR INiG scheme (EU-recognised) + EU schemes; KOWR",status:"NOT transposed — RED II only adopted; open formal notice 24 Jul 2025"},
     {iso:"LV",name:"Latvia",r:2,c:5,eu:true,type:"hybrid",st:"good",short:"≥9.5 vol%",
       level:"Combined: GHG target + adv./RFNBO ≥1% + petrol-95 ≥9.5 vol%, diesel ≥6.5 vol%",target:"GHG −16%; adv.+RFNBO ≥5.5% (≥1 pp RFNBO)",adv:"≥1% → ≥5.5%",tax:"Yes — high blends only (E85 360, B100/HVO100 330 €/1000 L)",cert:"EU schemes; State Environmental Service (VVD)",status:"Transport transposed (Transport Energy Law, 1 Jan 2026); on formal-notice list (permitting)"},
+    {iso:"LT",name:"Lithuania",r:2,c:6,eu:true,type:"energy",st:"good",short:"≥9.8 pp",
+      level:"Energy-share ≥9.8 percentage points (multiple counting; DAEI accounting units)",target:"≥16.8% by 2030",adv:"≥1.4 pp → ≥3.5 pp",tax:"Biogas/biomethane exempt (from 1 Jul 2025, pending EC state-aid clearance); no liquid-biofuel cut",cert:"EU schemes; DAEI/BALTPOOL accounting; RED BP (solid biomass only)",status:"Transposed early (June 2025 package); on 24 Jul 2025 formal-notice list"},
     {iso:"FR",name:"France",r:3,c:0,eu:true,type:"tax",st:"serious",short:"10.5/9.4%",
       level:"TIRUERT incentive tax — petrol pool 10.5% / diesel pool 9.4% renewable energy (tax=0 if met, else 140 €/hL)",target:"IRICC replaces TIRUERT from 2027 (numeric path in décrets — PROPOSED)",adv:"De-facto minima 1.8% petrol / 0.7% diesel (2026)",tax:"Yes — E85 17.894, B100 12.905, ED95 12.119 €/MWh (HVO100 none)",cert:"EU schemes + CarbuRe (DGEC)",status:"NOT fully transposed — reasoned opinion 11 Dec 2025 (INFR(2025)0220)"},
     {iso:"BE",name:"Belgium",r:3,c:1,eu:true,type:"energy",st:"good",short:"12.2%",
@@ -351,164 +207,148 @@
     {iso:"CY",name:"Cyprus",r:6,c:6,eu:true,type:"volume",st:"critical",short:"7.3%",flag:"7.3% PRIMARY-ONLY (single source); Annex IX-B cap exempt",
       level:"Blending obligation 7.3% energy content (single source)",target:"14% RES-T",adv:"1% (2025) → 3.5% (5.5% combined)",tax:"No",cert:"National certification system OR EU schemes (MECI)",status:"Most-advanced RED III case — additional reasoned opinion 4 Jun 2026; only MS escalated in June 2026"}
   ];
+  // index by iso; note Greece iso in data is "EL" but map path id is "GR"
+  var ISOMAP = { EL:"GR" };
+  function pathIso(iso){ return ISOMAP[iso] || iso; }
 
-  var app = document.getElementById("biofuelApp");
-  var mapEl = document.getElementById("bfMap");
-  var panelEl = document.getElementById("bfPanel");
-  var legendEl = document.getElementById("bfLegend");
-  var mode = "status";
-  var selected = null;
+  var app=document.getElementById("biofuelApp"), svg=document.getElementById("bfMap"),
+      panelEl=document.getElementById("bfPanel"), legendEl=document.getElementById("bfLegend"),
+      tip=document.getElementById("bfTip"), wrap=document.getElementById("bfGeoWrap");
+  var mode="status", selected=null, byIso={};
+  D.forEach(function(d){ byIso[d.iso]=d; });
 
-  function cssVar(name) {
-    return getComputedStyle(app).getPropertyValue(name).trim() || "#888888";
-  }
-  // relative luminance → pick legible text ink for a fill
-  function inkOn(hex) {
-    hex = hex.replace("#", "");
-    if (hex.length === 3) hex = hex.split("").map(function (x){return x+x;}).join("");
-    var r = parseInt(hex.slice(0,2),16)/255, g = parseInt(hex.slice(2,4),16)/255, b = parseInt(hex.slice(4,6),16)/255;
-    function lin(u){ return u <= 0.03928 ? u/12.92 : Math.pow((u+0.055)/1.055, 2.4); }
-    var L = 0.2126*lin(r) + 0.7152*lin(g) + 0.0722*lin(b);
-    return L > 0.48 ? "#141a16" : "#ffffff";
-  }
-  function colorFor(d) {
-    var key = mode === "status" ? d.st : d.type;
-    var meta = mode === "status" ? STATUS[key] : TYPES[key];
-    return cssVar(meta.varc);
+  function cssVar(n){ return getComputedStyle(app).getPropertyValue(n).trim()||"#888"; }
+  function inkOn(hex){ hex=hex.replace("#","");
+    if(hex.length===3) hex=hex.split("").map(function(x){return x+x;}).join("");
+    var r=parseInt(hex.slice(0,2),16)/255,g=parseInt(hex.slice(2,4),16)/255,b=parseInt(hex.slice(4,6),16)/255;
+    function l(u){return u<=.03928?u/12.92:Math.pow((u+.055)/1.055,2.4);}
+    return (.2126*l(r)+.7152*l(g)+.0722*l(b))>.48?"#141a16":"#ffffff"; }
+  function colorFor(d){ var m=mode==="status"?STATUS[d.st]:TYPES[d.type]; return cssVar(m.varc); }
+  function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c];}); }
+  var SVGNS="http://www.w3.org/2000/svg";
+  function el(n,a){ var e=document.createElementNS(SVGNS,n); if(a) for(var k in a) e.setAttribute(k,a[k]); return e; }
+
+  // ---- build map ----
+  var gCtx=el("g",{"class":"ctx"}), gCty=el("g",{"class":"cty"}), gLbl=el("g",{"class":"lbls"});
+  svg.setAttribute("viewBox","0 0 "+GEO.w+" "+GEO.h);
+  Object.keys(GEO.context||{}).forEach(function(iso){
+    gCtx.appendChild(el("path",{d:GEO.context[iso],"class":"bf-ctx"}));
+  });
+  var ctyNodes={};
+  D.forEach(function(d){
+    var pid=pathIso(d.iso), dd=GEO.targets[pid];
+    if(dd){
+      var p=el("path",{d:dd,"class":"bf-cty","data-iso":d.iso,tabindex:"0",role:"button"});
+      p.setAttribute("aria-label", d.name+" — "+d.short);
+      gCty.appendChild(p); ctyNodes[d.iso]=p;
+      attach(p,d);
+    } else if(GEO.markers && GEO.markers[pid]){
+      var m=GEO.markers[pid], s=13;
+      var rect=el("rect",{x:(m[0]-s/2),y:(m[1]-s/2),width:s,height:s,rx:3,"class":"bf-marker","data-iso":d.iso,tabindex:"0",role:"button"});
+      rect.setAttribute("aria-label", d.name+" — "+d.short);
+      gCty.appendChild(rect); ctyNodes[d.iso]=rect; attach(rect,d);
+    }
+  });
+  svg.appendChild(gCtx); svg.appendChild(gCty); svg.appendChild(gLbl);
+
+  function attach(node,d){
+    node.addEventListener("click",function(){ select(d); });
+    node.addEventListener("keydown",function(e){ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); select(d); }});
+    node.addEventListener("pointerenter",function(e){ showTip(e,d); });
+    node.addEventListener("pointermove",function(e){ moveTip(e); });
+    node.addEventListener("pointerleave",function(){ hideTip(); });
+    node.addEventListener("focus",function(){ var b=node.getBBox(); tipAt(b.x+b.width/2,b.y,d); });
+    node.addEventListener("blur",hideTip);
   }
 
-  function paintTiles() {
-    Array.prototype.forEach.call(mapEl.children, function (btn) {
-      var d = D[+btn.dataset.i];
-      var fill = colorFor(d);
-      btn.style.setProperty("--tile-bg", fill);
-      btn.style.setProperty("--tile-ink", inkOn(fill));
+  function paint(){
+    D.forEach(function(d){ var n=ctyNodes[d.iso]; if(n) n.setAttribute("fill",colorFor(d)); });
+    drawLabels();
+  }
+
+  function drawLabels(){
+    gLbl.textContent="";
+    D.forEach(function(d){
+      var n=ctyNodes[d.iso]; if(!n) return;
+      var b; try{ b=n.getBBox(); }catch(e){ return; }
+      if(b.width<26 || b.height<20) return; // skip tiny countries
+      var fill=colorFor(d), t=el("text",{x:(b.x+b.width/2),y:(b.y+b.height/2),"class":"bf-lbl","text-anchor":"middle","dominant-baseline":"central"});
+      var fs=Math.max(9,Math.min(17,b.width*0.34));
+      t.setAttribute("font-size",fs);
+      t.setAttribute("fill",inkOn(fill));
+      t.setAttribute("stroke",fill);
+      t.setAttribute("stroke-width",Math.max(1.6,fs*0.16));
+      t.textContent=d.iso;
+      gLbl.appendChild(t);
     });
   }
 
-  function buildLegend() {
-    var set = mode === "status" ? STATUS : TYPES;
-    legendEl.innerHTML = "";
-    Object.keys(set).forEach(function (k) {
-      var item = document.createElement("span");
-      item.className = "bf-legend-item";
-      var sw = document.createElement("span");
-      sw.className = "bf-swatch";
-      sw.style.background = cssVar(set[k].varc);
-      item.appendChild(sw);
-      item.appendChild(document.createTextNode(set[k].label));
-      legendEl.appendChild(item);
-    });
+  // ---- tooltip ----
+  function showTip(e,d){ tip.innerHTML="<b>"+esc(d.name)+"</b> · "+esc(d.short); tip.setAttribute("aria-hidden","false"); tip.style.opacity="1"; moveTip(e); }
+  function moveTip(e){ var r=wrap.getBoundingClientRect(); tip.style.left=(e.clientX-r.left)+"px"; tip.style.top=(e.clientY-r.top)+"px"; }
+  function tipAt(sx,sy,d){ /* focus: place near country centroid in svg space */
+    var r=svg.getBoundingClientRect(), vb=svg.viewBox.baseVal;
+    var px=r.left+ (sx/vb.width)*r.width, py=r.top+ (sy/vb.height)*r.height;
+    tip.innerHTML="<b>"+esc(d.name)+"</b> · "+esc(d.short); tip.setAttribute("aria-hidden","false"); tip.style.opacity="1";
+    var wr=wrap.getBoundingClientRect(); tip.style.left=(px-wr.left)+"px"; tip.style.top=(py-wr.top)+"px";
   }
+  function hideTip(){ tip.style.opacity="0"; tip.setAttribute("aria-hidden","true"); }
 
-  function esc(s){ return String(s).replace(/[&<>"]/g, function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c];}); }
+  // ---- legend ----
+  function buildLegend(){ var set=mode==="status"?STATUS:TYPES; legendEl.innerHTML="";
+    Object.keys(set).forEach(function(k){ var it=document.createElement("span"); it.className="bf-legend-item";
+      var sw=document.createElement("span"); sw.className="bf-swatch"; sw.style.background=cssVar(set[k].varc);
+      it.appendChild(sw); it.appendChild(document.createTextNode(set[k].label)); legendEl.appendChild(it); }); }
 
-  function overviewHTML() {
-    // compute counts
-    var euc = D.filter(function(d){return d.eu;});
-    function countBy(arr, key, order) {
-      var m = {}; arr.forEach(function(d){ m[d[key]] = (m[d[key]]||0)+1; });
-      return order.filter(function(k){return m[k];}).map(function(k){return {k:k, n:m[k]};});
-    }
-    var typeCounts = countBy(euc, "type", ["energy","volume","ghg","hybrid","tax"]);
-    var stCounts = countBy(euc, "st", ["good","warning","serious","critical"]);
-    var maxT = Math.max.apply(null, typeCounts.map(function(x){return x.n;}));
-    var maxS = Math.max.apply(null, stCounts.map(function(x){return x.n;}));
-
-    function bars(counts, set, max) {
-      return counts.map(function(x){
-        var col = cssVar(set[x.k].varc);
-        return '<div class="bf-barrow"><span class="bf-bl"><span class="bf-swatch" style="background:'+col+'"></span>'+esc(set[x.k].label)+'</span>'
-             + '<span class="bf-bartrack"><span class="bf-barfill" style="width:'+(x.n/max*100)+'%;background:'+col+'"></span></span>'
-             + '<span class="bf-barnum">'+x.n+'</span></div>';
-      }).join("");
-    }
-
-    return ''
-      + '<p class="bf-panel-kicker">Overview · EU-27</p>'
-      + '<div class="bf-country" style="margin-bottom:14px">Select a country</div>'
-      + '<p style="margin:0 0 4px;color:var(--ink-2);font-size:13.5px">Click any tile to read its full regulation card. The map colours by the control above.</p>'
-      + '<h3 class="bf-ov-title">Obligation design</h3>'
-      + bars(typeCounts, TYPES, maxT)
-      + '<h3 class="bf-ov-title">RED III transposition status</h3>'
-      + bars(stCounts, STATUS, maxS)
-      + '<div class="bf-flag" style="margin-top:18px"><svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1.4 15 14H1L8 1.4Zm0 3.2L3.5 12.6h9L8 4.6ZM7.3 7h1.4v2.6H7.3V7Zm0 3.4h1.4v1.3H7.3v-1.3Z"/></svg>'
-      + '<span><b>3 countries</b> (Portugal, Greece, Malta) have been referred to the CJEU for RED III non-transposition; <b>Cyprus</b> carries the most-advanced live infringement. Only <b>Denmark</b> transposed on time.</span></div>';
+  // ---- panel ----
+  function overviewHTML(){
+    var euc=D.filter(function(d){return d.eu;});
+    function countBy(arr,key,order){ var m={}; arr.forEach(function(d){m[d[key]]=(m[d[key]]||0)+1;}); return order.filter(function(k){return m[k];}).map(function(k){return {k:k,n:m[k]};}); }
+    var tc=countBy(euc,"type",["energy","volume","ghg","hybrid","tax"]), sc=countBy(euc,"st",["good","warning","serious","critical"]);
+    var mt=Math.max.apply(null,tc.map(function(x){return x.n;})), ms=Math.max.apply(null,sc.map(function(x){return x.n;}));
+    function bars(cs,set,max){ return cs.map(function(x){ var col=cssVar(set[x.k].varc);
+      return '<div class="bf-barrow"><span class="bf-bl"><span class="bf-swatch" style="background:'+col+'"></span>'+esc(set[x.k].label)+'</span><span class="bf-bartrack"><span class="bf-barfill" style="width:'+(x.n/max*100)+'%;background:'+col+'"></span></span><span class="bf-barnum">'+x.n+'</span></div>'; }).join(""); }
+    return '<p class="bf-panel-kicker">Overview · EU-27</p><div class="bf-country" style="margin-bottom:14px">Select a country</div>'
+      + '<p style="margin:0 0 4px;color:var(--ink-2);font-size:13.5px">Click a country on the map to read its full regulation card. The map colours by the control above.</p>'
+      + '<h3 class="bf-ov-title">Obligation design</h3>'+bars(tc,TYPES,mt)
+      + '<h3 class="bf-ov-title">RED III transposition status</h3>'+bars(sc,STATUS,ms)
+      + '<div class="bf-flag" style="margin-top:18px"><svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1.4 15 14H1L8 1.4Zm0 3.2L3.5 12.6h9L8 4.6ZM7.3 7h1.4v2.6H7.3V7Zm0 3.4h1.4v1.3H7.3v-1.3Z"/></svg><span><b>3 countries</b> (Portugal, Greece, Malta) have been referred to the CJEU for RED III non-transposition; <b>Cyprus</b> carries the most-advanced live infringement. Only <b>Denmark</b> transposed on time.</span></div>';
   }
-
-  function countryHTML(d) {
-    var typeMeta = TYPES[d.type], stMeta = STATUS[d.st];
-    var typeCol = cssVar(typeMeta.varc), stCol = cssVar(stMeta.varc);
-    var relief = /^Yes/i.test(d.tax);
-    var flag = d.flag ? ('<div class="bf-flag"><svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1.4 15 14H1L8 1.4Zm0 3.2L3.5 12.6h9L8 4.6ZM7.3 7h1.4v2.6H7.3V7Zm0 3.4h1.4v1.3H7.3v-1.3Z"/></svg><span><b>Data flag:</b> '+esc(d.flag)+'</span></div>') : '';
-    var euLabel = d.eu ? "EU member state" : "Non-EU";
-    return ''
-      + '<p class="bf-panel-kicker">'+euLabel+'</p>'
+  function countryHTML(d){
+    var tm=TYPES[d.type], sm=STATUS[d.st], tcol=cssVar(tm.varc), scol=cssVar(sm.varc), relief=/^Yes/i.test(d.tax);
+    var flag=d.flag?('<div class="bf-flag"><svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1.4 15 14H1L8 1.4Zm0 3.2L3.5 12.6h9L8 4.6ZM7.3 7h1.4v2.6H7.3V7Zm0 3.4h1.4v1.3H7.3v-1.3Z"/></svg><span><b>Data flag:</b> '+esc(d.flag)+'</span></div>'):'';
+    return '<p class="bf-panel-kicker">'+(d.eu?"EU member state":"Non-EU")+'</p>'
       + '<div class="bf-country">'+esc(d.name)+' <span class="bf-code">'+esc(d.iso)+'</span></div>'
-      + '<span class="bf-tag" style="background:color-mix(in srgb,'+typeCol+' 16%, var(--surface));color:var(--ink)"><span class="bf-swatch" style="background:'+typeCol+'"></span>'+esc(typeMeta.label)+'</span>'
-      + '<div class="bf-hero">'
-        + '<p class="bf-hero-label">2026 obligation — headline demand signal</p>'
-        + '<div class="bf-hero-val">'+esc(d.level)+'</div>'
-        + '<p class="bf-hero-note">The mandated share driving biofuel demand — not measured consumption.</p>'
-      + '</div>'
+      + '<span class="bf-tag" style="background:color-mix(in srgb,'+tcol+' 16%,var(--surface));color:var(--ink)"><span class="bf-swatch" style="background:'+tcol+'"></span>'+esc(tm.label)+'</span>'
+      + '<div class="bf-hero"><p class="bf-hero-label">2026 obligation — headline demand signal</p><div class="bf-hero-val">'+esc(d.level)+'</div><p class="bf-hero-note">The mandated share driving biofuel demand — not measured consumption.</p></div>'
       + '<dl class="bf-rows">'
-        + '<div class="bf-row"><dt>2030 target</dt><dd>'+esc(d.target)+'</dd></div>'
-        + '<div class="bf-row"><dt>Advanced</dt><dd>'+esc(d.adv)+'</dd></div>'
-        + '<div class="bf-row"><dt>Biofuel tax</dt><dd class="'+(relief?'pos':'')+'">'+esc(d.tax)+'</dd></div>'
-        + '<div class="bf-row"><dt>Certification</dt><dd>'+esc(d.cert)+'</dd></div>'
-        + '<div class="bf-row"><dt>RED III</dt><dd><b style="color:'+stCol+'">'+esc(stMeta.label)+(d.eu?'':' (n/a)')+'.</b> '+esc(d.status)+'</dd></div>'
-      + '</dl>'
-      + flag;
+      + '<div class="bf-row"><dt>2030 target</dt><dd>'+esc(d.target)+'</dd></div>'
+      + '<div class="bf-row"><dt>Advanced</dt><dd>'+esc(d.adv)+'</dd></div>'
+      + '<div class="bf-row"><dt>Biofuel tax</dt><dd class="'+(relief?'pos':'')+'">'+esc(d.tax)+'</dd></div>'
+      + '<div class="bf-row"><dt>Certification</dt><dd>'+esc(d.cert)+'</dd></div>'
+      + '<div class="bf-row"><dt>RED III</dt><dd><b style="color:'+scol+'">'+esc(sm.label)+(d.eu?'':' (n/a)')+'.</b> '+esc(d.status)+'</dd></div>'
+      + '</dl>'+flag;
   }
+  function renderPanel(){ panelEl.innerHTML = selected?countryHTML(selected):overviewHTML(); }
 
-  function renderPanel() {
-    panelEl.innerHTML = selected ? countryHTML(selected) : overviewHTML();
-  }
-
-  function select(d, btn) {
-    selected = d;
-    Array.prototype.forEach.call(mapEl.children, function (b) { b.setAttribute("aria-pressed", b === btn ? "true" : "false"); });
+  function select(d){
+    selected=d;
+    Object.keys(ctyNodes).forEach(function(iso){ ctyNodes[iso].classList.toggle("sel", iso===d.iso); });
+    var n=ctyNodes[d.iso]; if(n && n.parentNode===gCty){ gCty.appendChild(n); } // bring to front
     renderPanel();
   }
 
-  // build tiles
-  D.forEach(function (d, i) {
-    var btn = document.createElement("button");
-    btn.type = "button";
-    btn.className = "bf-tile";
-    btn.dataset.i = i;
-    btn.dataset.flag = d.flag ? "1" : "0";
-    btn.style.gridColumnStart = d.c + 1;
-    btn.style.gridRowStart = d.r + 1;
-    btn.setAttribute("aria-pressed", "false");
-    btn.setAttribute("aria-label", d.name + " — " + d.short);
-    btn.innerHTML = '<span class="bf-dot" aria-hidden="true"></span>'
-      + (d.eu ? '' : '<span class="bf-nonflag" aria-hidden="true">◇</span>')
-      + '<span class="bf-iso">'+esc(d.iso)+'</span>'
-      + '<span class="bf-tileval">'+esc(d.short)+'</span>';
-    btn.addEventListener("click", function () { select(d, btn); });
-    mapEl.appendChild(btn);
+  Array.prototype.forEach.call(app.querySelectorAll(".bf-seg button"),function(b){
+    b.addEventListener("click",function(){ mode=b.dataset.mode;
+      app.querySelectorAll(".bf-seg button").forEach(function(x){ x.setAttribute("aria-pressed", x===b?"true":"false"); });
+      paint(); buildLegend(); if(!selected) renderPanel(); });
   });
+  var mo=new MutationObserver(function(){ paint(); buildLegend(); if(!selected) renderPanel(); });
+  mo.observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
+  if(window.matchMedia){ try{ window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",function(){ paint(); buildLegend(); if(!selected) renderPanel(); }); }catch(e){} }
 
-  // mode toggle
-  Array.prototype.forEach.call(app.querySelectorAll(".bf-seg button"), function (b) {
-    b.addEventListener("click", function () {
-      mode = b.dataset.mode;
-      app.querySelectorAll(".bf-seg button").forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
-      paintTiles(); buildLegend();
-      if (!selected) renderPanel(); // overview swatches follow the mode
-    });
-  });
-
-  // react to theme changes (recompute css-var colours)
-  var mo = new MutationObserver(function () { paintTiles(); buildLegend(); if (!selected) renderPanel(); });
-  mo.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
-  if (window.matchMedia) {
-    try { window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function () { paintTiles(); buildLegend(); if (!selected) renderPanel(); }); } catch (e) {}
-  }
-
-  paintTiles();
-  buildLegend();
-  renderPanel();
+  // initial paint (rAF so getBBox works after layout)
+  buildLegend(); renderPanel();
+  requestAnimationFrame(function(){ paint(); });
 })();
 </script>

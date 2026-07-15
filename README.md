@@ -104,6 +104,13 @@ instruments rather than country reports (template:
   catches (SAF gets no relief; mass-balanced volumes appear not to qualify;
   single-assignment blocks double-counting with the CO2 compensation obligation).
 
+- `research/interactive/eu-biofuel-map.html` — self-contained **interactive
+  geographic map** (real LAEA-projected borders) of all 30 markets: click a
+  country for its regulation card (2026 obligation as headline demand signal,
+  2030 target, tax treatment, certification, RED III status + data flags);
+  colour by RED III status or obligation design; light/dark, keyboard-accessible.
+  Also published as a shareable Artifact.
+
 Each country report
 covers the biofuel mandate (2026 level + legislated trajectory to 2030),
 fuel taxation, and RED II/III sustainability/certification obligations, with a
