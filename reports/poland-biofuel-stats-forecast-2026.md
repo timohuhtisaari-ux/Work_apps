@@ -2,7 +2,7 @@
 
 *Prepared: 8 July 2026. Method: multi-agent deep-research run — 5 parallel search angles, 21 sources fetched, 99 claims extracted, top 25 claims adversarially verified by 3-vote panels (25 confirmed, 0 refuted). Confidence levels are noted per section.*
 
-*Last monitored: 15 July 2026 (see section 0 — Monitoring updates).*
+*Last monitored: 26 August 2026 (see section 0 — Monitoring updates).*
 
 ---
 
@@ -75,6 +75,23 @@ Draft act **UC106** (amending the biocomponents act + the RES act) went to publi
 - **URE quarterly template (Dz.U. 2025 poz. 1618) has NO SAF/aviation rows and no multiplier columns.** SAF accounting will evidently ride on the **annual** NCW report (art. 30b ust. 1) and URE proceedings, not quarterly filings. The template does add dedicated rows for co-processed ("współuwodornienie") biohydrocarbons on the road side.
 - **Co-processing / RED III aviation opt-in**: no new EU guidance (Del. Reg. 2023/1640 unchanged; Commission ReFuelEU FAQ C/2025/1368 gives no co-processing methodology). Domestically the opt-in question is moot — Poland hard-wired aviation/marine into NCW accounting from 1 Jan 2026.
 
+### 0.7 USDA FAS EU Biofuels Annual 2026 — revised Poland estimates (NEW, 26 August 2026 monitoring update)
+
+The **USDA FAS EU Biofuels Annual 2026** (report E42026-0052, The Hague; cover-dated 17 July 2026, released ~21 August 2026) is now published — the source the 22 July note flagged as pending. Verified directly against the report's member-state tables (all figures **million liters**, FAS estimates):
+
+| Poland (FAS mln L) | 2023 | 2024 | 2025 | 2026f |
+|---|---|---|---|---|
+| Fuel bioethanol **consumption** | 478 r | 659 e | 722 e | 760 |
+| Fuel bioethanol **production** | 429 r | 543 e | 604 e | 633 |
+| BBD **consumption** (FAME+HVO incl. small SAF) | 1,259 | 1,225 r | 1,162 e | 1,170 |
+| FAME **production** | 1,108 r | 1,150 r | 1,108 e | 1,108 |
+
+FAS narrative: Poland was **the main driver of the EU-wide 2025 bioethanol consumption rise**, attributed to the blending mandate going from 3.20% (2024) to 4.59% (2025) plus an expanding gasoline pool; Polish bioethanol production (corn-based, ~100% domestic) is forecast to keep growing; Poland (Gdańsk/Orlen) is listed as an HDRD/SAF plant but **no discrete Poland HVO or SAF volume is given**; RED II/E10 implementation is noted as delayed in Poland. No standalone "Poland Biofuels Annual 2026" — Poland is covered inside the EU report.
+
+**Caveat — FAS estimates run well above the Polish official actuals and are not directly reconcilable.** FAS puts 2025 bioethanol *consumption* at 722 mln L, but the primary Polish sources give materially lower/different-basis figures: POPiHN ~446 thousand m³ ethanol+ethers *blended*, URE 546,443 t used for NCW (mass), KOWR 445,511 t domestic production. The discrepancy (and FAS's own +38% one-year jump from 478→659 mln L across 2023→2024) reflects a scope/methodology difference — treat the **URE/KOWR/POPiHN actuals in §0.1 as the higher-confidence numbers** and the FAS series as an independent, upwardly-biased estimate. The old USDA series in §2.1–2.2 (which ended at a 2025 ethanol *forecast* of 520 mln L) is superseded by the revised figures above.
+
+*Monitoring note — 26 August 2026: aside from the USDA report above, the scheduled run found no new material data (KOWR still at Q1 2026; no URE aggregate; UC106 still not at Council of Ministers per the 20 & 27 Aug Standing Committee agendas — RCL portal 503 for a 3rd week; ReFuelEU simplification proposal still pending, expected Sept). Next catalysts: KOWR Q2 (~late Sept), EASA's first 2025 SAF volumes (Sept), Unimot H1 (16 Sept).*
+
 ---
 
 ## 1. The Polish blending mandate — National Indicative Target (NCW)
@@ -130,16 +147,19 @@ Confidence: **high** (primary legal sources).
 
 ### 2.1 Fuel ethanol
 
-| Year | Consumption (million liters, USDA FAS/Eurostat) |
+| Year | Consumption (million liters, USDA FAS) |
 |---|---|
 | 2020 | 359 |
 | 2021 | 409 |
 | 2022 | 456 |
-| 2023 | 470–478 (revised) |
-| 2024 | ~505–506 (est.) |
-| 2025 | 520 (FAS forecast) |
+| 2023 | 478 (revised) |
+| 2024 | 659 (est.) |
+| 2025 | 722 (est.) |
+| 2026 | 760 (forecast) |
 
-POPiHN separately estimates major operators blended **~519 thousand m³ of ethanol (counted with ethers/ETBE)** into gasoline in **2024, +41.2% y/y** — the jump reflects the E10 rollout. Confidence: **high**.
+*Series revised upward in the USDA FAS EU Biofuels Annual 2026 (Aug 2026); the earlier edition ended at a 2025 forecast of 520 mln L. **These FAS estimates run well above the Polish official actuals** (POPiHN ~446 thousand m³ blended; URE 546,443 t; KOWR 445,511 t produced in 2025) — see §0.7 for the reconciliation caveat; treat the §0.1 URE/KOWR/POPiHN figures as higher-confidence.*
+
+POPiHN separately estimates major operators blended **~519 thousand m³ of ethanol (counted with ethers/ETBE)** into gasoline in **2024, +41.2% y/y** — the jump reflects the E10 rollout. Confidence: **high** (Polish official actuals); **medium** (FAS estimate series).
 
 ### 2.2 FAME / biodiesel (biomass-based diesel)
 
@@ -147,8 +167,12 @@ POPiHN separately estimates major operators blended **~519 thousand m³ of ethan
 |---|---|
 | 2020 | 1,076 |
 | 2022 | 1,200 |
-| 2023 | 1,247–1,259 (revised) |
-| 2024 | 1,234–1,250 (est.) |
+| 2023 | 1,259 |
+| 2024 | 1,225 (revised) |
+| 2025 | 1,162 (est.) |
+| 2026 | 1,170 (forecast) |
+
+*Revised per USDA FAS EU Biofuels Annual 2026 (Aug 2026). FAS also reports Poland **FAME production** at 1,150 mln L (2024r) / 1,108 (2025e) / 1,108 (2026f). FAS gives no discrete Poland HVO/HDRD or SAF volume. See §0.7.*
 
 Additional official datapoints:
 - POPiHN 2024: members blended **>1.3 million m³ of FAME** into diesel (+3.8% y/y), plus **~209 thousand m³ of B100** supplied domestically and ~100 thousand m³ exported (most exported B100 believed consumed abroad).
