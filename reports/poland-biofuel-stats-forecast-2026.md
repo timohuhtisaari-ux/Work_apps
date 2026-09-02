@@ -2,7 +2,7 @@
 
 *Prepared: 8 July 2026. Method: multi-agent deep-research run — 5 parallel search angles, 21 sources fetched, 99 claims extracted, top 25 claims adversarially verified by 3-vote panels (25 confirmed, 0 refuted). Confidence levels are noted per section.*
 
-*Last monitored: 26 August 2026 (see section 0 — Monitoring updates).*
+*Last monitored: 2 September 2026 (see section 0 — Monitoring updates).*
 
 ---
 
@@ -91,6 +91,15 @@ FAS narrative: Poland was **the main driver of the EU-wide 2025 bioethanol consu
 **Caveat — FAS estimates run well above the Polish official actuals and are not directly reconcilable.** FAS puts 2025 bioethanol *consumption* at 722 mln L, but the primary Polish sources give materially lower/different-basis figures: POPiHN ~446 thousand m³ ethanol+ethers *blended*, URE 546,443 t used for NCW (mass), KOWR 445,511 t domestic production. The discrepancy (and FAS's own +38% one-year jump from 478→659 mln L across 2023→2024) reflects a scope/methodology difference — treat the **URE/KOWR/POPiHN actuals in §0.1 as the higher-confidence numbers** and the FAS series as an independent, upwardly-biased estimate. The old USDA series in §2.1–2.2 (which ended at a 2025 ethanol *forecast* of 520 mln L) is superseded by the revised figures above.
 
 *Monitoring note — 26 August 2026: aside from the USDA report above, the scheduled run found no new material data (KOWR still at Q1 2026; no URE aggregate; UC106 still not at Council of Ministers per the 20 & 27 Aug Standing Committee agendas — RCL portal 503 for a 3rd week; ReFuelEU simplification proposal still pending, expected Sept). Next catalysts: KOWR Q2 (~late Sept), EASA's first 2025 SAF volumes (Sept), Unimot H1 (16 Sept).*
+
+### 0.8 Sustainable-aviation law signed — SAF price-gap compensation (NEW, 2 September 2026 monitoring update)
+
+**On 28 August 2026 the President signed the "ustawa o zmianie niektórych ustaw w celu wsparcia zrównoważonego lotnictwa"** (the UC39 aviation bill, Act of 31 July 2026; Dz.U. promulgation number still pending at time of writing) — verified against wnp.pl's report with the operative Polish text. This is distinct from the April 2026 ReFuelEU implementation act (Dz.U. 2026 poz. 607); it transposes the amended **EU ETS aviation** directive and adds a domestic support mechanism. Two operative elements:
+
+- **A financial compensation mechanism to cover the price gap between SAF and conventional jet fuel** ("mechanizm rekompensat finansowych, które mają pokryć różnicę w cenie między drogim paliwem SAF a tradycyjną naftą lotniczą"). This directly improves SAF supply economics into Polish airports and is the first domestic Polish subsidy instrument aimed at the SAF cost premium — relevant to the §6 SAF-economics analysis and to obligated/aviation-fuel suppliers.
+- **Free ETS emission allowances for carriers are abolished and re-granted only for use of qualifying sustainable aviation fuels, phasing to zero by 2030** — an additional pull toward SAF uptake on top of the ReFuelEU 2% mandate. (Context: the Commission referred Poland and Spain to the CJEU in June 2026 over the ETS aviation directive; this act addresses that.)
+
+*Monitoring note — 2 September 2026: the two big EU catalysts have slipped — EASA's first ReFuelEU Annual Technical Report with 2025 compliance data (first official SAF volumes) is now signposted for **October 2026** (not Sept), and the ReFuelEU fast-track simplification proposal (anti-tankering relaxation; book-and-claim explicitly deferred to the 2027 review) is still unreleased. KOWR Q2 2026 still pending (~late Sept); UC106 (RED III/29%) still not at Council of Ministers (RCL portal 503 a 4th week); Unimot H1 due 16 Sept. Aside from the aviation law above, nothing material this week.*
 
 ---
 
