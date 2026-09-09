@@ -2,7 +2,7 @@
 
 *Prepared: 8 July 2026. Method: multi-agent deep-research run — 5 parallel search angles, 21 sources fetched, 99 claims extracted, top 25 claims adversarially verified by 3-vote panels (25 confirmed, 0 refuted). Confidence levels are noted per section.*
 
-*Last monitored: 2 September 2026 (see section 0 — Monitoring updates).*
+*Last monitored: 9 September 2026 (see section 0 — Monitoring updates).*
 
 ---
 
@@ -94,12 +94,14 @@ FAS narrative: Poland was **the main driver of the EU-wide 2025 bioethanol consu
 
 ### 0.8 Sustainable-aviation law signed — SAF price-gap compensation (NEW, 2 September 2026 monitoring update)
 
-**On 28 August 2026 the President signed the "ustawa o zmianie niektórych ustaw w celu wsparcia zrównoważonego lotnictwa"** (the UC39 aviation bill, Act of 31 July 2026; Dz.U. promulgation number still pending at time of writing) — verified against wnp.pl's report with the operative Polish text. This is distinct from the April 2026 ReFuelEU implementation act (Dz.U. 2026 poz. 607); it transposes the amended **EU ETS aviation** directive and adds a domestic support mechanism. Two operative elements:
+**On 28 August 2026 the President signed the "ustawa o zmianie ustaw w celu wsparcia zrównoważonego lotnictwa"** (the UC39 aviation bill, Act of 31 July 2026; **promulgated as Dz.U. 2026 poz. 1157, published 1 September 2026** — title and position confirmed against the rp.pl Dziennik Ustaw index) — content verified against wnp.pl's report with the operative Polish text. This is distinct from the April 2026 ReFuelEU implementation act (Dz.U. 2026 poz. 607); it transposes the amended **EU ETS aviation** directive and adds a domestic support mechanism. Two operative elements:
 
 - **A financial compensation mechanism to cover the price gap between SAF and conventional jet fuel** ("mechanizm rekompensat finansowych, które mają pokryć różnicę w cenie między drogim paliwem SAF a tradycyjną naftą lotniczą"). This directly improves SAF supply economics into Polish airports and is the first domestic Polish subsidy instrument aimed at the SAF cost premium — relevant to the §6 SAF-economics analysis and to obligated/aviation-fuel suppliers.
 - **Free ETS emission allowances for carriers are abolished and re-granted only for use of qualifying sustainable aviation fuels, phasing to zero by 2030** — an additional pull toward SAF uptake on top of the ReFuelEU 2% mandate. (Context: the Commission referred Poland and Spain to the CJEU in June 2026 over the ETS aviation directive; this act addresses that.)
 
 *Monitoring note — 2 September 2026: the two big EU catalysts have slipped — EASA's first ReFuelEU Annual Technical Report with 2025 compliance data (first official SAF volumes) is now signposted for **October 2026** (not Sept), and the ReFuelEU fast-track simplification proposal (anti-tankering relaxation; book-and-claim explicitly deferred to the 2027 review) is still unreleased. KOWR Q2 2026 still pending (~late Sept); UC106 (RED III/29%) still not at Council of Ministers (RCL portal 503 a 4th week); Unimot H1 due 16 Sept. Aside from the aviation law above, nothing material this week.*
+
+*Monitoring note — 9 September 2026: no new material data (the Dz.U. poz. 1157 promulgation detail above was filled in this run). URE published its annual "Raport rynkowy – paliwa ciekłe za rok 2025" on 3 Sept, but it only reconfirms figures already in this report (NCW 9.2% for 2025, 10% for 2026, 11% for 2027) plus out-of-scope market-structure data (grey market ~4%, 5,141 active fuel concessions) — no new biofuel volumes or multiplier-usage breakdown. KOWR Q2, the ReFuelEU simplification proposal, EASA's ATR and Unimot H1 (16 Sept) all still pending; UC106 still not at Council of Ministers (RCL 503 a 5th week).*
 
 ---
 
