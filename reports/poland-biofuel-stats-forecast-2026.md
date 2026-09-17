@@ -2,7 +2,7 @@
 
 *Prepared: 8 July 2026. Method: multi-agent deep-research run — 5 parallel search angles, 21 sources fetched, 99 claims extracted, top 25 claims adversarially verified by 3-vote panels (25 confirmed, 0 refuted). Confidence levels are noted per section.*
 
-*Last monitored: 9 September 2026 (see section 0 — Monitoring updates).*
+*Last monitored: 17 September 2026 (see section 0 — Monitoring updates).*
 
 ---
 
@@ -102,6 +102,17 @@ FAS narrative: Poland was **the main driver of the EU-wide 2025 bioethanol consu
 *Monitoring note — 2 September 2026: the two big EU catalysts have slipped — EASA's first ReFuelEU Annual Technical Report with 2025 compliance data (first official SAF volumes) is now signposted for **October 2026** (not Sept), and the ReFuelEU fast-track simplification proposal (anti-tankering relaxation; book-and-claim explicitly deferred to the 2027 review) is still unreleased. KOWR Q2 2026 still pending (~late Sept); UC106 (RED III/29%) still not at Council of Ministers (RCL portal 503 a 4th week); Unimot H1 due 16 Sept. Aside from the aviation law above, nothing material this week.*
 
 *Monitoring note — 9 September 2026: no new material data (the Dz.U. poz. 1157 promulgation detail above was filled in this run). URE published its annual "Raport rynkowy – paliwa ciekłe za rok 2025" on 3 Sept, but it only reconfirms figures already in this report (NCW 9.2% for 2025, 10% for 2026, 11% for 2027) plus out-of-scope market-structure data (grey market ~4%, 5,141 active fuel concessions) — no new biofuel volumes or multiplier-usage breakdown. KOWR Q2, the ReFuelEU simplification proposal, EASA's ATR and Unimot H1 (16 Sept) all still pending; UC106 still not at Council of Ministers (RCL 503 a 5th week).*
+
+### 0.9 Obligated-party compliance strategy — Unimot vertically integrates biocomponent supply (NEW, 17 September 2026 monitoring update)
+
+Unimot published its **H1 2026 report on 16 September 2026** and held an investor chat on 17 September. The investor chat contained **no biofuel content**, and Unimot maintained its long-standing stance of not disclosing its NCW compliance mix (biocomponent volumes/types treated as commercial strategy). But the **management report** yields the first concrete, quantified example of how a major obligated party is structurally de-risking NCW compliance — **vertical integration into biocomponent production rather than reliance on the spot market or the substitute fee**:
+
+- Via its March 2026 lease of biocomponent production installations (UNIMOT Terminale's dzierżawa of the ex-Wratislavia-Biodiesel FAME-ester + glycerine plant), the group states the arrangement will **"secure about 90% of the Group's demand for biocomponents used for diesel blending"** and thereby "ensure stable realization of ... NCW obligations" (verbatim: *"zabezpieczenie około 90% zapotrzebowania na biokomponenty wykorzystywane do komponowania oleju napędowego ... stabilnej realizacji obowiązków ... Narodowego Celu Wskaźnikowego"*). The underlying lease was already public (March 2026); the ~90% self-supply quantification is the new element, sourced to the H1 management report.
+- Unimot confirms it runs own **FAME ester production + bioblending** (no tonnage given) and reiterates its HVO-first positioning (first in Poland to retail HVO100; building HVO transshipment/blending infrastructure) — but discloses **no HVO/FAME volumes, no substitute-fee figure, and no SAF activity**. It flags rising NCW-compliance costs (from the RED II-transposing amendment) as a margin driver.
+
+This is the first obligated-party datapoint that goes beyond "plans to use the substitute fee" (§0.2): at least one mid-tier player is securing ~90% of its diesel-side biocomponent needs in-house. It does not change any volume table or the §3 forecast, but it colours the 2026 compliance-mix picture (open question in §5).
+
+*Monitoring note — 17 September 2026: targeted re-check of the Unimot H1 package (chat + full PDF). Only the ~90% self-supply figure above is new; no hard biofuel volumes/costs disclosed. KOWR Q2 2026 still not published (the outstanding #1 item); ReFuelEU simplification proposal and EASA's first 2025-compliance ATR both still pending.*
 
 ---
 
