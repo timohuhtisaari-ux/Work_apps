@@ -2,7 +2,7 @@
 
 *Prepared: 8 July 2026. Method: multi-agent deep-research run — 5 parallel search angles, 21 sources fetched, 99 claims extracted, top 25 claims adversarially verified by 3-vote panels (25 confirmed, 0 refuted). Confidence levels are noted per section.*
 
-*Last monitored: 17 September 2026 (see section 0 — Monitoring updates).*
+*Last monitored: 23 September 2026 (see section 0 — Monitoring updates).*
 
 ---
 
@@ -114,6 +114,23 @@ This is the first obligated-party datapoint that goes beyond "plans to use the s
 
 *Monitoring note — 17 September 2026: targeted re-check of the Unimot H1 package (chat + full PDF). Only the ~90% self-supply figure above is new; no hard biofuel volumes/costs disclosed. KOWR Q2 2026 still not published (the outstanding #1 item); ReFuelEU simplification proposal and EASA's first 2025-compliance ATR both still pending.*
 
+### 0.10 First official Polish SAF volume — EASA ReFuelEU ATR 2026 (NEW, 23 September 2026 monitoring update)
+
+**EASA published its first ReFuelEU Aviation compliance report for the 2025 mandate year on 17 September 2026** (a month ahead of the signposted October date) — the *Annual Technical Report 2026*. It carries the **first official Poland-specific SAF figures**, verified directly against the report PDF (§5.21, "SAF Activity in Poland"). This supersedes the long-standing "no official Polish SAF volume" status in §0.4 and §2.4.
+
+**Poland, 2025 (official, EASA ATR 2026 §5.21):**
+- **1.30 Mt** of aviation fuel supplied at Union airports in Poland within RFEUA scope; **1.27 Mt conventional**, and **SAF = 2.03%, i.e. 26.37 kt** — so **Poland cleared the 2% ReFuelEU mandate** in its first year.
+- Poland = **3.30%** of total EU in-scope conventional aviation fuel and **2.41%** of total EU SAF supply.
+- SAF composition: **17% "aviation biofuel", 83% "other aviation biofuels"**; feedstock origins New Zealand 13%, China 12%, UK 11%, France 7%, Argentina 7%.
+- **First physical SAF delivery in Poland: Unimot Aviation to Katowice Airport (2025)** — the first physical SAF availability in the country. (Ties to Unimot's HVO/SAF-forward positioning in §0.9.)
+- **LOT Polish Airlines** purchased SAF via a **book-and-claim** mechanism and signed a future-supply **offtake agreement with Orlen** (SkyNRG partnership) from the planned Płock facility. Orlen's Płock SAF unit is still planned (current infrastructure suits HVO; SAF commissioning date undetermined) — consistent with the §0.3/§2.3 picture that Płock runs in road-diesel/HVO mode and Orlen meets the 2% via imported SAF.
+
+**Sanity check vs the report's estimate:** the report derived ~31–34 thousand m³ of Polish SAF for 2026 (§3). The EASA 2025 actual of **26.37 kt ≈ ~33 million litres (~33 thousand m³)** lands squarely in that range — the derived estimate is validated at the order-of-magnitude level (and Poland already sits just above the 2% floor).
+
+**EU-level context (ATR 2026):** total 39.3 Mt aviation fuel; **1.1 Mt SAF = 2.8%**, exceeding the 2% mandate and up ~6× from 193 kt (0.6%) in 2024; 121 Union airports received SAF (79%, vs 33 in 2024). Five states — Netherlands, Spain, Germany, Italy, France — supplied 0.8 Mt / **74%** (Netherlands alone 0.32 Mt / 29%); Poland is **not** among the leaders. SAF remains ~98% biofuels (UCO-dominated); **synthetic/e-SAF is still effectively nil** (first EU demo plant only; ~50 projects pre-FID), putting the 2030 e-fuel sub-target at risk.
+
+*Monitoring note — 23 September 2026: the EASA ATR above is the week's material item. The ReFuelEU fast-track simplification proposal is still unreleased; UC106 (RED III/29%) still not at Council of Ministers (RCL portal 503 a 6th week); KOWR Q2 2026 still not published (the remaining #1 target). No new URE aggregate, HVO-policy, or obligated-party developments.*
+
 ---
 
 ## 1. The Polish blending mandate — National Indicative Target (NCW)
@@ -216,10 +233,10 @@ Confidence: **high** on status; no volume baseline exists.
 
 - Polish **jet fuel consumption: 1,448 thousand m³ in 2024 (+9.2% y/y)** (POPiHN; 1,326 thousand m³ in 2023).
 - **ReFuelEU Aviation** requires a **2% SAF share at EU airports from 2025** (6% from 2030); POPiHN notes Polish implementation is **delayed** ("ReFuelEU Aviation, FuelEU Maritime – opóźnienie się pogłębia").
-- SAF volumes to date are small and **embedded within biomass-based-diesel statistics** rather than reported separately.
+- **SAF volumes for 2025 are now officially published** (EASA ReFuelEU ATR 2026, §5.21 — see §0.10): Poland supplied **26.37 kt of SAF = 2.03%** of its 1.30 Mt of in-scope aviation fuel in 2025, clearing the 2% mandate. First physical delivery: Unimot Aviation → Katowice. Earlier years' SAF was small and embedded within biomass-based-diesel statistics.
 - From 2026, renewable fuels in aviation/marine earn the **1.2× NCW multiplier**, adding a domestic incentive on top of ReFuelEU.
 
-Confidence: **high** on the framework; Poland-specific SAF volumes are not separately published.
+Confidence: **high** on the framework; Poland-specific 2025 SAF volume now officially published (EASA ATR 2026, §0.10).
 
 ---
 
