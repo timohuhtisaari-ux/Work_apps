@@ -2,7 +2,7 @@
 
 *Prepared: 8 July 2026. Method: multi-agent deep-research run — 5 parallel search angles, 21 sources fetched, 99 claims extracted, top 25 claims adversarially verified by 3-vote panels (25 confirmed, 0 refuted). Confidence levels are noted per section.*
 
-*Last monitored: 23 September 2026 (see section 0 — Monitoring updates).*
+*Last monitored: 30 September 2026 (see section 0 — Monitoring updates).*
 
 ---
 
@@ -131,6 +131,28 @@ This is the first obligated-party datapoint that goes beyond "plans to use the s
 
 *Monitoring note — 23 September 2026: the EASA ATR above is the week's material item. The ReFuelEU fast-track simplification proposal is still unreleased; UC106 (RED III/29%) still not at Council of Ministers (RCL portal 503 a 6th week); KOWR Q2 2026 still not published (the remaining #1 target). No new URE aggregate, HVO-policy, or obligated-party developments.*
 
+### 0.11 KOWR Q2 2026 — first Płock HVO footprint; new SAF reporting column (NEW, 30 September 2026 monitoring update)
+
+**KOWR published Q2 2026 biocomponent data on 24 September 2026** (production + imports tables) — verified directly against both PDFs. This is the first quarter reflecting the Orlen Płock HVO unit (launched late May 2026), and the first to use the reporting form's new SAF column.
+
+**Domestic production, Q2 2026 (tonnes):**
+- Bioethanol produced: **127,945 t** (115,858 non-double-counting + 12,086 double-counting-eligible), corn-dominated (~298 kt corn feedstock).
+- FAME (ester metylowy) produced: **232,215 t** (219,691 non-DC + 12,482 DC + 41 non-KZR); rapeseed-oil-dominated (~215 kt), with ~8,646 t UCO and ~17,440 t crude-glycerine-derived feedstock on the double-counting side.
+- HVO (biowęglowodory ciekłe): only **~526 t** appears in the feedstock-detailed production tables, **but Table 5 shows 19,789.654 t of HVO earmarked by producers for their own liquid-fuel production** — up from ~27 t in Q1 2026 (~740×). This is the **first material footprint of the Płock HVO unit**. (Note a data-scope quirk: the ~19.8 kt in the "own-use" table is not broken down by feedstock in the production tables — treat 19.8 kt as the headline domestic HVO figure and the ~526 t feedstock-detailed line as a subset.)
+
+**Disposals by producers (Table 4) — compliance-mix signal:**
+- FAME disposed: **233,997 t**, of which **6.9% double-counting-eligible** (up from 4.0% in Q1 2026).
+- Bioethanol disposed: **121,653 t**, of which **9.9% double-counting-eligible** (up from 8.1% in Q1).
+- Double-counting (Annex IX) share is rising quarter-on-quarter on both fuels, as obligated parties lean harder on waste-based molecules toward the 10% 2026 mandate — but the mix is still overwhelmingly conventional crop-based.
+
+**Imports / intra-EU acquisition, Q2 2026 (Table 1):** bioethanol 27,674 t; FAME 120,920 t (of which 24,401 t double-counting-eligible); **HVO 9,292 t** (4,303 non-DC + 4,989 DC); total 157,885 t. All volumes were intra-EU acquisition (extra-EU import column zero).
+
+**HVO supply into Poland roughly tripled q/q:** ≈ **29 kt in Q2** (~19.8 kt domestic earmarked for own use + ~9.3 kt intra-EU acquisition) vs ~9.6 kt in Q1 (then all imported). Domestic Płock output is now the majority of Polish HVO supply — the report's HVO "no volume baseline" (§2.3) now has its first hard quarterly data.
+
+**New SAF reporting column — zero this quarter:** the Q2 form adds a dedicated **"HEFA SPK (biokomponent do paliw lotniczych)"** column for SAF; the Q2 value is **0** across production and imports. This corroborates §0.10/§2.4: Poland's 2025 SAF (26.37 kt) is imported *finished* SAF, not a domestically produced/reported biocomponent, and SAF does not yet register in the KOWR/NCW road-side accounting.
+
+*Monitoring note — 30 September 2026: KOWR Q2 (above) is the week's material item. Also flagged for verification — two QC Intel reports (paywalled; 29 June and 26 August 2026) indicate later UC106 drafts "scaled back the planned 2027 biofuel target" and "lowered the 2030 renewable fuel obligation," which would revise the trajectory in §0.5 (currently 29% RES-T by 2030). The actual revised figures could not be verified (paywall; RCL portal 503 a 7th week; one agent still reported "29% by 2030 unchanged"), so §0.5's numbers are left as-is pending a readable primary source — treat the 2027–2030 path as contested. ReFuelEU simplification proposal still unreleased (September window closed); no new URE aggregate or HVO-policy developments.*
+
 ---
 
 ## 1. The Polish blending mandate — National Indicative Target (NCW)
@@ -226,8 +248,9 @@ There is **no official Polish HVO consumption series yet**. Verified status:
 - HVO sales only became **legally possible in 2024** after a regulatory interpretation of placement-on-market rules; a quality-requirements regulation was to enter into force in 2025.
 - As of POPiHN's 2024 report, HVO was used in **"very small quantities"**; POPiHN advocates exempting HVO from the emission fee (opłata emisyjna) to spur uptake.
 - From 2026 HVO is recognized as an **uncapped drop-in diesel biocomponent** in the NCW framework (44–45 MJ/kg accounting values).
+- **First hard quarterly data (KOWR Q2 2026, see §0.11):** ~19.8 kt of domestic HVO earmarked for producers' own fuel production (the Płock unit's first footprint, up from ~27 t in Q1) plus ~9.3 kt intra-EU acquisition ≈ **~29 kt HVO into the Polish system in Q2 2026**, roughly triple Q1's ~9.6 kt.
 
-Confidence: **high** on status; no volume baseline exists.
+Confidence: **high** on status; first quarterly volume data now available (KOWR Q2 2026).
 
 ### 2.4 SAF and aviation fuel
 
