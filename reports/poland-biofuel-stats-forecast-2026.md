@@ -2,7 +2,7 @@
 
 *Prepared: 8 July 2026. Method: multi-agent deep-research run — 5 parallel search angles, 21 sources fetched, 99 claims extracted, top 25 claims adversarially verified by 3-vote panels (25 confirmed, 0 refuted). Confidence levels are noted per section.*
 
-*Last monitored: 30 September 2026 (see section 0 — Monitoring updates).*
+*Last monitored: 7 October 2026 (see section 0 — Monitoring updates).*
 
 ---
 
@@ -65,6 +65,8 @@ KOWR published Q1 2026 producer/import tables on 26 June 2026. The Q1 mix was **
 ### 0.5 RED III transposition — draft UC106 (NEW, in progress)
 
 Draft act **UC106** (amending the biocomponents act + the RES act) went to public consultation 13 January 2026. Poland chose the **29% RES-in-transport option** (not the 14.5% GHG-intensity option), with a back-loaded NCW path — press reports **10% (2026) → 11% (2027) → ~13–15% (2028–29) → 29% (2030)** — the crop cap nudged to 6.2% (one unverified source suggests 7% from 2026), and **aviation & marine fuels folded into the NCW base**. As of mid-July 2026 it remains **pre-Council-of-Ministers**; planned entry into force **1 January 2027**. Poland received an EU letter of formal notice (July 2025) for missing the 21 May 2025 RED III deadline, which the Commission escalated to a **reasoned opinion (INFR(2025)0238) in December 2025**; no further escalation followed in the April or June 2026 packages. *This supersedes the "14.9% from 2030" figure in section 1 if UC106 is enacted as drafted (29% by 2030).*
+
+> **Caveat (updated 7 October 2026): the 29% / 11%-in-2027 figures above are the *original January 2026 consultation draft* and have since been lowered.** Two dated QC Intel reports — "Poland lowers 2030 renewable fuel obligation in latest draft" (29 June 2026) and "Poland scales back planned 2027 biofuel target in latest draft law" (26 August 2026, after a government committee agreed changes) — confirm (via their visible leads) that **both the 2027 and the 2030 targets were reduced** in later drafts. The **exact revised percentages are not available from any open source** (RCL portal returns 503, ~8-week outage; QC Intel is paywalled; law-firm analyses blocked). Treat the 10/11/13/15/29 path and the 6.2% crop cap / 5.5% advanced sub-target as the *last publicly documented* values, now known to be superseded downward by an unverified margin. This does **not** affect the 2026 mandate (10%, fixed in current statute) — only the 2027–2030 outlook.
 
 *Monitoring note — 22 July 2026: scheduled run found no material new data (all volume/compliance/HVO/SAF/RED III sources unchanged since 15 July; USDA EU Biofuels Annual 2026, KOWR Q2 2026 and EASA's SAF report all still pending — expected ~Sept). Only the December 2025 reasoned-opinion detail above was corrected.*
 
@@ -152,6 +154,8 @@ This is the first obligated-party datapoint that goes beyond "plans to use the s
 **New SAF reporting column — zero this quarter:** the Q2 form adds a dedicated **"HEFA SPK (biokomponent do paliw lotniczych)"** column for SAF; the Q2 value is **0** across production and imports. This corroborates §0.10/§2.4: Poland's 2025 SAF (26.37 kt) is imported *finished* SAF, not a domestically produced/reported biocomponent, and SAF does not yet register in the KOWR/NCW road-side accounting.
 
 *Monitoring note — 30 September 2026: KOWR Q2 (above) is the week's material item. Also flagged for verification — two QC Intel reports (paywalled; 29 June and 26 August 2026) indicate later UC106 drafts "scaled back the planned 2027 biofuel target" and "lowered the 2030 renewable fuel obligation," which would revise the trajectory in §0.5 (currently 29% RES-T by 2030). The actual revised figures could not be verified (paywall; RCL portal 503 a 7th week; one agent still reported "29% by 2030 unchanged"), so §0.5's numbers are left as-is pending a readable primary source — treat the 2027–2030 path as contested. ReFuelEU simplification proposal still unreleased (September window closed); no new URE aggregate or HVO-policy developments.*
+
+*Monitoring note — 7 October 2026: no new data in the window. The UC106-trajectory question (flagged 30 Sept) is now resolved as far as open sources allow — the downward revision of both the 2027 and 2030 targets is **confirmed** (the two QC Intel reports' visible leads state it), but the exact revised percentages remain unobtainable from any open source. §0.5 updated with a firm caveat accordingly. ReFuelEU simplification proposal still unreleased; UC106 still not at Council of Ministers (RCL 503 an 8th week); KOWR Q3 not due until ~late December. Adjacent-but-out-of-scope: an early-October windfall/excess-profits tax on fuel producers and a renewed retail fuel price-cap program — neither touches the NCW/biofuel mandate.*
 
 ---
 
