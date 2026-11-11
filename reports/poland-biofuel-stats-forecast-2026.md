@@ -2,7 +2,7 @@
 
 *Prepared: 8 July 2026. Method: multi-agent deep-research run — 5 parallel search angles, 21 sources fetched, 99 claims extracted, top 25 claims adversarially verified by 3-vote panels (25 confirmed, 0 refuted). Confidence levels are noted per section.*
 
-*Last monitored: 21 October 2026 (see section 0 — Monitoring updates).*
+*Last monitored: 11 November 2026 (see section 0 — Monitoring updates).*
 
 ---
 
@@ -158,6 +158,8 @@ This is the first obligated-party datapoint that goes beyond "plans to use the s
 *Monitoring note — 7 October 2026: no new data in the window. The UC106-trajectory question (flagged 30 Sept) is now resolved as far as open sources allow — the downward revision of both the 2027 and 2030 targets is **confirmed** (the two QC Intel reports' visible leads state it), but the exact revised percentages remain unobtainable from any open source. §0.5 updated with a firm caveat accordingly. ReFuelEU simplification proposal still unreleased; UC106 still not at Council of Ministers (RCL 503 an 8th week); KOWR Q3 not due until ~late December. Adjacent-but-out-of-scope: an early-October windfall/excess-profits tax on fuel producers and a renewed retail fuel price-cap program — neither touches the NCW/biofuel mandate.*
 
 *Monitoring note — 21 October 2026: no material change. §0.5 caveat refined — the latest *published* KPRM draft (v4.0, 18 Aug) still shows 29% for 2030 and predates the 26 Aug committee change, so the QC-Intel-reported lowering is not yet in any published text (figures still unobtainable; RCL 503 continues). EU-level context (not a report change): on 16 Oct the Commission's transport director reaffirmed the ReFuelEU SAF mandate "is here to stay" — the still-unreleased simplification proposal will be narrow (anti-tankering/admin), not a mandate rollback. No new KOWR/URE/HVO/obligated-party data. Next watch items: Orlen Q3 2026 results (late Oct/early Nov) and KOWR Q3 (~late Dec).*
+
+*Monitoring note — 11 November 2026: the long-pending **ReFuelEU "fast-track" simplification (anticipated September 2026) did not materialise as a standalone text**; the **Commission Work Programme 2027 (COM(2026) 710 final, 4 November 2026)** instead folds it into the 2027 legislative programme — a **ReFuelEU Aviation revision** (legislative, with impact assessment) and a broader **Transport Simplification Package**, both scheduled in **2027** (the readable secondary source, Linklaters, places both in Q1 2027; the exact quarter is unconfirmed — the primary CWP Annex I PDF was not machine-readable this run). No change to SAF mandate levels is signalled, consistent with the Commission's 16 Oct reaffirmation. This closes the recurring "simplification overdue" watch item: it is now a 2027 legislative track, not a 2026 fast-track. Separately: **Orlen's Q3 2026 results (published 5 November) carried no NCW/biofuel content**, as its prior reports have — the obligated-party-disclosure angle remains closed. UC106 unchanged (still v4.0, 18 Aug, 29%/2030; pre-Council-of-Ministers, CoM target Q3/Q4 2026; revised figures still unpublished, RCL 503 ~11 weeks). No new KOWR/URE data; next hard datapoint is KOWR Q3 (~late December).*
 
 ---
 
